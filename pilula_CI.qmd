@@ -1,0 +1,40 @@
+---
+editor: 
+  markdown: 
+    wrap: sentence
+---
+
+# Pílulas Síndrome Coronariana Crônica {.unnumbered}
+
+## Você sabe qual é a melhor forma de prescrever o nitrato para o seu paciente com angina?
+
+**Você tem algum paciente com angina e que está usando nitrato de 8 em 8 horas?** Caso tenha, está sujeitando seu paciente ao fenômeno da tolerância (redução da responsividade vascular aos nitratos e de sua eficácia antianginosa), problema que ocorre com uso crônico de nitratos de ação prolongada.²
+
+**Como minimizar esse fenômeno?**
+
+Basta tomar os cuidados a seguir na hora da prescrição:
+
+-   O Mononitrato de Isossorbida 20 mg (disponível nas farmácias das Clínicas da Família) tem posologia habitual de: meio a 1 comprimido, 2 a 3 vezes ao dia¹.
+
+-   A terapia intermitente com um intervalo adequado livre de nitrato é uma abordagem razoável para prevenir a tolerância².
+    Devendo-se estimular um intervalo livre da medicação de 10 a 12 horas para evitar o fenômeno de taquifilaxia³
+
+-   Para melhor adaptação, iniciar o tratamento com pequenas doses e aumentá-las progressivamente, de acordo com a resposta terapêutica e a tolerabilidade¹ (efeitos colaterais comuns: hipotensão, cefaleia, rubor)².
+
+**Exemplo prático***:* Pode-se iniciar com 5 mg e aumentar para pelo menos 10 mg no segundo ou terceiro dia.
+Possíveis horários de tomadas às 8h e 16h; ou às 8h, 13h e 18h.³
+
+**Atenção**:
+
+-   Doses maiores que 20 mg duas vezes ao dia não foram adequadamente estudadas.
+
+-   A duração da eficácia antianginosa além de 14 horas não foi estudada.
+
+-   Embora minimizada, a tolerância pode ocorrer até certo ponto.
+
+**IMAGEM INFOGRÁFICO DAS HORAS DE TOMADA** - ainda em confecção.
+
+1)  MONOCORDIL. Bula. Laboratórios Baldacci S.A., 2008. Disponível em: https://www.saudedireta.com.br/catinc/drugs/bulas/monocordil.pdf
+2)  ESC Guidelines for the management of chronic coronary syndromes - 2024
+3)  SOCERJ Manual Síndrome Coronariana Crônica - 2021
+4)  Product Information: Isosorbide mononitrate oral tablets, isosorbide mononitrate oral tablets. Teva Pharmaceuticals (per DailyMed), Parsippany, NJ, 2022

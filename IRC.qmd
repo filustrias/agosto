@@ -1,0 +1,22 @@
+---
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Doença renal crônica {.unnumbered}
+
+## Relevância
+
+## Definição clínica
+
+## Critérios de inclusão de pacientes
+
+Neste momento, apenas informações provenientes dos CIDs registrados são usadas para definir paciente com DRC.
+    
+
+> CIDs - I120, I131, N032, N033, N034, N035, N036, N037, N052, N053, N054, N055, N056, N057, N18, N19, N250, Z490, Z491, Z492, Z940, Z992
+
+## Informações visualizadas
+
+## Educação Médica Continuada

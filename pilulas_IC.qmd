@@ -1,0 +1,95 @@
+# Pílulas para Insuficiência Cardíaca {.unnumbered}
+
+## Você sabe ajustar a dose de diurético dos pacientes com IC de forma segura?
+
+■ Lembretes: • Você sabia que nem todo paciente com IC precisa usar diurético? • Os diuréticos devem ser utilizados sempre que há necessidade de controle volêmico, e devem ser ajustados sempre que houver sinais de congestão ou hipovolemia. • Sempre defina e registre o peso-alvo (peso seco). • Monitore função renal e potássio após mudanças significativas.
+
+■ Checklist de ação: • Verifique: peso (ganho ≥ 2 kg em 3–5 dias), edema, dispneia, crepitação. • Se congesto → aumente furosemida (pode dobrar a dose, respeitando máximo ambulatorial de 240 mg/dia, dividida em 1–2 tomadas). • Após melhora da congestão → retorne à menor dose eficaz; reduza ou suspenda se houver hipotensão ou sinais de hipovolemia. • Se refratário → associe tiazídico (ex.: hidroclorotiazida 25–50 mg/dia), sempre monitorando sódio, potássio e creatinina. • Solicite creatinina e potássio em até 7 dias após o ajuste. • Eduque: peso diário em casa, sinais de alerta (dispneia em repouso, tontura, câimbras).
+
+■ Referência: • Diretriz Brasileira de Insuficiência Cardíaca Crônica e Aguda – SBC, 2022. • PCDT Insuficiência Cardíaca – Ministério da Saúde, 2022
+
+## Será que você não está deixando passar pacientes com IC?
+
+■ Lembretes: Nem sempre o paciente com IC apresenta a “dispneia típica” ou está em NYHA III–IV. Dispneia, fadiga ou edema podem ser atribuídos a “envelhecimento”, “sobrepeso” ou “varizes”. Pacientes com DPOC, DAC ou FA frequentemente escondem IC “por trás” dos sintomas. Identificar cedo muda prognóstico: IC tratada precocemente evolui melhor.
+
+■ Checklist de ação: Dispneia aos esforços que não melhora com broncodilatador. Ortopneia leve ou dispneia paroxística noturna, mesmo em pacientes sem asma. Edema de membros inferiores em pacientes sem diagnóstico de insuficiência venosa claro. Histórico de infarto ou DAC, mesmo sem dispneia importante. Presença de FA em paciente com fadiga ou intolerância ao exercício. Idoso com “cansaço” ou redução da capacidade funcional sem explicação evidente.
+
+Referências: MACHADO, G. D. B. et al. Insuficiência cardíaca com fração de ejeção preservada: fisiopatologia e manejo. 2015. CESTARI, V. R. F. et al. Spatial Distribution of Mortality for Heart Failure in Brazil, 1996–2017. Arq Bras Cardiol, 2022. PCDT Insuficiência Cardíaca – Ministério da Saúde, 2022. Diretriz Brasileira de Insuficiência Cardíaca Crônica e Aguda – SBC, 2022.
+
+## Quais pacientes na sua lista têm maior risco de IC?
+
+■ Lembretes: Muitos pacientes ainda não têm sintomas típicos de IC, mas carregam alto risco de desenvolvê-la. HAS de longa duração e mal controlada é a principal causa de IC no Brasil. DAC, FA, obesidade, DRC e DM são grandes “alimentadores” da IC. Rastrear risco permite iniciar prevenção e vigilância antes da descompensação.
+
+■ Checklist de ação (quem merece atenção especial no prontuário): Pacientes hipertensos de longa data, sobretudo se já usam ≥ 3 anti-hipertensivos. Diabéticos tipo 2 com mais de 10 anos de doença. Portadores de DAC (IAM prévio, angina, revascularização). Portadores de FA, mesmo assintomáticos. Portadores de DRC (TFG \< 60 mL/min/1,73 m²). Pacientes obesos com IMC ≥ 30 e/ou apneia obstrutiva do sono. Anemia crônica ou DPOC com internações frequentes.
+
+■ Referências: MACHADO, G. D. B. et al. Insuficiência cardíaca com fração de ejeção preservada: fisiopatologia e manejo. 2015. Diretriz Brasileira de Insuficiência Cardíaca Crônica e Aguda – SBC, 2022. PCDT Insuficiência Cardíaca – Ministério da Saúde, 2022.
+
+## Você está usando betabloqueador de forma eficaz no seu paciente com IC?
+
+■ Lembretes: Nem todo betabloqueador serve: apenas carvedilol, metoprolol succinato e bisoprolol têm benefício comprovado de redução de mortalidade na IC A dose inicial é sempre baixa e deve ser titulada lentamente até a dose alvo ou máxima tolerada. A melhora clínica pode levar semanas a meses — não suspenda abruptamente, há risco de descompensação.
+
+■ Checklist de ação: Inicie apenas se paciente estiver clinicamente estável (sem congestão ou uso recente de altas doses de diurético EV). Escolha a droga correta: Carvedilol: iniciar 3,125 mg 2x/dia → dobrar a cada 2–4 semanas até 25 mg 2x/dia (máx. 50 mg 2x/dia se \> 85 kg). Bisoprolol: iniciar 1,25 mg/dia → dobrar a cada 2–4 semanas até 10 mg/dia. Metoprolol succinato: iniciar 12,5–25 mg/dia → dobrar a cada 2–4 semanas até 200 mg/dia. Inicie na dose mínima e dobre a cada 2–4 semanas se tolerado. Monitore sempre: PA, FC, sintomas. Reduza dose se: PA \< 90 mmHg com sintomas, FC \< 50 bpm ou fadiga/tontura intensa. Reintroduza após estabilização, sempre na menor dose eficaz.
+
+■ Referências: Diretriz Brasileira de IC – SBC, 2022. PCDT IC – Ministério da Saúde, 2022.
+
+## Todo paciente com ICFEr deve usar IECA, e o seu?
+
+■ Lembretes: IECA reduzem mortalidade e hospitalizações em ICFEr. Devem ser iniciados em todos os pacientes com ICFEr, salvo contraindicação. Tosse seca pode ocorrer → substitua por BRA (losartana, valsartana, candesartana) se intolerância.
+
+■ Checklist de ação: Confirme se paciente tem ICFEr (\<40% FEVE). Inicie com baixa dose: Enalapril: 2,5–5 mg 2x/dia → até 10–20 mg 2x/dia. Captopril: 6,25 mg 3x/dia → até 50 mg 3x/dia. Ramipril: 2,5 mg/dia → até 10 mg/dia. Titule a cada 1-2 semanas até a dose alvo ou máxima tolerada. Monitore creatinina e potássio em até 7–14 dias após cada ajuste. Reduza ou suspenda se: creatinina ↑ \> 30% do basal, K+ \> 5,5 mEq/L, PA \< 90 mmHg sintomática. Sempre retorne à menor dose eficaz após resolução dos efeitos
+
+■ Referências: Diretriz Brasileira de IC – SBC, 2022. PCDT IC – Ministério da Saúde, 2022.
+
+## Você sabe quando indicar espironolactona no paciente com IC?
+
+■ Lembretes: É indicada para pacientes com ICFEr sintomática (NYHA II–IV) já em uso de IECA/ARNI + betabloqueador. Reduz mortalidade e hospitalizações. Cuidado: risco de hipercalemia e piora da função renal. Cuidado com ginecomastia
+
+■ Checklist de ação: Pré-requisitos: creatinina \< 2,5 mg/dL (homens) ou \< 2,0 mg/dL (mulheres) e K+ \< 5,0 mEq/L. Dose: iniciar 12,5–25 mg/dia, podendo aumentar até 50 mg/dia. Monitore: creatinina e potássio em 3–7 dias, depois em 1 mês, e a cada 3 meses. Reduza ou suspenda se: K+ ≥ 5,5 mEq/L ou creatinina ↑ progressivamente. Evite associar a AINEs e altas doses de IECA/BRA.
+
+■ Referências: Diretriz Brasileira de Insuficiência Cardíaca Crônica e Aguda – SBC, 2022. PCDT IC – Ministério da Saúde, 2022.
+
+## Seu paciente com IC já está recebendo Dapagliflozina?
+
+■ Lembretes: Benefício independente do diabetes: reduzem mortalidade e hospitalizações em ICFEr. Efeito diurético leve → pode ajudar no controle de volume. Bem tolerados, baixo risco de hipoglicemia. Cuidado com infecção urinária
+
+■ Checklist de ação: Indicação: todos os pacientes com ICFEr sintomática (NYHA II–IV), mesmo sem DM. Drogas e doses: Dapagliflozina 10 mg/dia. Empagliflozina 10 mg/dia. Não precisa titular dose! Avaliar função renal: iniciar se TFG ≥ 20–25 mL/min/1,73 m² (droga-dependente). Monitorar: sintomas de infecção urinária/genital, PA e função renal. Suspender temporariamente em casos de desidratação, jejum prolongado ou cirurgia.
+
+■ Referências: Diretriz Brasileira de Insuficiência Cardíaca Crônica e Aguda – SBC, 2022. PCDT IC – Ministério da Saúde, 2022.
+
+## Você sabe diferenciar ICFEr de ICFEp?
+
+■ Lembrete: A IC pode se apresentar de formas distintas: com fração de ejeção reduzida (ICFEr) ou preservada (ICFEp). Os sintomas costumam ser parecidos, mas o diagnóstico e o tratamento diferem. Reconhecer a diferença evita condutas ineficazes.
+
+■ Checklist de ação: Definição pelo ECO: Classifique como ICFEr se FEVE \< 40%. Classifique como ICFEp se FEVE ≥ 50% + disfunção diastólica ou sinais indiretos (hipertrofia VE, aumento AE, BNP elevado). Compare sintomas: Identifique dispneia, fadiga e edema. ICFEr: geralmente mais evidente, intolerância maior ao esforço. ICFEp: pode ser sutil, muitas vezes confundida com envelhecimento, DPOC ou obesidade. Tratamento: Trate ICFEr com medicamentos modificadores de prognóstico (IECA/BRA/INRA, BB, ARM, SGLT2i). Trate ICFEp focando no controle de comorbidades (HAS, DM, obesidade, FA, DRC) e alívio de sintomas (diurético apenas se congesto). Sempre registre: fração de ejeção e diagnóstico (ICFEr ou ICFEp).
+
+■ Referências: PCDT Insuficiência Cardíaca – Ministério da Saúde, 2022. Diretriz Brasileira de Insuficiência Cardíaca Crônica e Aguda – SBC, 2022
+
+## ICFEp: quando desconfiar e o que fazer na APS
+
+■ Lembretes: A ICFEP é mais comum em idosos, mulheres e hipertensos. É subdiagnosticada porque os sintomas são inespecíficos. Detectar cedo e controlar comorbidades melhora evolução.
+
+■ Checklist de ação
+
+-   Suspeite de ICFEP: Considere em idosos, hipertensos, diabéticos, obesos, FA ou DRC.
+
+-   Valorize dispneia aos esforços, ortopneia, edema de MMII e fadiga. Revise internações prévias por “falta de ar” sem diagnóstico definido.
+
+-   Cheque exames no prontuário: Confirme FEVE ≥ 50% no ECO com hipertrofia VE ou aumento AE.
+
+-   Verifique BNP/NT-proBNP elevados. Conduza na APS: Controle rigorosamente PA e FC. Trate DM, obesidade e FA.
+
+-   Prescreva diurético apenas se houver congestão.
+
+-   Oriente perda de peso, redução de sal e prática de atividade física regular.
+
+-   Registre no prontuário: classifique como ICFEP se critérios forem atendidos.
+
+Referências: Machado GDB, Santos CRC, Canevese FF, et al. Insuficiência cardíaca com fração de ejeção preservada: fisiopatologia e manejo. 2015. Diretriz Brasileira de Insuficiência Cardíaca Crônica e Aguda – SBC, 2022.
+
+## Você sabe reconhecer os perfis clínicos de IC descompensada (ABLC)?
+
+■ Lembretes: Os perfis ABLC ajudam a identificar rapidamente o tipo de descompensação na IC. Cada perfil exige condutas iniciais distintas. Reconhecer o perfil acelera o manejo e reduz mortalidade.
+
+■ Checklist de ação: Perfil A (quente e seco) – Agudo congesto: Identifique dispneia súbita, congestão pulmonar intensa, pressão arterial elevada. Inicie vasodilatador (se PA permitir), diurético EV, oxigênio. Perfil B (quente e úmido) – Bradi: Suspeite em bradicardia sintomática (\< 50 bpm) com tontura ou síncope. Suspenda betabloqueador, avalie necessidade de marcapasso temporário. Perfil L (frio e seco) – Lenti (baixo débito): Observe fadiga intensa, extremidades frias, PA baixa sem congestão evidente. Inicie suporte com inotrópico (em nível hospitalar). Perfil C (frio e úmido) – Choque cardiogênico: Reconheça hipotensão sustentada, hipoperfusão, oligúria, confusão mental. Aja rápido: referencie imediatamente para UTI, suporte vasopressor e inotrópico.
+
+Referências: Diretriz Brasileira de Insuficiência Cardíaca Crônica e Aguda – SBC, 2022. Aula ICC 2023 – Sociedade Brasileira de Cardiologia.

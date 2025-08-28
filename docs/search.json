@@ -1,0 +1,632 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Sprint de Agosto",
+    "section": "",
+    "text": "Apresentação\n\n\n\nKoudelka, 1968\n\n\nNeste manuscrito compartilhamos as informações relevantes para a frente de trabalho das doenças crônicas no mês de agosto - Sprint de Agosto.\nCada capítulo é referente a uma frente de trabalho e compreende decisões referentes a critérios de inclusão de pacientes, dados de pacientes que serão visualizados, temas para educação médica continuada, bem como as propostas de visualização das informações.",
+    "crumbs": [
+      "Apresentação"
+    ]
+  },
+  {
+    "objectID": "etapas.html",
+    "href": "etapas.html",
+    "title": "Etapas",
+    "section": "",
+    "text": "Etapas realizadas",
+    "crumbs": [
+      "Etapas"
+    ]
+  },
+  {
+    "objectID": "etapas.html#etapas-realizadas",
+    "href": "etapas.html#etapas-realizadas",
+    "title": "Etapas",
+    "section": "",
+    "text": "Relevância de cada problema\nDefinição de critérios de inclusão\nInformações que devem ser visualizadas\nTemas de Educação Médica Continuada\nPílulas\ninformações sobre bolsa família, territórios sociais, cadunico que não recebe PBF ou cartão familia carioca.",
+    "crumbs": [
+      "Etapas"
+    ]
+  },
+  {
+    "objectID": "CIDs.html",
+    "href": "CIDs.html",
+    "title": "CIDs",
+    "section": "",
+    "text": "Hipertensão Arterial\nAqui estão apenas as listas de CIDs usados nos códigos para identificação de casos. Não foram considerados outras regras aqui como exames laboratoriais, medidas de pressão arterial ou prescrição de medicamentos específicos. Estas informações estão nos capítulos específicos de cada morbidade.",
+    "crumbs": [
+      "CIDs"
+    ]
+  },
+  {
+    "objectID": "CIDs.html#hipertensão-arterial",
+    "href": "CIDs.html#hipertensão-arterial",
+    "title": "CIDs",
+    "section": "",
+    "text": "I10 – Hipertensão essencial (primária)\nI11 – Doença cardíaca hipertensiva\nI12 – Doença renal hipertensiva\nI13 – Doença cardiorrenal hipertensiva\nI15 – Hipertensão secundária\nI16 – Crise hipertensiva\nO100 – Hipertensão essencial pré-existente complicando a gravidez, parto e puerpério (O10.0)\nO104 – Hipertensão secundária pré-existente complicando a gravidez, parto e puerpério (O10.4)\nO109 – Hipertensão pré-existente não especificada complicando a gravidez, parto e puerpério (O10.9)\nO13 – Hipertensão gestacional (induzida pela gravidez) sem proteinúria significativa\nR030 – Leitura anormal de pressão arterial, sem diagnóstico de hipertensão\n\n\n\nDiabetes Mellitus\n\nE10 – Diabetes mellitus insulino-dependente (Tipo 1)\nE11 – Diabetes mellitus não insulino-dependente (Tipo 2)\nE12 – Diabetes mellitus relacionado à desnutrição\nE13 – Outros diabetes mellitus especificados\nE14 – Diabetes mellitus não especificado\nO24 – Diabetes mellitus na gravidez, no parto e no puerpério\nH360 – Retinopatia diabética (H36.0)\nH280 – Catarata diabética (H28.0)\nG632 – Polineuropatia diabética (G63.2)\nG590 – Mononeuropatia diabética (G59.0)\nG990 – Transtornos do sistema nervoso em doenças endócrinas, nutricionais e metabólicas (G99.0)\nN083 – Nefropatia diabética (N08.3)\nM142 – Artropatia diabética (M14.2)\n\n\n\n\nCardiopatia isquêmica\n\nI21 – Infarto agudo do miocárdio\nI22 – Infarto do miocárdio recorrente\nI252 – Infarto antigo do miocárdio (I25.2)\n\n\n\n\nInsuficiência cardíaca (independente da fração de ejeção)\n\nI110 – Doença cardíaca hipertensiva com insuficiência cardíaca (I11.0)\nI130 – Doença cardiorrenal hipertensiva com insuficiência cardíaca (I13.0)\nI132 – Doença cardiorrenal hipertensiva com insuficiência cardíaca e renal (I13.2)\nI255 – Miocardiopatia isquêmica (I25.5)\nI420 – Miocardiopatia dilatada (I42.0)\nI425 – Miocardiopatia alcoólica (I42.6 / I42.7 em algumas edições — aqui listado conforme padrão usado)\nI426 – Miocardiopatia devido a drogas e outros agentes externos (I42.7)\nI427 – Miocardiopatia devido a doenças endócrinas (I42.8)\nI428 – Outras miocardiopatias (I42.8)\nI429 – Miocardiopatia não especificada (I42.9)\nI43 – Miocardiopatia em doenças classificadas em outra parte\nI50 – Insuficiência cardíaca\nP290 – Insuficiência cardíaca neonatal (P29.0)\n\n\n\n\nDoenças vascular cerebral\n\nI60 a I69 - doenças cerebrovasculares)\nG45 – Acidentes isquêmicos transitórios e síndromes correlatas\nG46 – Síndromes vasculares do encéfalo em doenças cerebrovasculares\nH340 – Oclusão arterial retiniana (H34.0)\n\n\n\n\nDoença renal crônica\n\nI120 – Doença renal hipertensiva com insuficiência renal (I12.0)\nI131 – Doença cardiorrenal hipertensiva com insuficiência renal (I13.1)\nN032|N033|N034|N035|N036|N037 – Glomerulonefrites crônicas (com diferentes achados histológicos)\nN052|N053|N054|N055|N056|N057 – Síndrome nefrótica (variantes histológicas)\nN18 – Doença renal crônica\nN19 – Insuficiência renal não especificada\nN250 – Osteodistrofia renal\nZ490|Z491|Z492 – Atendimentos para diálise/hemodiálise/peritoneal\nZ940 – Rim transplantado\nZ992 – Dependência de diálise\n\n\n\n\nDemência\n\nF00 – Demência na doença de Alzheimer\nF01 – Demência vascular\nF02 – Demência em outras doenças classificadas em outra parte\nF03 – Demência não especificada\nF051 – Delirium superposto a demência (F05.1)\nG30 – Doença de Alzheimer\nG310 – Atrofia cortical circunscrita (G31.0)\nG311 – Degeneração corticobasal / outras degenerações frontotemporais (G31.1)\n\n\n\n\nDoença pulmonar obstrutiva crônica\n\nI278|I279 – Outras doenças do coração pulmonar / cor pulmonale\nJ4 – (padrão abreviado; não é código isolado — agrupa J40-J49: bronquites/asma e DPOC)\nJ60–J67 – Pneumoconioses (carvão, asbestos, sílica etc.)\nJ684 – Bronquiectasia (J47) (nota: “J684” usualmente corresponde a “bronquiectasias” em alguns mapeamentos locais; no CID-10 padrão, bronquiectasia é J47)\nJ701|J703 – Doenças pulmonares por agentes químicos/gases/fumos (J70.1, J70.3)\n\n\n\n\nDoença péptica\n\nK25 – Úlcera gástrica\nK26 – Úlcera duodenal\nK27 – Úlcera péptica de local não especificado\nK28 – Úlcera gastroyeyunal\n\n\n\n\nNeoplasias\n\nC00 – Neoplasia maligna do lábio\nC01 – Neoplasia maligna da base da língua\nC02 – Neoplasia maligna de outras partes e das não especificadas da língua\nC03 – Neoplasia maligna da gengiva\nC04 – Neoplasia maligna do assoalho da boca\nC05 – Neoplasia maligna do palato\nC06 – Neoplasia maligna de outras partes e das não especificadas da boca\nC07 – Neoplasia maligna da glândula parótida\nC08 – Neoplasia maligna de outras glândulas salivares maiores e das não especificadas\nC09 – Neoplasia maligna da amígdala\nC10 – Neoplasia maligna da orofaringe\nC11 – Neoplasia maligna da nasofaringe\nC12 – Neoplasia maligna do seio piriforme\nC13 – Neoplasia maligna da hipofaringe\nC14 – Neoplasia maligna de outros sítios e dos mal definidos do lábio, cavidade oral e faringe\nC15 – Neoplasia maligna do esôfago\nC16 – Neoplasia maligna do estômago\nC17 – Neoplasia maligna do intestino delgado\nC18 – Neoplasia maligna do cólon\nC19 – Neoplasia maligna da junção retossigmoide\nC20 – Neoplasia maligna do reto\nC21 – Ânus e canal anal\nC22 – Fígado e vias biliares intra-hepáticas\nC23 – Vesícula biliar\nC24 – Outras partes das vias biliares\nC25 – Pâncreas\nC26 – Órgãos digestivos mal definidos\nC30 – Cavidade nasal e ouvido médio\nC31 – Seios paranasais\nC32 – Laringe\nC33 – Traqueia\nC34 – Brônquios e pulmão\nC37 – Timo\nC38 – Coração, mediastino e pleura\nC39 – Aparelho respiratório e órgãos intratorácicos mal definidos\nC40 – Ossos e cartilagens articulares dos membros\nC41 – Ossos e cartilagens articulares de outros locais\nC43 – Melanoma maligno da pele\nC45 – Mesotelioma\nC46 – Sarcoma de Kaposi\nC47 – Nervos periféricos e sistema nervoso autônomo\nC48 – Retroperitônio e peritônio\nC49 – Tecido conjuntivo e outros tecidos moles\nC50 – Mama\nC51 – Vulva\nC52 – Vagina\nC53 – Colo do útero\nC54 – Corpo do útero\nC55 – Útero, porção não especificada\nC56 – Ovário\nC57 – Outros órgãos genitais femininos\nC58 – Placenta\nC60–C69 – órgãos genitais masculinos e olho/encéfalo)\nC70 – Meninges\nC71 – Encéfalo\nC72 – Medula espinal, nervos cranianos e outras partes do SNC\nC73 – Glândula tireoide\nC74 – Glândula supra-renal\nC75 – Outras glândulas endócrinas e estruturas correlatas\nC76 – Sítios mal definidos\nC77 – Linfonodos secundários e não especificados\nC78 – Metástases em órgãos respiratórios e digestivos\nC79 – Metástases em outros locais\nC80 – Neoplasia maligna, sem especificação de sítio\nC81 – Doença de Hodgkin\nC82 – Linfoma não Hodgkin folicular\nC83 – Linfoma não Hodgkin difuso\nC84 – Linfomas de células T/NK cutâneos\nC85 – Outros linfomas não Hodgkin\nC88 – Doenças imunoproliferativas malignas\nC90 – Mieloma múltiplo e neoplasias plasmocitárias\nC91 – Leucemias linfóides\nC92 – Leucemias mieloides\nC93 – Leucemias monocíticas\nC94 – Outras leucemias de células especificadas\nC95 – Leucemia de célula não especificada\nC96 – Outras neoplasias malignas do tecido linfóide, hematopoiético e correlatos\nC97 – Neoplasias malignas primárias de múltiplos sítios independentes\n\n\n\n\nInsuficiência hepática\n\nB18 – Hepatite viral crônica\nI85|I859|I864|I982 – Varizes esofágicas/portal; hipertensão portal; síndrome hepatorrenal (I98.2)\nK700|K701|K702|K703|K704|K709 – Transtornos mentais e comportamentais/ doença hepática alcoólica (K70.x)\nK711|K713|K715|K717 – Insuficiência hepática aguda/subaguda; hep. tóxica; hep. crônica tóxica\nK721|K729 – Insuficiência hepática não classificada em outra parte / não especificada\nK73 – Hepatite crônica, não classificada em outra parte\nK74 – Fibrose e cirrose hepática\nK760–K769 – Outras doenças do fígado (fígado gorduroso não alcoólico, hepatite não especificada etc.)\nZ944 – Fígado transplantado\n\n\n\n\nSIDA\n\nB20|B21|B22|B24 – Doenças por HIV (AIDS)\nZ21 – Estado de infecção assintomática pelo HIV\nR75 – Evidência laboratorial do HIV\nO987 – Doenças maternas por HIV complicando a gravidez, parto e puerpério (O98.7)\nP352 – Infecção congênita por HIV (P35.2)\n\n\n\n\nHipotireoidismo\n\nE00 – Síndrome congênita por deficiência de iodo (cretinismo)\nE01 – Transtornos tireoidianos e afecções relacionadas à deficiência de iodo\nE02 – Hipotireoidismo subclínico por deficiência de iodo\nE03 – Outros hipotireoidismos\nE890 – Hipotireoidismo pós-procedimentos (E89.0)\n\n\n\n\nArritmias cardíacas\n\nI441|I442|I443 – Bloqueios atrioventriculares de 1º, 2º, 3º graus\nI456 – Síndrome de Wolff-Parkinson-White\nI459 – Transtornos da condução não especificados\nI47 – Taquicardias paroxísticas\nI48 – Fibrilação e flutter atriais\nI49 – Outras arritmias cardíacas\nR000|R001|R008 – Taquicardia / Bradicardia / Outros sinais e sintomas do coração\nT821 – Complicações de dispositivos protéticos cardíacos\nZ450 – Ajuste e manutenção de marcapasso\nZ950 – Presença de prótese valvar cardíaca\n\n\n\n\nCoagulopatias\n\nD65 – Coagulação intravascular disseminada\nD66 – Hemofilia A\nD67 – Hemofilia B\nD68 – Outros defeitos de coagulação\nD691 – Púrpura alérgica (Henoch-Schönlein)\nD693 – Púrpura trombocitopênica idiopática crônica\nD694 – Púrpura não especificada\nD695 – Trombocitopenia secundária\nD696 – Outros transtornos de coagulação especificados\n\n\n\n\nDoenças reumatológicas\n\nL940|L941|L943 – Esclerodermias/ paniculites localizadas (códigos L94.x)\nM05|M06 – Artrite reumatoide (soropositiva / outras)\nM08 – Artrite juvenil\nM120|M123 – Transtornos do tecido conjuntivo induzidos por drogas (M12.0) / osteoartrite pós-inflamatória (M12.3)\nM30|M310|M313 – Poliarterite nodosa e vasculites; doença de Kawasaki; granulomatose de Wegener\nM32 – Lúpus eritematoso sistêmico\nM33 – Dermatomiosite/polimiosite\nM34 – Esclerodermia sistêmica\nM35 – Outras doenças sistêmicas do tecido conjuntivo\nM45 – Espondilite anquilosante\nM461|M468|M469 – Outras espondilopatias inflamatórias (M46.x)\n\n\n\n\nDoenças valvares\n\nA520 – Cardiopatia sifilítica (A52.0)\nI05|I06|I07|I08 – Doenças valvares reumáticas (mitral, aórtica, tricúspide, múltiplas)\nI091|I098 – Outras doenças cardíacas reumáticas (I09.1, I09.8)\nI34|I35|I36|I37 – Doenças não reumáticas das válvulas mitral, aórtica, tricúspide e pulmonar\nI38|I39 – Endocardite não especificada / Endocardite em doenças classificadas em outra parte\nQ230|Q231|Q232|Q233 – Malformações congênitas das válvulas (Q23.x)\nZ952|Z953|Z954 – Presença de substitutos valvares (mitral, aórtico, tricúspide)\n\n\n\n\nCirculação pulmonar\n\nI26 – Embolia pulmonar\nI27 – Outras doenças do coração pulmonar (hipertensão pulmonar, etc.)\nI280|I288|I289 – Doenças de vasos pulmonares (I28.0, I28.8, I28.9)\n\n\n\n\nDoenças neurológicas\n\nG10–G13 – Doenças hereditárias e degenerativas do SNC\nG20–G22 – Doenças extrapiramidais e transtornos do movimento (Parkinson, etc.)\nG254|G255 – Outras síndromes cerebelares (G25.4-G25.5)\nG312|G318|G319 – Outras degenerações do SNC (G31.2, G31.8, G31.9)\nG32 – Transtornos degenerativos do SNC em outras doenças\nG35–G37 – Esclerose múltipla e afins\nG40|G41 – Epilepsia e estado de mal epiléptico\nG931|G934 – Edema cerebral / Encefalopatia não especificada\nR470 – Disfasia/afasia não especificada\nR56 – Convulsões não classificadas em outra parte\n\n\n\n\nDoenças vasculares periféricas\n\nI70 – Aterosclerose\nI71 – Aneurisma e dissecção da aorta\nI731|I738|I739 – Doenças arteriais periféricas (I73.1, I73.8, I73.9)\nI771 – Doença de Buerger (tromboangeíte obliterante)\nI790|I792 – Aterosclerose de outros vasos / Doença de Raynaud secundária\nK551|K558|K559 – Transtornos vasculares do intestino (isquemia mesentérica etc.)\nZ958|Z959 – Presença de enxertos e implantes vasculares\n\n\n\n\nDislipidemia\n\nE78 – Transtornos do metabolismo de lipoproteínas e outras lipidemias\n\n\n\n\nObesidade\n\nE66 – Obesidade\n\n\n\n\nAnemias\n\nD50 – Anemia por deficiência de ferro\nD51 – Anemia por deficiência de vitamina B12\nD52 – Anemia por deficiência de folato\nD53 – Outras anemias nutricionais\n\n\n\n\nEtilismo\n\nF10 – Transtornos mentais e comportamentais devidos ao uso de álcool\nE52 – Deficiência de niacina (pelagra)\nG621 – Polineuropatia alcoólica (G62.1)\nI426 – Miocardiopatia alcoólica (I42.6)\nK292 – Gastrite alcoólica (K29.2)\nK700|K703|K709 – Doença hepática alcoólica (esteatose, hepatite, cirrose)\nT51 – Efeito tóxico do álcool\nZ502 – Tratamento de desintoxicação alcoólica\nZ714 – Aconselhamento por uso de álcool\nZ721 – Problemas relacionados ao uso de álcool\n\n\n\n\nDrogadição\n\nF11–F16, F18–F19 – Transtornos por uso de opioides, canabinoides, sedativos/hipnóticos, cocaína, outros/estimulantes, solventes/inalantes e múltiplas drogas\nZ715 – Aconselhamento por abuso de drogas\nZ722 – Problemas relacionados ao uso de drogas\n\n\n\n\nPsicoses\n\nF20 – Esquizofrenia\nF22–F25 – Transtornos delirantes; transtornos esquizoafetivos etc.\nF28|F29 – Outros transtornos psicóticos / não especificado\nF302 – Episódio maníaco com sintomas psicóticos (F30.2)\nF312 – Transtorno afetivo bipolar, episódio atual depressivo com sintomas psicóticos (F31.2)\nF315 – Transtorno afetivo bipolar, episódio atual remissão parcial/total (F31.5)\n\n\n\n\nDepressão\n\nF204 – Transtorno esquizofreniforme depressivo? (nota: F20.4 = esquizofrenia pós-esquizofrênica depressiva)\nF313|F314|F315 – Transtornos afetivos bipolares (episódios atuais hipomaníaco/maníaco/remissão)\nF32|F33 – Episódio depressivo / Transtorno depressivo recorrente\nF341 – Distimia (F34.1)\nF412 – Transtorno de ansiedade generalizada (F41.1)\nF432 – Transtorno de ajustamento (F43.2)\n\n\n\n\nRetardo Mental\n\nF70 – Deficiência intelectual leve\nF71 – Moderada\nF72 – Grave\nF73 – Profunda\nF78 – Outra especificada\nF79 – Não especificada\n\n\n\n\nHipertireoidismo\n\nE05 – Tireotoxicose (hipertireoidismo)\nE06 – Tireoidite\n\n\n\n\nDesnutrição\n\nE40–E46 – Kwashiorkor; marasmo; kwashiorkor marasmático; desnutrição grave/moderada/leve; retardo de desenvolvimento por desnutrição; desnutrição não especificada\n\n\n\n\nDeficiências motoras\n\nG041 – Mielite infecciosa (G04.1)\nG114 – Ataxia hereditária espástica (G11.4)\nG801 – Diplegia espástica infantil (G80.1)\nG802 – Tetraplegia infantil (G80.2)\nG81 – Hemiplegia\nG82 – Paraplegia e tetraplegia\nG830–G834 – Monoplegias / síndromes paralíticas (G83.0–G83.4)\nG839 – Transtorno paralítico não especificado (G83.9)\nR26 – Anormalidades da marcha e da mobilidade\n\n\n\n\nDoenças dos olhos\n\nH16|H17|H18 – Ceratites; cicatrizes/opacidades corneanas; outros transtornos da córnea\nH20|H21|H22 – Uveítes/iridociclites e correlatos\nH25|H26|H28 – Cataratas (senis, outras, em doenças classificadas em outra parte)\nH30–H36 – Doenças da retina (coriorretinites, oclusões, DMRI, retinopatias)\nH40|H42 – Glaucoma (e em doenças classificadas em outra parte)\nH44 – Transtornos do globo ocular (endoftalmite, panoftalmite, atrofia bulbar)\nH46–H48 – Neurite óptica e outros transtornos do nervo óptico\nH53|H54 – Distúrbios visuais e cegueira/baixa visão\n\n\n\n\nDoenças dos ouvidos\n\nH72 – Perfuração da membrana timpânica\nH80 – Otosclerose\nH81 – Transtornos da função vestibular\nH82 – Síndromes vertiginosas em doenças classificadas em outra parte\nH90 – Perda auditiva condutiva e/ou neurossensorial\nH91 – Outros transtornos da audição\n\n\n\n\nMá formações\n\nQ00–Q07 – Malformações congênitas do SNC (anencefalia, encefalocele, hidrocefalia, espinha bífida etc.)\nQ35–Q37 – Fendas orais (palatina/labial)\nQ60–Q62 – Malformações renais e do trato urinário\nQ80–Q81 – Ictiose congênita; epidermólise bolhosa hereditária\nQ90–Q99 – Anomalias cromossômicas (Down, Edwards, Patau, Turner, outras)\n\n\n\n\nDoenças da pele\n\nL10–L14 – Pênfigo, penfigoide e outras dermatoses bolhosas\nL40–L41 – Psoríase e parapsoríases\nL89 – Úlcera por pressão\nL90 – Transtornos atróficos da pele\nL93 – Lúpus eritematoso cutâneo",
+    "crumbs": [
+      "CIDs"
+    ]
+  },
+  {
+    "objectID": "CIDs.html#duplicações-de-códigos-entre-condições",
+    "href": "CIDs.html#duplicações-de-códigos-entre-condições",
+    "title": "CIDs",
+    "section": "Duplicações de códigos entre condições",
+    "text": "Duplicações de códigos entre condições\n\nR26 aparece em motor_temp e deficiencia_fisica_temp.\nK700, K703, K709 aparecem em liver_temp e alcool_temp.\n\n(Essas são as duplicações exatas de código. Não considerei sobreposição por categoria ampla vs. subcódigo — p.ex., H28 em olhos_temp e H280 em DM_temp — porque os códigos não são idênticos.)",
+    "crumbs": [
+      "CIDs"
+    ]
+  },
+  {
+    "objectID": "HAS.html",
+    "href": "HAS.html",
+    "title": "Hipertensão arterial",
+    "section": "",
+    "text": "Relevância",
+    "crumbs": [
+      "Hipertensão arterial"
+    ]
+  },
+  {
+    "objectID": "HAS.html#relevância",
+    "href": "HAS.html#relevância",
+    "title": "Hipertensão arterial",
+    "section": "",
+    "text": "Carga global da hipertensão\nA hipertensão arterial é o principal fator de risco modificável para doenças cardiovasculares, acidente vascular cerebral, insuficiência cardíaca e doença renal crônica, contribuindo de forma significativa para a mortalidade e anos de vida ajustados por incapacidade (DALYs) no mundo. Estimativas do Global Burden of Disease Study indicam que mais de 1,3 bilhão de adultos apresentam hipertensão, sendo que cerca de dois terços vivem em países de baixa e média renda. Apesar dos avanços em diagnóstico e tratamento, a taxa global de controle permanece baixa, com menos de 25% dos indivíduos hipertensos atingindo metas pressóricas, refletindo desigualdades no acesso a serviços de saúde, medicamentos e programas de prevenção. A carga global cresce não apenas pela transição demográfica e envelhecimento populacional, mas também pela urbanização acelerada, dietas hipersódicas, sedentarismo e aumento do sobrepeso e obesidade.\n\n\nCarga da hipertensão no Brasil\nNo Brasil, a hipertensão afeta aproximadamente 25% da população adulta, representando um dos principais problemas de saúde pública e a maior causa isolada de mortalidade cardiovascular. Dados da Pesquisa Nacional de Saúde (PNS 2019) indicam que a prevalência é maior em pessoas com menor escolaridade, nas regiões Sudeste e Sul, e aumenta significativamente com a idade, ultrapassando 60% entre idosos. A hipertensão contribui para cerca de 50% das mortes por doenças cardiovasculares e para elevada demanda por hospitalizações no Sistema Único de Saúde (SUS), especialmente por acidente vascular cerebral e infarto do miocárdio. Embora o Brasil tenha ampliado o acesso a medicamentos e o rastreamento na atenção primária, a taxa de controle pressórico ainda é insuficiente, o que mantém alta a carga de complicações e custos associados.",
+    "crumbs": [
+      "Hipertensão arterial"
+    ]
+  },
+  {
+    "objectID": "HAS.html#definição-clínica",
+    "href": "HAS.html#definição-clínica",
+    "title": "Hipertensão arterial",
+    "section": "Definição clínica",
+    "text": "Definição clínica\nA definição diagnóstica de hipertensão arterial depende das diretrizes utilizadas, mas as principais organizações internacionais e brasileiras apresentam critérios muito semelhantes.\nMedidas devem ser feitas de forma adequada, com paciente em repouso, sem consumo recente de cafeína, álcool ou cigarro, usando manguito de tamanho apropriado.",
+    "crumbs": [
+      "Hipertensão arterial"
+    ]
+  },
+  {
+    "objectID": "HAS.html#critérios-diagnósticos-em-adultos",
+    "href": "HAS.html#critérios-diagnósticos-em-adultos",
+    "title": "Hipertensão arterial",
+    "section": "Critérios diagnósticos em adultos",
+    "text": "Critérios diagnósticos em adultos\nSegue o quadro comparativo atualizado com os critérios diagnósticos e classificação da hipertensão nas três principais diretrizes:\n\nDiretriz Brasileira de Hipertensão 2020 (SBH/SBC/SBN)\nDiretriz Europeia 2024 (ESH/ESC)\nDiretriz americana (ACC/AHA 2017)\n\n\n\nDiagnóstico e Classificação da Hipertensão\n\n\n\n\n\n\n\n\n\nDiretriz\nDiretriz Brasileira de Hipertensão 2020\nDiretriz Europeia 2024\nDiretriz americana\n\n\n\n\nPressão Normal\n&lt; 120 / &lt; 80 mmHg\n&lt; 120 / &lt; 80 mmHg\n&lt; 120 / &lt; 80 mmHg\n\n\nPré-hipertensão / Elevada\n120–139 / 80–89 mmHg (pré-hipertensão)\n120–129 / 80–84 mmHg (normal-alta)130–139 / 85–89 mmHg (normal-alta alta)\n120–129 / &lt; 80 mmHg (elevada)\n\n\nHipertensão – Estágio 1\n≥ 140 / 90 mmHg\n≥ 140 / 90 mmHg (Grau 1: 140–159 / 90–99 mmHg)\n130–139 / 80–89 mmHg\n\n\nHipertensão – Estágio 2\n— (usa classificação geral ≥ 140/90)\nGrau 2: 160–179 / 100–109 mmHg\n140–159 / 90–99 mmHg\n\n\nHipertensão – Estágio 3\n—\nGrau 3: ≥ 180 / ≥ 110 mmHg\n≥ 160 / ≥ 100 mmHg\n\n\nDiagnóstico com MAPA (24h)\nMédia ≥ 130/80 mmHg (24h)Vigília ≥ 135/85 mmHgSono ≥ 120/70 mmHg\nMesmo critério da brasileira\nMesmo critério\n\n\nDiagnóstico com MRPA\nMédia ≥ 135/85 mmHg\n≥ 135/85 mmHg\n≥ 130/80 mmHg (alguns consensos americanos usam ≥ 135/85 mmHg para MRPA)\n\n\n\n\n\nPrincipais diferenças\n\nBrasil (2020) e Europa (2024): mantêm ponto de corte ≥ 140/90 mmHg no consultório para diagnóstico.\nEUA (ACC/AHA 2017): ponto de corte mais baixo, ≥ 130/80 mmHg, o que aumenta o número de pessoas diagnosticadas.\nEuropa subdivide a hipertensão em graus 1, 2 e 3 conforme gravidade; Brasil não detalha dessa forma.\nPara MAPA e MRPA, há mais consenso internacional, com corte principal em 130/80 mmHg (24h) e 135/85 mmHg (domicílio).",
+    "crumbs": [
+      "Hipertensão arterial"
+    ]
+  },
+  {
+    "objectID": "HAS.html#observações-importantes",
+    "href": "HAS.html#observações-importantes",
+    "title": "Hipertensão arterial",
+    "section": "Observações importantes",
+    "text": "Observações importantes\n\nO diagnóstico não deve ser baseado em uma única medida isolada, exceto em casos de PA muito elevada associada a sinais de lesão aguda de órgãos-alvo (emergência hipertensiva).\nA MAPA e a MRPA podem ajudar a identificar Hipertensão do avental branco (PA elevada só no consultório) e Hipertensão mascarada (PA normal no consultório, mas elevada fora dele).\nEm pacientes com diabetes, doença renal crônica ou risco cardiovascular muito alto, alguns consensos sugerem metas de controle mais rigorosas, mas o ponto de corte para diagnóstico permanece o mesmo.",
+    "crumbs": [
+      "Hipertensão arterial"
+    ]
+  },
+  {
+    "objectID": "HAS.html#critérios-de-inclusão-de-pacientes",
+    "href": "HAS.html#critérios-de-inclusão-de-pacientes",
+    "title": "Hipertensão arterial",
+    "section": "Critérios de inclusão de pacientes",
+    "text": "Critérios de inclusão de pacientes\n\nComeçamos com os seguintes critérios:\n\nRegistro de um código CID10 (I10|I11|I12|I13|I14|I15|I16|O100|O104|O109|O13|R030)\nOU uma aferição de PA acima de 180/110 mmHg\nOU prescrição de HIDROCLOROTIAZIDA|CLORTALIDONA|INDAPAMIDA|FUROSEMIDA|\nESPIRONOLACTONA|CAPTOPRIL| ENALAPRIL|LISINOPRIL|RAMIPRIL|\nPERINDOPRIL|BENAZEPRIL|LOSARTANA|VALSARTANA| CANDESARTANA|\nIRBESARTANA|OLMESARTANA|TELMISARTANA|ANLODIPINO|NIFEDIPINO|\nFELODIPINO|VERAPAMIL|DILTIAZEM|ATENOLOL|PROPRANOLOL|METOPROLOL|CARVEDILOL|\nBISOPROLOL|METILDOPA|CLONIDINA|HIDRALAZINA|NITROPRUSSETO DE SÓDIO|ALISQUIRENO\n\nconforme código abaixo:\n-- Hipertensão Arterial Sistêmica CASE WHEN ( REGEXP_CONTAINS(COALESCE(condicoes_ids, ''),\nr'I10|I11|I12|I13|I14|I15|I16|O100|O104|O109|O13|R030') OR \npressao_sistolica &gt; 180 OR pressao_diastolica &gt; 110 OR \nREGEXP_CONTAINS(UPPER(COALESCE(prescricoes_nomes, '')),\nr'HIDROCLOROTIAZIDA|CLORTALIDONA|INDAPAMIDA|FUROSEMIDA|ESPIRONOLACTONA|CAPTOPRIL|\nENALAPRIL|LISINOPRIL|RAMIPRIL|PERINDOPRIL|BENAZEPRIL|LOSARTANA|VALSARTANA|\nCANDESARTANA|IRBESARTANA|OLMESARTANA|TELMISARTANA|ANLODIPINO|NIFEDIPINO|\nFELODIPINO|VERAPAMIL|DILTIAZEM|ATENOLOL|PROPRANOLOL|METOPROLOL|CARVEDILOL|\nBISOPROLOL|METILDOPA|CLONIDINA|HIDRALAZINA|NITROPRUSSETO DE SÓDIO|ALISQUIRENO') ) \nTHEN TRUE ELSE FALSE END AS HAS_temp\n\nAlém disso, criamos a variável primeira_medida, para definir quando teve uma aferição acima de 140/90 mmHg, mas inferior a 180/110 mmHg:\n-- VARIÁVEL primeira_medida\nCASE WHEN (\n  (pressao_sistolica &gt;= 140 AND pressao_sistolica &lt; 180) OR \n  (pressao_diastolica &gt;= 90 AND pressao_diastolica &lt; 110)\n) THEN TRUE ELSE FALSE END AS primeira_medida\n\nDesta variável geramos um contador de aferições de PA elevadas, entre 140/90 e 180/110 mmHg.\nSUM(CASE WHEN (pressao_sistolica &gt; 140 OR pressao_diastolica &gt; 90) THEN 1 ELSE 0 END) \nOVER (PARTITION BY cpf ORDER BY entrada_data ASC ROWS UNBOUNDED PRECEDING) \nAS contador_pressao_alta\n\nEm seguida, quando o contador chegar a 2, torna a variável HAS_temp TRUE, caso ainda seja FALSE.\n    CASE \n      WHEN contador_pressao_alta &gt;= 2 THEN TRUE\n      ELSE HAS_temp\n    END AS HAS_ajustado\nDesta forma pegamos todos os CIDs relacionados à HAS, medicamentos prescritos e que são usados para HAS, bem como as aferições de PA, sendo requerido apenas uma acima de 180/110 mmHg ou duas acima de 140/90 mmHg.\nSobre as medicações, ainda restam dúvidas sobre a prescrição de alguns medicamentos em pacientes com outras condições cardiológicas e que não tenham HAS.",
+    "crumbs": [
+      "Hipertensão arterial"
+    ]
+  },
+  {
+    "objectID": "HAS.html#informações-que-devem-ser-visualizadas-pelas-esfs",
+    "href": "HAS.html#informações-que-devem-ser-visualizadas-pelas-esfs",
+    "title": "Hipertensão arterial",
+    "section": "Informações que devem ser visualizadas pelas ESFs",
+    "text": "Informações que devem ser visualizadas pelas ESFs\n\n\n\n\n\n\n\n\n\nInformação\nImportância\nLimitações para Obtenção\n\n\nNome completo\nIdentificação nominal; permite ação direta pela equipe\nPode haver duplicidades, erros de digitação ou homônimos\n\n\nData de nascimento / idade\nAvaliação de risco (idade &gt;65 anos); estratificação e rastreio infantil/adolescente\nÀs vezes preenchida incorretamente ou ausente\n\n\nSexo\nFator de risco (homens têm maior risco cardiovascular); define metas terapêuticas\nCampo às vezes não binário ou desatualizado\n\n\nContato (telefone)\nEssencial para busca ativa\nDesatualização. Áreas de vulnerabilidade social\n\n\nUnidade de saúde / equipe / microárea\nIdentifica responsabilidade sanitária; organização da busca ativa\nPode haver desatualização de vínculo por mudança de território ou ausência de cadastro\n\n\nDiagnósticos registrados (CID)\nIdentificação direta de hipertensão e comorbidades\nCID pode não ser ativado mesmo quando a condição está presente\n\n\nÚltimas aferições de PA (data e valor) - quantas?\nVerifica controle e adesão ao monitoramento\nPA pode ser medida, mas não registrada corretamente no campo específico\n\n\nHistórico de PA ≥140/90 mmHg em duas ou mais aferições\nCritério diagnóstico de hipertensão\nRequer histórico longitudinal e padronização das unidades de entrada\n\n\nHistórico de PA ≥ 180/110 com evidência de Lesão de Órgão-Alvo\nCritério diagnóstico de hipertensão\nLeitura do registro de LOA em prontuário, se realizado.\n\n\nPrescrição atual de anti-hipertensivos\nConfirma tratamento em curso\nPode haver prescrição sem registro no PEP, especialmente em papel\n\n\nData da última prescrição\nAvalia descontinuidade ou abandono do tratamento\nSistema pode não armazenar a validade da prescrição, apenas a emissão\n\n\nComorbidades (DM, DRC, dislipidemia, considerar tabagismo etc.)\nInfluencia metas pressóricas, cálculo de risco, escolha de tratamento\nÀs vezes não registradas com CID ou não atualizadas\n\n\nHistórico de LOA (ex: DAC, AVE, IC)\nEssencial para estratificação de risco e intensificação terapêutica\nInformações fragmentadas em laudos ou evoluções textuais (difíceis de minerar)\n\n\nPeso, altura, IMC, circunferência abdominal\nCálculo de risco cardiovascular; obesidade é fator modificável importante\nDados ausentes ou desatualizados; campos livres dificultam extração automatizada\n\n\nAba para ver exames laboratoriais recentes\nCreatinina/TFGe, potássio, perfil lipídico, glicose, EAS — necessários para diagnóstico e acompanhamento\nPode não estar integrado ao sistema de prontuário; exames fora da rede pública\n\n\nFrequência cardíaca (FC)\nFator de risco?\nMuitas vezes não registrada se não for consulta médica\n\n\nEstratificação de risco cardiovascular\nDireciona tratamento e metas terapêuticas\nNem sempre feita ou registrada no prontuário\n\n\nAvaliação da adesão / observações da equipe\nApoia gestão do cuidado e decisões clínicas\nInformações subjetivas, muitas vezes em texto livre\n\n\nParticipação em grupo educativo / MEV\nImportante para desfechos positivos e adesão\nRaramente sistematizado ou vinculado ao prontuário eletrônico\n\n\nData da última consulta médica e de enfermagem\nVerifica continuidade de cuidado\nPode não refletir atendimento real (agendado e não comparecido, por exemplo)\n\n\nDesejo reprodutivo (mulheres em idade fértil) - se faz uso de algum contraceptivo\nFundamental para orientar contracepção segura e riscos gestacionais\nNem sempre questionado ou registrado sistematicamente\n\n\nRastreamentos pendentes (ex: colpocitológico, mamografia, ISTs)\nAções integradas à linha de cuidado, inclusive cardiovascular\nGeralmente registrados em sistemas separados ou como texto livre",
+    "crumbs": [
+      "Hipertensão arterial"
+    ]
+  },
+  {
+    "objectID": "HAS.html#lacunas-de-cuidado-para-has",
+    "href": "HAS.html#lacunas-de-cuidado-para-has",
+    "title": "Hipertensão arterial",
+    "section": "Lacunas de cuidado para HAS",
+    "text": "Lacunas de cuidado para HAS\n1 - Ausência de rastreamento\nAusência de registro anual de PA em adultos (≥ 18 anos) saudáveis se a PA do consultório &lt; 140/90 mmHg. Ausência do registro anual de PA em crianças e adolescentes que deve ser realizado a partir dos 3 anos de idade. Em crianças de 1 ano a 13 anos de idade, a PA é considerada normal se estiver abaixo do percentil 90 (P90) para idade, altura e sexo, portanto, PA ≥ P90 corresponde a rastreio positivo para HAS (Material Suplementar 1).\nEm adolescentes a partir de 13 anos de idade, a PA é considerada normal se estiver abaixo de 120 mmHg/80 mmHg.\nCrianças menores de 3 anos de idade devem ter a PA medida em caso de presença de pelo menos uma das seguintes condições clínicas relacionadas à HAS, a serem avaliadas no momento da anamnese: Restrição de crescimento intrauterino; Crianças prematuras; Muito baixo peso ao nascer; Cardiopatia congênita operada ou não, como coarctação da aorta; História de internação em unidade de terapia intensiva (UTI) neonatal; Antecedente de cateterização umbilical pós-natal. Doença renal crônica (DRC), infecções urinárias de repetição, malformações renais, estenose da artéria renal, hematúria e proteinúria, história familiar de doença renal: Transplante de órgãos sólidos, câncer e transplante de medula óssea; Hipertensão intracraniana; Obstruções da aorta abdominal (neurofibromatose, síndrome de Williams, síndrome de Alagille, arterite de Takayasu); Distúrbios endocrinológicos, excesso de catecolaminas, mineralocorticoides, hiperplasia adrenal congênita, hiperaldosteronismo familiar, hipertireoidismo, tumores (feocromocitoma); Exposição a metais tóxicos, como mercúrio; Doenças sistêmicas que levam à HAS, como esclerose tuberosa; Uso de medicamentos corticoides e anti-inflamatórios não esteroidais; Sobrepeso ou obesidade; História familiar da HAS.\n2 - Falhas no diagnóstico\nTécnica inadequada de aferição: Paciente não relaxado, falando Bexiga cheia Prática recente de atividades físicas, uso recente de cafeína/estimulantes Utilizar bolsa de borracha do manguito de dimensão inadequada para a circunferência do braço Altura inadequada do braço Uso de aparelho digital em ritmos cardíacos irregulares Diagnóstico baseado em medição única da PA em consultório. Ausência de diagnóstico e início de tratamento em medição única quando a HA é estágio 3, especialmente em pacientes de alto risco. Não considerar a possibilidade de HA mascarada em pacientes com pré-hipertensão (PAS 130-139/ PAD 85-89). Não considerar a possibilidade de HA do avental branco em pacientes com HA estágios 1 e 2 (PAS 140-179/ PAD 90-109).\n3 - Ausência da ativação do CID correspondente:\nI10 – Hipertensão essencial (primária)\nI11 – Doença cardíaca hipertensiva\nI12 – Doença renal hipertensiva\nI13 – Doença cardíaca e renal hipertensiva\nI15 – Hipertensão secundária\nO10.0 – Hipertensão essencial pré-existente complicando a gravidez, o parto e o puerpério\nO10.4 – Hipertensão secundária pré-existente complicando a gravidez, o parto e o puerpério\nO10.9 – Hipertensão pré-existente não especificada, complicando a gravidez, o parto e o puerpério\nO13 – Hipertensão gestacional (induzida pela gravidez) sem proteinúria significativa\nR03.0 – Pressão arterial elevada sem diagnóstico de hipertensão\n4 - Ausência de identificação de fatores de risco:\n\nNão investigar fatores de risco (FR) ou Lesão de Órgão Alvo (LOA) em todos os pacientes com diagnóstico de pré-HA ou HA:\n\nFR: \n\nIdade &gt; 65 anos\nSexo (homens &gt; mulheres)\nFrequência cardíaca (&gt; 80 bpm)\nAumento do peso corporal\nDiabetes melito\nDislipidemia/Hipercolesterolemia\nHistória familiar de DCV (mulheres &lt;65a e homens &lt;55a)\nHistória familiar de HAS\nTabagismo\nFatores psicossociais e/ou socioeconômicos (alimentação, sedentarismo);\n\nLOA:\n\nDç. Cerebrovascular (AVEi ou AVEh, AIT)\nDAC\nIC/FA\nDAOP \nDRC moderada a grave (estágio 3 ou maior)\nRAC (Relação Albuminúria/Creatinina) = 30 a 300 mg/g\n\n\n\n5 - Ausência de identificação de complicações crônicas:\n\nLOA: \n\nDç. Cerebrovascular (AVE i ou h, AIT)\nDAC\nIC/FA\nDAOP\nDRC\nOftalmopatias\n\n\n6 - Ausência de solicitação e registro de exames e parâmetros biométricos no diagnóstico:\n\nFundoscopia: avaliação de retinopatia hipertensiva (encaminhamento para avaliação por oftalmologista)\nExames complementares: \n\nPotássio\nCreatinina/TFGe\nPerfil lipídico\nEAS\nECG\n\nExame físico:\n\nAusculta cardiovascular\nAusculta pulmonar\nExame neurológico e estado cognitivo \nPalpação coração e artérias carótidas \nPalpação de artérias periféricas \nComparação dos valores de pressão arterial em ambos os braços, medidos pelo menos uma vez, em cada um dos braços \n\nParâmetros biométricos:\n\nPeso\nAltura\nIMC\nFC\nCircunferência abdominal\n\n\n7 - Ausência de avaliação do cálculo do risco cardiovascular no diagnóstico e anual:\n\nNão estratificar o RCV do paciente com HA utilizando calculadoras validadas:\n\nUKPDS\nEscore de risco global\nCalculadora HEARTS (ideal usar em pessoas entre 40 a 74 anos de idade)\n\n\n8 - Pessoa Hipertensa sem registro de consulta nos últimos 6 meses:\n\nMínimo 1 consulta médica e 1 consulta de enfermagem ao ano.\n\n9 - Ausência de solicitação e registro de fundoscopia, exames complementares e parâmetros biométricos nos últimos 12 meses:\n\nParâmetros biométricos: \n\nPeso\nAltura\nIMC\nFC\nCircunferência abdominal\n\nExames complementares: \n\nPotássio\nCreatinina/TFGe\nPerfil lipídico\nEAS\nECG\n\nNão solicitar microalbuminúria urinária para cálculo de RA em pacientes HA com DM.\n\n10 - Ausência do cálculo da Taxa de Filtração Glomerular:\n\nUtilizando creatinina sérica para cálculo, preferencialmente CKD-EPI 2021 (exceto exceções, como extremos de peso)\n\n11 - Ausência de identificação de fatores de risco modificáveis e ausência de estímulos à melhorias para modificações:\n\nTabagismo, alcoolismo, obesidade, dislipidemia, sedentarismo, alimentação\nNegligenciar papel de grupos educativos na educação em saúde e adesão ao tratamento\nNão estimular MEV, associada ou não ao tratamento medicamentoso\n\n12 - Ausência de oportunizar testagem de ISTs e de outros rastreamentos indicados (mamografia, colpocitológico)\n13 - Ausência de avaliação de desejo e possibilidade de gestar e consideração de planejamento reprodutivo em mulheres em idade fértil;\n\nNão aconselhar e prescrever contracepção de alta eficácia em mulheres em idade fértil\nMulheres com hipertensão ou risco cardiovascular elevado não devem usar contraceptivos orais combinados. Nestes casos, são preferíveis métodos não hormonais ou progestagênios isolados.\n\n14 - Ausência de controle adequado de perfil lipídio, IMC e peso\n15 - Ausência de prescrição de estatina em doses otimizadas\n\nNão prescrever estatina de acordo com colesterol LDL e cálculo do RCV\nDificuldade de acessar estatinas de alta potência via LME\n\n16 - Ausência de avaliação de alvo de colesterol LDL\n17 - Falha na prescrição do tratamento medicamentoso\n\nNão utilizar as classes de anti-hipertensivos preferenciais para o uso em monoterapia ou combinação, sendo elas: \n\nIECA (Inibidores da enzima conversora de angiotensina) \nBRA (Bloqueadores dos receptores de angiotensina II)\nDiurético tiazídico ou similar\nBCC (Bloqueador de canal de cálcio)\nBB (Betabloqueadores)\n\n\n\n\nUtilizar monoterapia medicamentosa em hipertensos estágio 1 de moderado e alto risco, ou que possuam LOA, e hipertensos estágios 2 e 3 independe do risco cardiovascular:\n\nA monoterapia deve ser considerada apenas para hipertensos estágio 1 de baixo risco cardiovascular e para muito idosos e/ou indivíduos frágeis (≥ 75 anos, vive em instituições de longa permanência para idosos, encontra-se acamado, esteve hospitalizado recentemente por qualquer razão, apresente doenças sabidamente causadoras de incapacidade funcional, encontra-se com pelo menos uma incapacidade funcional básica, ou viva situações de violência doméstica).\n\n\n\n\nNão iniciar o tratamento com combinação de dois fármacos, sendo eles um IECA, ou BRA, associado a DIU tiazídico ou similar ou BCC:\n\nDiretrizes recentes recomendam o uso de diferentes classes de medicamentos como tratamento inicial em sua menor dose e, caso necessário, sua associação a outras classes terapêuticas até que o controle da PA seja alcançado, visando ao sucesso terapêutico, minimização de eventos adversos indesejáveis e abandono do tratamento. Essa estratégia é recomendada em detrimento do aumento da dose do medicamento em monoterapia ou troca por outro medicamento em monoterapia\n\n\n\n\nSe mesmo com a combinação das duas classes terapêuticas não houver alcance da meta terapêutica, então, deve-se aumentar gradualmente as doses prescritas até que o controle da PA seja alcançado, observando-se a dose máxima recomendada dos medicamentos.\n\n\n\nNão  prescrever três fármacos, habitualmente IECA ou BRA associado a DIU tiazídico ou similar e BCC, caso não se atinja o controle da PA com combinação de dois fármacos:\n\nSe mesmo com 2 classes associadas e otimizadas o controle da PA não for alcançado, recomenda-se incluir uma terceira classe em sua dose mínima, aumentando-a gradualmente, caso não haja o controle da PA esperado, até a dose máxima.\n\n\n\n18 - Não considerar meta pressórica adequada\n\nNão utilizar meta pressórica &lt;130/80 em pacientes portadores de DRC, DM2, IC e/ou DAC.\n\n19 - Não encaminhar paciente à Cardiologia - Hipertensão Arterial Resistente via SER em caso de HA resistente ou suspeita de HA secundária:\n\nHA resistente: PA de consultório que permanece com valores ≥140/90 mmHg, com o uso de três ou mais classes de fármacos anti-hipertensivos com ações sinérgicas, em doses máximas preconizadas ou toleradas, sendo um deles preferencialmente um diurético tiazídico; ou uso de quatro ou mais fármacos anti-hipertensivos para alcançar o controle da PA;\nHA secundária suspeita: HA estágio 3 &lt; 30 anos ou &gt; 55 anos; HA resistente ou refratária; Tríade do feocromocitoma: crises de palpitações, sudorese e cefaleia; Indícios de apneia obstrutiva do sono; Hipopotassemia espontânea ou severa induzida por diuréticos (&lt; 3,0 mEq/L); Exame de urina anormal (hematúria glomerular (dismórfica) ou presença de albuminúria/proteinúria), aumento de creatinina sérica ou alterações de imagem renal",
+    "crumbs": [
+      "Hipertensão arterial"
+    ]
+  },
+  {
+    "objectID": "HAS.html#educação-médica-continuada",
+    "href": "HAS.html#educação-médica-continuada",
+    "title": "Hipertensão arterial",
+    "section": "Educação Médica Continuada",
+    "text": "Educação Médica Continuada",
+    "crumbs": [
+      "Hipertensão arterial"
+    ]
+  },
+  {
+    "objectID": "HAS.html#referências-bibliográficas",
+    "href": "HAS.html#referências-bibliográficas",
+    "title": "Hipertensão arterial",
+    "section": "Referências Bibliográficas",
+    "text": "Referências Bibliográficas\nMCEVOY, John William; TOUYZ, Rhian M.; MCCARTHY, Cian P.; BRUNO, Rosa Maria; et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. European Heart Journal, v. 45, n. 38, p. 3912–4018, 2024. Disponível em: https://doi.org/10.1093/eurheartj/ehae178. Acesso em: 24 jul. 2025.\nBARROSO, Weimar Kunz Sebba; RODRIGUES, Cibele Isaac Saad; BORTOLOTTO, Luiz Aparecido; MOTA‑GOMES, Marco Antônio; et al. Diretrizes Brasileiras de Hipertensão Arterial – 2020. Departamento de Hipertensão Arterial da Sociedade Brasileira de Cardiologia, 2020. Disponível em: http://departamentos.cardiol.br/sbc-dha/profissional/pdf/Diretriz‑HAS‑2020.pdf. Acesso em: 24 jul. 2025\nBRASIL. Ministério da Saúde. Comissão Nacional de Incorporação de Tecnologias no SUS (Conitec). Relatório preliminar – Protocolo Clínico e Diretrizes Terapêuticas de Hipertensão Arterial Sistêmica (PCDT–HAS). Brasília: Ministério da Saúde, 13 mar. 2025. Disponível em: https://www.gov.br/conitec/pt-br/midias/consultas/relatorios/2025/relatorio-preliminar-pcdt-hipertensao-arterial-sistemica-cp-11/@(download/file?) . Acesso em: 24 jul. 2025.\nSecretaria Municipal de Saúde. Subsecretaria de Atenção Primária, Vigilância e Promoção da Saúde. Superintendência de Atenção Primária. Hipertensão: manejo clínico em adultos. - 1ª ed. Rio de Janeiro: SMS, 2016. 24 p. (Série F. Comunicação e Educação em Saúde) (Coleção Guia de Referência Rápida, nº 6)\n_____",
+    "crumbs": [
+      "Hipertensão arterial"
+    ]
+  },
+  {
+    "objectID": "DM.html",
+    "href": "DM.html",
+    "title": "Diabetes Mellitus",
+    "section": "",
+    "text": "Relevância",
+    "crumbs": [
+      "Diabetes Mellitus"
+    ]
+  },
+  {
+    "objectID": "DM.html#definição-clínica",
+    "href": "DM.html#definição-clínica",
+    "title": "Diabetes Mellitus",
+    "section": "Definição clínica",
+    "text": "Definição clínica",
+    "crumbs": [
+      "Diabetes Mellitus"
+    ]
+  },
+  {
+    "objectID": "DM.html#critérios-de-inclusão-de-pacientes",
+    "href": "DM.html#critérios-de-inclusão-de-pacientes",
+    "title": "Diabetes Mellitus",
+    "section": "Critérios de inclusão de pacientes",
+    "text": "Critérios de inclusão de pacientes",
+    "crumbs": [
+      "Diabetes Mellitus"
+    ]
+  },
+  {
+    "objectID": "DM.html#informações-visualizadas",
+    "href": "DM.html#informações-visualizadas",
+    "title": "Diabetes Mellitus",
+    "section": "Informações visualizadas",
+    "text": "Informações visualizadas",
+    "crumbs": [
+      "Diabetes Mellitus"
+    ]
+  },
+  {
+    "objectID": "DM.html#educação-médica-continuada",
+    "href": "DM.html#educação-médica-continuada",
+    "title": "Diabetes Mellitus",
+    "section": "Educação Médica Continuada",
+    "text": "Educação Médica Continuada",
+    "crumbs": [
+      "Diabetes Mellitus"
+    ]
+  },
+  {
+    "objectID": "CI.html",
+    "href": "CI.html",
+    "title": "Síndromes Coronarianas",
+    "section": "",
+    "text": "Relevância",
+    "crumbs": [
+      "Síndromes Coronarianas"
+    ]
+  },
+  {
+    "objectID": "CI.html#definição-clínica",
+    "href": "CI.html#definição-clínica",
+    "title": "Síndromes Coronarianas",
+    "section": "Definição clínica",
+    "text": "Definição clínica",
+    "crumbs": [
+      "Síndromes Coronarianas"
+    ]
+  },
+  {
+    "objectID": "CI.html#critérios-de-inclusão-de-pacientes",
+    "href": "CI.html#critérios-de-inclusão-de-pacientes",
+    "title": "Síndromes Coronarianas",
+    "section": "Critérios de inclusão de pacientes",
+    "text": "Critérios de inclusão de pacientes\nNeste momento, apenas informações provenientes dos CIDs registrados são usadas para definir paciente com CI.\n\nCIDs - I21, I22, I252\n\nEsta escolha contempla alguns critérios discutidos abaixo.\n\nCID-10 DEFINIDORES DE CARDIOPATIA ISQUÊMICA\n\nDOENÇA ISQUÊMICA CRÔNICA DO CORAÇÃO\n\nI250 - Doença cardiovascular aterosclerótica, descrita desta maneira\nI251 - Doença aterosclerótica do coração\nI252 - Infarto antigo do miocárdio\nI253 - Aneurisma cardíaco\nI254 - Aneurisma de artéria coronária\nI255 - Miocardiopatia isquêmica\nI256 - Isquemia miocárdica silenciosa\nI258 - Outras formas de doença isquêmica crônica do coração\nI259 - Doença isquêmica crônica do coração não especificada\n\nANGINA PECTORIS\n\nI200 - Angina instável\nI201 - Angina pectoris com espasmo documentado\nI208 - Outras formas de angina pectoris\nI209 - Angina pectoris, não especificada\n\nINFARTO AGUDO DO MIOCÁRDIO\n\nI210 - Infarto agudo transmural da parede anterior do miocárdio\nI211 - Infarto agudo transmural da parede inferior do miocárdio\nI212 - Infarto agudo transmural do miocárdio de outras localizações\nI213 - Infarto agudo transmural do miocárdio, de localização não especificada\nI214 - Infarto agudo subendocárdico do miocárdio\nI219 - Infarto agudo do miocárdio não especificado\n\nINFARTO DO MIOCÁRDIO RECORRENTE\n\nI220 - Infarto do miocárdio recorrente da parede anterior\nI221 - Infarto do miocárdio recorrente da parede inferior\nI228 - Infarto do miocárdio recorrente de outras localizações\nI229 - Infarto do miocárdio recorrente de localização não especificada\n\nALGUMAS COMPLICAÇÕES ATUAIS SUBSEQUENTES AO INFARTO AGUDO DO MIOCÁRDIO\n\nI230 - Hemopericárdio como complicação atual subseqüente ao infarto agudo do miocárdio\nI231 - Comunicação interatrial como complicação atual subseqüente ao infarto agudo do miocárdio\nI232 - Comunicação interventricular como complicação atual subseqüente ao infarto agudo do miocárdio\nI233 - Ruptura da parede do coração sem ocorrência de hemopericárdio como complicação atual subseqüente ao infarto agudo do miocárdio\nI234 - Ruptura de cordoalhas tendíneas como complicação atual subseqüente ao infarto agudo do miocárdio\nI235 - Ruptura de músculos papilares como complicação atual subseqüente ao infarto agudo do miocárdio\nI236 - Trombose de átrio, aurícula e ventrículo como complicação atual subseqüente ao infarto agudo do miocárdio\nI238 - Outras complicações atuais subseqüentes ao infarto agudo do miocárdio\n\nPARADA CARDÍACA\n\nI460 - Parada cardíaca com ressuscitação bem sucedida\nI469 - Parada cardíaca não especificada\n\nPRESENÇA DE IMPLANTES E ENXERTOS CARDÍACOS E VALVULARES\n\nZ951 - Presença de enxerto de ponte “bypass” aortocoronária\nZ955 - Presença de implante e enxerto de angioplastia coronária\n\n\nCID-10 SUGESTIVO PORÉM AINDA INESPECÍFICO (PODE ABRANGER OUTRAS CONDIÇÕES)\n\nI516 - Doença cardiovascular não especificada\n\nCID-10 QUE PODE LEVANTAR SUSPEITAS PORÉM AINDA MAIS INESPECÍFICO NO QUE TANGE À DOENÇA ISQUÊMICA\n\nI518 - Outras doenças mal definidas do coração\nI519 - Doença não especificada do coração\nI500 - Insuficiência cardíaca congestiva (?)\nI501 - Insuficiência ventricular esquerda (?)\nI509 - Insuficiência cardíaca não especificada (?)\nZ958 - Presença de outros implantes e enxertos cardíacos e vasculares Z959 - Presença de implante e enxerto cardíaco e vascular não especificado",
+    "crumbs": [
+      "Síndromes Coronarianas"
+    ]
+  },
+  {
+    "objectID": "CI.html#informações-visualizadas",
+    "href": "CI.html#informações-visualizadas",
+    "title": "Síndromes Coronarianas",
+    "section": "Informações visualizadas",
+    "text": "Informações visualizadas",
+    "crumbs": [
+      "Síndromes Coronarianas"
+    ]
+  },
+  {
+    "objectID": "ICC.html",
+    "href": "ICC.html",
+    "title": "Insuficiência Cardíaca",
+    "section": "",
+    "text": "Relevância",
+    "crumbs": [
+      "Insuficiência Cardíaca"
+    ]
+  },
+  {
+    "objectID": "ICC.html#definição-clínica",
+    "href": "ICC.html#definição-clínica",
+    "title": "Insuficiência Cardíaca",
+    "section": "Definição clínica",
+    "text": "Definição clínica",
+    "crumbs": [
+      "Insuficiência Cardíaca"
+    ]
+  },
+  {
+    "objectID": "ICC.html#critérios-de-inclusão-de-pacientes",
+    "href": "ICC.html#critérios-de-inclusão-de-pacientes",
+    "title": "Insuficiência Cardíaca",
+    "section": "Critérios de inclusão de pacientes",
+    "text": "Critérios de inclusão de pacientes\nNeste momento, apenas informações provenientes dos CIDs registrados são usadas para definir paciente com CI.\n\nCIDs - I110, I130, I132, I255, I420, I425, I426, I427, I428, I429, I43, I50, P290",
+    "crumbs": [
+      "Insuficiência Cardíaca"
+    ]
+  },
+  {
+    "objectID": "ICC.html#checklist-de-cuidado-em-insuficiência-cardíaca-na-atenção-primária-à-saúde",
+    "href": "ICC.html#checklist-de-cuidado-em-insuficiência-cardíaca-na-atenção-primária-à-saúde",
+    "title": "Insuficiência Cardíaca",
+    "section": "Checklist de Cuidado em Insuficiência Cardíaca na Atenção Primária à Saúde",
+    "text": "Checklist de Cuidado em Insuficiência Cardíaca na Atenção Primária à Saúde\n\nI - Diagnóstico e Estadiamento Inicial\n\nAvaliação Clínica Abrangente:\n◦ Anamnese Detalhada: Investigar ativamente sintomas sugestivos de IC, como dispneia (em repouso, ao caminhar, paroxística noturna), ortopneia (necessidade de mais travesseiros), edema (de membros inferiores), fadiga, cansaço, tosse seca (especialmente noturna), noctúria e dor em quadrante superior direito (QSD) secundária à congestão hepática.\n◦ Exame Físico Completo: Procurar sinais como taquicardia, ritmo de galope (terceira bulha), deslocamento do ictus cordis, turgência jugular a 45º, refluxo hepatojugular, estertores crepitantes pulmonares (principalmente nas bases), esforço respiratório/taquipneia, hepatomegalia e edema de membros inferiores.\n◦ Uso de Escores Diagnósticos: Aplicar os critérios de Boston ou Framingham para auxiliar na classificação da probabilidade clínica de IC.\n◦ Diagnósticos Diferenciais: Considerar e excluir outras causas de dispneia e sintomas, como Doença Pulmonar Obstrutiva Crônica (DPOC), asma, doenças pulmonares intersticiais, anemia, doenças da tireoide, cardiopatia valvar, apneia obstrutiva do sono, obesidade, insuficiência venosa periférica e insuficiência renal crônica.\nExames Complementares Iniciais (Conforme Fluxo de Diagnóstico):\n◦ Eletrocardiograma (ECG) de 12 Derivações: Realizar em todos os pacientes com suspeita de IC para avaliar sinais de cardiopatia estrutural (ex: hipertrofia ventricular esquerda), isquemia miocárdica, áreas de fibrose, distúrbios da condução atrioventricular, bradicardia ou taquiarritmias. Um ECG normal torna a disfunção sistólica de VE improvável (VPN: 98%).\n◦ Radiografia de Tórax: Realizar para avaliação de cardiomegalia e congestão pulmonar, além de ajudar a identificar causas pulmonares de dispneia. É mais valiosa na IC aguda.\n◦ Peptídeos Natriuréticos (BNP ou NT-proBNP): ▪ Realizar como primeiro teste diagnóstico em pacientes com baixa ou moderada probabilidade clínica de IC. ▪ Interpretar os resultados: • Negativo: Se BNP &lt; 35-50 pg/mL ou NT-proBNP &lt; 125 pg/mL (em ambulatório), ou BNP &lt; 100 pg/mL ou NT-proBNP &lt; 300 pg/mL (em emergência), o diagnóstico de IC é improvável, devendo-se investigar outras hipóteses. • Positivo: Se BNP &gt; 35-50 pg/mL ou NT-proBNP &gt; 125 pg/mL (em ambulatório), ou BNP &gt; 100 pg/mL ou NT-proBNP &gt; 300 pg/mL (em emergência), solicitar ecocardiografia para confirmação diagnóstica. ▪ Não recomendar BNP/NT-proBNP como teste diagnóstico em pacientes com alta probabilidade clínica de IC, pois a probabilidade de IC permanece alta mesmo com resultados negativos. ▪ Em pacientes em uso de sacubitril/valsartana, monitorar com NT-proBNP, pois o BNP tem seus níveis elevados por ação da droga.\n◦ Ecocardiografia Transtorácica (EcoTT): ▪ Solicitar para confirmação diagnóstica de IC em pacientes com baixa ou moderada probabilidade clínica e resultado positivo de BNP/NT-proBNP. ▪ Solicitar em pacientes com alta probabilidade clínica (após o diagnóstico clínico) para mensurar a fração de ejeção (FEVE) e demais parâmetros cardíacos, permitindo o planejamento terapêutico adequado e o reconhecimento de IC com fração de ejeção preservada (ICFEP). ▪ Avaliar função sistólica e diastólica (ventrículo esquerdo e direito), espessuras parietais, dimensões das cavidades, função valvar e estimativas hemodinâmicas. ▪ NÃO solicitar EcoTT como primeiro teste diagnóstico em pacientes com baixa probabilidade clínica de IC, a menos que BNP/NT-proBNP sejam positivos.\n◦ Exames Laboratoriais Adicionais: Solicitar hemograma completo, eletrólitos séricos (sódio, potássio, magnésio), função renal (ureia, creatinina), glicemia de jejum, hemoglobina glicosilada (HbA1c), perfil lipídico, função tireoidiana (TSH) e função hepática (TGO, TGP, bilirrubinas).\nClassificação da IC:\n◦ Classificar a IC pela Fração de Ejeção do Ventrículo Esquerdo (FEVE): ▪ IC com fração de ejeção reduzida (ICFEr): FEVE &lt; 40% (geral); ou ≤ 40% (para dapagliflozina); ou ≤ 35% (para sacubitril/valsartana); ou ≤ 35% (para TRC/CDI). ▪ IC com fração de ejeção intermediária (ICFEi): FEVE 40-49%. ▪ IC com fração de ejeção preservada (ICFEP): FEVE ≥ 50%.\n◦ Classificar Funcionalmente pela New York Heart Association (NYHA): Graduar a doença em 4 níveis (I, II, III, IV) para auxiliar na definição terapêutica e na avaliação da resposta ao tratamento. Registrar a classe funcional NYHA em cada consulta de acompanhamento.\n◦ Classificar pelos Estágios da American College of Cardiology/American Heart Association (ACC/AHA): Considerar os estágios A, B, C e D para enfatizar o desenvolvimento e a progressão da doença.\n\n\n\nII - Tratamento Não Farmacológico e Autocuidado\n\nEducação em Saúde e Apoio ao Autocuidado:\n◦ Fornecer Informações Abrangentes: Oferecer informações escritas e verbais sobre a IC (causas, tratamento, evolução, prognóstico), os benefícios e efeitos adversos dos medicamentos, posologias, e conduta em caso de esquecimento de dose.\n◦ Verificar Compreensão: Assegurar que o paciente e seu referente social (cuidador) compreenderam a importância de cada medicamento e as orientações, questionando ativamente sobre o uso e identificando dificuldades na adesão.\n◦ Aconselhamento sobre Sinais de Alarme: Orientar o paciente e o cuidador a procurar atendimento médico em caso de piora clínica, como mudanças nos sintomas, sinais vitais ou ganho de peso de 1 a 2 kg em poucos dias, associados à hipervolemia e descompensação.\n◦ Fomentar Adesão Medicamentosa: Enfatizar a importância do uso regular dos medicamentos prescritos.\n◦ Plano de Manejo Compartilhado: Desenvolver um plano de cuidado em conjunto com o paciente, respeitando suas necessidades, preferências, particularidades culturais e limitações físicas ou de aprendizado. Documentar as discussões.\n◦ Programas Multidisciplinares: Encorajar a participação em programas de gerenciamento multidisciplinar e grupos de pacientes (ex: hipertensos, diabéticos).\nDieta e Nutrição:\n◦ Dieta Cardioprotetora: Recomendar uma dieta saudável e balanceada.\n◦ Restrição de Sódio: Orientar a evitar a ingestão excessiva de sódio (&gt; 7g de sal por dia).\n◦ Restrição Hídrica: Não recomendar rotineiramente restrição hídrica para todos os pacientes com IC crônica; considerar apenas em casos específicos de hiponatremia, doença avançada, ou em pacientes muito congestos e sintomáticos (20-25mL/kg/dia).\n◦ Controle do Peso Corporal: Oferecer aconselhamento e apoio para atingir e manter um peso saudável para pessoas com sobrepeso ou obesidade. Para obesidade mórbida (IMC &gt; 40 kg/m2), buscar redução de peso. (Nota: Não há recomendação formal de dieta para sobrepeso e obesidade leve com o objetivo de alterar a evolução da síndrome devido ao “paradoxo da obesidade”).\nAtividade Física e Reabilitação Cardíaca:\n◦ Exercício Aeróbico Regular: Encorajar e recomendar a prática de exercício aeróbico em pacientes com IC estável (NYHA I-III), individualizado dentro de um programa de reabilitação cardíaca, visando 25 a 60 minutos por dia, pelo menos 3 vezes por semana.\n◦ Orientação para Interrupção: Instruir o paciente sobre a necessidade de interromper a atividade física em caso de angina, tontura ou piora no padrão da dispneia.\n◦ Contraindicações: Informar sobre as contraindicações para exercício aeróbico (arritmia não controlada, doença valvar grave com estenose ou regurgitação, IC descompensada e NYHA IV). Pacientes mais graves (ex: NYHA III ou com comorbidades) devem realizar atividade supervisionada.\n◦ Teste de Esforço: Considerar a realização de teste de esforço antes de iniciar programas de atividade física para pacientes com angina ou IC. Para programas de exercícios leves em pacientes bem controlados, o teste pode ser dispensado, a menos que desencadeie sintomas.\nVacinação:\n◦ Vacina contra Influenza: Recomendar a vacinação anual contra influenza para todos os pacientes com IC.\n◦ Vacina contra Pneumococo: Recomendar a vacinação contra pneumococo.\nCessação do Tabagismo e Controle do Álcool:\n◦ Cessação do Tabagismo: Encorajar todos os pacientes com IC a interromper o tabagismo.\n◦ Consumo de Álcool: Recomendar a redução da ingestão excessiva de álcool.\n\n\n\nIII - Tratamento Farmacológico (para ICFEr - FEVE ≤ 40%, salvo indicação diferente)\n\nInibidores da Enzima Conversora de Angiotensina (IECA) / Antagonistas do Receptor da Angiotensina II (ARA II):\n◦ IECA (Enalapril, Captopril): Iniciar em doses baixas e aumentar gradualmente até a dose máxima tolerada para pacientes sintomáticos ou assintomáticos com disfunção de VE.\n◦ ARA II (Losartana): Utilizar como alternativa em caso de intolerância a IECA (tosse persistente, angioedema).\n◦ Monitoramento: Realizar monitorização periódica da função renal e dos eletrólitos (potássio), especialmente após o início e ajustes de dose.\n◦ Suspensão/Ajuste: Considerar ajuste de dose ou suspensão se piora significativa da função renal (creatinina &gt; 3.5 mg/dL ou K &gt; 5.5 mEq/L).\n◦ NÃO usar IECA e BRA concomitantemente.\n◦ NÃO usar IECA/BRA em gestantes devido ao risco de malformações fetais.\nBetabloqueadores (BB):\n◦ Fármacos: Utilizar bisoprolol, carvedilol ou succinato de metoprolol.\n◦ Início e Titulação: Iniciar em doses baixas para pacientes clinicamente compensados (não congestos) e aumentar gradualmente a cada 2 semanas até a dose máxima tolerada ou dose-alvo.\n◦ Manutenção em Descompensação: Pacientes em uso crônico de betabloqueador com quadros de descompensação por congestão podem manter o uso, a menos que haja sinais de baixo débito cardíaco ou hipotensão sintomática.\n◦ NÃO iniciar BB se o paciente não estiver clinicamente compensado e sem sinais de congestão.\n◦ Evitar suspensão abrupta de BB, a não ser que estritamente necessário.\n◦ Monitoramento: Monitorar níveis pressóricos e frequência cardíaca. Bradicardia e hipotensão, desde que o paciente esteja assintomático, são toleradas.\n◦ Pneumopatias: Dar preferência a BB β1 seletivos (bisoprolol, metoprolol, nebivolol) em pacientes com pneumopatias, especialmente asma.\n◦ Bloqueios AV: Em caso de bloqueios atrioventriculares, reduzir ou suspender outros fármacos que atuam no nó atrioventricular (ex: digoxina, amiodarona).\nAntagonistas do Receptor Mineralocorticoide (ARM):\n◦ Fármaco: Espironolactona (12,5-25mg/dia).\n◦ Indicação: Iniciar para pacientes sintomáticos (NYHA II-IV) com disfunção sistólica de VE, associado ao tratamento padrão (IECA/ARA II e BB).\n◦ Titulação: Aumentar dose para 50mg/dia se níveis de potássio adequados.\n◦ Monitoramento: Realizar monitorização periódica de potássio sérico e função renal.\n◦ Contraindicações: NÃO usar em pacientes com insuficiência renal avançada (creatinina &gt; 2.5 mg/dL) ou hipercalemia persistente (potássio &gt; 5.9 mmol/L).\n◦ NÃO usar em gestantes devido a efeitos antiandrogênicos.\nDiuréticos:\n◦ Fármacos: Furosemida (diurético de alça) e hidroclorotiazida (diurético tiazídico).\n◦ Indicação: Utilizar diuréticos de alça para alívio da congestão pulmonar ou sistêmica, na menor dose terapêutica eficaz.\n◦ Associação: Considerar diuréticos tiazídicos associados a diuréticos de alça para controle de congestão persistente, apesar de terapêutica otimizada e incrementos na dose do diurético de alça.\n◦ Ajuste de Dose: Ajustar a dose de acordo com a presença de congestão.\n◦ Monitoramento: Monitorar função renal e eletrólitos.\n◦ IC Aguda: Em casos de IC aguda, iniciar furosemida intravenosa (20-40mg em bólus, ou dose equivalente ou o dobro da dose oral prévia) e titular intensamente para atingir os alvos clínicos de descongestão.\nDapagliflozina:\n◦ Indicação: Associar dapagliflozina (10mg/dia) à terapia padrão (IECA/ARA II, betabloqueadores, diuréticos e antagonista de receptor de mineralocorticoides) em pacientes adultos com IC, NYHA II-IV, FEVE reduzida (&lt;40%), e sintomáticos (dispneia aos esforços, sinais de congestão, piora clínica com internações recentes).\n◦ Prioridade: Se o paciente atender simultaneamente aos critérios de inclusão para dapagliflozina e sacubitril/valsartana, iniciar o tratamento com dapagliflozina primeiro (devido a menor custo e maior comodidade de uso).\nSacubitril/Valsartana:\n◦ Indicação: Substituir IECA (ou ARA II) por sacubitril/valsartana (comprimidos de 50, 100 e 200 mg) em pacientes adultos com idade inferior a 75 anos, classe funcional NYHA II, FEVE reduzida (&lt;35% - segundo PCDT, ou ≤ 40% - segundo SBC), níveis de BNP &gt; 150 pg/mL ou NT-proBNP &gt; 600 pg/mL, em tratamento otimizado e que permaneçam sintomáticos.\n◦ Período de “Washout”: Aguardar pelo menos 36 horas após a última dose de IECA antes de iniciar sacubitril/valsartana.\n◦ Titulação: Iniciar com dose baixa (50mg duas vezes ao dia, ou 100mg duas vezes ao dia se uso prévio de altas doses de IECA/ARA II e PA &gt; 100 mmHg) e aumentar progressivamente a cada 2-4 semanas até a dose-alvo (200mg duas vezes ao dia).\n◦ Monitoramento: Realizar monitoramento da função renal, eletrólitos e hipotensão durante a titulação.\n◦ Prescrição Inicial: A prescrição inicial deve ser realizada preferencialmente por médico especialista.\n◦ NÃO usar concomitantemente com IECA ou outro ARA II.\n◦ NÃO usar em pacientes com história de angioedema.\n◦ Associação ou Substituição: Se o paciente em uso de dapagliflozina permanecer sintomático e atender aos critérios de inclusão para sacubitril/valsartana, associar dapagliflozina com sacubitril/valsartana ou substituir dapagliflozina + IECA/ARA II por sacubitril/valsartana.\nHidralazina e Nitrato de Isossorbida:\n◦ Indicação: Considerar a associação de hidralazina e dinitrato de isossorbida para pacientes sintomáticos (NYHA II-IV) com contraindicação ou intolerância a IECA/ARA II (insuficiência renal e/ou hipercalemia). É especialmente preconizada na população negra com NYHA III-IV, apesar de terapia otimizada. Também para pacientes refratários à terapia otimizada, independente da raça.\nDigoxina:\n◦ Indicação: Utilizar para pacientes que permanecem sintomáticos apesar do tratamento otimizado com terapia tripla (IECA/ARA II ou sacubitril/valsartana, betabloqueador, antagonista da aldosterona).\n◦ Cautela: Usar com cautela em pacientes com função renal alterada, baixo peso e idosos; iniciar com doses baixas e ajustar de acordo com a sintomatologia e dosagem sérica. ◦ NÃO usar em disfunção de VE assintomática ou ICFEp em ritmo sinusal.\n\n\n\nIV - Monitorização e Acompanhamento Contínuo\n\nMonitorização Clínica Regular:\n◦ Realizar avaliação ambulatorial na APS para monitorar a resposta terapêutica e identificar necessidades de ajuste no tratamento medicamentoso e orientações para o autocuidado.\n◦ Monitorar sinais e sintomas de congestão e peso corporal regularmente. Informar o paciente sobre a importância da auto-monitorização.\n◦ Reavaliar os sintomas quatro semanas após a otimização da dose do último fármaco.\nMonitorização Laboratorial Regular:\n◦ Monitorar periodicamente a função renal e os eletrólitos (potássio), especialmente durante o início ou ajustes de dose de IECA/ARA II, ARMs e sacubitril/valsartana.\nAvaliação da Adesão Terapêutica:\n◦ Verificar regularmente se o paciente está aderindo ao uso dos medicamentos conforme prescrito e identificar e abordar quaisquer dificuldades na adesão. Utilizar ferramentas como lembretes e visitas domiciliares.\nReavaliação da Fração de Ejeção do Ventrículo Esquerdo (FEVE):\n◦ Considerar a realização de um novo ecocardiograma 3 a 6 meses após o início do tratamento com medicações que modificam o prognóstico, para avaliar o remodelamento reverso e reestratificação prognóstica.\n◦ NÃO realizar ecocardiograma de forma rotineira em intervalos predefinidos em pacientes com IC controlada, exceto quando houver mudança significativa no estado clínico.\nTelemonitoramento:\n◦ Considerar o telemonitoramento por suporte telefônico para pacientes com maior risco de desestabilização (ex: após alta hospitalar, com classe funcional NYHA III ou IV, ou com dificuldade de locomoção). As orientações devem ser realizadas por profissionais qualificados e individualizadas.\n\n\n\nV - Critérios de Encaminhamento para Atenção Especializada ou Emergência\n\nEncaminhamento para Serviço Especializado (Corresponsabilidade com a APS):\n◦ Classe Funcional: Pacientes com classe funcional NYHA II que atendem aos critérios para início de sacubitril/valsartana sódica hidratada (especialista para prescrição inicial). Pacientes com classe funcional NYHA III e IV, apesar de tratamento clínico otimizado com doses maximamente toleradas dos medicamentos padrão (IECA/ARA II, betabloqueador e espironolactona).\n◦ Histórico de Internação: Pacientes com episódio de internação hospitalar devido à IC descompensada no último ano.\n◦ Dúvida Diagnóstica/Investigação: Suspeita de insuficiência cardíaca sem possibilidade de investigação com ecocardiografia ou peptídeo natriurético cerebral.\n◦ Terapia Avançada: Pacientes com disfunção cardíaca grave, sintomáticos com terapia otimizada, que podem ser candidatos a dispositivos (terapia de ressincronização cardíaca - TRC, cardiodesfibrilador implantável - CDI) ou transplante cardíaco.\n◦ Arritmias Complexas: Pacientes com IC que apresentam fibrilação atrial (para avaliação em serviço especializado com acompanhamento concomitante na APS). Pacientes com indicação de dispositivos de estimulação elétrica (marca-passo, CDI) ou TRC.\nEncaminhamento para Serviço de Emergência:\n◦ IC Aguda/Descompensada: Pacientes com suspeita de IC aguda ou com IC crônica com descompensação aguda.\n◦ Instabilidade Hemodinâmica: Pacientes com IC com sinais de hipoperfusão (ex: oligúria, cianose, diaforese, hipotensão), síncope ou piora recente e significativa de sintomas e sinais de congestão.\n\n\n\nVI - Documentação e Registro\n\nRegistro Completo no Prontuário: Documentar todas as informações clínicas (anamnese, exame físico, classe NYHA), diagnósticos diferenciais, resultados de exames, plano de tratamento (farmacológico e não farmacológico), orientações fornecidas, adesão do paciente e discussões compartilhadas no prontuário.",
+    "crumbs": [
+      "Insuficiência Cardíaca"
+    ]
+  },
+  {
+    "objectID": "ICC.html#informações-visualizadas",
+    "href": "ICC.html#informações-visualizadas",
+    "title": "Insuficiência Cardíaca",
+    "section": "Informações visualizadas",
+    "text": "Informações visualizadas",
+    "crumbs": [
+      "Insuficiência Cardíaca"
+    ]
+  },
+  {
+    "objectID": "ICC.html#educação-médica-continuada",
+    "href": "ICC.html#educação-médica-continuada",
+    "title": "Insuficiência Cardíaca",
+    "section": "Educação Médica Continuada",
+    "text": "Educação Médica Continuada",
+    "crumbs": [
+      "Insuficiência Cardíaca"
+    ]
+  },
+  {
+    "objectID": "IRC.html",
+    "href": "IRC.html",
+    "title": "Doença renal crônica",
+    "section": "",
+    "text": "Relevância",
+    "crumbs": [
+      "Doença renal crônica"
+    ]
+  },
+  {
+    "objectID": "IRC.html#definição-clínica",
+    "href": "IRC.html#definição-clínica",
+    "title": "Doença renal crônica",
+    "section": "Definição clínica",
+    "text": "Definição clínica",
+    "crumbs": [
+      "Doença renal crônica"
+    ]
+  },
+  {
+    "objectID": "IRC.html#critérios-de-inclusão-de-pacientes",
+    "href": "IRC.html#critérios-de-inclusão-de-pacientes",
+    "title": "Doença renal crônica",
+    "section": "Critérios de inclusão de pacientes",
+    "text": "Critérios de inclusão de pacientes\nNeste momento, apenas informações provenientes dos CIDs registrados são usadas para definir paciente com DRC.\n\nCIDs - I120, I131, N032, N033, N034, N035, N036, N037, N052, N053, N054, N055, N056, N057, N18, N19, N250, Z490, Z491, Z492, Z940, Z992",
+    "crumbs": [
+      "Doença renal crônica"
+    ]
+  },
+  {
+    "objectID": "IRC.html#informações-visualizadas",
+    "href": "IRC.html#informações-visualizadas",
+    "title": "Doença renal crônica",
+    "section": "Informações visualizadas",
+    "text": "Informações visualizadas",
+    "crumbs": [
+      "Doença renal crônica"
+    ]
+  },
+  {
+    "objectID": "IRC.html#educação-médica-continuada",
+    "href": "IRC.html#educação-médica-continuada",
+    "title": "Doença renal crônica",
+    "section": "Educação Médica Continuada",
+    "text": "Educação Médica Continuada",
+    "crumbs": [
+      "Doença renal crônica"
+    ]
+  },
+  {
+    "objectID": "MM.html",
+    "href": "MM.html",
+    "title": "Multimorbidade",
+    "section": "",
+    "text": "Relevância\nMultimorbidade é a condição crônica mais prevalente em sociedades desenvolvidas. Multimorbidade é definida pelo acúmulo de duas ou mais condições crônicas em um mesmo indivíduo. Esta situação vem frenquentemente acomapanhada de outra condição extremamente comum - a Polifarmácia. Utilizar cinco ou mais medicamentos cronicamente é a definição mais comumente aceita para polifarmácia.",
+    "crumbs": [
+      "Multimorbidade"
+    ]
+  },
+  {
+    "objectID": "MM.html#definição-clínica",
+    "href": "MM.html#definição-clínica",
+    "title": "Multimorbidade",
+    "section": "Definição clínica",
+    "text": "Definição clínica",
+    "crumbs": [
+      "Multimorbidade"
+    ]
+  },
+  {
+    "objectID": "MM.html#critérios-de-inclusão-de-pacientes",
+    "href": "MM.html#critérios-de-inclusão-de-pacientes",
+    "title": "Multimorbidade",
+    "section": "Critérios de inclusão de pacientes",
+    "text": "Critérios de inclusão de pacientes",
+    "crumbs": [
+      "Multimorbidade"
+    ]
+  },
+  {
+    "objectID": "MM.html#informações-visualizadas",
+    "href": "MM.html#informações-visualizadas",
+    "title": "Multimorbidade",
+    "section": "Informações visualizadas",
+    "text": "Informações visualizadas",
+    "crumbs": [
+      "Multimorbidade"
+    ]
+  },
+  {
+    "objectID": "MM.html#educação-médica-continuada",
+    "href": "MM.html#educação-médica-continuada",
+    "title": "Multimorbidade",
+    "section": "Educação Médica Continuada",
+    "text": "Educação Médica Continuada",
+    "crumbs": [
+      "Multimorbidade"
+    ]
+  },
+  {
+    "objectID": "PoliF.html",
+    "href": "PoliF.html",
+    "title": "Polifarmácia",
+    "section": "",
+    "text": "Relevância",
+    "crumbs": [
+      "Polifarmácia"
+    ]
+  },
+  {
+    "objectID": "PoliF.html#definição-clínica",
+    "href": "PoliF.html#definição-clínica",
+    "title": "Polifarmácia",
+    "section": "Definição clínica",
+    "text": "Definição clínica",
+    "crumbs": [
+      "Polifarmácia"
+    ]
+  },
+  {
+    "objectID": "PoliF.html#critérios-de-inclusão-de-pacientes",
+    "href": "PoliF.html#critérios-de-inclusão-de-pacientes",
+    "title": "Polifarmácia",
+    "section": "Critérios de inclusão de pacientes",
+    "text": "Critérios de inclusão de pacientes",
+    "crumbs": [
+      "Polifarmácia"
+    ]
+  },
+  {
+    "objectID": "PoliF.html#informações-visualizadas",
+    "href": "PoliF.html#informações-visualizadas",
+    "title": "Polifarmácia",
+    "section": "Informações visualizadas",
+    "text": "Informações visualizadas",
+    "crumbs": [
+      "Polifarmácia"
+    ]
+  },
+  {
+    "objectID": "PoliF.html#educação-médica-continuada",
+    "href": "PoliF.html#educação-médica-continuada",
+    "title": "Polifarmácia",
+    "section": "Educação Médica Continuada",
+    "text": "Educação Médica Continuada",
+    "crumbs": [
+      "Polifarmácia"
+    ]
+  },
+  {
+    "objectID": "fragil.html",
+    "href": "fragil.html",
+    "title": "Fragilidade em idosos",
+    "section": "",
+    "text": "Relevância",
+    "crumbs": [
+      "Fragilidade em idosos"
+    ]
+  },
+  {
+    "objectID": "fragil.html#definição-clínica",
+    "href": "fragil.html#definição-clínica",
+    "title": "Fragilidade em idosos",
+    "section": "Definição clínica",
+    "text": "Definição clínica",
+    "crumbs": [
+      "Fragilidade em idosos"
+    ]
+  },
+  {
+    "objectID": "fragil.html#critérios-de-inclusão-de-pacientes",
+    "href": "fragil.html#critérios-de-inclusão-de-pacientes",
+    "title": "Fragilidade em idosos",
+    "section": "Critérios de inclusão de pacientes",
+    "text": "Critérios de inclusão de pacientes",
+    "crumbs": [
+      "Fragilidade em idosos"
+    ]
+  },
+  {
+    "objectID": "fragil.html#informações-visualizadas",
+    "href": "fragil.html#informações-visualizadas",
+    "title": "Fragilidade em idosos",
+    "section": "Informações visualizadas",
+    "text": "Informações visualizadas",
+    "crumbs": [
+      "Fragilidade em idosos"
+    ]
+  },
+  {
+    "objectID": "fragil.html#educação-médica-continuada",
+    "href": "fragil.html#educação-médica-continuada",
+    "title": "Fragilidade em idosos",
+    "section": "Educação Médica Continuada",
+    "text": "Educação Médica Continuada",
+    "crumbs": [
+      "Fragilidade em idosos"
+    ]
+  },
+  {
+    "objectID": "pilula_CI.html",
+    "href": "pilula_CI.html",
+    "title": "Pílulas Síndrome Coronariana Crônica",
+    "section": "",
+    "text": "Você sabe qual é a melhor forma de prescrever o nitrato para o seu paciente com angina?\nVocê tem algum paciente com angina e que está usando nitrato de 8 em 8 horas? Caso tenha, está sujeitando seu paciente ao fenômeno da tolerância (redução da responsividade vascular aos nitratos e de sua eficácia antianginosa), problema que ocorre com uso crônico de nitratos de ação prolongada.²\nComo minimizar esse fenômeno?\nBasta tomar os cuidados a seguir na hora da prescrição:\nExemplo prático: Pode-se iniciar com 5 mg e aumentar para pelo menos 10 mg no segundo ou terceiro dia. Possíveis horários de tomadas às 8h e 16h; ou às 8h, 13h e 18h.³\nAtenção:\nIMAGEM INFOGRÁFICO DAS HORAS DE TOMADA - ainda em confecção.",
+    "crumbs": [
+      "Pílulas Síndrome Coronariana Crônica"
+    ]
+  },
+  {
+    "objectID": "pilula_CI.html#você-sabe-qual-é-a-melhor-forma-de-prescrever-o-nitrato-para-o-seu-paciente-com-angina",
+    "href": "pilula_CI.html#você-sabe-qual-é-a-melhor-forma-de-prescrever-o-nitrato-para-o-seu-paciente-com-angina",
+    "title": "Pílulas Síndrome Coronariana Crônica",
+    "section": "",
+    "text": "O Mononitrato de Isossorbida 20 mg (disponível nas farmácias das Clínicas da Família) tem posologia habitual de: meio a 1 comprimido, 2 a 3 vezes ao dia¹.\nA terapia intermitente com um intervalo adequado livre de nitrato é uma abordagem razoável para prevenir a tolerância². Devendo-se estimular um intervalo livre da medicação de 10 a 12 horas para evitar o fenômeno de taquifilaxia³\nPara melhor adaptação, iniciar o tratamento com pequenas doses e aumentá-las progressivamente, de acordo com a resposta terapêutica e a tolerabilidade¹ (efeitos colaterais comuns: hipotensão, cefaleia, rubor)².\n\n\n\n\nDoses maiores que 20 mg duas vezes ao dia não foram adequadamente estudadas.\nA duração da eficácia antianginosa além de 14 horas não foi estudada.\nEmbora minimizada, a tolerância pode ocorrer até certo ponto.\n\n\n\nMONOCORDIL. Bula. Laboratórios Baldacci S.A., 2008. Disponível em: https://www.saudedireta.com.br/catinc/drugs/bulas/monocordil.pdf\nESC Guidelines for the management of chronic coronary syndromes - 2024\nSOCERJ Manual Síndrome Coronariana Crônica - 2021\nProduct Information: Isosorbide mononitrate oral tablets, isosorbide mononitrate oral tablets. Teva Pharmaceuticals (per DailyMed), Parsippany, NJ, 2022",
+    "crumbs": [
+      "Pílulas Síndrome Coronariana Crônica"
+    ]
+  },
+  {
+    "objectID": "pilulas_IC.html",
+    "href": "pilulas_IC.html",
+    "title": "Pílulas para Insuficiência Cardíaca",
+    "section": "",
+    "text": "Você sabe ajustar a dose de diurético dos pacientes com IC de forma segura?\n■ Lembretes: • Você sabia que nem todo paciente com IC precisa usar diurético? • Os diuréticos devem ser utilizados sempre que há necessidade de controle volêmico, e devem ser ajustados sempre que houver sinais de congestão ou hipovolemia. • Sempre defina e registre o peso-alvo (peso seco). • Monitore função renal e potássio após mudanças significativas.\n■ Checklist de ação: • Verifique: peso (ganho ≥ 2 kg em 3–5 dias), edema, dispneia, crepitação. • Se congesto → aumente furosemida (pode dobrar a dose, respeitando máximo ambulatorial de 240 mg/dia, dividida em 1–2 tomadas). • Após melhora da congestão → retorne à menor dose eficaz; reduza ou suspenda se houver hipotensão ou sinais de hipovolemia. • Se refratário → associe tiazídico (ex.: hidroclorotiazida 25–50 mg/dia), sempre monitorando sódio, potássio e creatinina. • Solicite creatinina e potássio em até 7 dias após o ajuste. • Eduque: peso diário em casa, sinais de alerta (dispneia em repouso, tontura, câimbras).\n■ Referência: • Diretriz Brasileira de Insuficiência Cardíaca Crônica e Aguda – SBC, 2022. • PCDT Insuficiência Cardíaca – Ministério da Saúde, 2022",
+    "crumbs": [
+      "Pílulas para Insuficiência Cardíaca"
+    ]
+  },
+  {
+    "objectID": "pilulas_IC.html#será-que-você-não-está-deixando-passar-pacientes-com-ic",
+    "href": "pilulas_IC.html#será-que-você-não-está-deixando-passar-pacientes-com-ic",
+    "title": "Pílulas para Insuficiência Cardíaca",
+    "section": "Será que você não está deixando passar pacientes com IC?",
+    "text": "Será que você não está deixando passar pacientes com IC?\n■ Lembretes: Nem sempre o paciente com IC apresenta a “dispneia típica” ou está em NYHA III–IV. Dispneia, fadiga ou edema podem ser atribuídos a “envelhecimento”, “sobrepeso” ou “varizes”. Pacientes com DPOC, DAC ou FA frequentemente escondem IC “por trás” dos sintomas. Identificar cedo muda prognóstico: IC tratada precocemente evolui melhor.\n■ Checklist de ação: Dispneia aos esforços que não melhora com broncodilatador. Ortopneia leve ou dispneia paroxística noturna, mesmo em pacientes sem asma. Edema de membros inferiores em pacientes sem diagnóstico de insuficiência venosa claro. Histórico de infarto ou DAC, mesmo sem dispneia importante. Presença de FA em paciente com fadiga ou intolerância ao exercício. Idoso com “cansaço” ou redução da capacidade funcional sem explicação evidente.\nReferências: MACHADO, G. D. B. et al. Insuficiência cardíaca com fração de ejeção preservada: fisiopatologia e manejo. 2015. CESTARI, V. R. F. et al. Spatial Distribution of Mortality for Heart Failure in Brazil, 1996–2017. Arq Bras Cardiol, 2022. PCDT Insuficiência Cardíaca – Ministério da Saúde, 2022. Diretriz Brasileira de Insuficiência Cardíaca Crônica e Aguda – SBC, 2022.",
+    "crumbs": [
+      "Pílulas para Insuficiência Cardíaca"
+    ]
+  },
+  {
+    "objectID": "pilulas_IC.html#quais-pacientes-na-sua-lista-têm-maior-risco-de-ic",
+    "href": "pilulas_IC.html#quais-pacientes-na-sua-lista-têm-maior-risco-de-ic",
+    "title": "Pílulas para Insuficiência Cardíaca",
+    "section": "Quais pacientes na sua lista têm maior risco de IC?",
+    "text": "Quais pacientes na sua lista têm maior risco de IC?\n■ Lembretes: Muitos pacientes ainda não têm sintomas típicos de IC, mas carregam alto risco de desenvolvê-la. HAS de longa duração e mal controlada é a principal causa de IC no Brasil. DAC, FA, obesidade, DRC e DM são grandes “alimentadores” da IC. Rastrear risco permite iniciar prevenção e vigilância antes da descompensação.\n■ Checklist de ação (quem merece atenção especial no prontuário): Pacientes hipertensos de longa data, sobretudo se já usam ≥ 3 anti-hipertensivos. Diabéticos tipo 2 com mais de 10 anos de doença. Portadores de DAC (IAM prévio, angina, revascularização). Portadores de FA, mesmo assintomáticos. Portadores de DRC (TFG &lt; 60 mL/min/1,73 m²). Pacientes obesos com IMC ≥ 30 e/ou apneia obstrutiva do sono. Anemia crônica ou DPOC com internações frequentes.\n■ Referências: MACHADO, G. D. B. et al. Insuficiência cardíaca com fração de ejeção preservada: fisiopatologia e manejo. 2015. Diretriz Brasileira de Insuficiência Cardíaca Crônica e Aguda – SBC, 2022. PCDT Insuficiência Cardíaca – Ministério da Saúde, 2022.",
+    "crumbs": [
+      "Pílulas para Insuficiência Cardíaca"
+    ]
+  },
+  {
+    "objectID": "pilulas_IC.html#você-está-usando-betabloqueador-de-forma-eficaz-no-seu-paciente-com-ic",
+    "href": "pilulas_IC.html#você-está-usando-betabloqueador-de-forma-eficaz-no-seu-paciente-com-ic",
+    "title": "Pílulas para Insuficiência Cardíaca",
+    "section": "Você está usando betabloqueador de forma eficaz no seu paciente com IC?",
+    "text": "Você está usando betabloqueador de forma eficaz no seu paciente com IC?\n■ Lembretes: Nem todo betabloqueador serve: apenas carvedilol, metoprolol succinato e bisoprolol têm benefício comprovado de redução de mortalidade na IC A dose inicial é sempre baixa e deve ser titulada lentamente até a dose alvo ou máxima tolerada. A melhora clínica pode levar semanas a meses — não suspenda abruptamente, há risco de descompensação.\n■ Checklist de ação: Inicie apenas se paciente estiver clinicamente estável (sem congestão ou uso recente de altas doses de diurético EV). Escolha a droga correta: Carvedilol: iniciar 3,125 mg 2x/dia → dobrar a cada 2–4 semanas até 25 mg 2x/dia (máx. 50 mg 2x/dia se &gt; 85 kg). Bisoprolol: iniciar 1,25 mg/dia → dobrar a cada 2–4 semanas até 10 mg/dia. Metoprolol succinato: iniciar 12,5–25 mg/dia → dobrar a cada 2–4 semanas até 200 mg/dia. Inicie na dose mínima e dobre a cada 2–4 semanas se tolerado. Monitore sempre: PA, FC, sintomas. Reduza dose se: PA &lt; 90 mmHg com sintomas, FC &lt; 50 bpm ou fadiga/tontura intensa. Reintroduza após estabilização, sempre na menor dose eficaz.\n■ Referências: Diretriz Brasileira de IC – SBC, 2022. PCDT IC – Ministério da Saúde, 2022.",
+    "crumbs": [
+      "Pílulas para Insuficiência Cardíaca"
+    ]
+  },
+  {
+    "objectID": "pilulas_IC.html#todo-paciente-com-icfer-deve-usar-ieca-e-o-seu",
+    "href": "pilulas_IC.html#todo-paciente-com-icfer-deve-usar-ieca-e-o-seu",
+    "title": "Pílulas para Insuficiência Cardíaca",
+    "section": "Todo paciente com ICFEr deve usar IECA, e o seu?",
+    "text": "Todo paciente com ICFEr deve usar IECA, e o seu?\n■ Lembretes: IECA reduzem mortalidade e hospitalizações em ICFEr. Devem ser iniciados em todos os pacientes com ICFEr, salvo contraindicação. Tosse seca pode ocorrer → substitua por BRA (losartana, valsartana, candesartana) se intolerância.\n■ Checklist de ação: Confirme se paciente tem ICFEr (&lt;40% FEVE). Inicie com baixa dose: Enalapril: 2,5–5 mg 2x/dia → até 10–20 mg 2x/dia. Captopril: 6,25 mg 3x/dia → até 50 mg 3x/dia. Ramipril: 2,5 mg/dia → até 10 mg/dia. Titule a cada 1-2 semanas até a dose alvo ou máxima tolerada. Monitore creatinina e potássio em até 7–14 dias após cada ajuste. Reduza ou suspenda se: creatinina ↑ &gt; 30% do basal, K+ &gt; 5,5 mEq/L, PA &lt; 90 mmHg sintomática. Sempre retorne à menor dose eficaz após resolução dos efeitos\n■ Referências: Diretriz Brasileira de IC – SBC, 2022. PCDT IC – Ministério da Saúde, 2022.",
+    "crumbs": [
+      "Pílulas para Insuficiência Cardíaca"
+    ]
+  },
+  {
+    "objectID": "pilulas_IC.html#você-sabe-quando-indicar-espironolactona-no-paciente-com-ic",
+    "href": "pilulas_IC.html#você-sabe-quando-indicar-espironolactona-no-paciente-com-ic",
+    "title": "Pílulas para Insuficiência Cardíaca",
+    "section": "Você sabe quando indicar espironolactona no paciente com IC?",
+    "text": "Você sabe quando indicar espironolactona no paciente com IC?\n■ Lembretes: É indicada para pacientes com ICFEr sintomática (NYHA II–IV) já em uso de IECA/ARNI + betabloqueador. Reduz mortalidade e hospitalizações. Cuidado: risco de hipercalemia e piora da função renal. Cuidado com ginecomastia\n■ Checklist de ação: Pré-requisitos: creatinina &lt; 2,5 mg/dL (homens) ou &lt; 2,0 mg/dL (mulheres) e K+ &lt; 5,0 mEq/L. Dose: iniciar 12,5–25 mg/dia, podendo aumentar até 50 mg/dia. Monitore: creatinina e potássio em 3–7 dias, depois em 1 mês, e a cada 3 meses. Reduza ou suspenda se: K+ ≥ 5,5 mEq/L ou creatinina ↑ progressivamente. Evite associar a AINEs e altas doses de IECA/BRA.\n■ Referências: Diretriz Brasileira de Insuficiência Cardíaca Crônica e Aguda – SBC, 2022. PCDT IC – Ministério da Saúde, 2022.",
+    "crumbs": [
+      "Pílulas para Insuficiência Cardíaca"
+    ]
+  },
+  {
+    "objectID": "pilulas_IC.html#seu-paciente-com-ic-já-está-recebendo-dapagliflozina",
+    "href": "pilulas_IC.html#seu-paciente-com-ic-já-está-recebendo-dapagliflozina",
+    "title": "Pílulas para Insuficiência Cardíaca",
+    "section": "Seu paciente com IC já está recebendo Dapagliflozina?",
+    "text": "Seu paciente com IC já está recebendo Dapagliflozina?\n■ Lembretes: Benefício independente do diabetes: reduzem mortalidade e hospitalizações em ICFEr. Efeito diurético leve → pode ajudar no controle de volume. Bem tolerados, baixo risco de hipoglicemia. Cuidado com infecção urinária\n■ Checklist de ação: Indicação: todos os pacientes com ICFEr sintomática (NYHA II–IV), mesmo sem DM. Drogas e doses: Dapagliflozina 10 mg/dia. Empagliflozina 10 mg/dia. Não precisa titular dose! Avaliar função renal: iniciar se TFG ≥ 20–25 mL/min/1,73 m² (droga-dependente). Monitorar: sintomas de infecção urinária/genital, PA e função renal. Suspender temporariamente em casos de desidratação, jejum prolongado ou cirurgia.\n■ Referências: Diretriz Brasileira de Insuficiência Cardíaca Crônica e Aguda – SBC, 2022. PCDT IC – Ministério da Saúde, 2022.",
+    "crumbs": [
+      "Pílulas para Insuficiência Cardíaca"
+    ]
+  },
+  {
+    "objectID": "pilulas_IC.html#você-sabe-diferenciar-icfer-de-icfep",
+    "href": "pilulas_IC.html#você-sabe-diferenciar-icfer-de-icfep",
+    "title": "Pílulas para Insuficiência Cardíaca",
+    "section": "Você sabe diferenciar ICFEr de ICFEp?",
+    "text": "Você sabe diferenciar ICFEr de ICFEp?\n■ Lembrete: A IC pode se apresentar de formas distintas: com fração de ejeção reduzida (ICFEr) ou preservada (ICFEp). Os sintomas costumam ser parecidos, mas o diagnóstico e o tratamento diferem. Reconhecer a diferença evita condutas ineficazes.\n■ Checklist de ação: Definição pelo ECO: Classifique como ICFEr se FEVE &lt; 40%. Classifique como ICFEp se FEVE ≥ 50% + disfunção diastólica ou sinais indiretos (hipertrofia VE, aumento AE, BNP elevado). Compare sintomas: Identifique dispneia, fadiga e edema. ICFEr: geralmente mais evidente, intolerância maior ao esforço. ICFEp: pode ser sutil, muitas vezes confundida com envelhecimento, DPOC ou obesidade. Tratamento: Trate ICFEr com medicamentos modificadores de prognóstico (IECA/BRA/INRA, BB, ARM, SGLT2i). Trate ICFEp focando no controle de comorbidades (HAS, DM, obesidade, FA, DRC) e alívio de sintomas (diurético apenas se congesto). Sempre registre: fração de ejeção e diagnóstico (ICFEr ou ICFEp).\n■ Referências: PCDT Insuficiência Cardíaca – Ministério da Saúde, 2022. Diretriz Brasileira de Insuficiência Cardíaca Crônica e Aguda – SBC, 2022",
+    "crumbs": [
+      "Pílulas para Insuficiência Cardíaca"
+    ]
+  },
+  {
+    "objectID": "pilulas_IC.html#icfep-quando-desconfiar-e-o-que-fazer-na-aps",
+    "href": "pilulas_IC.html#icfep-quando-desconfiar-e-o-que-fazer-na-aps",
+    "title": "Pílulas para Insuficiência Cardíaca",
+    "section": "ICFEp: quando desconfiar e o que fazer na APS",
+    "text": "ICFEp: quando desconfiar e o que fazer na APS\n■ Lembretes: A ICFEP é mais comum em idosos, mulheres e hipertensos. É subdiagnosticada porque os sintomas são inespecíficos. Detectar cedo e controlar comorbidades melhora evolução.\n■ Checklist de ação\n\nSuspeite de ICFEP: Considere em idosos, hipertensos, diabéticos, obesos, FA ou DRC.\nValorize dispneia aos esforços, ortopneia, edema de MMII e fadiga. Revise internações prévias por “falta de ar” sem diagnóstico definido.\nCheque exames no prontuário: Confirme FEVE ≥ 50% no ECO com hipertrofia VE ou aumento AE.\nVerifique BNP/NT-proBNP elevados. Conduza na APS: Controle rigorosamente PA e FC. Trate DM, obesidade e FA.\nPrescreva diurético apenas se houver congestão.\nOriente perda de peso, redução de sal e prática de atividade física regular.\nRegistre no prontuário: classifique como ICFEP se critérios forem atendidos.\n\nReferências: Machado GDB, Santos CRC, Canevese FF, et al. Insuficiência cardíaca com fração de ejeção preservada: fisiopatologia e manejo. 2015. Diretriz Brasileira de Insuficiência Cardíaca Crônica e Aguda – SBC, 2022.",
+    "crumbs": [
+      "Pílulas para Insuficiência Cardíaca"
+    ]
+  },
+  {
+    "objectID": "pilulas_IC.html#você-sabe-reconhecer-os-perfis-clínicos-de-ic-descompensada-ablc",
+    "href": "pilulas_IC.html#você-sabe-reconhecer-os-perfis-clínicos-de-ic-descompensada-ablc",
+    "title": "Pílulas para Insuficiência Cardíaca",
+    "section": "Você sabe reconhecer os perfis clínicos de IC descompensada (ABLC)?",
+    "text": "Você sabe reconhecer os perfis clínicos de IC descompensada (ABLC)?\n■ Lembretes: Os perfis ABLC ajudam a identificar rapidamente o tipo de descompensação na IC. Cada perfil exige condutas iniciais distintas. Reconhecer o perfil acelera o manejo e reduz mortalidade.\n■ Checklist de ação: Perfil A (quente e seco) – Agudo congesto: Identifique dispneia súbita, congestão pulmonar intensa, pressão arterial elevada. Inicie vasodilatador (se PA permitir), diurético EV, oxigênio. Perfil B (quente e úmido) – Bradi: Suspeite em bradicardia sintomática (&lt; 50 bpm) com tontura ou síncope. Suspenda betabloqueador, avalie necessidade de marcapasso temporário. Perfil L (frio e seco) – Lenti (baixo débito): Observe fadiga intensa, extremidades frias, PA baixa sem congestão evidente. Inicie suporte com inotrópico (em nível hospitalar). Perfil C (frio e úmido) – Choque cardiogênico: Reconheça hipotensão sustentada, hipoperfusão, oligúria, confusão mental. Aja rápido: referencie imediatamente para UTI, suporte vasopressor e inotrópico.\nReferências: Diretriz Brasileira de Insuficiência Cardíaca Crônica e Aguda – SBC, 2022. Aula ICC 2023 – Sociedade Brasileira de Cardiologia.",
+    "crumbs": [
+      "Pílulas para Insuficiência Cardíaca"
+    ]
+  }
+]
