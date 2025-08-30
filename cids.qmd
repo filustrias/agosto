@@ -21,7 +21,7 @@ Aqui estão apenas as listas de CIDs usados nos códigos para identificação de
 
 ---
 
-### Diabetes Mellitus
+### Diabetes Mellitus - incluindo tipo 1 e tipo 2
 
 * **E10** – Diabetes mellitus insulino-dependente (Tipo 1)
 * **E11** – Diabetes mellitus não insulino-dependente (Tipo 2)
@@ -377,23 +377,26 @@ Aqui estão apenas as listas de CIDs usados nos códigos para identificação de
 
 ### Psicoses
 
-* **F20** – Esquizofrenia
-* **F22–F25** – Transtornos delirantes; transtornos esquizoafetivos etc.
-* **F28|F29** – Outros transtornos psicóticos / não especificado
-* **F302** – Episódio maníaco com sintomas psicóticos (F30.2)
-* **F312** – Transtorno afetivo bipolar, episódio atual depressivo com sintomas psicóticos (F31.2)
-* **F315** – Transtorno afetivo bipolar, episódio atual remissão parcial/total (F31.5)
+* **F20** → Esquizofrenia
+* **F21** → Transtorno esquizotípico
+* **F22** → Transtornos delirantes persistentes
+* **F23** → Transtornos psicóticos agudos e transitórios
+* **F24** → Transtorno psicótico induzido
+* **F25** → Transtornos esquizoafetivos
+* **F28** → Outros transtornos psicóticos não orgânicos especificados
+* **F29** → Psicose não orgânica não especificada
+* **F31** → Transtorno afetivo bipolar
 
 ---
 
 ### Depressão
 
 
-* **F313|F314|F315** – Transtornos afetivos bipolares (episódios atuais hipomaníaco/maníaco/remissão)
 * **F32|F33** – Episódio depressivo / Transtorno depressivo recorrente
-* **F341** – Distimia (F34.1)
-* **F412** – Transtorno de ansiedade generalizada (F41.1)
-* **F432** – Transtorno de ajustamento (F43.2)
+* **F34** – Transtornos de humor persistentes
+* **F38** – Outros transtornos de humor (afetivos)
+* **F39** – Transtorno de humor (afetivo) não especificado
+* **F40–F41** Transtornos de ansiedade
 
 ---
 
