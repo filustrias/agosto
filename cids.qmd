@@ -388,7 +388,7 @@ Aqui estão apenas as listas de CIDs usados nos códigos para identificação de
 
 ### Depressão
 
-* **F204** – Transtorno esquizofreniforme depressivo? *(nota: F20.4 = esquizofrenia pós-esquizofrênica depressiva)*
+
 * **F313|F314|F315** – Transtornos afetivos bipolares (episódios atuais hipomaníaco/maníaco/remissão)
 * **F32|F33** – Episódio depressivo / Transtorno depressivo recorrente
 * **F341** – Distimia (F34.1)
