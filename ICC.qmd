@@ -12,9 +12,11 @@ editor:
 
 ## Critérios de inclusão de pacientes
 
-Neste momento, apenas informações provenientes dos CIDs registrados são usadas para definir paciente com CI.
+Neste momento, apenas informações provenientes dos CIDs registrados são
+usadas para definir paciente com CI.
 
-> CIDs - I110, I130, I132, I255, I420, I425, I426, I427, I428, I429, I43, I50, P290
+> CIDs - I110, I130, I132, I255, I420, I425, I426, I427, I428, I429,
+> I43, I50, P290
 
 ## Checklist de Cuidado em Insuficiência Cardíaca na Atenção Primária à Saúde
 
@@ -22,26 +24,51 @@ Neste momento, apenas informações provenientes dos CIDs registrados são usada
 
 1.  **Avaliação Clínica Abrangente:**
 
-    ◦ Anamnese Detalhada: Investigar ativamente sintomas sugestivos de IC, como dispneia (em repouso, ao caminhar, paroxística noturna),  ortopneia (necessidade de mais travesseiros), edema (de membros inferiores), fadiga, cansaço, tosse seca (especialmente noturna), noctúria e dor em quadrante superior direito (QSD) secundária à congestão hepática.
+    ◦ Anamnese Detalhada: Investigar ativamente sintomas sugestivos de
+    IC, como dispneia (em repouso, ao caminhar, paroxística noturna),
+    ortopneia (necessidade de mais travesseiros), edema (de membros
+    inferiores), fadiga, cansaço, tosse seca (especialmente noturna),
+    noctúria e dor em quadrante superior direito (QSD) secundária à
+    congestão hepática.
 
-    ◦ Exame Físico Completo: Procurar sinais como taquicardia, ritmo de galope (terceira bulha), deslocamento do ictus cordis, turgência jugular a 45º, refluxo hepatojugular, estertores crepitantes pulmonares (principalmente nas bases), esforço respiratório/taquipneia, hepatomegalia e edema de membros inferiores.
+    ◦ Exame Físico Completo: Procurar sinais como taquicardia, ritmo de
+    galope (terceira bulha), deslocamento do ictus cordis, turgência
+    jugular a 45º, refluxo hepatojugular, estertores crepitantes
+    pulmonares (principalmente nas bases), esforço
+    respiratório/taquipneia, hepatomegalia e edema de membros
+    inferiores.
 
-    ◦ Uso de Escores Diagnósticos: Aplicar os critérios de Boston ou Framingham para auxiliar na classificação da probabilidade clínica de IC.
+    ◦ Uso de Escores Diagnósticos: Aplicar os critérios de Boston ou
+    Framingham para auxiliar na classificação da probabilidade clínica
+    de IC.
 
-    ◦ Diagnósticos Diferenciais: Considerar e excluir outras causas de dispneia e sintomas, como Doença Pulmonar Obstrutiva Crônica (DPOC), asma, doenças pulmonares intersticiais, anemia, doenças da tireoide, cardiopatia valvar, apneia obstrutiva do sono, obesidade, insuficiência venosa periférica e insuficiência renal crônica.
+    ◦ Diagnósticos Diferenciais: Considerar e excluir outras causas de
+    dispneia e sintomas, como Doença Pulmonar Obstrutiva Crônica (DPOC),
+    asma, doenças pulmonares intersticiais, anemia, doenças da tireoide,
+    cardiopatia valvar, apneia obstrutiva do sono, obesidade,
+    insuficiência venosa periférica e insuficiência renal crônica.
 
 2.  **Exames Complementares Iniciais (Conforme Fluxo de Diagnóstico):**
 
-    ◦ Eletrocardiograma (ECG) de 12 Derivações: Realizar em todos os pacientes com suspeita de IC para avaliar sinais de cardiopatia estrutural (ex: hipertrofia ventricular esquerda), isquemia miocárdica, áreas de fibrose, distúrbios da condução atrioventricular, bradicardia ou taquiarritmias. Um ECG normal torna a disfunção sistólica de VE improvável (VPN: 98%).
+    ◦ Eletrocardiograma (ECG) de 12 Derivações: Realizar em todos os
+    pacientes com suspeita de IC para avaliar sinais de cardiopatia
+    estrutural (ex: hipertrofia ventricular esquerda), isquemia
+    miocárdica, áreas de fibrose, distúrbios da condução
+    atrioventricular, bradicardia ou taquiarritmias. Um ECG normal torna
+    a disfunção sistólica de VE improvável (VPN: 98%).
 
-    ◦ Radiografia de Tórax: Realizar para avaliação de cardiomegalia e congestão pulmonar, além de ajudar a identificar causas pulmonares de dispneia. É mais valiosa na IC aguda.
+    ◦ Radiografia de Tórax: Realizar para avaliação de cardiomegalia e
+    congestão pulmonar, além de ajudar a identificar causas pulmonares
+    de dispneia. É mais valiosa na IC aguda.
 
-    ◦ Peptídeos Natriuréticos (BNP ou NT-proBNP): ▪ Realizar como primeiro teste diagnóstico em pacientes com baixa ou moderada probabilidade clínica de IC. Interpretar os resultados:
-    Negativo: Se BNP \< 35-50 pg/mL ou NT-proBNP \< 125 pg/mL (em
-    ambulatório), ou BNP \< 100 pg/mL ou NT-proBNP \< 300 pg/mL (em
-    emergência), o diagnóstico de IC é improvável, devendo-se investigar
-    outras hipóteses. • Positivo: Se BNP \> 35-50 pg/mL ou NT-proBNP \>
-    125 pg/mL (em ambulatório), ou BNP \> 100 pg/mL ou NT-proBNP \> 300
+    ◦ Peptídeos Natriuréticos (BNP ou NT-proBNP): ▪ Realizar como
+    primeiro teste diagnóstico em pacientes com baixa ou moderada
+    probabilidade clínica de IC. Interpretar os resultados: Negativo: Se
+    BNP \< 35-50 pg/mL ou NT-proBNP \< 125 pg/mL (em ambulatório), ou
+    BNP \< 100 pg/mL ou NT-proBNP \< 300 pg/mL (em emergência), o
+    diagnóstico de IC é improvável, devendo-se investigar outras
+    hipóteses. • Positivo: Se BNP \> 35-50 pg/mL ou NT-proBNP \> 125
+    pg/mL (em ambulatório), ou BNP \> 100 pg/mL ou NT-proBNP \> 300
     pg/mL (em emergência), solicitar ecocardiografia para confirmação
     diagnóstica. ▪ Não recomendar BNP/NT-proBNP como teste diagnóstico
     em pacientes com alta probabilidade clínica de IC, pois a
@@ -70,56 +97,60 @@ Neste momento, apenas informações provenientes dos CIDs registrados são usada
 
 3.  **Classificação da IC:**
 
-    ◦ Classificar a IC pela Fração de Ejeção do Ventrículo Esquerdo
-    (FEVE): ▪ IC com fração de ejeção reduzida (ICFEr): FEVE \< 40%
-    (geral); ou ≤ 40% (para dapagliflozina); ou ≤ 35% (para
-    sacubitril/valsartana); ou ≤ 35% (para TRC/CDI). ▪ IC com fração de
-    ejeção intermediária (ICFEi): FEVE 40-49%. ▪ IC com fração de ejeção
-    preservada (ICFEP): FEVE ≥ 50%.
+-   Classificar a IC pela Fração de Ejeção do Ventrículo Esquerdo
+    (FEVE):
 
-    ◦ Classificar Funcionalmente pela New York Heart Association (NYHA):
+    -   IC com fração de ejeção reduzida (ICFEr): FEVE \< 40% (geral);
+        ou ≤ 40% (para dapagliflozina); ou ≤ 35% (para
+        sacubitril/valsartana); ou ≤ 35% (para TRC/CDI).
+
+    -   IC com fração de ejeção intermediária (ICFEi): FEVE 40-49%.
+
+    -   IC com fração de ejeção preservada (ICFEP): FEVE ≥ 50%.
+
+-   Classificar Funcionalmente pela New York Heart Association (NYHA):
     Graduar a doença em 4 níveis (I, II, III, IV) para auxiliar na
     definição terapêutica e na avaliação da resposta ao tratamento.
     Registrar a classe funcional NYHA em cada consulta de
     acompanhamento.
 
-    ◦ Classificar pelos Estágios da American College of
+-   Classificar pelos Estágios da American College of
     Cardiology/American Heart Association (ACC/AHA): Considerar os
     estágios A, B, C e D para enfatizar o desenvolvimento e a progressão
     da doença.
 
 ### II - Tratamento Não Farmacológico e Autocuidado
 
-1.  **Educação em Saúde e Apoio ao Autocuidado:**
+**Educação em Saúde e Apoio ao Autocuidado:**
 
-    ◦ Fornecer Informações Abrangentes: Oferecer informações escritas e
+-   Fornecer Informações Abrangentes: Oferecer informações escritas e
     verbais sobre a IC (causas, tratamento, evolução, prognóstico), os
     benefícios e efeitos adversos dos medicamentos, posologias, e
     conduta em caso de esquecimento de dose.
 
-    ◦ Verificar Compreensão: Assegurar que o paciente e seu referente
+-   Verificar Compreensão: Assegurar que o paciente e seu referente
     social (cuidador) compreenderam a importância de cada medicamento e
     as orientações, questionando ativamente sobre o uso e identificando
     dificuldades na adesão.
 
-    ◦ Aconselhamento sobre Sinais de Alarme: Orientar o paciente e o
+-   Aconselhamento sobre Sinais de Alarme: Orientar o paciente e o
     cuidador a procurar atendimento médico em caso de piora clínica,
     como mudanças nos sintomas, sinais vitais ou ganho de peso de 1 a 2
     kg em poucos dias, associados à hipervolemia e descompensação.
 
-    ◦ Fomentar Adesão Medicamentosa: Enfatizar a importância do uso
+-   Fomentar Adesão Medicamentosa: Enfatizar a importância do uso
     regular dos medicamentos prescritos.
 
-    ◦ Plano de Manejo Compartilhado: Desenvolver um plano de cuidado em
+-   Plano de Manejo Compartilhado: Desenvolver um plano de cuidado em
     conjunto com o paciente, respeitando suas necessidades,
     preferências, particularidades culturais e limitações físicas ou de
     aprendizado. Documentar as discussões.
 
-    ◦ Programas Multidisciplinares: Encorajar a participação em
-    programas de gerenciamento multidisciplinar e grupos de pacientes
-    (ex: hipertensos, diabéticos).
+-   Programas Multidisciplinares: Encorajar a participação em programas
+    de gerenciamento multidisciplinar e grupos de pacientes (ex:
+    hipertensos, diabéticos).
 
-2.  **Dieta e Nutrição:**
+    **Dieta e Nutrição:**
 
     ◦ Dieta Cardioprotetora: Recomendar uma dieta saudável e balanceada.
 
@@ -138,7 +169,7 @@ Neste momento, apenas informações provenientes dos CIDs registrados são usada
     obesidade leve com o objetivo de alterar a evolução da síndrome
     devido ao "paradoxo da obesidade").
 
-3.  **Atividade Física e Reabilitação Cardíaca:**
+    **Atividade Física e Reabilitação Cardíaca:**
 
     ◦ Exercício Aeróbico Regular: Encorajar e recomendar a prática de
     exercício aeróbico em pacientes com IC estável (NYHA I-III),
@@ -161,7 +192,7 @@ Neste momento, apenas informações provenientes dos CIDs registrados são usada
     controlados, o teste pode ser dispensado, a menos que desencadeie
     sintomas.
 
-4.  **Vacinação:**
+    **Vacinação:**
 
     ◦ Vacina contra Influenza: Recomendar a vacinação anual contra
     influenza para todos os pacientes com IC.
@@ -169,7 +200,7 @@ Neste momento, apenas informações provenientes dos CIDs registrados são usada
     ◦ Vacina contra Pneumococo: Recomendar a vacinação contra
     pneumococo.
 
-5.  **Cessação do Tabagismo e Controle do Álcool:**
+    **Cessação do Tabagismo e Controle do Álcool:**
 
     ◦ Cessação do Tabagismo: Encorajar todos os pacientes com IC a
     interromper o tabagismo.
@@ -239,8 +270,8 @@ Neste momento, apenas informações provenientes dos CIDs registrados são usada
     ◦ Fármaco: Espironolactona (12,5-25mg/dia).
 
     ◦ Indicação: Iniciar para pacientes sintomáticos (NYHA II-IV) com
-    disfunção sistólica de VE, associado ao tratamento padrão (IECA/ARA
-    II e BB).
+    disfunção sistólica de VE, associado ao tratamento padrão
+    (IECA/ARA-II e BB).
 
     ◦ Titulação: Aumentar dose para 50mg/dia se níveis de potássio
     adequados.
