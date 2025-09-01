@@ -6,12 +6,8 @@ editor:
 
 # Multimorbidade {.unnumbered}
 
-**Multimorbidade** é a condição crônica mais prevalente em sociedades
-desenvolvidas. Multimorbidade é definida pelo acúmulo de duas ou mais
-condições crônicas em um mesmo indivíduo. Esta situação vem
-frenquentemente acomapanhada de outra condição extremamente comum - a
-**Polifarmácia.** Utilizar cinco ou mais medicamentos cronicamente é a
-definição mais comumente aceita para polifarmácia.
+**Multimorbidade** é a condição crônica mais prevalente em sociedades desenvolvidas. Multimorbidade é definida pelo acúmulo de duas ou mais
+condições crônicas em um mesmo indivíduo. Esta situação vem frenquentemente acomapanhada de outra condição extremamente comum - a **Polifarmácia.** Utilizar cinco ou mais medicamentos cronicamente é a definição mais comumente aceita para polifarmácia.
 
 ![](MM.jpg)
 

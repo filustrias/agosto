@@ -375,7 +375,7 @@ Aqui estão apenas as listas de CIDs usados nos códigos para identificação de
 
 ---
 
-### Psicoses
+### Esquizofrenia e Psicoses
 
 * **F20** → Esquizofrenia
 * **F21** → Transtorno esquizotípico

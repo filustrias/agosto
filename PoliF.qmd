@@ -6,11 +6,37 @@ editor:
 
 # Polifarmácia {.unnumbered}
 
-## Relevância
+Polifarmácia refere-se ao uso simultâneo de múltiplos medicamentos por um mesmo paciente, geralmente definido como cinco ou mais fármacos em uso contínuo. Suas principais causas incluem o envelhecimento populacional, a multimorbidade (presença de várias doenças crônicas), a fragmentação do cuidado entre diferentes especialistas, a automedicação e a pressão do mercado farmacêutico. Polifarmácia é um problema por si só e médicos de família precisam estar atentos para suas consequências, que incluem risco aumentado de interações medicamentosas, efeitos adversos, quedas, declínio cognitivo e diminuição da adesão ao tratamento. Para as famílias, isso pode significar maior sobrecarga no manejo dos medicamentos, aumento dos custos pessoais e impacto na qualidade de vida. O sistema de saúde também sofre impactos da polifarmácia, pois está associada ao aumento das hospitalizações evitáveis, maior tempo de internação, maior risco de readmissões e elevação dos gastos em saúde, tanto pelo custo direto dos medicamentos quanto pelo tratamento de complicações decorrentes.
+
+**Iniciativas para minimizar o impacto da polifarmácia incluem**
+ferramentas e critérios clínicos auxiliam na revisão de prescrições e o uso racional de medicamentos. São elas:
+
+-   [**Critérios de Beers**](https://agsjournals.onlinelibrary.wiley.com/doi/epdf/10.1111/jgs.18372){target="_blank"} (American Geriatrics Society): lista de medicamentos potencialmente inapropriados para idosos.
+
+-    [**Critérios STOPP/START**](https://www.cgakit.com/m-2-stopp-start){target="_blank"} (Screening Tool of Older Persons’ Prescriptions / Screening Tool to Alert to Right Treatment): identificam medicamentos potencialmente inapropriados (STOPP) e omissões de tratamentos necessários (START).
+
+-   [**Medication Appropriateness Index (MAI)**](https://www.hqsc.govt.nz/assets/Our-work/System-safety/Reducing-harm/Medicines/Publications-resources/Use-of-the-Medication-Appropriateness-Index.pdf){target="_blank"}: instrumento que avalia adequação da prescrição considerando indicação, efetividade e
+    segurança.
+
+A implementação de revisões periódicas da prescrição, apoio farmacêutico nas equipes de saúde, protocolos de desprescrição e educação de pacientes e familiares são estratégias fundamentais para reduzir os riscos da polifarmácia.
+
+## Referências
+
+[American Geriatrics Society 2019 Updated AGS Beers Criteria® for Potentially Inappropriate Medication Use in Older Adults. *J Am Geriatr Soc*. 2019;67(4):674–694.](https://sbgg.org.br/informativos/13-02-19/1_Updated_AGS_Beer.pdf){target="_blank"}
+
+[O’Mahony D, et al. STOPP/START criteria for potentially inappropriate prescribing in older people: version 2. *Age Ageing*.2015;44(2):213–218.](https://pmc.ncbi.nlm.nih.gov/articles/PMC4339726/pdf/afu145.pdf){target="_blank"}
+
+[Hanlon JT, Schmader KE. The Medication Appropriateness Index at 20: where it started, where it has been, and where it may be going. *Drugs Aging*. 2013;30(11):893–900.](https://pmc.ncbi.nlm.nih.gov/articles/PMC3831621/pdf/nihms527022.pdf){target="_blank"}
+
+[Scott IA, Hilmer SN, Reeve E, et al. Reducing inappropriate polypharmacy: the process of deprescribing. *JAMA Intern Med*.2015;175(5):827–834.](https://drive.google.com/file/d/1TgdMwYCkxbyBors45kwNJoOi01qw9v6D/view?usp=sharing){target="_blank"}
 
 ## Definição clínica
 
+Vamos trabalhar com 5 ou mais medicações de uso crônico. Precisaremos definir a lista de medicamentos prescritos a partir da REMUME.
+
 ## Critérios de inclusão de pacientes
+
+POr ora estamos criando os códigos a partir dos [**Critérios STOPP/START**](https://www.cgakit.com/m-2-stopp-start){target="_blank"}.
 
 ## Informações visualizadas
 
