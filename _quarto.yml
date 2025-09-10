@@ -20,6 +20,8 @@ book:
     - fragil.qmd
     - pilula_CI.qmd
     - pilulas_IC.qmd
+    - implementacao.qmd
+    - rastreios.qmd
 
 bibliography: references.bib
 

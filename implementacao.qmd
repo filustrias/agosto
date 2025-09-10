@@ -1,0 +1,149 @@
+# Implementação {.unnumbered}
+
+## Objetivos do projeto
+
+### Missão
+
+A produção do Monitor da Multimorbidade tem como missão melhorar a forma como Equipes de Sáude da Família realizam o manejo individual de condições crônicas de saúde, como partilham este cuidado em equipe e como façam o monitoramento das suas coortes de pacientes ao longo do tempo. Através do monitor esperamos qualificar práticas clínicas que resultam em cuidado de baixo valor, melhorar a qualidade dos registro de informações de pacientes e consultas nos sistemas eletrônicos, bem como diminuir a ocorrência de desfechos indesejados na população, como efeitos adversos do uso de medicamentos ou de interação entre medicamentos, internações hospitalares evitáveis, sequelas, perda funcional, diminuição da qualidade de vida e morte.
+
+## RE-AIM Framework
+
+### REACH - Alcance
+
+**Dimensão ou questão: Quem participará?**
+
+Certifique-se de acompanhar o alcance de forma contínua e ajustar suas abordagens conforme necessário, especialmente se você não estiver atingindo grupos-chave.
+
+-   A quem a iniciativa atrairá? (Usuários finais da iniciativa – por exemplo, pacientes, estudantes, funcionários, crianças, pais, membros da comunidade)
+
+-   Quem você planeja alcançar com a sua iniciativa?
+
+-   Defina os beneficiários pretendidos – população(ões)-alvo.
+
+-   Como e onde você irá alcançá-los?
+
+-   Como você irá divulgar e promover o programa?
+
+-   Quem precisa aprovar esses métodos?
+
+-   Como saberá se você os alcançou e quem participou?
+
+-   Como saberá se aqueles que participaram são representativos dos beneficiários pretendidos (população-alvo)?
+
+-   Que métodos você usará para atrair populações vulneráveis e com foco em iniquidades em saúde?
+
+-   Que informações estão disponíveis para determinar se a amostra é representativa do público-alvo?
+
+## EFFECTIVENESS - Efetividade
+
+**Dimensão ou questão: Quais serão os resultados?** Avalie periodicamente os resultados obtidos até o momento, especialmente quem está se beneficiando e quem não está.
+
+-   Quais são os resultados mais importantes que você espera observar? (por exemplo: mais atividade física, perda de peso, melhor qualidade de vida, menos bullying, menos absenteísmo, menos uso de drogas; melhor adesão a medicamentos; melhora da qualidade de vida)
+
+-   Qual é a mudança esperada no nível individual?
+
+-   Como você medirá essas mudanças?
+
+-   Quem se importará com os resultados?
+
+-   Como você compartilhará esses resultados?
+
+-   Qual é a probabilidade de sua iniciativa alcançar os principais resultados?
+
+-   Quais são as maiores ameaças para alcançar os resultados desejados?
+
+-   Seu programa ou política será eficaz para aqueles que mais precisam?
+
+-   Como seu programa ou política precisará ser adaptado para beneficiar esses indivíduos?
+
+-   Que consequências ou resultados não intencionais podem surgir?
+
+-   O que deu errado em outras iniciativas semelhantes?
+
+## ADOPTION - Adoção
+
+**Dimensão ou questão: Onde a iniciativa será realizada?** Sempre que possível, incorpore as atividades de implementação da iniciativa nas funções e fluxos de trabalho existentes, em vez de criar novas tarefas.
+
+-   Quais ambientes ou tipos de organizações você está visando (por exemplo: escolas, locais de trabalho, clínicas, ambientes ou organizações comunitárias)?
+
+-   Quais são as principais características dos ambientes que você deseja que participem?
+
+-   Quem pode se interessar por essa iniciativa e por quê?
+
+-   Como esses ambientes tomarão conhecimento disso?
+
+-   Quais foram as características dos ambientes que não participaram (por exemplo: localização, instalações, finanças, pessoal)?
+
+-   Quantos desses ambientes e organizações você estima que usarão o programa ou participarão da sua política?
+
+-   Que apoios ou ameaças externas ou ambientais existem?
+
+-   Como você saberá se as organizações usaram a iniciativa?
+
+-   Quem pode ajudar a reunir informações sobre isso?
+
+-   Quem irá implementar o programa ou política (efetivamente realizar o trabalho) e essas pessoas têm as habilidades e o tempo necessários? (por exemplo: professores, equipe de recursos humanos, clínicos, educadores leigos em saúde, voluntários)?
+
+-   Quais são as competências ou características daqueles (por exemplo, equipe, voluntários) que você deseja que implementem a intervenção?
+
+## IMPLEMENTATION - Implementação
+
+**Dimensão ou questão: Com que consistência o programa ou política será executado?** Antecipe a necessidade de fazer ajustes para refinar seus planos iniciais. Isso é normal e esperado. Busque maneiras de tornar a execução do programa mais eficiente.
+
+-   Como a iniciativa será implementada, incluindo ajustes e adaptações?
+
+-   Quais são os elementos-chave da iniciativa que precisam ser garantidos para que ela tenha sucesso?
+
+-   Em que medida os aspectos principais do programa ou política serão executados conforme planejado?
+
+-   Como você avaliará a execução do programa (autoavaliação, auditoria, listas de verificação)?
+
+-   Descreva a viabilidade desses métodos.
+
+-   Que adaptações ou modificações você acha que serão necessárias para implementar a iniciativa em diferentes contextos?
+
+-   Quais são os desafios prováveis de implementação que você precisará superar?
+
+-   Como saberá quais adaptações ou modificações foram feitas durante o programa?
+
+-   Quem pode ajudar a acompanhar as modificações ou ajustes realizados?
+
+-   Quais são alguns dos possíveis obstáculos para uma implementação consistente?
+
+-   Existem projetos ou programas concorrentes a serem considerados?
+
+-   Quais custos e recursos (incluindo tempo e carga de trabalho, não apenas dinheiro) precisam ser considerados?
+
+-   Esses custos e recursos estão disponíveis e são razoáveis de solicitar (prioridade suficiente)?
+
+-   Quais custos e recursos (incluindo tempo e carga de trabalho, não apenas dinheiro) precisam ser considerados?
+
+## MAINTENANCE - manutenção/sustentabilidade
+
+**Dimensão ou questão: Quando a sua iniciativa precisará ser renovada? O que acontecerá no longo prazo?** Considere tanto os beneficiários individuais quanto os ambientes/organizações (por exemplo: apoio a benefícios de longo prazo para crianças, funcionários, pacientes, estudantes; infraestrutura e políticas contínuas).
+
+-   Quais são os prováveis desafios de implementação que você precisará superar?
+
+-   As organizações conseguirão sustentar a iniciativa ao longo do tempo e existem planos para manter a equipe treinada em atividade?
+
+-   Que apoios de infraestrutura serão necessários para sustentar a iniciativa?
+
+-   Haverá uma infraestrutura e financiamento permanentes?
+
+-   Como essa iniciativa se alinhará com políticas atuais e futuras, além de mecanismos de reembolso e fontes de receita?
+
+-   Qual é a probabilidade de sua iniciativa produzir efeitos duradouros para os participantes individuais?
+
+-   Como os componentes principais do programa serão entregues aos indivíduos ao longo do tempo? Eles permanecerão em contato?
+
+-   Como será possível acompanhar a sua iniciativa por um período prolongado?
+
+-   Como você continuará a monitorar o sucesso e fornecer feedback contínuo? (“Está funcionando para você?”)
+
+-   Como você divulgará seu produto e as lições aprendidas?
+
+-   Que materiais simples e fáceis de compreender você pode produzir para compartilhar suas lições aprendidas?
+
+-   Quais são as modificações ou adaptações prováveis que precisarão ser feitas para sustentar a iniciativa ao longo do tempo (por exemplo: menor custo, equipe diferente, menor intensidade, diferentes ambientes)?
+
+-   Como você poderá acompanhar as principais mudanças realizadas ao longo do tempo?

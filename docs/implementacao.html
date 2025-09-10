@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Fragilidade em idosos – Sprint de Agosto</title>
+<title>Implementação – Sprint de Agosto</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./pilula_CI.html" rel="next">
-<link href="./PoliF.html" rel="prev">
+<link href="./rastreios.html" rel="next">
+<link href="./pilulas_IC.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./fragil.html">Fragilidade em idosos</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./implementacao.html">Implementação</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -171,7 +171,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./fragil.html" class="sidebar-item-text sidebar-link active">
+  <a href="./fragil.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Fragilidade em idosos</span></a>
   </div>
 </li>
@@ -189,7 +189,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./implementacao.html" class="sidebar-item-text sidebar-link">
+  <a href="./implementacao.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Implementação</span></a>
   </div>
 </li>
@@ -209,11 +209,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#relevância" id="toc-relevância" class="nav-link active" data-scroll-target="#relevância">Relevância</a></li>
-  <li><a href="#definição-clínica" id="toc-definição-clínica" class="nav-link" data-scroll-target="#definição-clínica">Definição clínica</a></li>
-  <li><a href="#critérios-de-inclusão-de-pacientes" id="toc-critérios-de-inclusão-de-pacientes" class="nav-link" data-scroll-target="#critérios-de-inclusão-de-pacientes">Critérios de inclusão de pacientes</a></li>
-  <li><a href="#informações-visualizadas" id="toc-informações-visualizadas" class="nav-link" data-scroll-target="#informações-visualizadas">Informações visualizadas</a></li>
-  <li><a href="#educação-médica-continuada" id="toc-educação-médica-continuada" class="nav-link" data-scroll-target="#educação-médica-continuada">Educação Médica Continuada</a></li>
+  <li><a href="#objetivos-do-projeto" id="toc-objetivos-do-projeto" class="nav-link active" data-scroll-target="#objetivos-do-projeto">Objetivos do projeto</a>
+  <ul class="collapse">
+  <li><a href="#missão" id="toc-missão" class="nav-link" data-scroll-target="#missão">Missão</a></li>
+  </ul></li>
+  <li><a href="#re-aim-framework" id="toc-re-aim-framework" class="nav-link" data-scroll-target="#re-aim-framework">RE-AIM Framework</a>
+  <ul class="collapse">
+  <li><a href="#reach---alcance" id="toc-reach---alcance" class="nav-link" data-scroll-target="#reach---alcance">REACH - Alcance</a></li>
+  </ul></li>
+  <li><a href="#effectiveness---efetividade" id="toc-effectiveness---efetividade" class="nav-link" data-scroll-target="#effectiveness---efetividade">EFFECTIVENESS - Efetividade</a></li>
+  <li><a href="#adoption---adoção" id="toc-adoption---adoção" class="nav-link" data-scroll-target="#adoption---adoção">ADOPTION - Adoção</a></li>
+  <li><a href="#implementation---implementação" id="toc-implementation---implementação" class="nav-link" data-scroll-target="#implementation---implementação">IMPLEMENTATION - Implementação</a></li>
+  <li><a href="#maintenance---manutençãosustentabilidade" id="toc-maintenance---manutençãosustentabilidade" class="nav-link" data-scroll-target="#maintenance---manutençãosustentabilidade">MAINTENANCE - manutenção/sustentabilidade</a></li>
   </ul>
 </nav>
     </div>
@@ -222,7 +229,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Fragilidade em idosos</h1>
+<h1 class="title">Implementação</h1>
 </div>
 
 
@@ -239,20 +246,105 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="relevância" class="level2">
-<h2 class="anchored" data-anchor-id="relevância">Relevância</h2>
+<section id="objetivos-do-projeto" class="level2">
+<h2 class="anchored" data-anchor-id="objetivos-do-projeto">Objetivos do projeto</h2>
+<section id="missão" class="level3">
+<h3 class="anchored" data-anchor-id="missão">Missão</h3>
+<p>A produção do Monitor da Multimorbidade tem como missão melhorar a forma como Equipes de Sáude da Família realizam o manejo individual de condições crônicas de saúde, como partilham este cuidado em equipe e como façam o monitoramento das suas coortes de pacientes ao longo do tempo. Através do monitor esperamos qualificar práticas clínicas que resultam em cuidado de baixo valor, melhorar a qualidade dos registro de informações de pacientes e consultas nos sistemas eletrônicos, bem como diminuir a ocorrência de desfechos indesejados na população, como efeitos adversos do uso de medicamentos ou de interação entre medicamentos, internações hospitalares evitáveis, sequelas, perda funcional, diminuição da qualidade de vida e morte.</p>
 </section>
-<section id="definição-clínica" class="level2">
-<h2 class="anchored" data-anchor-id="definição-clínica">Definição clínica</h2>
 </section>
-<section id="critérios-de-inclusão-de-pacientes" class="level2">
-<h2 class="anchored" data-anchor-id="critérios-de-inclusão-de-pacientes">Critérios de inclusão de pacientes</h2>
+<section id="re-aim-framework" class="level2">
+<h2 class="anchored" data-anchor-id="re-aim-framework">RE-AIM Framework</h2>
+<section id="reach---alcance" class="level3">
+<h3 class="anchored" data-anchor-id="reach---alcance">REACH - Alcance</h3>
+<p><strong>Dimensão ou questão: Quem participará?</strong></p>
+<p>Certifique-se de acompanhar o alcance de forma contínua e ajustar suas abordagens conforme necessário, especialmente se você não estiver atingindo grupos-chave.</p>
+<ul>
+<li><p>A quem a iniciativa atrairá? (Usuários finais da iniciativa – por exemplo, pacientes, estudantes, funcionários, crianças, pais, membros da comunidade)</p></li>
+<li><p>Quem você planeja alcançar com a sua iniciativa?</p></li>
+<li><p>Defina os beneficiários pretendidos – população(ões)-alvo.</p></li>
+<li><p>Como e onde você irá alcançá-los?</p></li>
+<li><p>Como você irá divulgar e promover o programa?</p></li>
+<li><p>Quem precisa aprovar esses métodos?</p></li>
+<li><p>Como saberá se você os alcançou e quem participou?</p></li>
+<li><p>Como saberá se aqueles que participaram são representativos dos beneficiários pretendidos (população-alvo)?</p></li>
+<li><p>Que métodos você usará para atrair populações vulneráveis e com foco em iniquidades em saúde?</p></li>
+<li><p>Que informações estão disponíveis para determinar se a amostra é representativa do público-alvo?</p></li>
+</ul>
 </section>
-<section id="informações-visualizadas" class="level2">
-<h2 class="anchored" data-anchor-id="informações-visualizadas">Informações visualizadas</h2>
 </section>
-<section id="educação-médica-continuada" class="level2">
-<h2 class="anchored" data-anchor-id="educação-médica-continuada">Educação Médica Continuada</h2>
+<section id="effectiveness---efetividade" class="level2">
+<h2 class="anchored" data-anchor-id="effectiveness---efetividade">EFFECTIVENESS - Efetividade</h2>
+<p><strong>Dimensão ou questão: Quais serão os resultados?</strong> Avalie periodicamente os resultados obtidos até o momento, especialmente quem está se beneficiando e quem não está.</p>
+<ul>
+<li><p>Quais são os resultados mais importantes que você espera observar? (por exemplo: mais atividade física, perda de peso, melhor qualidade de vida, menos bullying, menos absenteísmo, menos uso de drogas; melhor adesão a medicamentos; melhora da qualidade de vida)</p></li>
+<li><p>Qual é a mudança esperada no nível individual?</p></li>
+<li><p>Como você medirá essas mudanças?</p></li>
+<li><p>Quem se importará com os resultados?</p></li>
+<li><p>Como você compartilhará esses resultados?</p></li>
+<li><p>Qual é a probabilidade de sua iniciativa alcançar os principais resultados?</p></li>
+<li><p>Quais são as maiores ameaças para alcançar os resultados desejados?</p></li>
+<li><p>Seu programa ou política será eficaz para aqueles que mais precisam?</p></li>
+<li><p>Como seu programa ou política precisará ser adaptado para beneficiar esses indivíduos?</p></li>
+<li><p>Que consequências ou resultados não intencionais podem surgir?</p></li>
+<li><p>O que deu errado em outras iniciativas semelhantes?</p></li>
+</ul>
+</section>
+<section id="adoption---adoção" class="level2">
+<h2 class="anchored" data-anchor-id="adoption---adoção">ADOPTION - Adoção</h2>
+<p><strong>Dimensão ou questão: Onde a iniciativa será realizada?</strong> Sempre que possível, incorpore as atividades de implementação da iniciativa nas funções e fluxos de trabalho existentes, em vez de criar novas tarefas.</p>
+<ul>
+<li><p>Quais ambientes ou tipos de organizações você está visando (por exemplo: escolas, locais de trabalho, clínicas, ambientes ou organizações comunitárias)?</p></li>
+<li><p>Quais são as principais características dos ambientes que você deseja que participem?</p></li>
+<li><p>Quem pode se interessar por essa iniciativa e por quê?</p></li>
+<li><p>Como esses ambientes tomarão conhecimento disso?</p></li>
+<li><p>Quais foram as características dos ambientes que não participaram (por exemplo: localização, instalações, finanças, pessoal)?</p></li>
+<li><p>Quantos desses ambientes e organizações você estima que usarão o programa ou participarão da sua política?</p></li>
+<li><p>Que apoios ou ameaças externas ou ambientais existem?</p></li>
+<li><p>Como você saberá se as organizações usaram a iniciativa?</p></li>
+<li><p>Quem pode ajudar a reunir informações sobre isso?</p></li>
+<li><p>Quem irá implementar o programa ou política (efetivamente realizar o trabalho) e essas pessoas têm as habilidades e o tempo necessários? (por exemplo: professores, equipe de recursos humanos, clínicos, educadores leigos em saúde, voluntários)?</p></li>
+<li><p>Quais são as competências ou características daqueles (por exemplo, equipe, voluntários) que você deseja que implementem a intervenção?</p></li>
+</ul>
+</section>
+<section id="implementation---implementação" class="level2">
+<h2 class="anchored" data-anchor-id="implementation---implementação">IMPLEMENTATION - Implementação</h2>
+<p><strong>Dimensão ou questão: Com que consistência o programa ou política será executado?</strong> Antecipe a necessidade de fazer ajustes para refinar seus planos iniciais. Isso é normal e esperado. Busque maneiras de tornar a execução do programa mais eficiente.</p>
+<ul>
+<li><p>Como a iniciativa será implementada, incluindo ajustes e adaptações?</p></li>
+<li><p>Quais são os elementos-chave da iniciativa que precisam ser garantidos para que ela tenha sucesso?</p></li>
+<li><p>Em que medida os aspectos principais do programa ou política serão executados conforme planejado?</p></li>
+<li><p>Como você avaliará a execução do programa (autoavaliação, auditoria, listas de verificação)?</p></li>
+<li><p>Descreva a viabilidade desses métodos.</p></li>
+<li><p>Que adaptações ou modificações você acha que serão necessárias para implementar a iniciativa em diferentes contextos?</p></li>
+<li><p>Quais são os desafios prováveis de implementação que você precisará superar?</p></li>
+<li><p>Como saberá quais adaptações ou modificações foram feitas durante o programa?</p></li>
+<li><p>Quem pode ajudar a acompanhar as modificações ou ajustes realizados?</p></li>
+<li><p>Quais são alguns dos possíveis obstáculos para uma implementação consistente?</p></li>
+<li><p>Existem projetos ou programas concorrentes a serem considerados?</p></li>
+<li><p>Quais custos e recursos (incluindo tempo e carga de trabalho, não apenas dinheiro) precisam ser considerados?</p></li>
+<li><p>Esses custos e recursos estão disponíveis e são razoáveis de solicitar (prioridade suficiente)?</p></li>
+<li><p>Quais custos e recursos (incluindo tempo e carga de trabalho, não apenas dinheiro) precisam ser considerados?</p></li>
+</ul>
+</section>
+<section id="maintenance---manutençãosustentabilidade" class="level2">
+<h2 class="anchored" data-anchor-id="maintenance---manutençãosustentabilidade">MAINTENANCE - manutenção/sustentabilidade</h2>
+<p><strong>Dimensão ou questão: Quando a sua iniciativa precisará ser renovada? O que acontecerá no longo prazo?</strong> Considere tanto os beneficiários individuais quanto os ambientes/organizações (por exemplo: apoio a benefícios de longo prazo para crianças, funcionários, pacientes, estudantes; infraestrutura e políticas contínuas).</p>
+<ul>
+<li><p>Quais são os prováveis desafios de implementação que você precisará superar?</p></li>
+<li><p>As organizações conseguirão sustentar a iniciativa ao longo do tempo e existem planos para manter a equipe treinada em atividade?</p></li>
+<li><p>Que apoios de infraestrutura serão necessários para sustentar a iniciativa?</p></li>
+<li><p>Haverá uma infraestrutura e financiamento permanentes?</p></li>
+<li><p>Como essa iniciativa se alinhará com políticas atuais e futuras, além de mecanismos de reembolso e fontes de receita?</p></li>
+<li><p>Qual é a probabilidade de sua iniciativa produzir efeitos duradouros para os participantes individuais?</p></li>
+<li><p>Como os componentes principais do programa serão entregues aos indivíduos ao longo do tempo? Eles permanecerão em contato?</p></li>
+<li><p>Como será possível acompanhar a sua iniciativa por um período prolongado?</p></li>
+<li><p>Como você continuará a monitorar o sucesso e fornecer feedback contínuo? (“Está funcionando para você?”)</p></li>
+<li><p>Como você divulgará seu produto e as lições aprendidas?</p></li>
+<li><p>Que materiais simples e fáceis de compreender você pode produzir para compartilhar suas lições aprendidas?</p></li>
+<li><p>Quais são as modificações ou adaptações prováveis que precisarão ser feitas para sustentar a iniciativa ao longo do tempo (por exemplo: menor custo, equipe diferente, menor intensidade, diferentes ambientes)?</p></li>
+<li><p>Como você poderá acompanhar as principais mudanças realizadas ao longo do tempo?</p></li>
+</ul>
 
 
 </section>
@@ -677,13 +769,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./PoliF.html" class="pagination-link" aria-label="Polifarmácia">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Polifarmácia</span>
+      <a href="./pilulas_IC.html" class="pagination-link" aria-label="Pílulas para Insuficiência Cardíaca">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Pílulas para Insuficiência Cardíaca</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./pilula_CI.html" class="pagination-link" aria-label="Pílulas Síndrome Coronariana Crônica">
-        <span class="nav-page-text">Pílulas Síndrome Coronariana Crônica</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./rastreios.html" class="pagination-link" aria-label="Rastreios neoplasias">
+        <span class="nav-page-text">Rastreios neoplasias</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

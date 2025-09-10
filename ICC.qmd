@@ -184,86 +184,119 @@ funcional NYHA em cada consulta de acompanhamento.
 Considerar os estágios A, B, C e D para enfatizar o desenvolvimento e a
 progressão da doença.
 
-+------------------+---------------------------------------------------+
-| Estágio          | Descrição                                         |
-+==================+===================================================+
-| **Estágio A –    | -   Pacientes **sem doença estrutural cardíaca**  |
-| Risco aumentado, |     identificada.                                 |
-| sem alteração    |                                                   |
-| estrutural ou    | -   **Nunca apresentaram sinais ou sintomas de    |
-| sintomas**       |     insuficiência cardíaca.**                     |
-|                  |                                                   |
-|                  | -   Possuem **alto risco** de desenvolver IC no   |
-|                  |     futuro por causa de comorbidades.             |
-|                  |                                                   |
-|                  | -   **Exemplos de fatores de risco:** hipertensão |
-|                  |     arterial sistêmica, diabetes mellitus,        |
-|                  |     obesidade, síndrome metabólica,               |
-|                  |     aterosclerose, uso de cardiotóxicos,          |
-|                  |     histórico familiar de miocardiopatia.         |
-|                  |                                                   |
-|                  | -   **Foco terapêutico:** prevenção — controle    |
-|                  |     rigoroso de fatores de risco, mudança de      |
-|                  |     estilo de vida.                               |
-+------------------+---------------------------------------------------+
-| **Estágio B –    | -   Presença de **doença cardíaca estrutural**    |
-| Doença           |     (ex.: infarto prévio, hipertrofia             |
-| estrutural, sem  |     ventricular, disfunção sistólica              |
-| sintomas de      |     assintomática, valvopatia importante).        |
-| insuficiência    |                                                   |
-| cardíaca**       | -   **Ainda sem sintomas** de IC (sem dispneia,   |
-|                  |     fadiga ou retenção hídrica).                  |
-|                  |                                                   |
-|                  | -   **Exemplo:** paciente com fração de ejeção    |
-|                  |     reduzida após um infarto, mas que nunca       |
-|                  |     apresentou dispneia.                          |
-|                  |                                                   |
-|                  | -   **Foco terapêutico:** evitar progressão — uso |
-|                  |     de medicamentos (IECA, BRA, betabloqueadores, |
-|                  |     estatinas), intervenção em fatores            |
-|                  |     modificáveis, tratamento precoce de lesões    |
-|                  |     valvares.                                     |
-+------------------+---------------------------------------------------+
-| **Estágio C –    | -   Doença cardíaca estrutural estabelecida **com |
-| Doença           |     sintomas típicos de IC**:                     |
-| estrutural +     |                                                   |
-| sintomas prévios |     -   Dispneia (em esforço ou repouso), fadiga, |
-| ou atuais de     |         intolerância ao exercício.                |
-| insuficiência    |                                                   |
-| cardíaca**       |     -   Retenção de líquidos (edema, congestão    |
-|                  |         pulmonar, ascite).                        |
-|                  |                                                   |
-|                  | -   Engloba tanto pacientes **com sintomas        |
-|                  |     atuais** quanto aqueles **que já tiveram      |
-|                  |     sintomas no passado**.                        |
-|                  |                                                   |
-|                  | -   Aqui se enquadram a maior parte dos pacientes |
-|                  |     em acompanhamento clínico.                    |
-|                  |                                                   |
-|                  | -   **Foco terapêutico:** controle sintomático    |
-|                  |     (diuréticos), prevenção de progressão         |
-|                  |     (IECA/BRAs, betabloqueadores, antagonistas de |
-|                  |     aldosterona), dispositivos (CDI,              |
-|                  |     ressincronizador), reabilitação cardíaca,     |
-|                  |     educação para autocuidado.                    |
-+------------------+---------------------------------------------------+
-| **Estágio D –    | -   Insuficiência cardíaca **em estágio           |
-| Doença avançada  |     terminal**, refratária ao tratamento clínico  |
-| ou refratária**  |     otimizado.                                    |
-|                  |                                                   |
-|                  | -   Pacientes apresentam **sintomas persistentes  |
-|                  |     em repouso ou com mínimos esforços**.         |
-|                  |                                                   |
-|                  | -   Requerem **internações frequentes** e         |
-|                  |     estratégias avançadas: suporte circulatório   |
-|                  |     mecânico, transplante cardíaco, cuidados      |
-|                  |     paliativos.                                   |
-|                  |                                                   |
-|                  | -   **Foco terapêutico:** cuidados                |
-|                  |     especializados, integração de equipe          |
-|                  |     multidisciplinar, decisões sobre suporte      |
-|                  |     avançado e qualidade de vida.                 |
-+------------------+---------------------------------------------------+
++----------------------------------+----------------------------------+
+| Estágio                          | Descrição                        |
++==================================+==================================+
+| **Estágio A – Risco aumentado,   | -   Pacientes **sem doença       |
+| sem alteração estrutural ou      |     estrutural cardíaca**        |
+| sintomas**                       |     identificada.                |
+|                                  |                                  |
+|                                  | -   **Nunca apresentaram sinais  |
+|                                  |     ou sintomas de insuficiência |
+|                                  |     cardíaca.**                  |
+|                                  |                                  |
+|                                  | -   Possuem **alto risco** de    |
+|                                  |     desenvolver IC no futuro por |
+|                                  |     causa de comorbidades.       |
+|                                  |                                  |
+|                                  | -   **Exemplos de fatores de     |
+|                                  |     risco:** hipertensão         |
+|                                  |     arterial sistêmica, diabetes |
+|                                  |     mellitus, obesidade,         |
+|                                  |     síndrome metabólica,         |
+|                                  |     aterosclerose, uso de        |
+|                                  |     cardiotóxicos, histórico     |
+|                                  |     familiar de miocardiopatia.  |
+|                                  |                                  |
+|                                  | -   **Foco terapêutico:**        |
+|                                  |     prevenção — controle         |
+|                                  |     rigoroso de fatores de       |
+|                                  |     risco, mudança de estilo de  |
+|                                  |     vida.                        |
++----------------------------------+----------------------------------+
+| **Estágio B – Doença estrutural, | -   Presença de **doença         |
+| sem sintomas de insuficiência    |     cardíaca estrutural** (ex.:  |
+| cardíaca**                       |     infarto prévio, hipertrofia  |
+|                                  |     ventricular, disfunção       |
+|                                  |     sistólica assintomática,     |
+|                                  |     valvopatia importante).      |
+|                                  |                                  |
+|                                  | -   **Ainda sem sintomas** de IC |
+|                                  |     (sem dispneia, fadiga ou     |
+|                                  |     retenção hídrica).           |
+|                                  |                                  |
+|                                  | -   **Exemplo:** paciente com    |
+|                                  |     fração de ejeção reduzida    |
+|                                  |     após um infarto, mas que     |
+|                                  |     nunca apresentou dispneia.   |
+|                                  |                                  |
+|                                  | -   **Foco terapêutico:** evitar |
+|                                  |     progressão — uso de          |
+|                                  |     medicamentos (IECA, BRA,     |
+|                                  |     betabloqueadores,            |
+|                                  |     estatinas), intervenção em   |
+|                                  |     fatores modificáveis,        |
+|                                  |     tratamento precoce de lesões |
+|                                  |     valvares.                    |
++----------------------------------+----------------------------------+
+| **Estágio C – Doença             | -   Doença cardíaca estrutural   |
+| estrutural + sintomas prévios ou |     estabelecida **com sintomas  |
+| atuais de insuficiência          |     típicos de IC**:             |
+| cardíaca**                       |                                  |
+|                                  |     -   Dispneia (em esforço ou  |
+|                                  |         repouso), fadiga,        |
+|                                  |         intolerância ao          |
+|                                  |         exercício.               |
+|                                  |                                  |
+|                                  |     -   Retenção de líquidos     |
+|                                  |         (edema, congestão        |
+|                                  |         pulmonar, ascite).       |
+|                                  |                                  |
+|                                  | -   Engloba tanto pacientes      |
+|                                  |     **com sintomas atuais**      |
+|                                  |     quanto aqueles **que já      |
+|                                  |     tiveram sintomas no          |
+|                                  |     passado**.                   |
+|                                  |                                  |
+|                                  | -   Aqui se enquadram a maior    |
+|                                  |     parte dos pacientes em       |
+|                                  |     acompanhamento clínico.      |
+|                                  |                                  |
+|                                  | -   **Foco terapêutico:**        |
+|                                  |     controle sintomático         |
+|                                  |     (diuréticos), prevenção de   |
+|                                  |     progressão (IECA/BRAs,       |
+|                                  |     betabloqueadores,            |
+|                                  |     antagonistas de              |
+|                                  |     aldosterona), dispositivos   |
+|                                  |     (CDI, ressincronizador),     |
+|                                  |     reabilitação cardíaca,       |
+|                                  |     educação para autocuidado.   |
++----------------------------------+----------------------------------+
+| **Estágio D – Doença avançada ou | -   Insuficiência cardíaca **em  |
+| refratária**                     |     estágio terminal**,          |
+|                                  |     refratária ao tratamento     |
+|                                  |     clínico otimizado.           |
+|                                  |                                  |
+|                                  | -   Pacientes apresentam         |
+|                                  |     **sintomas persistentes em   |
+|                                  |     repouso ou com mínimos       |
+|                                  |     esforços**.                  |
+|                                  |                                  |
+|                                  | -   Requerem **internações       |
+|                                  |     frequentes** e estratégias   |
+|                                  |     avançadas: suporte           |
+|                                  |     circulatório mecânico,       |
+|                                  |     transplante cardíaco,        |
+|                                  |     cuidados paliativos.         |
+|                                  |                                  |
+|                                  | -   **Foco terapêutico:**        |
+|                                  |     cuidados especializados,     |
+|                                  |     integração de equipe         |
+|                                  |     multidisciplinar, decisões   |
+|                                  |     sobre suporte avançado e     |
+|                                  |     qualidade de vida.           |
++----------------------------------+----------------------------------+
 
 ### II - Tratamento Não Farmacológico e Autocuidado
 
@@ -472,43 +505,41 @@ progressão da doença.
     Comparação de **dapagliflozina vs. placebo** em análises de
     subgrupos secundários deste ensaio.
 
-    **Subgrupo de 2.139 pacientes com diabetes:**
+-   **Subgrupo de 2.139 pacientes com diabetes:**
 
-    -   **Desfecho primário:** 20% vs. 25,5% (razão de risco \[HR\]
-        0,75; IC 95% 0,63–0,9)
+    -   Desfecho primário (morte + piora clínica): 20% vs. 25,5% (razão
+        de risco \[HR\] 0,75; IC 95% 0,63–0,9)
 
-        **Morte cardiovascular:** 11,3% vs. 13,9% (HR 0,79; IC 95%
+    -   Morte cardiovascular: 11,3% vs. 13,9% (HR 0,79; IC 95%
         0,63–1,01)
 
-        **Piora da insuficiência cardíaca:** 13,2% vs. 16,5% (HR 0,77;
-        IC 95% 0,61–0,95)
+    -   Piora da insuficiência cardíaca: 13,2% vs. 16,5% (HR 0,77; IC
+        95% 0,61–0,95)
 
-        **Morte por todas as causas:** 13,3% vs. 16,7% (HR 0,78; IC 95%
+    -   Morte por todas as causas: 13,3% vs. 16,7% (HR 0,78; IC 95%
         0,63–0,97)
 
-        **Eventos adversos renais:** 8,5% vs. 8,7% (sem valor de p
+    -   Eventos adversos renais: 8,5% vs. 8,7% (sem valor de p
         reportado)
 
-        **Depleção volêmica:** 7,8% vs. 7,8% (sem valor de p reportado)
+    -   Depleção volêmica: 7,8% vs. 7,8% (sem valor de p reportado)
 
-    **Subgrupo de 2.605 pacientes sem diabetes:**
+-   **Subgrupo de 2.605 pacientes sem diabetes:**
 
-    -   **Desfecho primário:** 13,2% vs. 17,7% (HR 0,73; IC 95%
-        0,6–0,88)
+    -   Desfecho primário (morte + piora clínica): 13,2% vs. 17,7% (HR
+        0,73; IC 95% 0,6–0,88)
 
-        **Morte cardiovascular:** 8,2% vs. 9,6% (HR 0,85; IC 95%
-        0,66–1,1)
+    -   Morte cardiovascular: 8,2% vs. 9,6% (HR 0,85; IC 95% 0,66–1,1)
 
-        **Piora da insuficiência cardíaca:** 7,3% vs. 11,5% (HR 0,62; IC
-        95% 0,48–0,8)
+    -   Piora da insuficiência cardíaca: 7,3% vs. 11,5% (HR 0,62; IC 95%
+        0,48–0,8)
 
-        **Morte por todas as causas:** 10,2% vs. 11,6% (HR 0,88; IC 95%
+    -   Morte por todas as causas: 10,2% vs. 11,6% (HR 0,88; IC 95%
         0,7–1,12)
 
-        **Eventos adversos renais:** 4,8% vs. 6% (sem valor de p
-        reportado)
+    -   Eventos adversos renais: 4,8% vs. 6% (sem valor de p reportado)
 
-        **Depleção volêmica:** 7,3% vs. 6,1% (sem valor de p reportado)
+    -   Depleção volêmica: 7,3% vs. 6,1% (sem valor de p reportado)
 
 -   **Posologia:** 10 mg por via oral, uma vez ao dia. O uso é
     contraindicado em pacientes em diálise.
@@ -534,7 +565,7 @@ progressão da doença.
     NT-proBNP \> 600 pg/mL, em tratamento otimizado e que permaneçam
     sintomáticos.
 
--   Período de "Washout": Aguardar pelo menos 36 horas após a última
+-   **Período de "Washout"**: Aguardar pelo menos 36 horas após a última
     dose de IECA antes de iniciar sacubitril/valsartana.
 
 -   Titulação: Iniciar com dose baixa (50mg duas vezes ao dia, ou 100mg

@@ -1,0 +1,22 @@
+# Rastreios neoplasias {.unnumbered}
+
+
+No SER:
+
+Encaminhamento pro início do tratamento para colo e mama - consulta em ginecologia onco e mastologia onco. 
+Investigação diagnóstica - consulta mastologia lesão impalpável - biópsia por estereotaxia no Rio Imagem.
+
+no SISREG
+
+Consulta patologia cervical para pap alterado.
+Biópsia de mama lesão palpável
+Biópsia de mama guiada por ultrassom
+Biópsia por estereotaxia
+
+
+SISCAN
+
+Coleta não vale a pena, há pedidos duplicados.
+VEr resultado de mamografia. 
+O resultado do pap vem pelo laboratório, mas é visto dentro do SISCAN.
+
