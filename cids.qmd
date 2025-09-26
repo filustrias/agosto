@@ -11,12 +11,24 @@ Aqui estão apenas as listas de CIDs usados nos códigos para identificação de
 * **I11** – Doença cardíaca hipertensiva
 * **I12** – Doença renal hipertensiva
 * **I13** – Doença cardiorrenal hipertensiva
+* **I14** - Hipertensão pulmonar
 * **I15** – Hipertensão secundária
 * **I16** – Crise hipertensiva
-* **O100** – Hipertensão essencial pré-existente complicando a gravidez, parto e puerpério (O10.0)
-* **O104** – Hipertensão secundária pré-existente complicando a gravidez, parto e puerpério (O10.4)
-* **O109** – Hipertensão pré-existente não especificada complicando a gravidez, parto e puerpério (O10.9)
+* **O10** - Hipertensão pre-existente complicando gravidez, prato ou puerpério
+* **O11** -	Distúrbio hipertensivo pré-existente com proteinúria superposta
+
+
+## Hipertensão relacionada com a gestação
+
+* **O10** - Hipertensão pre-existente complicando gravidez, prato ou puerpério
+* **O11** -	Distúrbio hipertensivo pré-existente com proteinúria superposta
 * **O13** – Hipertensão gestacional (induzida pela gravidez) sem proteinúria significativa
+* **O14** - Hipertensao gestacional (induzida pela gravidez) com proteinúria significativa
+* **O15** - Eclâmpsia
+* **O16** - Hipertensão materna não especificada
+
+## Suspeita de hipertensão
+
 * **R030** – Leitura anormal de pressão arterial, sem diagnóstico de hipertensão
 
 ---
@@ -28,12 +40,10 @@ Aqui estão apenas as listas de CIDs usados nos códigos para identificação de
 * **E12** – Diabetes mellitus relacionado à desnutrição
 * **E13** – Outros diabetes mellitus especificados
 * **E14** – Diabetes mellitus não especificado
-* **O24** – Diabetes mellitus na gravidez, no parto e no puerpério
 * **H360** – Retinopatia diabética (H36.0)
 * **H280** – Catarata diabética (H28.0)
 * **G632** – Polineuropatia diabética (G63.2)
 * **G590** – Mononeuropatia diabética (G59.0)
-* **G990** – Transtornos do sistema nervoso em doenças endócrinas, nutricionais e metabólicas (G99.0)
 * **N083** – Nefropatia diabética (N08.3)
 * **M142** – Artropatia diabética (M14.2)
 
@@ -41,33 +51,33 @@ Aqui estão apenas as listas de CIDs usados nos códigos para identificação de
 
 ### Cardiopatia isquêmica
 
+* **I20** - Angina pectoris
 * **I21** – Infarto agudo do miocárdio
 * **I22** – Infarto do miocárdio recorrente
-* **I252** – Infarto antigo do miocárdio (I25.2)
+* **I23** - complicações relacionados a IAM
+* **I248** - Outras formas de doença isquêmica aguda do coração
+* **I249** - Doença isquêmica aguda do coração NE
+* **I25** – Doença isquêmica crônica do coração
+* **Z951** - Presença de enxerto ou ponto aortocoronária
+* **Z955** - presença de angioplastia coronária
 
 ---
 
 ### Insuficiência cardíaca (independente da fração de ejeção)
 
-* **I110** – Doença cardíaca hipertensiva com insuficiência cardíaca (I11.0)
-* **I130** – Doença cardiorrenal hipertensiva com insuficiência cardíaca (I13.0)
-* **I132** – Doença cardiorrenal hipertensiva com insuficiência cardíaca e renal (I13.2)
-* **I255** – Miocardiopatia isquêmica (I25.5)
-* **I420** – Miocardiopatia dilatada (I42.0)
-* **I425** – Miocardiopatia alcoólica (I42.6 / I42.7 em algumas edições — aqui listado conforme padrão usado)
-* **I426** – Miocardiopatia devido a drogas e outros agentes externos (I42.7)
-* **I427** – Miocardiopatia devido a doenças endócrinas (I42.8)
-* **I428** – Outras miocardiopatias (I42.8)
-* **I429** – Miocardiopatia não especificada (I42.9)
-* **I43** – Miocardiopatia em doenças classificadas em outra parte
+* **I110** – Doença cardíaca hipertensiva com insuficiência cardíaca
+* **I130** – Doença cardiorrenal hipertensiva com insuficiência cardíaca
+* **I132** – Doença cardiorrenal hipertensiva com insuficiência cardíaca e renal
 * **I50** – Insuficiência cardíaca
-* **P290** – Insuficiência cardíaca neonatal (P29.0)
+* **I517** - Cardiomegalia
+* **I278** – Outras doenças pulmonares do coração 
+* **I279** - Cor pulmonale
 
 ---
 
-### Doenças vascular cerebral
+### Acidente vascular cerebral
 
-* **I60 a I69** - doenças cerebrovasculares)
+* **I60 a I69** - doenças cerebrovasculares
 * **G45** – Acidentes isquêmicos transitórios e síndromes correlatas
 * **G46** – Síndromes vasculares do encéfalo em doenças cerebrovasculares
 * **H340** – Oclusão arterial retiniana (H34.0)
@@ -76,14 +86,15 @@ Aqui estão apenas as listas de CIDs usados nos códigos para identificação de
 
 ### Doença renal crônica
 
-* **I120** – Doença renal hipertensiva com insuficiência renal (I12.0)
-* **I131** – Doença cardiorrenal hipertensiva com insuficiência renal (I13.1)
-* **N032|N033|N034|N035|N036|N037** – Glomerulonefrites crônicas (com diferentes achados histológicos)
-* **N052|N053|N054|N055|N056|N057** – Síndrome nefrótica (variantes histológicas)
+* **I120** – Doença renal hipertensiva com insuficiência renal
+* **I131** – Doença cardiorrenal hipertensiva com insuficiência renal
+* **I132** – Doença cardiorrenal hipertensiva com ICC e insuficiência renal
+* **N03** – Síndrome nefrítica crônica
 * **N18** – Doença renal crônica
 * **N19** – Insuficiência renal não especificada
 * **N250** – Osteodistrofia renal
 * **Z490|Z491|Z492** – Atendimentos para diálise/hemodiálise/peritoneal
+* **T861** - Rejeição de rim transplantado
 * **Z940** – Rim transplantado
 * **Z992** – Dependência de diálise
 
@@ -95,24 +106,41 @@ Aqui estão apenas as listas de CIDs usados nos códigos para identificação de
 * **F01** – Demência vascular
 * **F02** – Demência em outras doenças classificadas em outra parte
 * **F03** – Demência não especificada
-* **F051** – Delirium superposto a demência (F05.1)
+* **F051** – Delirium superposto a demência
 * **G30** – Doença de Alzheimer
-* **G310** – Atrofia cortical circunscrita (G31.0)
-* **G311** – Degeneração corticobasal / outras degenerações frontotemporais (G31.1)
+* **G310** – Atrofia cortical circunscrita
+* **G311** – Degeneração corticobasal / outras degenerações frontotemporais
 
 ---
 
 ### Doença pulmonar obstrutiva crônica
 
-* **I278|I279** – Outras doenças do coração pulmonar / cor pulmonale
-* **J4** – *(padrão abreviado; não é código isolado — agrupa J40-J49: bronquites/asma e DPOC)*
+* **I278** – Outras doenças pulmonares do coração 
+* **I279** - Cor pulmonale
+* **J43** – Enfisema
+* **J44** – Outras doenças pulmonares obstrutivas crônicas
 * **J60–J67** – Pneumoconioses (carvão, asbestos, sílica etc.)
-* **J684** – Bronquiectasia (J47) *(nota: “J684” usualmente corresponde a “bronquiectasias” em alguns mapeamentos locais; no CID-10 padrão, bronquiectasia é J47)*
-* **J701|J703** – Doenças pulmonares por agentes químicos/gases/fumos (J70.1, J70.3)
+* **J684** - afecções respiratórias crÔnicas por produtos químicos, gases e vapores
+* **J701** - Manifestações pulmonares crônicas e outras, devidas a radiação
+* **J703** – Manifestações pulmonares crônicas e outras por agentes químicos/gases/fumos (J70.1, J70.3)
+* **J841** - outras doenças pulmonares intersticiais com fibrose
+
+
+### Asma
+
+**falta criar o código**
+
+* **J40** – Bronquite aguda ou crônica
+* **J41** – Bronquite crônica simples
+* **J42** – Bronquite crônica NE
+* **J45** - Asma
+* **J46** - Mal asmático
 
 ---
 
 ### Doença péptica
+
+**falta revisar**
 
 * **K25** – Úlcera gástrica
 * **K26** – Úlcera duodenal
@@ -121,8 +149,24 @@ Aqui estão apenas as listas de CIDs usados nos códigos para identificação de
 
 ---
 
-### Neoplasias
+### Neoplasia de mama
 
+* **C50** - Neoplasia de mama
+
+### Neoplasia de colo uterino
+
+* **C53** - Neoplasia de colo uterino
+
+### Neoplasia de genitais femininos
+
+* **C51|C52|C54|C55|C56|C57|C58** - Neoplasias estritas às mulheres (exceto mama e colo uterino)
+
+### Neoplasia de genitais masculinos
+
+* **C60|C61|C62|C63** - Neoplasias estritas aos homens
+
+
+### Neoplasias gerais
 
 * **C00** – Neoplasia maligna do lábio
 * **C01** – Neoplasia maligna da base da língua
@@ -167,16 +211,8 @@ Aqui estão apenas as listas de CIDs usados nos códigos para identificação de
 * **C47** – Nervos periféricos e sistema nervoso autônomo
 * **C48** – Retroperitônio e peritônio
 * **C49** – Tecido conjuntivo e outros tecidos moles
-* **C50** – Mama
-* **C51** – Vulva
-* **C52** – Vagina
-* **C53** – Colo do útero
-* **C54** – Corpo do útero
-* **C55** – Útero, porção não especificada
-* **C56** – Ovário
-* **C57** – Outros órgãos genitais femininos
-* **C58** – Placenta
-* **C60–C69** – órgãos genitais masculinos e olho/encéfalo)
+* **C64–C68** – Rim, pelve renal, ureteres, bexiga, outros órgãos urinários
+* **C69** - olhos e anexos
 * **C70** – Meninges
 * **C71** – Encéfalo
 * **C72** – Medula espinal, nervos cranianos e outras partes do SNC
@@ -205,7 +241,10 @@ Aqui estão apenas as listas de CIDs usados nos códigos para identificação de
 
 ---
 
+
 ### Insuficiência hepática
+
+**falta revisar**
 
 * **B18** – Hepatite viral crônica
 * **I85|I859|I864|I982** – Varizes esofágicas/portal; hipertensão portal; síndrome hepatorrenal (I98.2)
@@ -221,6 +260,8 @@ Aqui estão apenas as listas de CIDs usados nos códigos para identificação de
 
 ### SIDA
 
+**falta revisar**
+
 * **B20|B21|B22|B24** – Doenças por HIV (AIDS)
 * **Z21** – Estado de infecção assintomática pelo HIV
 * **R75** – Evidência laboratorial do HIV
@@ -231,6 +272,8 @@ Aqui estão apenas as listas de CIDs usados nos códigos para identificação de
 
 ### Hipotireoidismo
 
+**falta revisar**
+
 * **E00** – Síndrome congênita por deficiência de iodo (cretinismo)
 * **E01** – Transtornos tireoidianos e afecções relacionadas à deficiência de iodo
 * **E02** – Hipotireoidismo subclínico por deficiência de iodo
@@ -240,6 +283,8 @@ Aqui estão apenas as listas de CIDs usados nos códigos para identificação de
 ---
 
 ### Arritmias cardíacas
+
+**falta revisar**
 
 * **I441|I442|I443** – Bloqueios atrioventriculares de 1º, 2º, 3º graus
 * **I456** – Síndrome de Wolff-Parkinson-White
@@ -256,6 +301,8 @@ Aqui estão apenas as listas de CIDs usados nos códigos para identificação de
 
 ### Coagulopatias
 
+**falta revisar**
+
 * **D65** – Coagulação intravascular disseminada
 * **D66** – Hemofilia A
 * **D67** – Hemofilia B
@@ -269,6 +316,8 @@ Aqui estão apenas as listas de CIDs usados nos códigos para identificação de
 ---
 
 ### Doenças reumatológicas
+
+**falta revisar**
 
 * **L940|L941|L943** – Esclerodermias/ paniculites localizadas (códigos L94.x)
 * **M05|M06** – Artrite reumatoide (soropositiva / outras)
@@ -284,7 +333,9 @@ Aqui estão apenas as listas de CIDs usados nos códigos para identificação de
 
 ---
 
-### Doenças valvares
+### Cardiomiopatias e doenças valvares
+
+**falta revisar**
 
 * **A520** – Cardiopatia sifilítica (A52.0)
 * **I05|I06|I07|I08** – Doenças valvares reumáticas (mitral, aórtica, tricúspide, múltiplas)
@@ -294,9 +345,20 @@ Aqui estão apenas as listas de CIDs usados nos códigos para identificação de
 * **Q230|Q231|Q232|Q233** – Malformações congênitas das válvulas (Q23.x)
 * **Z952|Z953|Z954** – Presença de substitutos valvares (mitral, aórtico, tricúspide)
 
+* **I420** – Miocardiopatia dilatada 
+* **I426** – Miocardiopatia alcoólica
+* **I427** – Miocardiopatia devido a drogas e outros agentes externos
+* **I427** – Miocardiopatia devido a doenças endócrinas
+* **I428** – Outras miocardiopatias (I42.8)
+* **I429** – Miocardiopatia não especificada (I42.9)
+* **I43** – Miocardiopatia em doenças classificadas em outra parte
+* **I44** - BAV e do ramo esquerdo - Transtornos de condução
+
 ---
 
 ### Circulação pulmonar
+
+**falta revisar**
 
 * **I26** – Embolia pulmonar
 * **I27** – Outras doenças do coração pulmonar (hipertensão pulmonar, etc.)
@@ -305,6 +367,8 @@ Aqui estão apenas as listas de CIDs usados nos códigos para identificação de
 ---
 
 ### Doenças neurológicas
+
+**falta revisar**
 
 * **G10–G13** – Doenças hereditárias e degenerativas do SNC
 * **G20–G22** – Doenças extrapiramidais e transtornos do movimento (Parkinson, etc.)
@@ -321,6 +385,8 @@ Aqui estão apenas as listas de CIDs usados nos códigos para identificação de
 
 ### Doenças vasculares periféricas
 
+**falta revisar**
+
 * **I70** – Aterosclerose
 * **I71** – Aneurisma e dissecção da aorta
 * **I731|I738|I739** – Doenças arteriais periféricas (I73.1, I73.8, I73.9)
@@ -333,17 +399,23 @@ Aqui estão apenas as listas de CIDs usados nos códigos para identificação de
 
 ### Dislipidemia
 
+**falta revisar**
+
 * **E78** – Transtornos do metabolismo de lipoproteínas e outras lipidemias
 
 ---
 
 ### Obesidade
 
+**falta revisar**
+
 * **E66** – Obesidade
 
 ---
 
 ### Anemias
+
+**falta revisar**
 
 * **D50** – Anemia por deficiência de ferro
 * **D51** – Anemia por deficiência de vitamina B12
@@ -353,6 +425,8 @@ Aqui estão apenas as listas de CIDs usados nos códigos para identificação de
 ---
 
 ### Etilismo
+
+**falta revisar**
 
 * **F10** – Transtornos mentais e comportamentais devidos ao uso de álcool
 * **E52** – Deficiência de niacina (pelagra)
@@ -369,6 +443,8 @@ Aqui estão apenas as listas de CIDs usados nos códigos para identificação de
 
 ### Drogadição
 
+**falta revisar**
+
 * **F11–F16, F18–F19** – Transtornos por uso de opioides, canabinoides, sedativos/hipnóticos, cocaína, outros/estimulantes, solventes/inalantes e múltiplas drogas
 * **Z715** – Aconselhamento por abuso de drogas
 * **Z722** – Problemas relacionados ao uso de drogas
@@ -381,7 +457,6 @@ Aqui estão apenas as listas de CIDs usados nos códigos para identificação de
 * **F21** → Transtorno esquizotípico
 * **F22** → Transtornos delirantes persistentes
 * **F23** → Transtornos psicóticos agudos e transitórios
-* **F24** → Transtorno psicótico induzido
 * **F25** → Transtornos esquizoafetivos
 * **F28** → Outros transtornos psicóticos não orgânicos especificados
 * **F29** → Psicose não orgânica não especificada
@@ -390,6 +465,7 @@ Aqui estão apenas as listas de CIDs usados nos códigos para identificação de
 ---
 
 ### Depressão
+
 
 
 * **F32|F33** – Episódio depressivo / Transtorno depressivo recorrente
@@ -413,6 +489,8 @@ Aqui estão apenas as listas de CIDs usados nos códigos para identificação de
 
 ### Hipertireoidismo
 
+**falta revisar**
+
 * **E05** – Tireotoxicose (hipertireoidismo)
 * **E06** – Tireoidite
 
@@ -420,11 +498,15 @@ Aqui estão apenas as listas de CIDs usados nos códigos para identificação de
 
 ### Desnutrição
 
+**falta revisar**
+
 * **E40–E46** – Kwashiorkor; marasmo; kwashiorkor marasmático; desnutrição grave/moderada/leve; retardo de desenvolvimento por desnutrição; desnutrição não especificada
 
 ---
 
 ### Deficiências motoras
+
+**falta revisar**
 
 * **G041** – Mielite infecciosa (G04.1)
 * **G114** – Ataxia hereditária espástica (G11.4)
@@ -440,6 +522,8 @@ Aqui estão apenas as listas de CIDs usados nos códigos para identificação de
 
 ### Doenças dos olhos
 
+**falta revisar**
+
 * **H16|H17|H18** – Ceratites; cicatrizes/opacidades corneanas; outros transtornos da córnea
 * **H20|H21|H22** – Uveítes/iridociclites e correlatos
 * **H25|H26|H28** – Cataratas (senis, outras, em doenças classificadas em outra parte)
@@ -453,6 +537,8 @@ Aqui estão apenas as listas de CIDs usados nos códigos para identificação de
 
 ### Doenças dos ouvidos
 
+**falta revisar**
+
 * **H72** – Perfuração da membrana timpânica
 * **H80** – Otosclerose
 * **H81** – Transtornos da função vestibular
@@ -464,6 +550,8 @@ Aqui estão apenas as listas de CIDs usados nos códigos para identificação de
 
 ### Má formações
 
+**falta revisar**
+
 * **Q00–Q07** – Malformações congênitas do SNC (anencefalia, encefalocele, hidrocefalia, espinha bífida etc.)
 * **Q35–Q37** – Fendas orais (palatina/labial)
 * **Q60–Q62** – Malformações renais e do trato urinário
@@ -474,6 +562,8 @@ Aqui estão apenas as listas de CIDs usados nos códigos para identificação de
 
 ### Doenças da pele
 
+**falta revisar**
+
 * **L10–L14** – Pênfigo, penfigoide e outras dermatoses bolhosas
 * **L40–L41** – Psoríase e parapsoríases
 * **L89** – Úlcera por pressão
@@ -481,10 +571,3 @@ Aqui estão apenas as listas de CIDs usados nos códigos para identificação de
 * **L93** – Lúpus eritematoso cutâneo
 
 ---
-
-## Duplicações de códigos entre condições
-
-* **R26** aparece em **motor\_temp** **e** **deficiencia\_fisica\_temp**.
-* **K700, K703, K709** aparecem em **liver\_temp** **e** **alcool\_temp**.
-
-*(Essas são as duplicações exatas de código. Não considerei sobreposição por categoria ampla vs. subcódigo — p.ex., **H28** em olhos\_temp e **H280** em DM\_temp — porque os códigos não são idênticos.)*
