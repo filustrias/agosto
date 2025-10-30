@@ -744,7 +744,7 @@
     "href": "pente_fino_DM.html",
     "title": "Pente Fino Diabetes",
     "section": "",
-    "text": "SEÇÃO 1: IDENTIFICAÇÃO E CONSULTA",
+    "text": "DOCUMENTAÇÃO DAS VARIÁVEIS - ANÁLISE DE DIABETES MELLITUS",
     "crumbs": [
       "Pente Fino Diabetes"
     ]
@@ -753,8 +753,8 @@
     "objectID": "pente_fino_DM.html#seção-1-identificação-e-consulta",
     "href": "pente_fino_DM.html#seção-1-identificação-e-consulta",
     "title": "Pente Fino Diabetes",
-    "section": "",
-    "text": "cpf\n\nTipo: String (11 dígitos)\nDescrição: Identificador único do paciente\nUso: Agrupar todas as consultas do mesmo paciente\n\n\n\nentrada_data\n\nTipo: Date\nDescrição: Data da consulta/episódio assistencial\nUso: Ordenação temporal das consultas\n\n\n\nconsulta_numero\n\nTipo: Integer\nDescrição: Número sequencial da consulta para cada paciente (1, 2, 3…)\nUso: Identificar primeira consulta, progressão temporal\n\n\n\nprofissional_especialidade\n\nTipo: String\nValores comuns:\n\n“Médico clínico geral”\n“Enfermeiro”\n“Médico cardiologista”\n“Técnico de enfermagem”\n\nUso: Identificar tipo de atendimento",
+    "section": "SEÇÃO 1: IDENTIFICAÇÃO E CONSULTA",
+    "text": "SEÇÃO 1: IDENTIFICAÇÃO E CONSULTA\n\ncpf\n\nTipo: String (11 dígitos)\nDescrição: Identificador único do paciente\nUso: Agrupar todas as consultas do mesmo paciente\n\n\n\nentrada_data\n\nTipo: Date\nDescrição: Data da consulta/episódio assistencial\nUso: Ordenação temporal das consultas\n\n\n\nconsulta_numero\n\nTipo: Integer\nDescrição: Número sequencial da consulta para cada paciente (1, 2, 3…)\nUso: Identificar primeira consulta, progressão temporal\n\n\n\nprofissional_especialidade\n\nTipo: String\nValores comuns:\n\n“Médico clínico geral”\n“Enfermeiro”\n“Médico cardiologista”\n“Técnico de enfermagem”\n\nUso: Identificar tipo de atendimento",
     "crumbs": [
       "Pente Fino Diabetes"
     ]
@@ -857,6 +857,136 @@
     "text": "⚠️ NOTAS IMPORTANTES\n\nForward-fill: Valores de HbA1c se repetem entre consultas até nova medição\nPersistência de diagnósticos: DM, HAS, CI, ICC etc. uma vez TRUE, permanecem TRUE\nLacunas são cumulativas: Um paciente pode ter múltiplas lacunas simultaneamente\nInterpretação contextualizada: Sempre considerar idade, comorbidades e meta individualizada",
     "crumbs": [
       "Pente Fino Diabetes"
+    ]
+  },
+  {
+    "objectID": "pente_fino_HAS.html",
+    "href": "pente_fino_HAS.html",
+    "title": "Pente Fino HAS",
+    "section": "",
+    "text": "DOCUMENTAÇÃO DAS VARIÁVEIS - ANÁLISE DE HIPERTENSÃO ARTERIAL SISTÊMICA",
+    "crumbs": [
+      "Pente Fino HAS"
+    ]
+  },
+  {
+    "objectID": "pente_fino_HAS.html#seção-1-identificação-e-consulta",
+    "href": "pente_fino_HAS.html#seção-1-identificação-e-consulta",
+    "title": "Pente Fino HAS",
+    "section": "SEÇÃO 1: IDENTIFICAÇÃO E CONSULTA",
+    "text": "SEÇÃO 1: IDENTIFICAÇÃO E CONSULTA\n\ncpf\n\nTipo: String (11 dígitos)\nDescrição: Identificador único do paciente\nUso: Agrupar todas as consultas do mesmo paciente\n\n\n\nentrada_data\n\nTipo: Date\nDescrição: Data da consulta/episódio assistencial\nUso: Ordenação temporal das consultas\n\n\n\nconsulta_numero\n\nTipo: Integer\nDescrição: Número sequencial da consulta para cada paciente (1, 2, 3…)\nUso: Identificar primeira consulta, progressão temporal\n\n\n\nprofissional_especialidade\n\nTipo: String\nValores comuns:\n\n“Médico clínico geral”\n“Enfermeiro”\n“Médico cardiologista”\n“Técnico de enfermagem”\n\nUso: Identificar tipo de atendimento",
+    "crumbs": [
+      "Pente Fino HAS"
+    ]
+  },
+  {
+    "objectID": "pente_fino_HAS.html#seção-2-dados-demográficos",
+    "href": "pente_fino_HAS.html#seção-2-dados-demográficos",
+    "title": "Pente Fino HAS",
+    "section": "SEÇÃO 2: DADOS DEMOGRÁFICOS",
+    "text": "SEÇÃO 2: DADOS DEMOGRÁFICOS\n\nidade\n\nTipo: Integer\nUnidade: Anos\nDescrição: Idade do paciente na data da consulta\nUso: Estratificar análises, aplicar metas individualizadas\n\n\n\ngenero\n\nTipo: String\nValores: “masculino”, “feminino”\nDescrição: Gênero do paciente\nUso: Análises epidemiológicas, estratificação de risco",
+    "crumbs": [
+      "Pente Fino HAS"
+    ]
+  },
+  {
+    "objectID": "pente_fino_HAS.html#seção-3-diagnóstico---morbidades-principais",
+    "href": "pente_fino_HAS.html#seção-3-diagnóstico---morbidades-principais",
+    "title": "Pente Fino HAS",
+    "section": "SEÇÃO 3: DIAGNÓSTICO - MORBIDADES PRINCIPAIS",
+    "text": "SEÇÃO 3: DIAGNÓSTICO - MORBIDADES PRINCIPAIS\n\nHAS\n\nTipo: Boolean\nValores: TRUE/FALSE\nDescrição: Paciente tem diagnóstico de Hipertensão Arterial Sistêmica\nCritérios:\n\nCID I10-I16, O10-O11\nOU PA ≥ 180/110 mmHg\nOU uso de anti-hipertensivos\n\nPersistência: Uma vez TRUE, permanece TRUE em todas consultas subsequentes\n\n\n\nDM\n\nTipo: Boolean\nValores: TRUE/FALSE\nDescrição: Paciente tem diabetes mellitus (comorbidade importante)\nUso: Ajustar meta de PA, estratificação de risco cardiovascular\n\n\n\nICC\n\nTipo: Boolean\nValores: TRUE/FALSE\nDescrição: Insuficiência Cardíaca Congestiva\nUso: Ajustar meta de PA (evitar hipotensão)\n\n\n\nIRC\n\nTipo: Boolean\nValores: TRUE/FALSE\nDescrição: Insuficiência Renal Crônica\nUso: Ajustar meta de PA, escolha de medicamentos\n\n\n\nCI\n\nTipo: Boolean\nValores: TRUE/FALSE\nDescrição: Cardiopatia Isquêmica\nUso: Estratificação de risco cardiovascular\n\n\n\nstroke\n\nTipo: Boolean\nValores: TRUE/FALSE\nDescrição: História de Acidente Vascular Cerebral\nUso: Alto risco, requer controle rigoroso",
+    "crumbs": [
+      "Pente Fino HAS"
+    ]
+  },
+  {
+    "objectID": "pente_fino_HAS.html#seção-4-pressão-arterial---medições",
+    "href": "pente_fino_HAS.html#seção-4-pressão-arterial---medições",
+    "title": "Pente Fino HAS",
+    "section": "SEÇÃO 4: PRESSÃO ARTERIAL - MEDIÇÕES",
+    "text": "SEÇÃO 4: PRESSÃO ARTERIAL - MEDIÇÕES\n\npas\n\nTipo: Integer\nUnidade: mmHg\nDescrição: Pressão Arterial Sistólica (com forward-fill)\nValores típicos: 100-200 mmHg\nInterpretação:\n\n&lt; 120 mmHg: Ótimo\n120-129 mmHg: Normal\n130-139 mmHg: Limítrofe\n140-159 mmHg: HAS estágio 1\n160-179 mmHg: HAS estágio 2\n≥ 180 mmHg: HAS estágio 3 (crise hipertensiva)\n\nForward-fill: Repete o último valor medido até nova medição\n\n\n\npad\n\nTipo: Integer\nUnidade: mmHg\nDescrição: Pressão Arterial Diastólica (com forward-fill)\nValores típicos: 60-110 mmHg\nInterpretação:\n\n&lt; 80 mmHg: Ótimo\n80-84 mmHg: Normal\n85-89 mmHg: Limítrofe\n90-99 mmHg: HAS estágio 1\n100-109 mmHg: HAS estágio 2\n≥ 110 mmHg: HAS estágio 3 (crise hipertensiva)\n\n\n\n\npas_anterior\n\nTipo: Integer\nUnidade: mmHg\nDescrição: Valor da penúltima medição REAL de PA sistólica\nValores: NULL se é a primeira medição do paciente\nUso: Comparar com PA atual para calcular tendência\n\n\n\npad_anterior\n\nTipo: Integer\nUnidade: mmHg\nDescrição: Valor da penúltima medição REAL de PA diastólica\nValores: NULL se é a primeira medição do paciente\n\n\n\ndata_pa_anterior\n\nTipo: Date\nDescrição: Data em que a penúltima PA foi medida\nUso: Contextualizar a comparação temporal\n\n\n\ndias_desde_pa_anterior\n\nTipo: Integer\nUnidade: Dias\nDescrição: Número de dias entre as duas últimas medições de PA\nValores:\n\nNULL: Primeira medição do paciente\n0-365: Intervalo normal entre medições\n\nInterpretação:\n\n&lt; 30 dias: Intervalo muito curto\n30-90 dias: Intervalo ideal para ajuste\n90-180 dias: Intervalo adequado para manutenção\n\n180 dias: Intervalo muito longo\n\n\n\n\n\nvariacao_pas\n\nTipo: Integer\nUnidade: mmHg\nDescrição: Diferença entre PA sistólica atual e anterior (atual - anterior)\nCálculo: pas - pas_anterior\nInterpretação:\n\n&lt; -10 mmHg: Melhora significativa\n-10 a -5 mmHg: Melhora moderada\n-5 a +5 mmHg: Estável\n+5 a +10 mmHg: Piora moderada\n\n+10 mmHg: Piora significativa\n\n\nExemplo: 160 → 140 mmHg = -20 mmHg (melhorou)\n\n\n\nvariacao_pad\n\nTipo: Integer\nUnidade: mmHg\nDescrição: Diferença entre PA diastólica atual e anterior\nInterpretação: Similar à sistólica (variações &gt; ±5 mmHg são significativas)\n\n\n\ndias_desde_pa_medida\n\nTipo: Integer\nUnidade: Dias\nDescrição: Dias desde a última medição real de PA até a consulta atual\nUso: Identificar se PA está “fresca” ou “antiga”\nInterpretação:\n\n0-90 dias: Medição recente (válida)\n91-180 dias: Medição ainda aceitável\n\n180 dias: Medição antiga (precisa renovar)\n\n\n\n\n\ndata_ultima_pa_medida\n\nTipo: Date\nDescrição: Data da última medição REAL de PA\nUso: Rastrear quando foi a última aferição",
+    "crumbs": [
+      "Pente Fino HAS"
+    ]
+  },
+  {
+    "objectID": "pente_fino_HAS.html#seção-5-metas-e-status-de-controle",
+    "href": "pente_fino_HAS.html#seção-5-metas-e-status-de-controle",
+    "title": "Pente Fino HAS",
+    "section": "SEÇÃO 5: METAS E STATUS DE CONTROLE",
+    "text": "SEÇÃO 5: METAS E STATUS DE CONTROLE\n\nmeta_pas\n\nTipo: Integer\nUnidade: mmHg\nValores possíveis: 140, 150\nDescrição: Meta individualizada de PA sistólica\nCritérios de definição:\n\n140 mmHg (meta padrão): Pacientes &lt; 80 anos\n150 mmHg: Pacientes ≥ 80 anos\n\nReferência: VII Diretriz Brasileira de Hipertensão\n\n\n\nmeta_pad\n\nTipo: Integer\nUnidade: mmHg\nValores: 90\nDescrição: Meta de PA diastólica (constante para todos)\n\n\n\nstatus_controle_pressorio\n\nTipo: String\nValores possíveis:\n\n“controlado”: PAS &lt; meta_pas E PAD &lt; meta_pad\n“descontrolado”: PAS ≥ meta_pas OU PAD ≥ meta_pad\n“sem_dados”: Não há PA medida\n\nExemplo: Meta 140/90, PA 135/85 → “controlado”\n\n\n\ntendencia_pa\n\nTipo: String\nValores possíveis:\n\n“sem_dados”: Nenhuma medição de PA realizada\n“sem_referencia_previa”: Apenas 1 medição (não há anterior para comparar)\n“melhorando”: PAS caiu ≥ 5 mmHg em relação à anterior\n“piorando”: PAS subiu ≥ 5 mmHg em relação à anterior\n“estavel”: Variação entre -5 e +5 mmHg\n\nNota: Usa variação de 5 mmHg (vs 0.5% para HbA1c) devido à variação diurna da PA\nInterpretação clínica:\n\n“melhorando” → Tratamento efetivo\n“estavel” → Manutenção adequada\n“piorando” → Necessita ajuste terapêutico",
+    "crumbs": [
+      "Pente Fino HAS"
+    ]
+  },
+  {
+    "objectID": "pente_fino_HAS.html#seção-6-tratamento---medicamentos-anti-hipertensivos",
+    "href": "pente_fino_HAS.html#seção-6-tratamento---medicamentos-anti-hipertensivos",
+    "title": "Pente Fino HAS",
+    "section": "SEÇÃO 6: TRATAMENTO - MEDICAMENTOS ANTI-HIPERTENSIVOS",
+    "text": "SEÇÃO 6: TRATAMENTO - MEDICAMENTOS ANTI-HIPERTENSIVOS\n\nnucleo_has\n\nTipo: String (texto longo)\nDescrição: Lista de medicamentos anti-hipertensivos ativos (propagados)\nFormato: Texto normalizado\nExemplo: “Enalapril 10mg / Hidroclorotiazida 25mg”\nUso: Visão geral do regime terapêutico para HAS\n\n\n\nmedicamentos_cronicos_normalizados\n\nTipo: String\nDescrição: Lista de TODOS os medicamentos crônicos (não só HAS)\nUso: Contexto completo do tratamento\n\n\n\ntotal_medicamentos_cronicos\n\nTipo: Integer\nDescrição: Número total de medicamentos crônicos em uso\nValores: 0-20+ (tipicamente 3-10)\nUso: Identificar polifarmácia\n\n\n\ntto_HAS_tendencia\n\nTipo: String\nDescrição: Esquema terapêutico atual para hipertensão\nValores possíveis:\n\n“Sem tratamento medicamentoso”: Não usa anti-hipertensivos\n“Monoterapia”: 1 classe (ex: só IECA)\n“Terapia dupla”: 2 classes (ex: IECA + Diurético)\n“Terapia tripla”: 3 classes (ex: IECA + Diurético + BCC)\n“Terapia quádrupla ou mais”: 4+ classes\n\nUso: Avaliar intensidade do tratamento\n\n\n\nqtd_classes_has\n\nTipo: Integer\nValores: 0-8\nDescrição: Número de classes terapêuticas de anti-hipertensivos em uso\nClasses incluídas:\n\nDiuréticos (hidroclorotiazida, clortalidona, indapamida)\nIECAs (enalapril, captopril, lisinopril, ramipril)\nBRAs (losartana, valsartana, candesartana)\nBetabloqueadores (atenolol, propranolol, carvedilol, bisoprolol)\nBloqueadores de Canais de Cálcio (anlodipino, nifedipino)\nARM - Antagonistas Mineralocorticoides (espironolactona)\nAção Central (metildopa, clonidina)\nVasodilatadores (hidralazina)\n\nInterpretação:\n\n0: Tratamento não medicamentoso\n1: Monoterapia\n2: Terapia dupla (adequado para maioria)\n3: Terapia tripla (HAS resistente)\n4+: Hipertensão refratária (considerar causas secundárias)",
+    "crumbs": [
+      "Pente Fino HAS"
+    ]
+  },
+  {
+    "objectID": "pente_fino_HAS.html#seção-7-polifarmácia",
+    "href": "pente_fino_HAS.html#seção-7-polifarmácia",
+    "title": "Pente Fino HAS",
+    "section": "SEÇÃO 7: POLIFARMÁCIA",
+    "text": "SEÇÃO 7: POLIFARMÁCIA\n\npolifarmacia\n\nTipo: Boolean\nValores: TRUE/FALSE\nDefinição: Paciente usa 5 ou mais medicamentos crônicos simultaneamente\nImplicação: Aumento do risco de interações, efeitos adversos, baixa adesão\n\n\n\nhiperpolifarmacia\n\nTipo: Boolean\nValores: TRUE/FALSE\nDefinição: Paciente usa 10 ou mais medicamentos crônicos simultaneamente\nImplicação: Risco muito elevado, necessita revisão medicamentosa",
+    "crumbs": [
+      "Pente Fino HAS"
+    ]
+  },
+  {
+    "objectID": "pente_fino_HAS.html#seção-8-mudanças-de-tratamento",
+    "href": "pente_fino_HAS.html#seção-8-mudanças-de-tratamento",
+    "title": "Pente Fino HAS",
+    "section": "SEÇÃO 8: MUDANÇAS DE TRATAMENTO",
+    "text": "SEÇÃO 8: MUDANÇAS DE TRATAMENTO\n\nhouve_mudanca_has_prescricao\n\nTipo: Integer\nValores: 0 ou 1\nDescrição: Indica se houve mudança no tratamento HAS NESTA consulta\nCritério: Mudança no núcleo crônico de anti-hipertensivos\nMudanças consideradas:\n\nAdição de classe\nRemoção de classe\nTroca de classe\nMudança de dose (se detectável)\n\n\n\n\nevento_mudanca_has_real\n\nTipo: Integer\nValores: 0 ou 1\nDescrição: Mudança real confirmada (excluindo falsos positivos)\nDiferença: Remove flutuações temporárias de registro\n\n\n\ndata_ultima_mudanca_has_real\n\nTipo: Date\nDescrição: Data da última mudança REAL no tratamento HAS\nValores: NULL se nunca houve mudança\n\n\n\ndias_desde_mudanca_has_real\n\nTipo: Integer\nUnidade: Dias\nDescrição: Dias desde a última mudança REAL no tratamento HAS\nValores:\n\n0: Houve mudança nesta consulta\nNULL: Nunca houve mudança\n1-730: Dias desde última mudança\n\nUso: Avaliar inércia terapêutica\n\n\n\nnucleo_has_anterior\n\nTipo: String\nDescrição: Tratamento HAS da consulta imediatamente anterior\nUso: Comparar com nucleo_has para identificar mudanças\n\n\n\nqtd_classes_has_anterior\n\nTipo: Integer\nDescrição: Número de classes de anti-hipertensivos na consulta anterior\nUso: Identificar se houve intensificação/simplificação\n\n\n\ntto_HAS_anterior\n\nTipo: String\nDescrição: Esquema terapêutico da consulta anterior\nUso: Rastrear evolução do tratamento",
+    "crumbs": [
+      "Pente Fino HAS"
+    ]
+  },
+  {
+    "objectID": "pente_fino_HAS.html#seção-9-lacunas-de-cuidado---hipertensão",
+    "href": "pente_fino_HAS.html#seção-9-lacunas-de-cuidado---hipertensão",
+    "title": "Pente Fino HAS",
+    "section": "SEÇÃO 9: LACUNAS DE CUIDADO - HIPERTENSÃO",
+    "text": "SEÇÃO 9: LACUNAS DE CUIDADO - HIPERTENSÃO\n\nlacuna_HAS_sem_CID\n\nTipo: Boolean\nValores: TRUE/FALSE\nDescrição: Lacuna 1 - Paciente hipertenso mas nunca teve CID I10-I16 documentado\nCritério:\n\nHAS = TRUE (por PA elevada/medicamentos)\nE nunca teve CID I10-I16 registrado\n\nImportância: Afeta codificação, estatísticas, repasse de recursos\nPersistência: TRUE até documentar CID\n\n\n\nlacuna_HAS_sem_PA_recente\n\nTipo: Boolean\nValores: TRUE/FALSE\nDescrição: Lacuna 2 - Hipertenso sem aferição de PA nos últimos 180 dias\nCritério:\n\nHAS = TRUE\nE dias_desde_pa_medida &gt; 180 OU dias_desde_pa_medida IS NULL\n\nProtocolo recomendado: PA a cada 3-6 meses para hipertensos\n\n\n\nlacuna_HAS_descontrolado\n\nTipo: Boolean\nValores: TRUE/FALSE\nDescrição: Lacuna 3 - PA acima da meta individualizada\nCritério:\n\nstatus_controle_pressorio = 'descontrolado'\nPAS ≥ meta_pas OU PAD ≥ meta_pad\n\nAção recomendada: Ajuste terapêutico, medidas não farmacológicas\n\n\n\nlacuna_HAS_inercia_terapeutica\n\nTipo: Boolean\nValores: TRUE/FALSE\nDescrição: Lacuna 4 - HAS descontrolado SEM ajuste há ≥ 180 dias\nCritério:\n\nPA acima da meta\nE dias_desde_mudanca_has_real ≥ 180 OU nunca houve mudança\n\nDefinição de inércia: Falha em intensificar tratamento quando indicado\nImportância: Principal barreira ao controle adequado da HAS\nExceções consideradas:\n\nAjuste recente (&lt; 180 dias)\nContraindicações\nRecusa do paciente\n\n\n\n\nlacuna_HAS_piorando_sem_ajuste\n\nTipo: Boolean\nValores: TRUE/FALSE\nDescrição: Lacuna 5 - PA piorando (↑ ≥5 mmHg) sem resposta terapêutica\nCritério:\n\ntendencia_pa = 'piorando'\nE dias_desde_mudanca_has_real ≥ 90 OU nunca houve mudança\n\nImportância: Indica perda de oportunidade de intervenção precoce\nNota: Limite menor (90 dias) pois PA piora rapidamente\n\n\n\nHAS_ajuste_ativo\n\nTipo: Boolean\nValores: TRUE/FALSE\nDescrição: Flag positivo - Houve ajuste terapêutico nos últimos 180 dias\nCritério:\n\ndias_desde_mudanca_has_real &lt; 180\n\nUso: Identificar manejo ativo (contraponto às lacunas)\nInterpretação: TRUE = equipe está respondendo adequadamente",
+    "crumbs": [
+      "Pente Fino HAS"
+    ]
+  },
+  {
+    "objectID": "pente_fino_HAS.html#seção-10-totalizadores-do-paciente",
+    "href": "pente_fino_HAS.html#seção-10-totalizadores-do-paciente",
+    "title": "Pente Fino HAS",
+    "section": "SEÇÃO 10: TOTALIZADORES DO PACIENTE",
+    "text": "SEÇÃO 10: TOTALIZADORES DO PACIENTE\n\ntotal_consultas_paciente_has\n\nTipo: Integer\nDescrição: Total de consultas do paciente hipertenso em TODO o período\nUso: Avaliar engajamento no cuidado, aderência ao seguimento\n\n\n\ntotal_medicas_paciente_has\n\nTipo: Integer\nDescrição: Total de consultas MÉDICAS do paciente\nUso: Avaliar acesso à consulta médica\n\n\n\ntotal_medicoes_pa_paciente\n\nTipo: Integer\nDescrição: Total de medições de PA do paciente\nUso: Avaliar adequação do monitoramento\n\n\n\ntotal_mudancas_has_paciente\n\nTipo: Integer\nDescrição: Total de mudanças REAIS no tratamento HAS\nUso: Avaliar dinamismo do manejo terapêutico\n\n\n\nprimeira_consulta_has\n\nTipo: Date\nDescrição: Data da primeira consulta do paciente como hipertenso\nUso: Calcular tempo de doença conhecida\n\n\n\nultima_consulta_has\n\nTipo: Date\nDescrição: Data da última consulta do paciente\nUso: Identificar pacientes perdidos do seguimento\n\n\n\ndias_seguimento_has\n\nTipo: Integer\nUnidade: Dias\nDescrição: Tempo total de seguimento do paciente (última - primeira consulta)\nUso: Contextualizar análises longitudinais",
+    "crumbs": [
+      "Pente Fino HAS"
+    ]
+  },
+  {
+    "objectID": "pente_fino_HAS.html#casos-de-uso---exemplos-de-análise",
+    "href": "pente_fino_HAS.html#casos-de-uso---exemplos-de-análise",
+    "title": "Pente Fino HAS",
+    "section": "📊 CASOS DE USO - EXEMPLOS DE ANÁLISE",
+    "text": "📊 CASOS DE USO - EXEMPLOS DE ANÁLISE\n\nExemplo 1: Identificar pacientes com inércia terapêutica grave\nWHERE lacuna_HAS_inercia_terapeutica = TRUE\n  AND dias_desde_mudanca_has_real &gt; 365\n  AND pas &gt; 160\n\n\nExemplo 2: Monitorar resposta ao ajuste terapêutico\nWHERE HAS_ajuste_ativo = TRUE\n  AND tendencia_pa = 'melhorando'\n\n\nExemplo 3: Pacientes em risco de eventos cardiovasculares\nWHERE tendencia_pa = 'piorando'\n  AND status_controle_pressorio = 'descontrolado'\n  AND (CI = TRUE OR stroke = TRUE)\n  AND lacuna_HAS_piorando_sem_ajuste = TRUE\n\n\nExemplo 4: Avaliar efetividade por esquema terapêutico\nSELECT \n  tto_HAS_tendencia,\n  AVG(pas) as pas_media,\n  SUM(CASE WHEN status_controle_pressorio = 'controlado' THEN 1 ELSE 0 END) / COUNT(*) as taxa_controle\nGROUP BY tto_HAS_tendencia\n\n\nExemplo 5: Identificar HAS resistente\nWHERE qtd_classes_has &gt;= 3\n  AND status_controle_pressorio = 'descontrolado'\n  AND dias_seguimento_has &gt; 180",
+    "crumbs": [
+      "Pente Fino HAS"
+    ]
+  },
+  {
+    "objectID": "pente_fino_HAS.html#notas-importantes",
+    "href": "pente_fino_HAS.html#notas-importantes",
+    "title": "Pente Fino HAS",
+    "section": "⚠️ NOTAS IMPORTANTES",
+    "text": "⚠️ NOTAS IMPORTANTES\n\nForward-fill: Valores de PA se repetem entre consultas até nova medição\nPersistência de diagnósticos: HAS uma vez TRUE, permanece TRUE\nLacunas são cumulativas: Um paciente pode ter múltiplas lacunas simultaneamente\nMetas individualizadas: Consideram apenas idade (&lt; 80 vs ≥ 80 anos)\nNúcleo crônico propagado: Medicamentos se mantêm ativos por ~180 dias após prescrição\nVariação significativa PA: ±5 mmHg (vs ±0.5% para HbA1c)\nInércia terapêutica: 180 dias para HAS (mesmo critério que DM)\nPiora sem ajuste: 90 dias para HAS (vs 180 dias no DM) - PA muda mais rápido",
+    "crumbs": [
+      "Pente Fino HAS"
     ]
   }
 ]

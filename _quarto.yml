@@ -23,6 +23,7 @@ book:
     - implementacao.qmd
     - rastreios.qmd
     - pente_fino_DM.qmd
+    - pente_fino_HAS.qmd
 
 bibliography: references.bib
 

@@ -1,0 +1,509 @@
+# Pente Fino HAS {.unnumbered}
+
+
+## DOCUMENTAÇÃO DAS VARIÁVEIS - ANÁLISE DE HIPERTENSÃO ARTERIAL SISTÊMICA
+
+## **SEÇÃO 1: IDENTIFICAÇÃO E CONSULTA**
+
+### `cpf`
+- **Tipo:** String (11 dígitos)
+- **Descrição:** Identificador único do paciente
+- **Uso:** Agrupar todas as consultas do mesmo paciente
+
+### `entrada_data`
+- **Tipo:** Date
+- **Descrição:** Data da consulta/episódio assistencial
+- **Uso:** Ordenação temporal das consultas
+
+### `consulta_numero`
+- **Tipo:** Integer
+- **Descrição:** Número sequencial da consulta para cada paciente (1, 2, 3...)
+- **Uso:** Identificar primeira consulta, progressão temporal
+
+### `profissional_especialidade`
+- **Tipo:** String
+- **Valores comuns:** 
+  - "Médico clínico geral"
+  - "Enfermeiro"
+  - "Médico cardiologista"
+  - "Técnico de enfermagem"
+- **Uso:** Identificar tipo de atendimento
+
+---
+
+## **SEÇÃO 2: DADOS DEMOGRÁFICOS**
+
+### `idade`
+- **Tipo:** Integer
+- **Unidade:** Anos
+- **Descrição:** Idade do paciente na data da consulta
+- **Uso:** Estratificar análises, aplicar metas individualizadas
+
+### `genero`
+- **Tipo:** String
+- **Valores:** "masculino", "feminino"
+- **Descrição:** Gênero do paciente
+- **Uso:** Análises epidemiológicas, estratificação de risco
+
+---
+
+## **SEÇÃO 3: DIAGNÓSTICO - MORBIDADES PRINCIPAIS**
+
+### `HAS`
+- **Tipo:** Boolean
+- **Valores:** TRUE/FALSE
+- **Descrição:** Paciente tem diagnóstico de Hipertensão Arterial Sistêmica
+- **Critérios:**
+  - CID I10-I16, O10-O11
+  - OU PA ≥ 180/110 mmHg
+  - OU uso de anti-hipertensivos
+- **Persistência:** Uma vez TRUE, permanece TRUE em todas consultas subsequentes
+
+### `DM`
+- **Tipo:** Boolean
+- **Valores:** TRUE/FALSE
+- **Descrição:** Paciente tem diabetes mellitus (comorbidade importante)
+- **Uso:** Ajustar meta de PA, estratificação de risco cardiovascular
+
+### `ICC`
+- **Tipo:** Boolean
+- **Valores:** TRUE/FALSE
+- **Descrição:** Insuficiência Cardíaca Congestiva
+- **Uso:** Ajustar meta de PA (evitar hipotensão)
+
+### `IRC`
+- **Tipo:** Boolean
+- **Valores:** TRUE/FALSE
+- **Descrição:** Insuficiência Renal Crônica
+- **Uso:** Ajustar meta de PA, escolha de medicamentos
+
+### `CI`
+- **Tipo:** Boolean
+- **Valores:** TRUE/FALSE
+- **Descrição:** Cardiopatia Isquêmica
+- **Uso:** Estratificação de risco cardiovascular
+
+### `stroke`
+- **Tipo:** Boolean
+- **Valores:** TRUE/FALSE
+- **Descrição:** História de Acidente Vascular Cerebral
+- **Uso:** Alto risco, requer controle rigoroso
+
+---
+
+## **SEÇÃO 4: PRESSÃO ARTERIAL - MEDIÇÕES**
+
+### `pas`
+- **Tipo:** Integer
+- **Unidade:** mmHg
+- **Descrição:** Pressão Arterial Sistólica (com forward-fill)
+- **Valores típicos:** 100-200 mmHg
+- **Interpretação:**
+  - < 120 mmHg: Ótimo
+  - 120-129 mmHg: Normal
+  - 130-139 mmHg: Limítrofe
+  - 140-159 mmHg: HAS estágio 1
+  - 160-179 mmHg: HAS estágio 2
+  - ≥ 180 mmHg: HAS estágio 3 (crise hipertensiva)
+- **Forward-fill:** Repete o último valor medido até nova medição
+
+### `pad`
+- **Tipo:** Integer
+- **Unidade:** mmHg
+- **Descrição:** Pressão Arterial Diastólica (com forward-fill)
+- **Valores típicos:** 60-110 mmHg
+- **Interpretação:**
+  - < 80 mmHg: Ótimo
+  - 80-84 mmHg: Normal
+  - 85-89 mmHg: Limítrofe
+  - 90-99 mmHg: HAS estágio 1
+  - 100-109 mmHg: HAS estágio 2
+  - ≥ 110 mmHg: HAS estágio 3 (crise hipertensiva)
+
+### `pas_anterior`
+- **Tipo:** Integer
+- **Unidade:** mmHg
+- **Descrição:** Valor da **penúltima** medição REAL de PA sistólica
+- **Valores:** NULL se é a primeira medição do paciente
+- **Uso:** Comparar com PA atual para calcular tendência
+
+### `pad_anterior`
+- **Tipo:** Integer
+- **Unidade:** mmHg
+- **Descrição:** Valor da **penúltima** medição REAL de PA diastólica
+- **Valores:** NULL se é a primeira medição do paciente
+
+### `data_pa_anterior`
+- **Tipo:** Date
+- **Descrição:** Data em que a penúltima PA foi medida
+- **Uso:** Contextualizar a comparação temporal
+
+### `dias_desde_pa_anterior`
+- **Tipo:** Integer
+- **Unidade:** Dias
+- **Descrição:** Número de dias **entre** as duas últimas medições de PA
+- **Valores:** 
+  - NULL: Primeira medição do paciente
+  - 0-365: Intervalo normal entre medições
+- **Interpretação:**
+  - < 30 dias: Intervalo muito curto
+  - 30-90 dias: Intervalo ideal para ajuste
+  - 90-180 dias: Intervalo adequado para manutenção
+  - > 180 dias: Intervalo muito longo
+
+### `variacao_pas`
+- **Tipo:** Integer
+- **Unidade:** mmHg
+- **Descrição:** Diferença entre PA sistólica atual e anterior (atual - anterior)
+- **Cálculo:** `pas - pas_anterior`
+- **Interpretação:**
+  - < -10 mmHg: Melhora significativa
+  - -10 a -5 mmHg: Melhora moderada
+  - -5 a +5 mmHg: Estável
+  - +5 a +10 mmHg: Piora moderada
+  - > +10 mmHg: Piora significativa
+- **Exemplo:** 160 → 140 mmHg = -20 mmHg (melhorou)
+
+### `variacao_pad`
+- **Tipo:** Integer
+- **Unidade:** mmHg
+- **Descrição:** Diferença entre PA diastólica atual e anterior
+- **Interpretação:** Similar à sistólica (variações > ±5 mmHg são significativas)
+
+### `dias_desde_pa_medida`
+- **Tipo:** Integer
+- **Unidade:** Dias
+- **Descrição:** Dias desde a **última medição real** de PA até a consulta atual
+- **Uso:** Identificar se PA está "fresca" ou "antiga"
+- **Interpretação:**
+  - 0-90 dias: Medição recente (válida)
+  - 91-180 dias: Medição ainda aceitável
+  - > 180 dias: Medição antiga (precisa renovar)
+
+### `data_ultima_pa_medida`
+- **Tipo:** Date
+- **Descrição:** Data da última medição REAL de PA
+- **Uso:** Rastrear quando foi a última aferição
+
+---
+
+## **SEÇÃO 5: METAS E STATUS DE CONTROLE**
+
+### `meta_pas`
+- **Tipo:** Integer
+- **Unidade:** mmHg
+- **Valores possíveis:** 140, 150
+- **Descrição:** Meta individualizada de PA sistólica
+- **Critérios de definição:**
+  - **140 mmHg** (meta padrão): Pacientes < 80 anos
+  - **150 mmHg**: Pacientes ≥ 80 anos
+- **Referência:** VII Diretriz Brasileira de Hipertensão
+
+### `meta_pad`
+- **Tipo:** Integer
+- **Unidade:** mmHg
+- **Valores:** 90
+- **Descrição:** Meta de PA diastólica (constante para todos)
+
+### `status_controle_pressorio`
+- **Tipo:** String
+- **Valores possíveis:**
+  - **"controlado"**: PAS < meta_pas E PAD < meta_pad
+  - **"descontrolado"**: PAS ≥ meta_pas OU PAD ≥ meta_pad
+  - **"sem_dados"**: Não há PA medida
+- **Exemplo:** Meta 140/90, PA 135/85 → "controlado"
+
+### `tendencia_pa`
+- **Tipo:** String
+- **Valores possíveis:**
+  - **"sem_dados"**: Nenhuma medição de PA realizada
+  - **"sem_referencia_previa"**: Apenas 1 medição (não há anterior para comparar)
+  - **"melhorando"**: PAS caiu ≥ 5 mmHg em relação à anterior
+  - **"piorando"**: PAS subiu ≥ 5 mmHg em relação à anterior
+  - **"estavel"**: Variação entre -5 e +5 mmHg
+- **Nota:** Usa variação de 5 mmHg (vs 0.5% para HbA1c) devido à variação diurna da PA
+- **Interpretação clínica:**
+  - "melhorando" → Tratamento efetivo
+  - "estavel" → Manutenção adequada
+  - "piorando" → Necessita ajuste terapêutico
+
+---
+
+## **SEÇÃO 6: TRATAMENTO - MEDICAMENTOS ANTI-HIPERTENSIVOS**
+
+### `nucleo_has`
+- **Tipo:** String (texto longo)
+- **Descrição:** Lista de medicamentos anti-hipertensivos ativos (propagados)
+- **Formato:** Texto normalizado
+- **Exemplo:** "Enalapril 10mg / Hidroclorotiazida 25mg"
+- **Uso:** Visão geral do regime terapêutico para HAS
+
+### `medicamentos_cronicos_normalizados`
+- **Tipo:** String
+- **Descrição:** Lista de TODOS os medicamentos crônicos (não só HAS)
+- **Uso:** Contexto completo do tratamento
+
+### `total_medicamentos_cronicos`
+- **Tipo:** Integer
+- **Descrição:** Número total de medicamentos crônicos em uso
+- **Valores:** 0-20+ (tipicamente 3-10)
+- **Uso:** Identificar polifarmácia
+
+### `tto_HAS_tendencia`
+- **Tipo:** String
+- **Descrição:** Esquema terapêutico atual para hipertensão
+- **Valores possíveis:**
+  - **"Sem tratamento medicamentoso"**: Não usa anti-hipertensivos
+  - **"Monoterapia"**: 1 classe (ex: só IECA)
+  - **"Terapia dupla"**: 2 classes (ex: IECA + Diurético)
+  - **"Terapia tripla"**: 3 classes (ex: IECA + Diurético + BCC)
+  - **"Terapia quádrupla ou mais"**: 4+ classes
+- **Uso:** Avaliar intensidade do tratamento
+
+### `qtd_classes_has`
+- **Tipo:** Integer
+- **Valores:** 0-8
+- **Descrição:** Número de classes terapêuticas de anti-hipertensivos em uso
+- **Classes incluídas:**
+  1. Diuréticos (hidroclorotiazida, clortalidona, indapamida)
+  2. IECAs (enalapril, captopril, lisinopril, ramipril)
+  3. BRAs (losartana, valsartana, candesartana)
+  4. Betabloqueadores (atenolol, propranolol, carvedilol, bisoprolol)
+  5. Bloqueadores de Canais de Cálcio (anlodipino, nifedipino)
+  6. ARM - Antagonistas Mineralocorticoides (espironolactona)
+  7. Ação Central (metildopa, clonidina)
+  8. Vasodilatadores (hidralazina)
+- **Interpretação:**
+  - 0: Tratamento não medicamentoso
+  - 1: Monoterapia
+  - 2: Terapia dupla (adequado para maioria)
+  - 3: Terapia tripla (HAS resistente)
+  - 4+: Hipertensão refratária (considerar causas secundárias)
+
+---
+
+## **SEÇÃO 7: POLIFARMÁCIA**
+
+### `polifarmacia`
+- **Tipo:** Boolean
+- **Valores:** TRUE/FALSE
+- **Definição:** Paciente usa **5 ou mais** medicamentos crônicos simultaneamente
+- **Implicação:** Aumento do risco de interações, efeitos adversos, baixa adesão
+
+### `hiperpolifarmacia`
+- **Tipo:** Boolean
+- **Valores:** TRUE/FALSE
+- **Definição:** Paciente usa **10 ou mais** medicamentos crônicos simultaneamente
+- **Implicação:** Risco muito elevado, necessita revisão medicamentosa
+
+---
+
+## **SEÇÃO 8: MUDANÇAS DE TRATAMENTO**
+
+### `houve_mudanca_has_prescricao`
+- **Tipo:** Integer
+- **Valores:** 0 ou 1
+- **Descrição:** Indica se houve mudança no tratamento HAS NESTA consulta
+- **Critério:** Mudança no núcleo crônico de anti-hipertensivos
+- **Mudanças consideradas:**
+  - Adição de classe
+  - Remoção de classe
+  - Troca de classe
+  - Mudança de dose (se detectável)
+
+### `evento_mudanca_has_real`
+- **Tipo:** Integer
+- **Valores:** 0 ou 1
+- **Descrição:** Mudança real confirmada (excluindo falsos positivos)
+- **Diferença:** Remove flutuações temporárias de registro
+
+### `data_ultima_mudanca_has_real`
+- **Tipo:** Date
+- **Descrição:** Data da última mudança REAL no tratamento HAS
+- **Valores:** NULL se nunca houve mudança
+
+### `dias_desde_mudanca_has_real`
+- **Tipo:** Integer
+- **Unidade:** Dias
+- **Descrição:** Dias desde a última mudança REAL no tratamento HAS
+- **Valores:**
+  - 0: Houve mudança nesta consulta
+  - NULL: Nunca houve mudança
+  - 1-730: Dias desde última mudança
+- **Uso:** Avaliar inércia terapêutica
+
+### `nucleo_has_anterior`
+- **Tipo:** String
+- **Descrição:** Tratamento HAS da consulta **imediatamente anterior**
+- **Uso:** Comparar com `nucleo_has` para identificar mudanças
+
+### `qtd_classes_has_anterior`
+- **Tipo:** Integer
+- **Descrição:** Número de classes de anti-hipertensivos na consulta anterior
+- **Uso:** Identificar se houve intensificação/simplificação
+
+### `tto_HAS_anterior`
+- **Tipo:** String
+- **Descrição:** Esquema terapêutico da consulta anterior
+- **Uso:** Rastrear evolução do tratamento
+
+---
+
+## **SEÇÃO 9: LACUNAS DE CUIDADO - HIPERTENSÃO**
+
+### `lacuna_HAS_sem_CID`
+- **Tipo:** Boolean
+- **Valores:** TRUE/FALSE
+- **Descrição:** **Lacuna 1** - Paciente hipertenso mas nunca teve CID I10-I16 documentado
+- **Critério:**
+  - `HAS = TRUE` (por PA elevada/medicamentos)
+  - E nunca teve CID I10-I16 registrado
+- **Importância:** Afeta codificação, estatísticas, repasse de recursos
+- **Persistência:** TRUE até documentar CID
+
+### `lacuna_HAS_sem_PA_recente`
+- **Tipo:** Boolean
+- **Valores:** TRUE/FALSE
+- **Descrição:** **Lacuna 2** - Hipertenso sem aferição de PA nos últimos 180 dias
+- **Critério:**
+  - `HAS = TRUE`
+  - E `dias_desde_pa_medida > 180` OU `dias_desde_pa_medida IS NULL`
+- **Protocolo recomendado:** PA a cada 3-6 meses para hipertensos
+
+### `lacuna_HAS_descontrolado`
+- **Tipo:** Boolean
+- **Valores:** TRUE/FALSE
+- **Descrição:** **Lacuna 3** - PA acima da meta individualizada
+- **Critério:**
+  - `status_controle_pressorio = 'descontrolado'`
+  - PAS ≥ meta_pas OU PAD ≥ meta_pad
+- **Ação recomendada:** Ajuste terapêutico, medidas não farmacológicas
+
+### `lacuna_HAS_inercia_terapeutica`
+- **Tipo:** Boolean
+- **Valores:** TRUE/FALSE
+- **Descrição:** **Lacuna 4** - HAS descontrolado SEM ajuste há ≥ 180 dias
+- **Critério:**
+  - PA acima da meta
+  - E `dias_desde_mudanca_has_real ≥ 180` OU nunca houve mudança
+- **Definição de inércia:** Falha em intensificar tratamento quando indicado
+- **Importância:** Principal barreira ao controle adequado da HAS
+- **Exceções consideradas:**
+  - Ajuste recente (< 180 dias)
+  - Contraindicações
+  - Recusa do paciente
+
+### `lacuna_HAS_piorando_sem_ajuste`
+- **Tipo:** Boolean
+- **Valores:** TRUE/FALSE
+- **Descrição:** **Lacuna 5** - PA piorando (↑ ≥5 mmHg) sem resposta terapêutica
+- **Critério:**
+  - `tendencia_pa = 'piorando'`
+  - E `dias_desde_mudanca_has_real ≥ 90` OU nunca houve mudança
+- **Importância:** Indica perda de oportunidade de intervenção precoce
+- **Nota:** Limite menor (90 dias) pois PA piora rapidamente
+
+### `HAS_ajuste_ativo`
+- **Tipo:** Boolean
+- **Valores:** TRUE/FALSE
+- **Descrição:** **Flag positivo** - Houve ajuste terapêutico nos últimos 180 dias
+- **Critério:**
+  - `dias_desde_mudanca_has_real < 180`
+- **Uso:** Identificar manejo ativo (contraponto às lacunas)
+- **Interpretação:** TRUE = equipe está respondendo adequadamente
+
+---
+
+## **SEÇÃO 10: TOTALIZADORES DO PACIENTE**
+
+### `total_consultas_paciente_has`
+- **Tipo:** Integer
+- **Descrição:** Total de consultas do paciente hipertenso em TODO o período
+- **Uso:** Avaliar engajamento no cuidado, aderência ao seguimento
+
+### `total_medicas_paciente_has`
+- **Tipo:** Integer
+- **Descrição:** Total de consultas MÉDICAS do paciente
+- **Uso:** Avaliar acesso à consulta médica
+
+### `total_medicoes_pa_paciente`
+- **Tipo:** Integer
+- **Descrição:** Total de medições de PA do paciente
+- **Uso:** Avaliar adequação do monitoramento
+
+### `total_mudancas_has_paciente`
+- **Tipo:** Integer
+- **Descrição:** Total de mudanças REAIS no tratamento HAS
+- **Uso:** Avaliar dinamismo do manejo terapêutico
+
+### `primeira_consulta_has`
+- **Tipo:** Date
+- **Descrição:** Data da primeira consulta do paciente como hipertenso
+- **Uso:** Calcular tempo de doença conhecida
+
+### `ultima_consulta_has`
+- **Tipo:** Date
+- **Descrição:** Data da última consulta do paciente
+- **Uso:** Identificar pacientes perdidos do seguimento
+
+### `dias_seguimento_has`
+- **Tipo:** Integer
+- **Unidade:** Dias
+- **Descrição:** Tempo total de seguimento do paciente (última - primeira consulta)
+- **Uso:** Contextualizar análises longitudinais
+
+---
+
+## **📊 CASOS DE USO - EXEMPLOS DE ANÁLISE**
+
+### **Exemplo 1: Identificar pacientes com inércia terapêutica grave**
+```sql
+WHERE lacuna_HAS_inercia_terapeutica = TRUE
+  AND dias_desde_mudanca_has_real > 365
+  AND pas > 160
+```
+
+### **Exemplo 2: Monitorar resposta ao ajuste terapêutico**
+```sql
+WHERE HAS_ajuste_ativo = TRUE
+  AND tendencia_pa = 'melhorando'
+```
+
+### **Exemplo 3: Pacientes em risco de eventos cardiovasculares**
+```sql
+WHERE tendencia_pa = 'piorando'
+  AND status_controle_pressorio = 'descontrolado'
+  AND (CI = TRUE OR stroke = TRUE)
+  AND lacuna_HAS_piorando_sem_ajuste = TRUE
+```
+
+### **Exemplo 4: Avaliar efetividade por esquema terapêutico**
+```sql
+SELECT 
+  tto_HAS_tendencia,
+  AVG(pas) as pas_media,
+  SUM(CASE WHEN status_controle_pressorio = 'controlado' THEN 1 ELSE 0 END) / COUNT(*) as taxa_controle
+GROUP BY tto_HAS_tendencia
+```
+
+### **Exemplo 5: Identificar HAS resistente**
+```sql
+WHERE qtd_classes_has >= 3
+  AND status_controle_pressorio = 'descontrolado'
+  AND dias_seguimento_has > 180
+```
+
+---
+
+## **⚠️ NOTAS IMPORTANTES**
+
+1. **Forward-fill:** Valores de PA se repetem entre consultas até nova medição
+2. **Persistência de diagnósticos:** HAS uma vez TRUE, permanece TRUE
+3. **Lacunas são cumulativas:** Um paciente pode ter múltiplas lacunas simultaneamente
+4. **Metas individualizadas:** Consideram apenas idade (< 80 vs ≥ 80 anos)
+5. **Núcleo crônico propagado:** Medicamentos se mantêm ativos por ~180 dias após prescrição
+6. **Variação significativa PA:** ±5 mmHg (vs ±0.5% para HbA1c)
+7. **Inércia terapêutica:** 180 dias para HAS (mesmo critério que DM)
+8. **Piora sem ajuste:** 90 dias para HAS (vs 180 dias no DM) - PA muda mais rápido
+
+---

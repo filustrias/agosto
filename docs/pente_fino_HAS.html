@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Pente Fino Diabetes – Sprint de Agosto</title>
+<title>Pente Fino HAS – Sprint de Agosto</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,8 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./pente_fino_HAS.html" rel="next">
-<link href="./rastreios.html" rel="prev">
+<link href="./pente_fino_DM.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -122,7 +121,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./pente_fino_DM.html">Pente Fino Diabetes</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./pente_fino_HAS.html">Pente Fino HAS</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -243,13 +242,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pente_fino_DM.html" class="sidebar-item-text sidebar-link active">
+  <a href="./pente_fino_DM.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Pente Fino Diabetes</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pente_fino_HAS.html" class="sidebar-item-text sidebar-link">
+  <a href="./pente_fino_HAS.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Pente Fino HAS</span></a>
   </div>
 </li>
@@ -263,7 +262,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#documentação-das-variáveis---análise-de-diabetes-mellitus" id="toc-documentação-das-variáveis---análise-de-diabetes-mellitus" class="nav-link active" data-scroll-target="#documentação-das-variáveis---análise-de-diabetes-mellitus">DOCUMENTAÇÃO DAS VARIÁVEIS - ANÁLISE DE DIABETES MELLITUS</a></li>
+  <li><a href="#documentação-das-variáveis---análise-de-hipertensão-arterial-sistêmica" id="toc-documentação-das-variáveis---análise-de-hipertensão-arterial-sistêmica" class="nav-link active" data-scroll-target="#documentação-das-variáveis---análise-de-hipertensão-arterial-sistêmica">DOCUMENTAÇÃO DAS VARIÁVEIS - ANÁLISE DE HIPERTENSÃO ARTERIAL SISTÊMICA</a></li>
   <li><a href="#seção-1-identificação-e-consulta" id="toc-seção-1-identificação-e-consulta" class="nav-link" data-scroll-target="#seção-1-identificação-e-consulta"><strong>SEÇÃO 1: IDENTIFICAÇÃO E CONSULTA</strong></a>
   <ul class="collapse">
   <li><a href="#cpf" id="toc-cpf" class="nav-link" data-scroll-target="#cpf"><code>cpf</code></a></li>
@@ -271,77 +270,89 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#consulta_numero" id="toc-consulta_numero" class="nav-link" data-scroll-target="#consulta_numero"><code>consulta_numero</code></a></li>
   <li><a href="#profissional_especialidade" id="toc-profissional_especialidade" class="nav-link" data-scroll-target="#profissional_especialidade"><code>profissional_especialidade</code></a></li>
   </ul></li>
-  <li><a href="#seção-2-diagnóstico---morbidades-principais" id="toc-seção-2-diagnóstico---morbidades-principais" class="nav-link" data-scroll-target="#seção-2-diagnóstico---morbidades-principais"><strong>SEÇÃO 2: DIAGNÓSTICO - MORBIDADES PRINCIPAIS</strong></a>
+  <li><a href="#seção-2-dados-demográficos" id="toc-seção-2-dados-demográficos" class="nav-link" data-scroll-target="#seção-2-dados-demográficos"><strong>SEÇÃO 2: DADOS DEMOGRÁFICOS</strong></a>
   <ul class="collapse">
-  <li><a href="#dm" id="toc-dm" class="nav-link" data-scroll-target="#dm"><code>DM</code></a></li>
-  <li><a href="#pre_dm" id="toc-pre_dm" class="nav-link" data-scroll-target="#pre_dm"><code>pre_DM</code></a></li>
+  <li><a href="#idade" id="toc-idade" class="nav-link" data-scroll-target="#idade"><code>idade</code></a></li>
+  <li><a href="#genero" id="toc-genero" class="nav-link" data-scroll-target="#genero"><code>genero</code></a></li>
+  </ul></li>
+  <li><a href="#seção-3-diagnóstico---morbidades-principais" id="toc-seção-3-diagnóstico---morbidades-principais" class="nav-link" data-scroll-target="#seção-3-diagnóstico---morbidades-principais"><strong>SEÇÃO 3: DIAGNÓSTICO - MORBIDADES PRINCIPAIS</strong></a>
+  <ul class="collapse">
   <li><a href="#has" id="toc-has" class="nav-link" data-scroll-target="#has"><code>HAS</code></a></li>
-  <li><a href="#ci" id="toc-ci" class="nav-link" data-scroll-target="#ci"><code>CI</code></a></li>
+  <li><a href="#dm" id="toc-dm" class="nav-link" data-scroll-target="#dm"><code>DM</code></a></li>
   <li><a href="#icc" id="toc-icc" class="nav-link" data-scroll-target="#icc"><code>ICC</code></a></li>
   <li><a href="#irc" id="toc-irc" class="nav-link" data-scroll-target="#irc"><code>IRC</code></a></li>
+  <li><a href="#ci" id="toc-ci" class="nav-link" data-scroll-target="#ci"><code>CI</code></a></li>
+  <li><a href="#stroke" id="toc-stroke" class="nav-link" data-scroll-target="#stroke"><code>stroke</code></a></li>
   </ul></li>
-  <li><a href="#seção-3-controle-glicêmico---medições" id="toc-seção-3-controle-glicêmico---medições" class="nav-link" data-scroll-target="#seção-3-controle-glicêmico---medições"><strong>SEÇÃO 3: CONTROLE GLICÊMICO - MEDIÇÕES</strong></a>
+  <li><a href="#seção-4-pressão-arterial---medições" id="toc-seção-4-pressão-arterial---medições" class="nav-link" data-scroll-target="#seção-4-pressão-arterial---medições"><strong>SEÇÃO 4: PRESSÃO ARTERIAL - MEDIÇÕES</strong></a>
   <ul class="collapse">
-  <li><a href="#hemoglobina_glicada_ff" id="toc-hemoglobina_glicada_ff" class="nav-link" data-scroll-target="#hemoglobina_glicada_ff"><code>hemoglobina_glicada_ff</code></a></li>
-  <li><a href="#hba1c_anterior" id="toc-hba1c_anterior" class="nav-link" data-scroll-target="#hba1c_anterior"><code>hba1c_anterior</code></a></li>
-  <li><a href="#dias_desde_hba1c_anterior" id="toc-dias_desde_hba1c_anterior" class="nav-link" data-scroll-target="#dias_desde_hba1c_anterior"><code>dias_desde_hba1c_anterior</code></a></li>
-  <li><a href="#variacao_hba1c" id="toc-variacao_hba1c" class="nav-link" data-scroll-target="#variacao_hba1c"><code>variacao_hba1c</code></a></li>
-  <li><a href="#dias_desde_hba1c_medida" id="toc-dias_desde_hba1c_medida" class="nav-link" data-scroll-target="#dias_desde_hba1c_medida"><code>dias_desde_hba1c_medida</code></a></li>
-  <li><a href="#data_hba1c_anterior" id="toc-data_hba1c_anterior" class="nav-link" data-scroll-target="#data_hba1c_anterior"><code>data_hba1c_anterior</code></a></li>
+  <li><a href="#pas" id="toc-pas" class="nav-link" data-scroll-target="#pas"><code>pas</code></a></li>
+  <li><a href="#pad" id="toc-pad" class="nav-link" data-scroll-target="#pad"><code>pad</code></a></li>
+  <li><a href="#pas_anterior" id="toc-pas_anterior" class="nav-link" data-scroll-target="#pas_anterior"><code>pas_anterior</code></a></li>
+  <li><a href="#pad_anterior" id="toc-pad_anterior" class="nav-link" data-scroll-target="#pad_anterior"><code>pad_anterior</code></a></li>
+  <li><a href="#data_pa_anterior" id="toc-data_pa_anterior" class="nav-link" data-scroll-target="#data_pa_anterior"><code>data_pa_anterior</code></a></li>
+  <li><a href="#dias_desde_pa_anterior" id="toc-dias_desde_pa_anterior" class="nav-link" data-scroll-target="#dias_desde_pa_anterior"><code>dias_desde_pa_anterior</code></a></li>
+  <li><a href="#variacao_pas" id="toc-variacao_pas" class="nav-link" data-scroll-target="#variacao_pas"><code>variacao_pas</code></a></li>
+  <li><a href="#variacao_pad" id="toc-variacao_pad" class="nav-link" data-scroll-target="#variacao_pad"><code>variacao_pad</code></a></li>
+  <li><a href="#dias_desde_pa_medida" id="toc-dias_desde_pa_medida" class="nav-link" data-scroll-target="#dias_desde_pa_medida"><code>dias_desde_pa_medida</code></a></li>
+  <li><a href="#data_ultima_pa_medida" id="toc-data_ultima_pa_medida" class="nav-link" data-scroll-target="#data_ultima_pa_medida"><code>data_ultima_pa_medida</code></a></li>
   </ul></li>
-  <li><a href="#seção-4-metas-e-status-de-controle" id="toc-seção-4-metas-e-status-de-controle" class="nav-link" data-scroll-target="#seção-4-metas-e-status-de-controle"><strong>SEÇÃO 4: METAS E STATUS DE CONTROLE</strong></a>
+  <li><a href="#seção-5-metas-e-status-de-controle" id="toc-seção-5-metas-e-status-de-controle" class="nav-link" data-scroll-target="#seção-5-metas-e-status-de-controle"><strong>SEÇÃO 5: METAS E STATUS DE CONTROLE</strong></a>
   <ul class="collapse">
-  <li><a href="#meta_hba1c" id="toc-meta_hba1c" class="nav-link" data-scroll-target="#meta_hba1c"><code>meta_hba1c</code></a></li>
-  <li><a href="#status_controle_glicemico" id="toc-status_controle_glicemico" class="nav-link" data-scroll-target="#status_controle_glicemico"><code>status_controle_glicemico</code></a></li>
-  <li><a href="#tendencia_hba1c" id="toc-tendencia_hba1c" class="nav-link" data-scroll-target="#tendencia_hba1c"><code>tendencia_hba1c</code></a></li>
+  <li><a href="#meta_pas" id="toc-meta_pas" class="nav-link" data-scroll-target="#meta_pas"><code>meta_pas</code></a></li>
+  <li><a href="#meta_pad" id="toc-meta_pad" class="nav-link" data-scroll-target="#meta_pad"><code>meta_pad</code></a></li>
+  <li><a href="#status_controle_pressorio" id="toc-status_controle_pressorio" class="nav-link" data-scroll-target="#status_controle_pressorio"><code>status_controle_pressorio</code></a></li>
+  <li><a href="#tendencia_pa" id="toc-tendencia_pa" class="nav-link" data-scroll-target="#tendencia_pa"><code>tendencia_pa</code></a></li>
   </ul></li>
-  <li><a href="#seção-5-tratamento---medicamentos-para-diabetes" id="toc-seção-5-tratamento---medicamentos-para-diabetes" class="nav-link" data-scroll-target="#seção-5-tratamento---medicamentos-para-diabetes"><strong>SEÇÃO 5: TRATAMENTO - MEDICAMENTOS PARA DIABETES</strong></a>
+  <li><a href="#seção-6-tratamento---medicamentos-anti-hipertensivos" id="toc-seção-6-tratamento---medicamentos-anti-hipertensivos" class="nav-link" data-scroll-target="#seção-6-tratamento---medicamentos-anti-hipertensivos"><strong>SEÇÃO 6: TRATAMENTO - MEDICAMENTOS ANTI-HIPERTENSIVOS</strong></a>
   <ul class="collapse">
-  <li><a href="#nucleo_cronico_atual" id="toc-nucleo_cronico_atual" class="nav-link" data-scroll-target="#nucleo_cronico_atual"><code>nucleo_cronico_atual</code></a></li>
+  <li><a href="#nucleo_has" id="toc-nucleo_has" class="nav-link" data-scroll-target="#nucleo_has"><code>nucleo_has</code></a></li>
   <li><a href="#medicamentos_cronicos_normalizados" id="toc-medicamentos_cronicos_normalizados" class="nav-link" data-scroll-target="#medicamentos_cronicos_normalizados"><code>medicamentos_cronicos_normalizados</code></a></li>
   <li><a href="#total_medicamentos_cronicos" id="toc-total_medicamentos_cronicos" class="nav-link" data-scroll-target="#total_medicamentos_cronicos"><code>total_medicamentos_cronicos</code></a></li>
-  <li><a href="#tto_dm_tendencia" id="toc-tto_dm_tendencia" class="nav-link" data-scroll-target="#tto_dm_tendencia"><code>tto_DM_tendencia</code></a></li>
-  <li><a href="#qtd_classes_dm" id="toc-qtd_classes_dm" class="nav-link" data-scroll-target="#qtd_classes_dm"><code>qtd_classes_dm</code></a></li>
-  <li><a href="#dose_diaria_metformina" id="toc-dose_diaria_metformina" class="nav-link" data-scroll-target="#dose_diaria_metformina"><code>dose_diaria_metformina</code></a></li>
-  <li><a href="#dose_diaria_insulina_ui" id="toc-dose_diaria_insulina_ui" class="nav-link" data-scroll-target="#dose_diaria_insulina_ui"><code>dose_diaria_insulina_ui</code></a></li>
+  <li><a href="#tto_has_tendencia" id="toc-tto_has_tendencia" class="nav-link" data-scroll-target="#tto_has_tendencia"><code>tto_HAS_tendencia</code></a></li>
+  <li><a href="#qtd_classes_has" id="toc-qtd_classes_has" class="nav-link" data-scroll-target="#qtd_classes_has"><code>qtd_classes_has</code></a></li>
   </ul></li>
-  <li><a href="#seção-6-polifarmácia" id="toc-seção-6-polifarmácia" class="nav-link" data-scroll-target="#seção-6-polifarmácia"><strong>SEÇÃO 6: POLIFARMÁCIA</strong></a>
+  <li><a href="#seção-7-polifarmácia" id="toc-seção-7-polifarmácia" class="nav-link" data-scroll-target="#seção-7-polifarmácia"><strong>SEÇÃO 7: POLIFARMÁCIA</strong></a>
   <ul class="collapse">
   <li><a href="#polifarmacia" id="toc-polifarmacia" class="nav-link" data-scroll-target="#polifarmacia"><code>polifarmacia</code></a></li>
   <li><a href="#hiperpolifarmacia" id="toc-hiperpolifarmacia" class="nav-link" data-scroll-target="#hiperpolifarmacia"><code>hiperpolifarmacia</code></a></li>
   </ul></li>
-  <li><a href="#seção-7-mudanças-de-tratamento" id="toc-seção-7-mudanças-de-tratamento" class="nav-link" data-scroll-target="#seção-7-mudanças-de-tratamento"><strong>SEÇÃO 7: MUDANÇAS DE TRATAMENTO</strong></a>
+  <li><a href="#seção-8-mudanças-de-tratamento" id="toc-seção-8-mudanças-de-tratamento" class="nav-link" data-scroll-target="#seção-8-mudanças-de-tratamento"><strong>SEÇÃO 8: MUDANÇAS DE TRATAMENTO</strong></a>
   <ul class="collapse">
-  <li><a href="#houve_mudanca_prescricao_nesta_consulta" id="toc-houve_mudanca_prescricao_nesta_consulta" class="nav-link" data-scroll-target="#houve_mudanca_prescricao_nesta_consulta"><code>houve_mudanca_prescricao_nesta_consulta</code></a></li>
-  <li><a href="#dias_desde_mudanca_prescricao_real" id="toc-dias_desde_mudanca_prescricao_real" class="nav-link" data-scroll-target="#dias_desde_mudanca_prescricao_real"><code>dias_desde_mudanca_prescricao_real</code></a></li>
-  <li><a href="#nucleo_anterior" id="toc-nucleo_anterior" class="nav-link" data-scroll-target="#nucleo_anterior"><code>nucleo_anterior</code></a></li>
-  <li><a href="#qtd_classes_anterior" id="toc-qtd_classes_anterior" class="nav-link" data-scroll-target="#qtd_classes_anterior"><code>qtd_classes_anterior</code></a></li>
-  <li><a href="#dose_metformina_anterior" id="toc-dose_metformina_anterior" class="nav-link" data-scroll-target="#dose_metformina_anterior"><code>dose_metformina_anterior</code></a></li>
-  <li><a href="#dose_insulina_anterior" id="toc-dose_insulina_anterior" class="nav-link" data-scroll-target="#dose_insulina_anterior"><code>dose_insulina_anterior</code></a></li>
+  <li><a href="#houve_mudanca_has_prescricao" id="toc-houve_mudanca_has_prescricao" class="nav-link" data-scroll-target="#houve_mudanca_has_prescricao"><code>houve_mudanca_has_prescricao</code></a></li>
+  <li><a href="#evento_mudanca_has_real" id="toc-evento_mudanca_has_real" class="nav-link" data-scroll-target="#evento_mudanca_has_real"><code>evento_mudanca_has_real</code></a></li>
+  <li><a href="#data_ultima_mudanca_has_real" id="toc-data_ultima_mudanca_has_real" class="nav-link" data-scroll-target="#data_ultima_mudanca_has_real"><code>data_ultima_mudanca_has_real</code></a></li>
+  <li><a href="#dias_desde_mudanca_has_real" id="toc-dias_desde_mudanca_has_real" class="nav-link" data-scroll-target="#dias_desde_mudanca_has_real"><code>dias_desde_mudanca_has_real</code></a></li>
+  <li><a href="#nucleo_has_anterior" id="toc-nucleo_has_anterior" class="nav-link" data-scroll-target="#nucleo_has_anterior"><code>nucleo_has_anterior</code></a></li>
+  <li><a href="#qtd_classes_has_anterior" id="toc-qtd_classes_has_anterior" class="nav-link" data-scroll-target="#qtd_classes_has_anterior"><code>qtd_classes_has_anterior</code></a></li>
+  <li><a href="#tto_has_anterior" id="toc-tto_has_anterior" class="nav-link" data-scroll-target="#tto_has_anterior"><code>tto_HAS_anterior</code></a></li>
   </ul></li>
-  <li><a href="#seção-8-lacunas-de-cuidado---diabetes" id="toc-seção-8-lacunas-de-cuidado---diabetes" class="nav-link" data-scroll-target="#seção-8-lacunas-de-cuidado---diabetes"><strong>SEÇÃO 8: LACUNAS DE CUIDADO - DIABETES</strong></a>
+  <li><a href="#seção-9-lacunas-de-cuidado---hipertensão" id="toc-seção-9-lacunas-de-cuidado---hipertensão" class="nav-link" data-scroll-target="#seção-9-lacunas-de-cuidado---hipertensão"><strong>SEÇÃO 9: LACUNAS DE CUIDADO - HIPERTENSÃO</strong></a>
   <ul class="collapse">
-  <li><a href="#lacuna_dm_sem_cid" id="toc-lacuna_dm_sem_cid" class="nav-link" data-scroll-target="#lacuna_dm_sem_cid"><code>lacuna_DM_sem_CID</code></a></li>
-  <li><a href="#lacuna_dm_sem_hba1c_recente" id="toc-lacuna_dm_sem_hba1c_recente" class="nav-link" data-scroll-target="#lacuna_dm_sem_hba1c_recente"><code>lacuna_DM_sem_HbA1c_recente</code></a></li>
-  <li><a href="#lacuna_dm_descontrolado" id="toc-lacuna_dm_descontrolado" class="nav-link" data-scroll-target="#lacuna_dm_descontrolado"><code>lacuna_DM_descontrolado</code></a></li>
-  <li><a href="#lacuna_dm_inercia_terapeutica" id="toc-lacuna_dm_inercia_terapeutica" class="nav-link" data-scroll-target="#lacuna_dm_inercia_terapeutica"><code>lacuna_DM_inercia_terapeutica</code></a></li>
-  <li><a href="#lacuna_dm_piorando_sem_ajuste" id="toc-lacuna_dm_piorando_sem_ajuste" class="nav-link" data-scroll-target="#lacuna_dm_piorando_sem_ajuste"><code>lacuna_DM_piorando_sem_ajuste</code></a></li>
-  <li><a href="#dm_ajuste_ativo" id="toc-dm_ajuste_ativo" class="nav-link" data-scroll-target="#dm_ajuste_ativo"><code>DM_ajuste_ativo</code></a></li>
+  <li><a href="#lacuna_has_sem_cid" id="toc-lacuna_has_sem_cid" class="nav-link" data-scroll-target="#lacuna_has_sem_cid"><code>lacuna_HAS_sem_CID</code></a></li>
+  <li><a href="#lacuna_has_sem_pa_recente" id="toc-lacuna_has_sem_pa_recente" class="nav-link" data-scroll-target="#lacuna_has_sem_pa_recente"><code>lacuna_HAS_sem_PA_recente</code></a></li>
+  <li><a href="#lacuna_has_descontrolado" id="toc-lacuna_has_descontrolado" class="nav-link" data-scroll-target="#lacuna_has_descontrolado"><code>lacuna_HAS_descontrolado</code></a></li>
+  <li><a href="#lacuna_has_inercia_terapeutica" id="toc-lacuna_has_inercia_terapeutica" class="nav-link" data-scroll-target="#lacuna_has_inercia_terapeutica"><code>lacuna_HAS_inercia_terapeutica</code></a></li>
+  <li><a href="#lacuna_has_piorando_sem_ajuste" id="toc-lacuna_has_piorando_sem_ajuste" class="nav-link" data-scroll-target="#lacuna_has_piorando_sem_ajuste"><code>lacuna_HAS_piorando_sem_ajuste</code></a></li>
+  <li><a href="#has_ajuste_ativo" id="toc-has_ajuste_ativo" class="nav-link" data-scroll-target="#has_ajuste_ativo"><code>HAS_ajuste_ativo</code></a></li>
   </ul></li>
-  <li><a href="#seção-9-totalizadores-do-paciente" id="toc-seção-9-totalizadores-do-paciente" class="nav-link" data-scroll-target="#seção-9-totalizadores-do-paciente"><strong>SEÇÃO 9: TOTALIZADORES DO PACIENTE</strong></a>
+  <li><a href="#seção-10-totalizadores-do-paciente" id="toc-seção-10-totalizadores-do-paciente" class="nav-link" data-scroll-target="#seção-10-totalizadores-do-paciente"><strong>SEÇÃO 10: TOTALIZADORES DO PACIENTE</strong></a>
   <ul class="collapse">
-  <li><a href="#total_consultas_paciente" id="toc-total_consultas_paciente" class="nav-link" data-scroll-target="#total_consultas_paciente"><code>total_consultas_paciente</code></a></li>
-  <li><a href="#total_medicas_paciente" id="toc-total_medicas_paciente" class="nav-link" data-scroll-target="#total_medicas_paciente"><code>total_medicas_paciente</code></a></li>
-  <li><a href="#total_hba1c_paciente" id="toc-total_hba1c_paciente" class="nav-link" data-scroll-target="#total_hba1c_paciente"><code>total_hba1c_paciente</code></a></li>
-  <li><a href="#consultas_validadas" id="toc-consultas_validadas" class="nav-link" data-scroll-target="#consultas_validadas"><code>consultas_validadas</code></a></li>
-  <li><a href="#medicoes_hba1c_validadas" id="toc-medicoes_hba1c_validadas" class="nav-link" data-scroll-target="#medicoes_hba1c_validadas"><code>medicoes_hba1c_validadas</code></a></li>
+  <li><a href="#total_consultas_paciente_has" id="toc-total_consultas_paciente_has" class="nav-link" data-scroll-target="#total_consultas_paciente_has"><code>total_consultas_paciente_has</code></a></li>
+  <li><a href="#total_medicas_paciente_has" id="toc-total_medicas_paciente_has" class="nav-link" data-scroll-target="#total_medicas_paciente_has"><code>total_medicas_paciente_has</code></a></li>
+  <li><a href="#total_medicoes_pa_paciente" id="toc-total_medicoes_pa_paciente" class="nav-link" data-scroll-target="#total_medicoes_pa_paciente"><code>total_medicoes_pa_paciente</code></a></li>
+  <li><a href="#total_mudancas_has_paciente" id="toc-total_mudancas_has_paciente" class="nav-link" data-scroll-target="#total_mudancas_has_paciente"><code>total_mudancas_has_paciente</code></a></li>
+  <li><a href="#primeira_consulta_has" id="toc-primeira_consulta_has" class="nav-link" data-scroll-target="#primeira_consulta_has"><code>primeira_consulta_has</code></a></li>
+  <li><a href="#ultima_consulta_has" id="toc-ultima_consulta_has" class="nav-link" data-scroll-target="#ultima_consulta_has"><code>ultima_consulta_has</code></a></li>
+  <li><a href="#dias_seguimento_has" id="toc-dias_seguimento_has" class="nav-link" data-scroll-target="#dias_seguimento_has"><code>dias_seguimento_has</code></a></li>
   </ul></li>
   <li><a href="#casos-de-uso---exemplos-de-análise" id="toc-casos-de-uso---exemplos-de-análise" class="nav-link" data-scroll-target="#casos-de-uso---exemplos-de-análise"><strong>📊 CASOS DE USO - EXEMPLOS DE ANÁLISE</strong></a>
   <ul class="collapse">
   <li><a href="#exemplo-1-identificar-pacientes-com-inércia-terapêutica-grave" id="toc-exemplo-1-identificar-pacientes-com-inércia-terapêutica-grave" class="nav-link" data-scroll-target="#exemplo-1-identificar-pacientes-com-inércia-terapêutica-grave"><strong>Exemplo 1: Identificar pacientes com inércia terapêutica grave</strong></a></li>
   <li><a href="#exemplo-2-monitorar-resposta-ao-ajuste-terapêutico" id="toc-exemplo-2-monitorar-resposta-ao-ajuste-terapêutico" class="nav-link" data-scroll-target="#exemplo-2-monitorar-resposta-ao-ajuste-terapêutico"><strong>Exemplo 2: Monitorar resposta ao ajuste terapêutico</strong></a></li>
-  <li><a href="#exemplo-3-pacientes-em-risco-de-descompensação" id="toc-exemplo-3-pacientes-em-risco-de-descompensação" class="nav-link" data-scroll-target="#exemplo-3-pacientes-em-risco-de-descompensação"><strong>Exemplo 3: Pacientes em risco de descompensação</strong></a></li>
-  <li><a href="#exemplo-4-avaliar-intensidade-do-tratamento-vs-controle" id="toc-exemplo-4-avaliar-intensidade-do-tratamento-vs-controle" class="nav-link" data-scroll-target="#exemplo-4-avaliar-intensidade-do-tratamento-vs-controle"><strong>Exemplo 4: Avaliar intensidade do tratamento vs controle</strong></a></li>
+  <li><a href="#exemplo-3-pacientes-em-risco-de-eventos-cardiovasculares" id="toc-exemplo-3-pacientes-em-risco-de-eventos-cardiovasculares" class="nav-link" data-scroll-target="#exemplo-3-pacientes-em-risco-de-eventos-cardiovasculares"><strong>Exemplo 3: Pacientes em risco de eventos cardiovasculares</strong></a></li>
+  <li><a href="#exemplo-4-avaliar-efetividade-por-esquema-terapêutico" id="toc-exemplo-4-avaliar-efetividade-por-esquema-terapêutico" class="nav-link" data-scroll-target="#exemplo-4-avaliar-efetividade-por-esquema-terapêutico"><strong>Exemplo 4: Avaliar efetividade por esquema terapêutico</strong></a></li>
+  <li><a href="#exemplo-5-identificar-has-resistente" id="toc-exemplo-5-identificar-has-resistente" class="nav-link" data-scroll-target="#exemplo-5-identificar-has-resistente"><strong>Exemplo 5: Identificar HAS resistente</strong></a></li>
   </ul></li>
   <li><a href="#notas-importantes" id="toc-notas-importantes" class="nav-link" data-scroll-target="#notas-importantes"><strong>⚠️ NOTAS IMPORTANTES</strong></a></li>
   </ul>
@@ -352,7 +363,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Pente Fino Diabetes</h1>
+<h1 class="title">Pente Fino HAS</h1>
 </div>
 
 
@@ -369,8 +380,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="documentação-das-variáveis---análise-de-diabetes-mellitus" class="level2">
-<h2 class="anchored" data-anchor-id="documentação-das-variáveis---análise-de-diabetes-mellitus">DOCUMENTAÇÃO DAS VARIÁVEIS - ANÁLISE DE DIABETES MELLITUS</h2>
+<section id="documentação-das-variáveis---análise-de-hipertensão-arterial-sistêmica" class="level2">
+<h2 class="anchored" data-anchor-id="documentação-das-variáveis---análise-de-hipertensão-arterial-sistêmica">DOCUMENTAÇÃO DAS VARIÁVEIS - ANÁLISE DE HIPERTENSÃO ARTERIAL SISTÊMICA</h2>
 </section>
 <section id="seção-1-identificação-e-consulta" class="level2">
 <h2 class="anchored" data-anchor-id="seção-1-identificação-e-consulta"><strong>SEÇÃO 1: IDENTIFICAÇÃO E CONSULTA</strong></h2>
@@ -414,59 +425,52 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="seção-2-diagnóstico---morbidades-principais" class="level2">
-<h2 class="anchored" data-anchor-id="seção-2-diagnóstico---morbidades-principais"><strong>SEÇÃO 2: DIAGNÓSTICO - MORBIDADES PRINCIPAIS</strong></h2>
-<section id="dm" class="level3">
-<h3 class="anchored" data-anchor-id="dm"><code>DM</code></h3>
+<section id="seção-2-dados-demográficos" class="level2">
+<h2 class="anchored" data-anchor-id="seção-2-dados-demográficos"><strong>SEÇÃO 2: DADOS DEMOGRÁFICOS</strong></h2>
+<section id="idade" class="level3">
+<h3 class="anchored" data-anchor-id="idade"><code>idade</code></h3>
 <ul>
-<li><strong>Tipo:</strong> Boolean</li>
-<li><strong>Valores:</strong> TRUE/FALSE</li>
-<li><strong>Descrição:</strong> Paciente tem diagnóstico de Diabetes Mellitus</li>
-<li><strong>Critérios:</strong>
-<ul>
-<li>CID E10-E14, O24, ou complicações (H360, G632, etc.)</li>
-<li>OU HbA1c ≥ 6.5%</li>
-<li>OU Glicemia jejum ≥ 126 mg/dL</li>
-<li>OU uso de antidiabéticos (metformina, insulina, etc.)</li>
-</ul></li>
-<li><strong>Persistência:</strong> Uma vez TRUE, permanece TRUE em todas consultas subsequentes</li>
+<li><strong>Tipo:</strong> Integer</li>
+<li><strong>Unidade:</strong> Anos</li>
+<li><strong>Descrição:</strong> Idade do paciente na data da consulta</li>
+<li><strong>Uso:</strong> Estratificar análises, aplicar metas individualizadas</li>
 </ul>
 </section>
-<section id="pre_dm" class="level3">
-<h3 class="anchored" data-anchor-id="pre_dm"><code>pre_DM</code></h3>
+<section id="genero" class="level3">
+<h3 class="anchored" data-anchor-id="genero"><code>genero</code></h3>
 <ul>
-<li><strong>Tipo:</strong> Boolean</li>
-<li><strong>Valores:</strong> TRUE/FALSE</li>
-<li><strong>Descrição:</strong> Paciente tem pré-diabetes (apenas se NÃO for diabético)</li>
-<li><strong>Critérios:</strong>
-<ul>
-<li>Glicemia jejum entre 100-125 mg/dL</li>
-<li>OU HbA1c entre 5.7-6.4%</li>
-</ul></li>
-<li><strong>Nota:</strong> Se <code>DM = TRUE</code>, então <code>pre_DM = FALSE</code></li>
+<li><strong>Tipo:</strong> String</li>
+<li><strong>Valores:</strong> “masculino”, “feminino”</li>
+<li><strong>Descrição:</strong> Gênero do paciente</li>
+<li><strong>Uso:</strong> Análises epidemiológicas, estratificação de risco</li>
 </ul>
+<hr>
 </section>
+</section>
+<section id="seção-3-diagnóstico---morbidades-principais" class="level2">
+<h2 class="anchored" data-anchor-id="seção-3-diagnóstico---morbidades-principais"><strong>SEÇÃO 3: DIAGNÓSTICO - MORBIDADES PRINCIPAIS</strong></h2>
 <section id="has" class="level3">
 <h3 class="anchored" data-anchor-id="has"><code>HAS</code></h3>
 <ul>
 <li><strong>Tipo:</strong> Boolean</li>
 <li><strong>Valores:</strong> TRUE/FALSE</li>
-<li><strong>Descrição:</strong> Hipertensão Arterial Sistêmica</li>
+<li><strong>Descrição:</strong> Paciente tem diagnóstico de Hipertensão Arterial Sistêmica</li>
 <li><strong>Critérios:</strong>
 <ul>
 <li>CID I10-I16, O10-O11</li>
 <li>OU PA ≥ 180/110 mmHg</li>
 <li>OU uso de anti-hipertensivos</li>
 </ul></li>
+<li><strong>Persistência:</strong> Uma vez TRUE, permanece TRUE em todas consultas subsequentes</li>
 </ul>
 </section>
-<section id="ci" class="level3">
-<h3 class="anchored" data-anchor-id="ci"><code>CI</code></h3>
+<section id="dm" class="level3">
+<h3 class="anchored" data-anchor-id="dm"><code>DM</code></h3>
 <ul>
 <li><strong>Tipo:</strong> Boolean</li>
 <li><strong>Valores:</strong> TRUE/FALSE</li>
-<li><strong>Descrição:</strong> Cardiopatia Isquêmica (angina, IAM, etc.)</li>
-<li><strong>Critérios:</strong> CID I20-I25</li>
+<li><strong>Descrição:</strong> Paciente tem diabetes mellitus (comorbidade importante)</li>
+<li><strong>Uso:</strong> Ajustar meta de PA, estratificação de risco cardiovascular</li>
 </ul>
 </section>
 <section id="icc" class="level3">
@@ -475,7 +479,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Tipo:</strong> Boolean</li>
 <li><strong>Valores:</strong> TRUE/FALSE</li>
 <li><strong>Descrição:</strong> Insuficiência Cardíaca Congestiva</li>
-<li><strong>Critérios:</strong> CID I11.0, I13.0, I42.x, I43, I50, P29.0</li>
+<li><strong>Uso:</strong> Ajustar meta de PA (evitar hipotensão)</li>
 </ul>
 </section>
 <section id="irc" class="level3">
@@ -484,152 +488,225 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Tipo:</strong> Boolean</li>
 <li><strong>Valores:</strong> TRUE/FALSE</li>
 <li><strong>Descrição:</strong> Insuficiência Renal Crônica</li>
-<li><strong>Critérios:</strong>
+<li><strong>Uso:</strong> Ajustar meta de PA, escolha de medicamentos</li>
+</ul>
+</section>
+<section id="ci" class="level3">
+<h3 class="anchored" data-anchor-id="ci"><code>CI</code></h3>
 <ul>
-<li>CID N18, N19, I12.0, I13.1, etc.</li>
-<li>OU eGFR indica estágio G2-G5 (tabela MM_eGFR)</li>
-</ul></li>
+<li><strong>Tipo:</strong> Boolean</li>
+<li><strong>Valores:</strong> TRUE/FALSE</li>
+<li><strong>Descrição:</strong> Cardiopatia Isquêmica</li>
+<li><strong>Uso:</strong> Estratificação de risco cardiovascular</li>
+</ul>
+</section>
+<section id="stroke" class="level3">
+<h3 class="anchored" data-anchor-id="stroke"><code>stroke</code></h3>
+<ul>
+<li><strong>Tipo:</strong> Boolean</li>
+<li><strong>Valores:</strong> TRUE/FALSE</li>
+<li><strong>Descrição:</strong> História de Acidente Vascular Cerebral</li>
+<li><strong>Uso:</strong> Alto risco, requer controle rigoroso</li>
 </ul>
 <hr>
 </section>
 </section>
-<section id="seção-3-controle-glicêmico---medições" class="level2">
-<h2 class="anchored" data-anchor-id="seção-3-controle-glicêmico---medições"><strong>SEÇÃO 3: CONTROLE GLICÊMICO - MEDIÇÕES</strong></h2>
-<section id="hemoglobina_glicada_ff" class="level3">
-<h3 class="anchored" data-anchor-id="hemoglobina_glicada_ff"><code>hemoglobina_glicada_ff</code></h3>
+<section id="seção-4-pressão-arterial---medições" class="level2">
+<h2 class="anchored" data-anchor-id="seção-4-pressão-arterial---medições"><strong>SEÇÃO 4: PRESSÃO ARTERIAL - MEDIÇÕES</strong></h2>
+<section id="pas" class="level3">
+<h3 class="anchored" data-anchor-id="pas"><code>pas</code></h3>
 <ul>
-<li><strong>Tipo:</strong> Float</li>
-<li><strong>Unidade:</strong> % (percentual)</li>
-<li><strong>Descrição:</strong> Último valor de HbA1c medido (com forward-fill)</li>
+<li><strong>Tipo:</strong> Integer</li>
+<li><strong>Unidade:</strong> mmHg</li>
+<li><strong>Descrição:</strong> Pressão Arterial Sistólica (com forward-fill)</li>
+<li><strong>Valores típicos:</strong> 100-200 mmHg</li>
 <li><strong>Interpretação:</strong>
 <ul>
-<li>&lt; 5.7%: Normal</li>
-<li>5.7-6.4%: Pré-diabetes</li>
-<li>≥ 6.5%: Diabetes</li>
-<li>&lt; 7.0%: Controlado (meta padrão)</li>
-<li>≥ 7.0%: Descontrolado</li>
+<li>&lt; 120 mmHg: Ótimo</li>
+<li>120-129 mmHg: Normal</li>
+<li>130-139 mmHg: Limítrofe</li>
+<li>140-159 mmHg: HAS estágio 1</li>
+<li>160-179 mmHg: HAS estágio 2</li>
+<li>≥ 180 mmHg: HAS estágio 3 (crise hipertensiva)</li>
 </ul></li>
 <li><strong>Forward-fill:</strong> Repete o último valor medido até nova medição</li>
 </ul>
 </section>
-<section id="hba1c_anterior" class="level3">
-<h3 class="anchored" data-anchor-id="hba1c_anterior"><code>hba1c_anterior</code></h3>
+<section id="pad" class="level3">
+<h3 class="anchored" data-anchor-id="pad"><code>pad</code></h3>
 <ul>
-<li><strong>Tipo:</strong> Float</li>
-<li><strong>Unidade:</strong> %</li>
-<li><strong>Descrição:</strong> Valor da <strong>penúltima</strong> medição REAL de HbA1c</li>
-<li><strong>Valores:</strong> NULL se é a primeira medição do paciente</li>
-<li><strong>Uso:</strong> Comparar com HbA1c atual para calcular tendência</li>
+<li><strong>Tipo:</strong> Integer</li>
+<li><strong>Unidade:</strong> mmHg</li>
+<li><strong>Descrição:</strong> Pressão Arterial Diastólica (com forward-fill)</li>
+<li><strong>Valores típicos:</strong> 60-110 mmHg</li>
+<li><strong>Interpretação:</strong>
+<ul>
+<li>&lt; 80 mmHg: Ótimo</li>
+<li>80-84 mmHg: Normal</li>
+<li>85-89 mmHg: Limítrofe</li>
+<li>90-99 mmHg: HAS estágio 1</li>
+<li>100-109 mmHg: HAS estágio 2</li>
+<li>≥ 110 mmHg: HAS estágio 3 (crise hipertensiva)</li>
+</ul></li>
 </ul>
 </section>
-<section id="dias_desde_hba1c_anterior" class="level3">
-<h3 class="anchored" data-anchor-id="dias_desde_hba1c_anterior"><code>dias_desde_hba1c_anterior</code></h3>
+<section id="pas_anterior" class="level3">
+<h3 class="anchored" data-anchor-id="pas_anterior"><code>pas_anterior</code></h3>
+<ul>
+<li><strong>Tipo:</strong> Integer</li>
+<li><strong>Unidade:</strong> mmHg</li>
+<li><strong>Descrição:</strong> Valor da <strong>penúltima</strong> medição REAL de PA sistólica</li>
+<li><strong>Valores:</strong> NULL se é a primeira medição do paciente</li>
+<li><strong>Uso:</strong> Comparar com PA atual para calcular tendência</li>
+</ul>
+</section>
+<section id="pad_anterior" class="level3">
+<h3 class="anchored" data-anchor-id="pad_anterior"><code>pad_anterior</code></h3>
+<ul>
+<li><strong>Tipo:</strong> Integer</li>
+<li><strong>Unidade:</strong> mmHg</li>
+<li><strong>Descrição:</strong> Valor da <strong>penúltima</strong> medição REAL de PA diastólica</li>
+<li><strong>Valores:</strong> NULL se é a primeira medição do paciente</li>
+</ul>
+</section>
+<section id="data_pa_anterior" class="level3">
+<h3 class="anchored" data-anchor-id="data_pa_anterior"><code>data_pa_anterior</code></h3>
+<ul>
+<li><strong>Tipo:</strong> Date</li>
+<li><strong>Descrição:</strong> Data em que a penúltima PA foi medida</li>
+<li><strong>Uso:</strong> Contextualizar a comparação temporal</li>
+</ul>
+</section>
+<section id="dias_desde_pa_anterior" class="level3">
+<h3 class="anchored" data-anchor-id="dias_desde_pa_anterior"><code>dias_desde_pa_anterior</code></h3>
 <ul>
 <li><strong>Tipo:</strong> Integer</li>
 <li><strong>Unidade:</strong> Dias</li>
-<li><strong>Descrição:</strong> Número de dias <strong>entre</strong> as duas últimas medições de HbA1c</li>
+<li><strong>Descrição:</strong> Número de dias <strong>entre</strong> as duas últimas medições de PA</li>
 <li><strong>Valores:</strong>
 <ul>
-<li>NULL: Paciente nunca teve HbA1c medida</li>
-<li>NULL: É a primeira medição do paciente</li>
-<li>0-730: Intervalo normal entre medições</li>
+<li>NULL: Primeira medição do paciente</li>
+<li>0-365: Intervalo normal entre medições</li>
 </ul></li>
 <li><strong>Interpretação:</strong>
 <ul>
-<li>&lt; 90 dias: Intervalo curto (não usar para tendência)</li>
-<li>90-180 dias: Intervalo ideal para monitoramento</li>
-<li>180-365 dias: Intervalo aceitável</li>
+<li>&lt; 30 dias: Intervalo muito curto</li>
+<li>30-90 dias: Intervalo ideal para ajuste</li>
+<li>90-180 dias: Intervalo adequado para manutenção</li>
 <li><blockquote class="blockquote">
-<p>365 dias: Intervalo muito longo</p>
+<p>180 dias: Intervalo muito longo</p>
 </blockquote></li>
 </ul></li>
 </ul>
 </section>
-<section id="variacao_hba1c" class="level3">
-<h3 class="anchored" data-anchor-id="variacao_hba1c"><code>variacao_hba1c</code></h3>
+<section id="variacao_pas" class="level3">
+<h3 class="anchored" data-anchor-id="variacao_pas"><code>variacao_pas</code></h3>
 <ul>
-<li><strong>Tipo:</strong> Float</li>
-<li><strong>Unidade:</strong> Pontos percentuais (pp)</li>
-<li><strong>Descrição:</strong> Diferença entre HbA1c atual e anterior (atual - anterior)</li>
-<li><strong>Cálculo:</strong> <code>hba1c - hba1c_anterior</code></li>
+<li><strong>Tipo:</strong> Integer</li>
+<li><strong>Unidade:</strong> mmHg</li>
+<li><strong>Descrição:</strong> Diferença entre PA sistólica atual e anterior (atual - anterior)</li>
+<li><strong>Cálculo:</strong> <code>pas - pas_anterior</code></li>
 <li><strong>Interpretação:</strong>
 <ul>
-<li>&lt; -0.5 pp: Melhora significativa</li>
-<li>-0.5 a +0.5 pp: Estável</li>
+<li>&lt; -10 mmHg: Melhora significativa</li>
+<li>-10 a -5 mmHg: Melhora moderada</li>
+<li>-5 a +5 mmHg: Estável</li>
+<li>+5 a +10 mmHg: Piora moderada</li>
 <li><blockquote class="blockquote">
-<p>+0.5 pp: Piora significativa</p>
+<p>+10 mmHg: Piora significativa</p>
 </blockquote></li>
 </ul></li>
-<li><strong>Exemplo:</strong> 9.5% → 7.8% = -1.7 pp (melhorou)</li>
+<li><strong>Exemplo:</strong> 160 → 140 mmHg = -20 mmHg (melhorou)</li>
 </ul>
 </section>
-<section id="dias_desde_hba1c_medida" class="level3">
-<h3 class="anchored" data-anchor-id="dias_desde_hba1c_medida"><code>dias_desde_hba1c_medida</code></h3>
+<section id="variacao_pad" class="level3">
+<h3 class="anchored" data-anchor-id="variacao_pad"><code>variacao_pad</code></h3>
+<ul>
+<li><strong>Tipo:</strong> Integer</li>
+<li><strong>Unidade:</strong> mmHg</li>
+<li><strong>Descrição:</strong> Diferença entre PA diastólica atual e anterior</li>
+<li><strong>Interpretação:</strong> Similar à sistólica (variações &gt; ±5 mmHg são significativas)</li>
+</ul>
+</section>
+<section id="dias_desde_pa_medida" class="level3">
+<h3 class="anchored" data-anchor-id="dias_desde_pa_medida"><code>dias_desde_pa_medida</code></h3>
 <ul>
 <li><strong>Tipo:</strong> Integer</li>
 <li><strong>Unidade:</strong> Dias</li>
-<li><strong>Descrição:</strong> Dias desde a <strong>última medição real</strong> de HbA1c até a consulta atual</li>
-<li><strong>Uso:</strong> Identificar se HbA1c está “fresca” ou “antiga”</li>
+<li><strong>Descrição:</strong> Dias desde a <strong>última medição real</strong> de PA até a consulta atual</li>
+<li><strong>Uso:</strong> Identificar se PA está “fresca” ou “antiga”</li>
 <li><strong>Interpretação:</strong>
 <ul>
-<li>0-90 dias: Medição recente</li>
-<li>91-180 dias: Medição ainda válida</li>
+<li>0-90 dias: Medição recente (válida)</li>
+<li>91-180 dias: Medição ainda aceitável</li>
 <li><blockquote class="blockquote">
 <p>180 dias: Medição antiga (precisa renovar)</p>
 </blockquote></li>
 </ul></li>
 </ul>
 </section>
-<section id="data_hba1c_anterior" class="level3">
-<h3 class="anchored" data-anchor-id="data_hba1c_anterior"><code>data_hba1c_anterior</code></h3>
+<section id="data_ultima_pa_medida" class="level3">
+<h3 class="anchored" data-anchor-id="data_ultima_pa_medida"><code>data_ultima_pa_medida</code></h3>
 <ul>
 <li><strong>Tipo:</strong> Date</li>
-<li><strong>Descrição:</strong> Data em que a penúltima HbA1c foi medida</li>
-<li><strong>Uso:</strong> Contextualizar a comparação temporal</li>
+<li><strong>Descrição:</strong> Data da última medição REAL de PA</li>
+<li><strong>Uso:</strong> Rastrear quando foi a última aferição</li>
 </ul>
 <hr>
 </section>
 </section>
-<section id="seção-4-metas-e-status-de-controle" class="level2">
-<h2 class="anchored" data-anchor-id="seção-4-metas-e-status-de-controle"><strong>SEÇÃO 4: METAS E STATUS DE CONTROLE</strong></h2>
-<section id="meta_hba1c" class="level3">
-<h3 class="anchored" data-anchor-id="meta_hba1c"><code>meta_hba1c</code></h3>
+<section id="seção-5-metas-e-status-de-controle" class="level2">
+<h2 class="anchored" data-anchor-id="seção-5-metas-e-status-de-controle"><strong>SEÇÃO 5: METAS E STATUS DE CONTROLE</strong></h2>
+<section id="meta_pas" class="level3">
+<h3 class="anchored" data-anchor-id="meta_pas"><code>meta_pas</code></h3>
 <ul>
-<li><strong>Tipo:</strong> Float</li>
-<li><strong>Unidade:</strong> %</li>
-<li><strong>Valores possíveis:</strong> 7.0, 7.5, 8.0</li>
-<li><strong>Descrição:</strong> Meta individualizada de HbA1c para o paciente</li>
+<li><strong>Tipo:</strong> Integer</li>
+<li><strong>Unidade:</strong> mmHg</li>
+<li><strong>Valores possíveis:</strong> 140, 150</li>
+<li><strong>Descrição:</strong> Meta individualizada de PA sistólica</li>
 <li><strong>Critérios de definição:</strong>
 <ul>
-<li><strong>7.0%</strong> (meta padrão): Pacientes jovens/saudáveis</li>
-<li><strong>7.5%</strong>: Idade 60-75 anos OU complicações moderadas</li>
-<li><strong>8.0%</strong>: Idade ≥ 75 anos OU múltiplas complicações/comorbidades graves</li>
+<li><strong>140 mmHg</strong> (meta padrão): Pacientes &lt; 80 anos</li>
+<li><strong>150 mmHg</strong>: Pacientes ≥ 80 anos</li>
 </ul></li>
-<li><strong>Complicações consideradas:</strong> ICC, IRC, CI, stroke, demência</li>
+<li><strong>Referência:</strong> VII Diretriz Brasileira de Hipertensão</li>
 </ul>
 </section>
-<section id="status_controle_glicemico" class="level3">
-<h3 class="anchored" data-anchor-id="status_controle_glicemico"><code>status_controle_glicemico</code></h3>
+<section id="meta_pad" class="level3">
+<h3 class="anchored" data-anchor-id="meta_pad"><code>meta_pad</code></h3>
+<ul>
+<li><strong>Tipo:</strong> Integer</li>
+<li><strong>Unidade:</strong> mmHg</li>
+<li><strong>Valores:</strong> 90</li>
+<li><strong>Descrição:</strong> Meta de PA diastólica (constante para todos)</li>
+</ul>
+</section>
+<section id="status_controle_pressorio" class="level3">
+<h3 class="anchored" data-anchor-id="status_controle_pressorio"><code>status_controle_pressorio</code></h3>
 <ul>
 <li><strong>Tipo:</strong> String</li>
 <li><strong>Valores possíveis:</strong>
 <ul>
-<li><strong>“controlado”</strong>: HbA1c ≤ meta individualizada</li>
-<li><strong>“descontrolado”</strong>: HbA1c &gt; meta individualizada</li>
-<li><strong>“sem_dados”</strong>: Não há HbA1c medida</li>
+<li><strong>“controlado”</strong>: PAS &lt; meta_pas E PAD &lt; meta_pad</li>
+<li><strong>“descontrolado”</strong>: PAS ≥ meta_pas OU PAD ≥ meta_pad</li>
+<li><strong>“sem_dados”</strong>: Não há PA medida</li>
 </ul></li>
-<li><strong>Exemplo:</strong> Meta 7.5%, HbA1c 7.2% → “controlado”</li>
+<li><strong>Exemplo:</strong> Meta 140/90, PA 135/85 → “controlado”</li>
 </ul>
 </section>
-<section id="tendencia_hba1c" class="level3">
-<h3 class="anchored" data-anchor-id="tendencia_hba1c"><code>tendencia_hba1c</code></h3>
+<section id="tendencia_pa" class="level3">
+<h3 class="anchored" data-anchor-id="tendencia_pa"><code>tendencia_pa</code></h3>
 <ul>
 <li><strong>Tipo:</strong> String</li>
-<li><strong>Valores possíveis:</strong></li>
-</ul>
-<p><strong>Para pacientes COM diabetes (DM = TRUE):</strong> - <strong>“sem_dados”</strong>: Nenhum exame de HbA1c realizado - <strong>“sem_referencia_previa”</strong>: Apenas 1 exame (não há anterior para comparar) - <strong>“melhorando”</strong>: HbA1c caiu &gt; 0.5 pp em relação à anterior - <strong>“piorando”</strong>: HbA1c subiu &gt; 0.5 pp em relação à anterior - <strong>“estavel”</strong>: Variação entre -0.5 e +0.5 pp</p>
-<p><strong>Para pacientes SEM diabetes (DM = FALSE) - Rastreamento:</strong> - <strong>“rastreio - normal”</strong>: HbA1c &lt; 5.7% - <strong>“rastreio - pre_diabetes”</strong>: HbA1c 5.7-6.4% - <strong>“rastreio - provavel_diabetes”</strong>: HbA1c ≥ 6.5%</p>
+<li><strong>Valores possíveis:</strong>
 <ul>
+<li><strong>“sem_dados”</strong>: Nenhuma medição de PA realizada</li>
+<li><strong>“sem_referencia_previa”</strong>: Apenas 1 medição (não há anterior para comparar)</li>
+<li><strong>“melhorando”</strong>: PAS caiu ≥ 5 mmHg em relação à anterior</li>
+<li><strong>“piorando”</strong>: PAS subiu ≥ 5 mmHg em relação à anterior</li>
+<li><strong>“estavel”</strong>: Variação entre -5 e +5 mmHg</li>
+</ul></li>
+<li><strong>Nota:</strong> Usa variação de 5 mmHg (vs 0.5% para HbA1c) devido à variação diurna da PA</li>
 <li><strong>Interpretação clínica:</strong>
 <ul>
 <li>“melhorando” → Tratamento efetivo</li>
@@ -640,25 +717,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="seção-5-tratamento---medicamentos-para-diabetes" class="level2">
-<h2 class="anchored" data-anchor-id="seção-5-tratamento---medicamentos-para-diabetes"><strong>SEÇÃO 5: TRATAMENTO - MEDICAMENTOS PARA DIABETES</strong></h2>
-<section id="nucleo_cronico_atual" class="level3">
-<h3 class="anchored" data-anchor-id="nucleo_cronico_atual"><code>nucleo_cronico_atual</code></h3>
+<section id="seção-6-tratamento---medicamentos-anti-hipertensivos" class="level2">
+<h2 class="anchored" data-anchor-id="seção-6-tratamento---medicamentos-anti-hipertensivos"><strong>SEÇÃO 6: TRATAMENTO - MEDICAMENTOS ANTI-HIPERTENSIVOS</strong></h2>
+<section id="nucleo_has" class="level3">
+<h3 class="anchored" data-anchor-id="nucleo_has"><code>nucleo_has</code></h3>
 <ul>
 <li><strong>Tipo:</strong> String (texto longo)</li>
-<li><strong>Descrição:</strong> Lista de TODOS os medicamentos crônicos prescritos</li>
-<li><strong>Formato:</strong> Separados por ” / ”</li>
-<li><strong>Exemplo:</strong> “Metformina 850mg / Losartana 50mg / Sinvastatina 20mg”</li>
-<li><strong>Uso:</strong> Visão geral do regime terapêutico</li>
+<li><strong>Descrição:</strong> Lista de medicamentos anti-hipertensivos ativos (propagados)</li>
+<li><strong>Formato:</strong> Texto normalizado</li>
+<li><strong>Exemplo:</strong> “Enalapril 10mg / Hidroclorotiazida 25mg”</li>
+<li><strong>Uso:</strong> Visão geral do regime terapêutico para HAS</li>
 </ul>
 </section>
 <section id="medicamentos_cronicos_normalizados" class="level3">
 <h3 class="anchored" data-anchor-id="medicamentos_cronicos_normalizados"><code>medicamentos_cronicos_normalizados</code></h3>
 <ul>
 <li><strong>Tipo:</strong> String</li>
-<li><strong>Descrição:</strong> Lista padronizada de medicamentos crônicos</li>
-<li><strong>Diferença do anterior:</strong> Nomes normalizados, doses extraíveis</li>
-<li><strong>Uso:</strong> Análise computacional de doses e classes</li>
+<li><strong>Descrição:</strong> Lista de TODOS os medicamentos crônicos (não só HAS)</li>
+<li><strong>Uso:</strong> Contexto completo do tratamento</li>
 </ul>
 </section>
 <section id="total_medicamentos_cronicos" class="level3">
@@ -670,97 +746,60 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Uso:</strong> Identificar polifarmácia</li>
 </ul>
 </section>
-<section id="tto_dm_tendencia" class="level3">
-<h3 class="anchored" data-anchor-id="tto_dm_tendencia"><code>tto_DM_tendencia</code></h3>
+<section id="tto_has_tendencia" class="level3">
+<h3 class="anchored" data-anchor-id="tto_has_tendencia"><code>tto_HAS_tendencia</code></h3>
 <ul>
 <li><strong>Tipo:</strong> String</li>
-<li><strong>Descrição:</strong> Esquema terapêutico atual para diabetes</li>
+<li><strong>Descrição:</strong> Esquema terapêutico atual para hipertensão</li>
 <li><strong>Valores possíveis:</strong>
 <ul>
-<li><strong>“Sem tratamento medicamentoso”</strong>: Não usa antidiabéticos</li>
-<li><strong>“Monoterapia oral”</strong>: 1 classe oral (ex: só metformina)</li>
-<li><strong>“Terapia dupla oral”</strong>: 2 classes orais</li>
-<li><strong>“Terapia tripla oral”</strong>: 3 classes orais</li>
-<li><strong>“Insulina isolada”</strong>: Só insulina</li>
-<li><strong>“Insulina + oral”</strong>: Combinação</li>
-<li><strong>“Terapia complexa”</strong>: 4+ classes</li>
+<li><strong>“Sem tratamento medicamentoso”</strong>: Não usa anti-hipertensivos</li>
+<li><strong>“Monoterapia”</strong>: 1 classe (ex: só IECA)</li>
+<li><strong>“Terapia dupla”</strong>: 2 classes (ex: IECA + Diurético)</li>
+<li><strong>“Terapia tripla”</strong>: 3 classes (ex: IECA + Diurético + BCC)</li>
+<li><strong>“Terapia quádrupla ou mais”</strong>: 4+ classes</li>
 </ul></li>
 <li><strong>Uso:</strong> Avaliar intensidade do tratamento</li>
 </ul>
 </section>
-<section id="qtd_classes_dm" class="level3">
-<h3 class="anchored" data-anchor-id="qtd_classes_dm"><code>qtd_classes_dm</code></h3>
+<section id="qtd_classes_has" class="level3">
+<h3 class="anchored" data-anchor-id="qtd_classes_has"><code>qtd_classes_has</code></h3>
 <ul>
 <li><strong>Tipo:</strong> Integer</li>
-<li><strong>Valores:</strong> 0-6</li>
-<li><strong>Descrição:</strong> Número de classes terapêuticas de antidiabéticos em uso</li>
+<li><strong>Valores:</strong> 0-8</li>
+<li><strong>Descrição:</strong> Número de classes terapêuticas de anti-hipertensivos em uso</li>
 <li><strong>Classes incluídas:</strong>
 <ol type="1">
-<li>Biguanidas (metformina)</li>
-<li>Sulfonilureias (gliclazida, glibenclamida)</li>
-<li>Insulinas</li>
-<li>SGLT2-i (dapagliflozina, empagliflozina)</li>
-<li>GLP-1 agonistas</li>
-<li>Inibidores DPP-4</li>
+<li>Diuréticos (hidroclorotiazida, clortalidona, indapamida)</li>
+<li>IECAs (enalapril, captopril, lisinopril, ramipril)</li>
+<li>BRAs (losartana, valsartana, candesartana)</li>
+<li>Betabloqueadores (atenolol, propranolol, carvedilol, bisoprolol)</li>
+<li>Bloqueadores de Canais de Cálcio (anlodipino, nifedipino)</li>
+<li>ARM - Antagonistas Mineralocorticoides (espironolactona)</li>
+<li>Ação Central (metildopa, clonidina)</li>
+<li>Vasodilatadores (hidralazina)</li>
 </ol></li>
 <li><strong>Interpretação:</strong>
 <ul>
 <li>0: Tratamento não medicamentoso</li>
 <li>1: Monoterapia</li>
-<li>2-3: Terapia combinada (adequado)</li>
-<li>4+: Terapia complexa (considerar revisão)</li>
-</ul></li>
-</ul>
-</section>
-<section id="dose_diaria_metformina" class="level3">
-<h3 class="anchored" data-anchor-id="dose_diaria_metformina"><code>dose_diaria_metformina</code></h3>
-<ul>
-<li><strong>Tipo:</strong> Float</li>
-<li><strong>Unidade:</strong> mg/dia</li>
-<li><strong>Valores:</strong> 0-3000 mg (tipicamente 500-2500 mg)</li>
-<li><strong>Descrição:</strong> Dose total diária de metformina</li>
-<li><strong>Referência:</strong>
-<ul>
-<li>500-1000 mg/dia: Dose baixa</li>
-<li>1500-2000 mg/dia: Dose padrão</li>
-<li>2000-2550 mg/dia: Dose máxima</li>
-</ul></li>
-</ul>
-</section>
-<section id="dose_diaria_insulina_ui" class="level3">
-<h3 class="anchored" data-anchor-id="dose_diaria_insulina_ui"><code>dose_diaria_insulina_ui</code></h3>
-<ul>
-<li><strong>Tipo:</strong> Float</li>
-<li><strong>Unidade:</strong> UI/dia (Unidades Internacionais)</li>
-<li><strong>Valores:</strong> 0-200 UI/dia (tipicamente 10-100 UI)</li>
-<li><strong>Descrição:</strong> Dose total diária de insulina (todas as insulinas somadas)</li>
-<li><strong>Referência:</strong>
-<ul>
-<li>&lt; 30 UI/dia: Dose baixa</li>
-<li>30-60 UI/dia: Dose moderada</li>
-<li><blockquote class="blockquote">
-<p>60 UI/dia: Dose alta</p>
-</blockquote></li>
+<li>2: Terapia dupla (adequado para maioria)</li>
+<li>3: Terapia tripla (HAS resistente)</li>
+<li>4+: Hipertensão refratária (considerar causas secundárias)</li>
 </ul></li>
 </ul>
 <hr>
 </section>
 </section>
-<section id="seção-6-polifarmácia" class="level2">
-<h2 class="anchored" data-anchor-id="seção-6-polifarmácia"><strong>SEÇÃO 6: POLIFARMÁCIA</strong></h2>
+<section id="seção-7-polifarmácia" class="level2">
+<h2 class="anchored" data-anchor-id="seção-7-polifarmácia"><strong>SEÇÃO 7: POLIFARMÁCIA</strong></h2>
 <section id="polifarmacia" class="level3">
 <h3 class="anchored" data-anchor-id="polifarmacia"><code>polifarmacia</code></h3>
 <ul>
 <li><strong>Tipo:</strong> Boolean</li>
 <li><strong>Valores:</strong> TRUE/FALSE</li>
 <li><strong>Definição:</strong> Paciente usa <strong>5 ou mais</strong> medicamentos crônicos simultaneamente</li>
-<li><strong>Implicação:</strong> Aumento do risco de:
-<ul>
-<li>Interações medicamentosas</li>
-<li>Efeitos adversos</li>
-<li>Baixa adesão</li>
-<li>Erros de administração</li>
-</ul></li>
+<li><strong>Implicação:</strong> Aumento do risco de interações, efeitos adversos, baixa adesão</li>
 </ul>
 </section>
 <section id="hiperpolifarmacia" class="level3">
@@ -769,35 +808,52 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Tipo:</strong> Boolean</li>
 <li><strong>Valores:</strong> TRUE/FALSE</li>
 <li><strong>Definição:</strong> Paciente usa <strong>10 ou mais</strong> medicamentos crônicos simultaneamente</li>
-<li><strong>Implicação:</strong> Risco ainda maior que polifarmácia simples</li>
+<li><strong>Implicação:</strong> Risco muito elevado, necessita revisão medicamentosa</li>
 </ul>
 <hr>
 </section>
 </section>
-<section id="seção-7-mudanças-de-tratamento" class="level2">
-<h2 class="anchored" data-anchor-id="seção-7-mudanças-de-tratamento"><strong>SEÇÃO 7: MUDANÇAS DE TRATAMENTO</strong></h2>
-<section id="houve_mudanca_prescricao_nesta_consulta" class="level3">
-<h3 class="anchored" data-anchor-id="houve_mudanca_prescricao_nesta_consulta"><code>houve_mudanca_prescricao_nesta_consulta</code></h3>
+<section id="seção-8-mudanças-de-tratamento" class="level2">
+<h2 class="anchored" data-anchor-id="seção-8-mudanças-de-tratamento"><strong>SEÇÃO 8: MUDANÇAS DE TRATAMENTO</strong></h2>
+<section id="houve_mudanca_has_prescricao" class="level3">
+<h3 class="anchored" data-anchor-id="houve_mudanca_has_prescricao"><code>houve_mudanca_has_prescricao</code></h3>
 <ul>
 <li><strong>Tipo:</strong> Integer</li>
 <li><strong>Valores:</strong> 0 ou 1</li>
-<li><strong>Descrição:</strong> Indica se houve mudança no núcleo crônico NESTA consulta</li>
-<li><strong>Critério:</strong> Comparação com o núcleo da consulta anterior</li>
+<li><strong>Descrição:</strong> Indica se houve mudança no tratamento HAS NESTA consulta</li>
+<li><strong>Critério:</strong> Mudança no núcleo crônico de anti-hipertensivos</li>
 <li><strong>Mudanças consideradas:</strong>
 <ul>
-<li>Adição de medicamento</li>
-<li>Remoção de medicamento</li>
-<li>Troca de medicamento</li>
-<li>Mudança de dose</li>
+<li>Adição de classe</li>
+<li>Remoção de classe</li>
+<li>Troca de classe</li>
+<li>Mudança de dose (se detectável)</li>
 </ul></li>
 </ul>
 </section>
-<section id="dias_desde_mudanca_prescricao_real" class="level3">
-<h3 class="anchored" data-anchor-id="dias_desde_mudanca_prescricao_real"><code>dias_desde_mudanca_prescricao_real</code></h3>
+<section id="evento_mudanca_has_real" class="level3">
+<h3 class="anchored" data-anchor-id="evento_mudanca_has_real"><code>evento_mudanca_has_real</code></h3>
+<ul>
+<li><strong>Tipo:</strong> Integer</li>
+<li><strong>Valores:</strong> 0 ou 1</li>
+<li><strong>Descrição:</strong> Mudança real confirmada (excluindo falsos positivos)</li>
+<li><strong>Diferença:</strong> Remove flutuações temporárias de registro</li>
+</ul>
+</section>
+<section id="data_ultima_mudanca_has_real" class="level3">
+<h3 class="anchored" data-anchor-id="data_ultima_mudanca_has_real"><code>data_ultima_mudanca_has_real</code></h3>
+<ul>
+<li><strong>Tipo:</strong> Date</li>
+<li><strong>Descrição:</strong> Data da última mudança REAL no tratamento HAS</li>
+<li><strong>Valores:</strong> NULL se nunca houve mudança</li>
+</ul>
+</section>
+<section id="dias_desde_mudanca_has_real" class="level3">
+<h3 class="anchored" data-anchor-id="dias_desde_mudanca_has_real"><code>dias_desde_mudanca_has_real</code></h3>
 <ul>
 <li><strong>Tipo:</strong> Integer</li>
 <li><strong>Unidade:</strong> Dias</li>
-<li><strong>Descrição:</strong> Dias desde a última mudança REAL detectada no tratamento</li>
+<li><strong>Descrição:</strong> Dias desde a última mudança REAL no tratamento HAS</li>
 <li><strong>Valores:</strong>
 <ul>
 <li>0: Houve mudança nesta consulta</li>
@@ -807,174 +863,186 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Uso:</strong> Avaliar inércia terapêutica</li>
 </ul>
 </section>
-<section id="nucleo_anterior" class="level3">
-<h3 class="anchored" data-anchor-id="nucleo_anterior"><code>nucleo_anterior</code></h3>
+<section id="nucleo_has_anterior" class="level3">
+<h3 class="anchored" data-anchor-id="nucleo_has_anterior"><code>nucleo_has_anterior</code></h3>
 <ul>
 <li><strong>Tipo:</strong> String</li>
-<li><strong>Descrição:</strong> Núcleo crônico da consulta <strong>imediatamente anterior</strong></li>
-<li><strong>Uso:</strong> Comparar com <code>nucleo_cronico_atual</code> para identificar mudanças</li>
+<li><strong>Descrição:</strong> Tratamento HAS da consulta <strong>imediatamente anterior</strong></li>
+<li><strong>Uso:</strong> Comparar com <code>nucleo_has</code> para identificar mudanças</li>
 </ul>
 </section>
-<section id="qtd_classes_anterior" class="level3">
-<h3 class="anchored" data-anchor-id="qtd_classes_anterior"><code>qtd_classes_anterior</code></h3>
+<section id="qtd_classes_has_anterior" class="level3">
+<h3 class="anchored" data-anchor-id="qtd_classes_has_anterior"><code>qtd_classes_has_anterior</code></h3>
 <ul>
 <li><strong>Tipo:</strong> Integer</li>
-<li><strong>Descrição:</strong> Número de classes de antidiabéticos na consulta anterior</li>
-<li><strong>Uso:</strong> Identificar se houve intensificação/simplificação do tratamento DM</li>
+<li><strong>Descrição:</strong> Número de classes de anti-hipertensivos na consulta anterior</li>
+<li><strong>Uso:</strong> Identificar se houve intensificação/simplificação</li>
 </ul>
 </section>
-<section id="dose_metformina_anterior" class="level3">
-<h3 class="anchored" data-anchor-id="dose_metformina_anterior"><code>dose_metformina_anterior</code></h3>
+<section id="tto_has_anterior" class="level3">
+<h3 class="anchored" data-anchor-id="tto_has_anterior"><code>tto_HAS_anterior</code></h3>
 <ul>
-<li><strong>Tipo:</strong> Float</li>
-<li><strong>Unidade:</strong> mg/dia</li>
-<li><strong>Descrição:</strong> Dose de metformina na consulta anterior</li>
-<li><strong>Uso:</strong> Identificar ajustes de dose</li>
-</ul>
-</section>
-<section id="dose_insulina_anterior" class="level3">
-<h3 class="anchored" data-anchor-id="dose_insulina_anterior"><code>dose_insulina_anterior</code></h3>
-<ul>
-<li><strong>Tipo:</strong> Float</li>
-<li><strong>Unidade:</strong> UI/dia</li>
-<li><strong>Descrição:</strong> Dose de insulina na consulta anterior</li>
-<li><strong>Uso:</strong> Identificar ajustes de dose (titulação)</li>
+<li><strong>Tipo:</strong> String</li>
+<li><strong>Descrição:</strong> Esquema terapêutico da consulta anterior</li>
+<li><strong>Uso:</strong> Rastrear evolução do tratamento</li>
 </ul>
 <hr>
 </section>
 </section>
-<section id="seção-8-lacunas-de-cuidado---diabetes" class="level2">
-<h2 class="anchored" data-anchor-id="seção-8-lacunas-de-cuidado---diabetes"><strong>SEÇÃO 8: LACUNAS DE CUIDADO - DIABETES</strong></h2>
-<section id="lacuna_dm_sem_cid" class="level3">
-<h3 class="anchored" data-anchor-id="lacuna_dm_sem_cid"><code>lacuna_DM_sem_CID</code></h3>
+<section id="seção-9-lacunas-de-cuidado---hipertensão" class="level2">
+<h2 class="anchored" data-anchor-id="seção-9-lacunas-de-cuidado---hipertensão"><strong>SEÇÃO 9: LACUNAS DE CUIDADO - HIPERTENSÃO</strong></h2>
+<section id="lacuna_has_sem_cid" class="level3">
+<h3 class="anchored" data-anchor-id="lacuna_has_sem_cid"><code>lacuna_HAS_sem_CID</code></h3>
 <ul>
 <li><strong>Tipo:</strong> Boolean</li>
 <li><strong>Valores:</strong> TRUE/FALSE</li>
-<li><strong>Descrição:</strong> <strong>Lacuna 1.2</strong> - Paciente tem diabetes mas nunca teve CID documentado</li>
+<li><strong>Descrição:</strong> <strong>Lacuna 1</strong> - Paciente hipertenso mas nunca teve CID I10-I16 documentado</li>
 <li><strong>Critério:</strong>
 <ul>
-<li><code>DM = TRUE</code> (por exames/medicamentos)</li>
-<li>E nunca teve CID E10-E14 registrado</li>
+<li><code>HAS = TRUE</code> (por PA elevada/medicamentos)</li>
+<li>E nunca teve CID I10-I16 registrado</li>
 </ul></li>
 <li><strong>Importância:</strong> Afeta codificação, estatísticas, repasse de recursos</li>
+<li><strong>Persistência:</strong> TRUE até documentar CID</li>
 </ul>
 </section>
-<section id="lacuna_dm_sem_hba1c_recente" class="level3">
-<h3 class="anchored" data-anchor-id="lacuna_dm_sem_hba1c_recente"><code>lacuna_DM_sem_HbA1c_recente</code></h3>
+<section id="lacuna_has_sem_pa_recente" class="level3">
+<h3 class="anchored" data-anchor-id="lacuna_has_sem_pa_recente"><code>lacuna_HAS_sem_PA_recente</code></h3>
 <ul>
 <li><strong>Tipo:</strong> Boolean</li>
 <li><strong>Valores:</strong> TRUE/FALSE</li>
-<li><strong>Descrição:</strong> <strong>Lacuna 6.1</strong> - Paciente diabético sem HbA1c nos últimos 180 dias</li>
+<li><strong>Descrição:</strong> <strong>Lacuna 2</strong> - Hipertenso sem aferição de PA nos últimos 180 dias</li>
 <li><strong>Critério:</strong>
 <ul>
-<li><code>DM = TRUE</code></li>
-<li>E <code>dias_desde_hba1c_medida &gt; 180</code> OU <code>dias_desde_hba1c_medida IS NULL</code></li>
+<li><code>HAS = TRUE</code></li>
+<li>E <code>dias_desde_pa_medida &gt; 180</code> OU <code>dias_desde_pa_medida IS NULL</code></li>
 </ul></li>
-<li><strong>Protocolo recomendado:</strong> HbA1c a cada 3-6 meses</li>
+<li><strong>Protocolo recomendado:</strong> PA a cada 3-6 meses para hipertensos</li>
 </ul>
 </section>
-<section id="lacuna_dm_descontrolado" class="level3">
-<h3 class="anchored" data-anchor-id="lacuna_dm_descontrolado"><code>lacuna_DM_descontrolado</code></h3>
+<section id="lacuna_has_descontrolado" class="level3">
+<h3 class="anchored" data-anchor-id="lacuna_has_descontrolado"><code>lacuna_HAS_descontrolado</code></h3>
 <ul>
 <li><strong>Tipo:</strong> Boolean</li>
 <li><strong>Valores:</strong> TRUE/FALSE</li>
-<li><strong>Descrição:</strong> <strong>Lacuna 6.2</strong> - Diabetes descontrolado (HbA1c acima da meta)</li>
+<li><strong>Descrição:</strong> <strong>Lacuna 3</strong> - PA acima da meta individualizada</li>
 <li><strong>Critério:</strong>
 <ul>
-<li><code>status_controle_glicemico = 'descontrolado'</code></li>
-<li>HbA1c &gt; meta individualizada</li>
+<li><code>status_controle_pressorio = 'descontrolado'</code></li>
+<li>PAS ≥ meta_pas OU PAD ≥ meta_pad</li>
 </ul></li>
-<li><strong>Ação recomendada:</strong> Ajuste terapêutico</li>
+<li><strong>Ação recomendada:</strong> Ajuste terapêutico, medidas não farmacológicas</li>
 </ul>
 </section>
-<section id="lacuna_dm_inercia_terapeutica" class="level3">
-<h3 class="anchored" data-anchor-id="lacuna_dm_inercia_terapeutica"><code>lacuna_DM_inercia_terapeutica</code></h3>
+<section id="lacuna_has_inercia_terapeutica" class="level3">
+<h3 class="anchored" data-anchor-id="lacuna_has_inercia_terapeutica"><code>lacuna_HAS_inercia_terapeutica</code></h3>
 <ul>
 <li><strong>Tipo:</strong> Boolean</li>
 <li><strong>Valores:</strong> TRUE/FALSE</li>
-<li><strong>Descrição:</strong> <strong>Lacuna 6.3</strong> - Diabetes descontrolado SEM ajuste há ≥ 180 dias</li>
+<li><strong>Descrição:</strong> <strong>Lacuna 4</strong> - HAS descontrolado SEM ajuste há ≥ 180 dias</li>
 <li><strong>Critério:</strong>
 <ul>
-<li>HbA1c &gt; meta</li>
-<li>E <code>dias_desde_mudanca_prescricao_real ≥ 180</code> OU nunca houve mudança</li>
+<li>PA acima da meta</li>
+<li>E <code>dias_desde_mudanca_has_real ≥ 180</code> OU nunca houve mudança</li>
 </ul></li>
 <li><strong>Definição de inércia:</strong> Falha em intensificar tratamento quando indicado</li>
+<li><strong>Importância:</strong> Principal barreira ao controle adequado da HAS</li>
 <li><strong>Exceções consideradas:</strong>
 <ul>
 <li>Ajuste recente (&lt; 180 dias)</li>
 <li>Contraindicações</li>
+<li>Recusa do paciente</li>
 </ul></li>
 </ul>
 </section>
-<section id="lacuna_dm_piorando_sem_ajuste" class="level3">
-<h3 class="anchored" data-anchor-id="lacuna_dm_piorando_sem_ajuste"><code>lacuna_DM_piorando_sem_ajuste</code></h3>
+<section id="lacuna_has_piorando_sem_ajuste" class="level3">
+<h3 class="anchored" data-anchor-id="lacuna_has_piorando_sem_ajuste"><code>lacuna_HAS_piorando_sem_ajuste</code></h3>
 <ul>
 <li><strong>Tipo:</strong> Boolean</li>
 <li><strong>Valores:</strong> TRUE/FALSE</li>
-<li><strong>Descrição:</strong> <strong>Lacuna 6.4</strong> - HbA1c piorando sem resposta terapêutica</li>
+<li><strong>Descrição:</strong> <strong>Lacuna 5</strong> - PA piorando (↑ ≥5 mmHg) sem resposta terapêutica</li>
 <li><strong>Critério:</strong>
 <ul>
-<li><code>tendencia_hba1c = 'piorando'</code></li>
-<li>E <code>dias_desde_mudanca_prescricao_real ≥ 90</code> OU nunca houve mudança</li>
+<li><code>tendencia_pa = 'piorando'</code></li>
+<li>E <code>dias_desde_mudanca_has_real ≥ 90</code> OU nunca houve mudança</li>
 </ul></li>
 <li><strong>Importância:</strong> Indica perda de oportunidade de intervenção precoce</li>
+<li><strong>Nota:</strong> Limite menor (90 dias) pois PA piora rapidamente</li>
 </ul>
 </section>
-<section id="dm_ajuste_ativo" class="level3">
-<h3 class="anchored" data-anchor-id="dm_ajuste_ativo"><code>DM_ajuste_ativo</code></h3>
+<section id="has_ajuste_ativo" class="level3">
+<h3 class="anchored" data-anchor-id="has_ajuste_ativo"><code>HAS_ajuste_ativo</code></h3>
 <ul>
 <li><strong>Tipo:</strong> Boolean</li>
 <li><strong>Valores:</strong> TRUE/FALSE</li>
 <li><strong>Descrição:</strong> <strong>Flag positivo</strong> - Houve ajuste terapêutico nos últimos 180 dias</li>
 <li><strong>Critério:</strong>
 <ul>
-<li><code>dias_desde_mudanca_prescricao_real &lt; 180</code></li>
+<li><code>dias_desde_mudanca_has_real &lt; 180</code></li>
 </ul></li>
 <li><strong>Uso:</strong> Identificar manejo ativo (contraponto às lacunas)</li>
+<li><strong>Interpretação:</strong> TRUE = equipe está respondendo adequadamente</li>
 </ul>
 <hr>
 </section>
 </section>
-<section id="seção-9-totalizadores-do-paciente" class="level2">
-<h2 class="anchored" data-anchor-id="seção-9-totalizadores-do-paciente"><strong>SEÇÃO 9: TOTALIZADORES DO PACIENTE</strong></h2>
-<section id="total_consultas_paciente" class="level3">
-<h3 class="anchored" data-anchor-id="total_consultas_paciente"><code>total_consultas_paciente</code></h3>
+<section id="seção-10-totalizadores-do-paciente" class="level2">
+<h2 class="anchored" data-anchor-id="seção-10-totalizadores-do-paciente"><strong>SEÇÃO 10: TOTALIZADORES DO PACIENTE</strong></h2>
+<section id="total_consultas_paciente_has" class="level3">
+<h3 class="anchored" data-anchor-id="total_consultas_paciente_has"><code>total_consultas_paciente_has</code></h3>
 <ul>
 <li><strong>Tipo:</strong> Integer</li>
-<li><strong>Descrição:</strong> Total de consultas do paciente em TODO o período</li>
-<li><strong>Uso:</strong> Avaliar engajamento no cuidado</li>
+<li><strong>Descrição:</strong> Total de consultas do paciente hipertenso em TODO o período</li>
+<li><strong>Uso:</strong> Avaliar engajamento no cuidado, aderência ao seguimento</li>
 </ul>
 </section>
-<section id="total_medicas_paciente" class="level3">
-<h3 class="anchored" data-anchor-id="total_medicas_paciente"><code>total_medicas_paciente</code></h3>
+<section id="total_medicas_paciente_has" class="level3">
+<h3 class="anchored" data-anchor-id="total_medicas_paciente_has"><code>total_medicas_paciente_has</code></h3>
 <ul>
 <li><strong>Tipo:</strong> Integer</li>
 <li><strong>Descrição:</strong> Total de consultas MÉDICAS do paciente</li>
 <li><strong>Uso:</strong> Avaliar acesso à consulta médica</li>
 </ul>
 </section>
-<section id="total_hba1c_paciente" class="level3">
-<h3 class="anchored" data-anchor-id="total_hba1c_paciente"><code>total_hba1c_paciente</code></h3>
+<section id="total_medicoes_pa_paciente" class="level3">
+<h3 class="anchored" data-anchor-id="total_medicoes_pa_paciente"><code>total_medicoes_pa_paciente</code></h3>
 <ul>
 <li><strong>Tipo:</strong> Integer</li>
-<li><strong>Descrição:</strong> Total de medições de HbA1c do paciente</li>
+<li><strong>Descrição:</strong> Total de medições de PA do paciente</li>
 <li><strong>Uso:</strong> Avaliar adequação do monitoramento</li>
 </ul>
 </section>
-<section id="consultas_validadas" class="level3">
-<h3 class="anchored" data-anchor-id="consultas_validadas"><code>consultas_validadas</code></h3>
+<section id="total_mudancas_has_paciente" class="level3">
+<h3 class="anchored" data-anchor-id="total_mudancas_has_paciente"><code>total_mudancas_has_paciente</code></h3>
 <ul>
 <li><strong>Tipo:</strong> Integer</li>
-<li><strong>Descrição:</strong> Total de consultas do paciente (redundante com <code>total_consultas_paciente</code>)</li>
-<li><strong>Origem:</strong> CTE <code>pacientes_filtrados_final</code></li>
+<li><strong>Descrição:</strong> Total de mudanças REAIS no tratamento HAS</li>
+<li><strong>Uso:</strong> Avaliar dinamismo do manejo terapêutico</li>
 </ul>
 </section>
-<section id="medicoes_hba1c_validadas" class="level3">
-<h3 class="anchored" data-anchor-id="medicoes_hba1c_validadas"><code>medicoes_hba1c_validadas</code></h3>
+<section id="primeira_consulta_has" class="level3">
+<h3 class="anchored" data-anchor-id="primeira_consulta_has"><code>primeira_consulta_has</code></h3>
+<ul>
+<li><strong>Tipo:</strong> Date</li>
+<li><strong>Descrição:</strong> Data da primeira consulta do paciente como hipertenso</li>
+<li><strong>Uso:</strong> Calcular tempo de doença conhecida</li>
+</ul>
+</section>
+<section id="ultima_consulta_has" class="level3">
+<h3 class="anchored" data-anchor-id="ultima_consulta_has"><code>ultima_consulta_has</code></h3>
+<ul>
+<li><strong>Tipo:</strong> Date</li>
+<li><strong>Descrição:</strong> Data da última consulta do paciente</li>
+<li><strong>Uso:</strong> Identificar pacientes perdidos do seguimento</li>
+</ul>
+</section>
+<section id="dias_seguimento_has" class="level3">
+<h3 class="anchored" data-anchor-id="dias_seguimento_has"><code>dias_seguimento_has</code></h3>
 <ul>
 <li><strong>Tipo:</strong> Integer</li>
-<li><strong>Descrição:</strong> Número de valores DISTINTOS de HbA1c (aproximado)</li>
-<li><strong>Uso:</strong> Confirmar critério de inclusão (≥ 3 medições)</li>
+<li><strong>Unidade:</strong> Dias</li>
+<li><strong>Descrição:</strong> Tempo total de seguimento do paciente (última - primeira consulta)</li>
+<li><strong>Uso:</strong> Contextualizar análises longitudinais</li>
 </ul>
 <hr>
 </section>
@@ -983,38 +1051,49 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="casos-de-uso---exemplos-de-análise"><strong>📊 CASOS DE USO - EXEMPLOS DE ANÁLISE</strong></h2>
 <section id="exemplo-1-identificar-pacientes-com-inércia-terapêutica-grave" class="level3">
 <h3 class="anchored" data-anchor-id="exemplo-1-identificar-pacientes-com-inércia-terapêutica-grave"><strong>Exemplo 1: Identificar pacientes com inércia terapêutica grave</strong></h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> lacuna_DM_inercia_terapeutica <span class="op">=</span> <span class="kw">TRUE</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">AND</span> dias_desde_mudanca_prescricao_real <span class="op">&gt;</span> <span class="dv">365</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">AND</span> hba1c <span class="op">&gt;</span> <span class="fl">9.0</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> lacuna_HAS_inercia_terapeutica <span class="op">=</span> <span class="kw">TRUE</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">AND</span> dias_desde_mudanca_has_real <span class="op">&gt;</span> <span class="dv">365</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">AND</span> pas <span class="op">&gt;</span> <span class="dv">160</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="exemplo-2-monitorar-resposta-ao-ajuste-terapêutico" class="level3">
 <h3 class="anchored" data-anchor-id="exemplo-2-monitorar-resposta-ao-ajuste-terapêutico"><strong>Exemplo 2: Monitorar resposta ao ajuste terapêutico</strong></h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> DM_ajuste_ativo <span class="op">=</span> <span class="kw">TRUE</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">AND</span> tendencia_hba1c <span class="op">=</span> <span class="st">'melhorando'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> HAS_ajuste_ativo <span class="op">=</span> <span class="kw">TRUE</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">AND</span> tendencia_pa <span class="op">=</span> <span class="st">'melhorando'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="exemplo-3-pacientes-em-risco-de-descompensação" class="level3">
-<h3 class="anchored" data-anchor-id="exemplo-3-pacientes-em-risco-de-descompensação"><strong>Exemplo 3: Pacientes em risco de descompensação</strong></h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> tendencia_hba1c <span class="op">=</span> <span class="st">'piorando'</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">AND</span> status_controle_glicemico <span class="op">=</span> <span class="st">'descontrolado'</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">AND</span> lacuna_DM_piorando_sem_ajuste <span class="op">=</span> <span class="kw">TRUE</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="exemplo-3-pacientes-em-risco-de-eventos-cardiovasculares" class="level3">
+<h3 class="anchored" data-anchor-id="exemplo-3-pacientes-em-risco-de-eventos-cardiovasculares"><strong>Exemplo 3: Pacientes em risco de eventos cardiovasculares</strong></h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> tendencia_pa <span class="op">=</span> <span class="st">'piorando'</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">AND</span> status_controle_pressorio <span class="op">=</span> <span class="st">'descontrolado'</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">AND</span> (CI <span class="op">=</span> <span class="kw">TRUE</span> <span class="kw">OR</span> stroke <span class="op">=</span> <span class="kw">TRUE</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">AND</span> lacuna_HAS_piorando_sem_ajuste <span class="op">=</span> <span class="kw">TRUE</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="exemplo-4-avaliar-intensidade-do-tratamento-vs-controle" class="level3">
-<h3 class="anchored" data-anchor-id="exemplo-4-avaliar-intensidade-do-tratamento-vs-controle"><strong>Exemplo 4: Avaliar intensidade do tratamento vs controle</strong></h3>
+<section id="exemplo-4-avaliar-efetividade-por-esquema-terapêutico" class="level3">
+<h3 class="anchored" data-anchor-id="exemplo-4-avaliar-efetividade-por-esquema-terapêutico"><strong>Exemplo 4: Avaliar efetividade por esquema terapêutico</strong></h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> </span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  qtd_classes_dm,</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">AVG</span>(hba1c) <span class="kw">as</span> hba1c_media,</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">SUM</span>(<span class="cf">CASE</span> <span class="cf">WHEN</span> status_controle_glicemico <span class="op">=</span> <span class="st">'controlado'</span> <span class="cf">THEN</span> <span class="dv">1</span> <span class="cf">ELSE</span> <span class="dv">0</span> <span class="cf">END</span>) <span class="op">/</span> <span class="fu">COUNT</span>(<span class="op">*</span>) <span class="kw">as</span> taxa_controle</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> qtd_classes_dm</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  tto_HAS_tendencia,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">AVG</span>(pas) <span class="kw">as</span> pas_media,</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">SUM</span>(<span class="cf">CASE</span> <span class="cf">WHEN</span> status_controle_pressorio <span class="op">=</span> <span class="st">'controlado'</span> <span class="cf">THEN</span> <span class="dv">1</span> <span class="cf">ELSE</span> <span class="dv">0</span> <span class="cf">END</span>) <span class="op">/</span> <span class="fu">COUNT</span>(<span class="op">*</span>) <span class="kw">as</span> taxa_controle</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> tto_HAS_tendencia</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="exemplo-5-identificar-has-resistente" class="level3">
+<h3 class="anchored" data-anchor-id="exemplo-5-identificar-has-resistente"><strong>Exemplo 5: Identificar HAS resistente</strong></h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> qtd_classes_has <span class="op">&gt;=</span> <span class="dv">3</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">AND</span> status_controle_pressorio <span class="op">=</span> <span class="st">'descontrolado'</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">AND</span> dias_seguimento_has <span class="op">&gt;</span> <span class="dv">180</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 </section>
 <section id="notas-importantes" class="level2">
 <h2 class="anchored" data-anchor-id="notas-importantes"><strong>⚠️ NOTAS IMPORTANTES</strong></h2>
 <ol type="1">
-<li><strong>Forward-fill:</strong> Valores de HbA1c se repetem entre consultas até nova medição</li>
-<li><strong>Persistência de diagnósticos:</strong> DM, HAS, CI, ICC etc. uma vez TRUE, permanecem TRUE</li>
+<li><strong>Forward-fill:</strong> Valores de PA se repetem entre consultas até nova medição</li>
+<li><strong>Persistência de diagnósticos:</strong> HAS uma vez TRUE, permanece TRUE</li>
 <li><strong>Lacunas são cumulativas:</strong> Um paciente pode ter múltiplas lacunas simultaneamente</li>
-<li><strong>Interpretação contextualizada:</strong> Sempre considerar idade, comorbidades e meta individualizada</li>
+<li><strong>Metas individualizadas:</strong> Consideram apenas idade (&lt; 80 vs ≥ 80 anos)</li>
+<li><strong>Núcleo crônico propagado:</strong> Medicamentos se mantêm ativos por ~180 dias após prescrição</li>
+<li><strong>Variação significativa PA:</strong> ±5 mmHg (vs ±0.5% para HbA1c)</li>
+<li><strong>Inércia terapêutica:</strong> 180 dias para HAS (mesmo critério que DM)</li>
+<li><strong>Piora sem ajuste:</strong> 90 dias para HAS (vs 180 dias no DM) - PA muda mais rápido</li>
 </ol>
 <hr>
 
@@ -1424,14 +1503,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./rastreios.html" class="pagination-link" aria-label="Rastreios neoplasias">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Rastreios neoplasias</span>
+      <a href="./pente_fino_DM.html" class="pagination-link" aria-label="Pente Fino Diabetes">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Pente Fino Diabetes</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./pente_fino_HAS.html" class="pagination-link" aria-label="Pente Fino HAS">
-        <span class="nav-page-text">Pente Fino HAS</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
