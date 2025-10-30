@@ -22,6 +22,7 @@ book:
     - pilulas_IC.qmd
     - implementacao.qmd
     - rastreios.qmd
+    - pente_fino_DM.qmd
 
 bibliography: references.bib
 

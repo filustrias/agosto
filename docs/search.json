@@ -738,5 +738,125 @@
     "crumbs": [
       "Rastreios neoplasias"
     ]
+  },
+  {
+    "objectID": "pente_fino_DM.html",
+    "href": "pente_fino_DM.html",
+    "title": "Pente Fino Diabetes",
+    "section": "",
+    "text": "SEÇÃO 1: IDENTIFICAÇÃO E CONSULTA",
+    "crumbs": [
+      "Pente Fino Diabetes"
+    ]
+  },
+  {
+    "objectID": "pente_fino_DM.html#seção-1-identificação-e-consulta",
+    "href": "pente_fino_DM.html#seção-1-identificação-e-consulta",
+    "title": "Pente Fino Diabetes",
+    "section": "",
+    "text": "cpf\n\nTipo: String (11 dígitos)\nDescrição: Identificador único do paciente\nUso: Agrupar todas as consultas do mesmo paciente\n\n\n\nentrada_data\n\nTipo: Date\nDescrição: Data da consulta/episódio assistencial\nUso: Ordenação temporal das consultas\n\n\n\nconsulta_numero\n\nTipo: Integer\nDescrição: Número sequencial da consulta para cada paciente (1, 2, 3…)\nUso: Identificar primeira consulta, progressão temporal\n\n\n\nprofissional_especialidade\n\nTipo: String\nValores comuns:\n\n“Médico clínico geral”\n“Enfermeiro”\n“Médico cardiologista”\n“Técnico de enfermagem”\n\nUso: Identificar tipo de atendimento",
+    "crumbs": [
+      "Pente Fino Diabetes"
+    ]
+  },
+  {
+    "objectID": "pente_fino_DM.html#seção-2-diagnóstico---morbidades-principais",
+    "href": "pente_fino_DM.html#seção-2-diagnóstico---morbidades-principais",
+    "title": "Pente Fino Diabetes",
+    "section": "SEÇÃO 2: DIAGNÓSTICO - MORBIDADES PRINCIPAIS",
+    "text": "SEÇÃO 2: DIAGNÓSTICO - MORBIDADES PRINCIPAIS\n\nDM\n\nTipo: Boolean\nValores: TRUE/FALSE\nDescrição: Paciente tem diagnóstico de Diabetes Mellitus\nCritérios:\n\nCID E10-E14, O24, ou complicações (H360, G632, etc.)\nOU HbA1c ≥ 6.5%\nOU Glicemia jejum ≥ 126 mg/dL\nOU uso de antidiabéticos (metformina, insulina, etc.)\n\nPersistência: Uma vez TRUE, permanece TRUE em todas consultas subsequentes\n\n\n\npre_DM\n\nTipo: Boolean\nValores: TRUE/FALSE\nDescrição: Paciente tem pré-diabetes (apenas se NÃO for diabético)\nCritérios:\n\nGlicemia jejum entre 100-125 mg/dL\nOU HbA1c entre 5.7-6.4%\n\nNota: Se DM = TRUE, então pre_DM = FALSE\n\n\n\nHAS\n\nTipo: Boolean\nValores: TRUE/FALSE\nDescrição: Hipertensão Arterial Sistêmica\nCritérios:\n\nCID I10-I16, O10-O11\nOU PA ≥ 180/110 mmHg\nOU uso de anti-hipertensivos\n\n\n\n\nCI\n\nTipo: Boolean\nValores: TRUE/FALSE\nDescrição: Cardiopatia Isquêmica (angina, IAM, etc.)\nCritérios: CID I20-I25\n\n\n\nICC\n\nTipo: Boolean\nValores: TRUE/FALSE\nDescrição: Insuficiência Cardíaca Congestiva\nCritérios: CID I11.0, I13.0, I42.x, I43, I50, P29.0\n\n\n\nIRC\n\nTipo: Boolean\nValores: TRUE/FALSE\nDescrição: Insuficiência Renal Crônica\nCritérios:\n\nCID N18, N19, I12.0, I13.1, etc.\nOU eGFR indica estágio G2-G5 (tabela MM_eGFR)",
+    "crumbs": [
+      "Pente Fino Diabetes"
+    ]
+  },
+  {
+    "objectID": "pente_fino_DM.html#seção-3-controle-glicêmico---medições",
+    "href": "pente_fino_DM.html#seção-3-controle-glicêmico---medições",
+    "title": "Pente Fino Diabetes",
+    "section": "SEÇÃO 3: CONTROLE GLICÊMICO - MEDIÇÕES",
+    "text": "SEÇÃO 3: CONTROLE GLICÊMICO - MEDIÇÕES\n\nhemoglobina_glicada_ff\n\nTipo: Float\nUnidade: % (percentual)\nDescrição: Último valor de HbA1c medido (com forward-fill)\nInterpretação:\n\n&lt; 5.7%: Normal\n5.7-6.4%: Pré-diabetes\n≥ 6.5%: Diabetes\n&lt; 7.0%: Controlado (meta padrão)\n≥ 7.0%: Descontrolado\n\nForward-fill: Repete o último valor medido até nova medição\n\n\n\nhba1c_anterior\n\nTipo: Float\nUnidade: %\nDescrição: Valor da penúltima medição REAL de HbA1c\nValores: NULL se é a primeira medição do paciente\nUso: Comparar com HbA1c atual para calcular tendência\n\n\n\ndias_desde_hba1c_anterior\n\nTipo: Integer\nUnidade: Dias\nDescrição: Número de dias entre as duas últimas medições de HbA1c\nValores:\n\nNULL: Paciente nunca teve HbA1c medida\nNULL: É a primeira medição do paciente\n0-730: Intervalo normal entre medições\n\nInterpretação:\n\n&lt; 90 dias: Intervalo curto (não usar para tendência)\n90-180 dias: Intervalo ideal para monitoramento\n180-365 dias: Intervalo aceitável\n\n365 dias: Intervalo muito longo\n\n\n\n\n\nvariacao_hba1c\n\nTipo: Float\nUnidade: Pontos percentuais (pp)\nDescrição: Diferença entre HbA1c atual e anterior (atual - anterior)\nCálculo: hba1c - hba1c_anterior\nInterpretação:\n\n&lt; -0.5 pp: Melhora significativa\n-0.5 a +0.5 pp: Estável\n\n+0.5 pp: Piora significativa\n\n\nExemplo: 9.5% → 7.8% = -1.7 pp (melhorou)\n\n\n\ndias_desde_hba1c_medida\n\nTipo: Integer\nUnidade: Dias\nDescrição: Dias desde a última medição real de HbA1c até a consulta atual\nUso: Identificar se HbA1c está “fresca” ou “antiga”\nInterpretação:\n\n0-90 dias: Medição recente\n91-180 dias: Medição ainda válida\n\n180 dias: Medição antiga (precisa renovar)\n\n\n\n\n\ndata_hba1c_anterior\n\nTipo: Date\nDescrição: Data em que a penúltima HbA1c foi medida\nUso: Contextualizar a comparação temporal",
+    "crumbs": [
+      "Pente Fino Diabetes"
+    ]
+  },
+  {
+    "objectID": "pente_fino_DM.html#seção-4-metas-e-status-de-controle",
+    "href": "pente_fino_DM.html#seção-4-metas-e-status-de-controle",
+    "title": "Pente Fino Diabetes",
+    "section": "SEÇÃO 4: METAS E STATUS DE CONTROLE",
+    "text": "SEÇÃO 4: METAS E STATUS DE CONTROLE\n\nmeta_hba1c\n\nTipo: Float\nUnidade: %\nValores possíveis: 7.0, 7.5, 8.0\nDescrição: Meta individualizada de HbA1c para o paciente\nCritérios de definição:\n\n7.0% (meta padrão): Pacientes jovens/saudáveis\n7.5%: Idade 60-75 anos OU complicações moderadas\n8.0%: Idade ≥ 75 anos OU múltiplas complicações/comorbidades graves\n\nComplicações consideradas: ICC, IRC, CI, stroke, demência\n\n\n\nstatus_controle_glicemico\n\nTipo: String\nValores possíveis:\n\n“controlado”: HbA1c ≤ meta individualizada\n“descontrolado”: HbA1c &gt; meta individualizada\n“sem_dados”: Não há HbA1c medida\n\nExemplo: Meta 7.5%, HbA1c 7.2% → “controlado”\n\n\n\ntendencia_hba1c\n\nTipo: String\nValores possíveis:\n\nPara pacientes COM diabetes (DM = TRUE): - “sem_dados”: Nenhum exame de HbA1c realizado - “sem_referencia_previa”: Apenas 1 exame (não há anterior para comparar) - “melhorando”: HbA1c caiu &gt; 0.5 pp em relação à anterior - “piorando”: HbA1c subiu &gt; 0.5 pp em relação à anterior - “estavel”: Variação entre -0.5 e +0.5 pp\nPara pacientes SEM diabetes (DM = FALSE) - Rastreamento: - “rastreio - normal”: HbA1c &lt; 5.7% - “rastreio - pre_diabetes”: HbA1c 5.7-6.4% - “rastreio - provavel_diabetes”: HbA1c ≥ 6.5%\n\nInterpretação clínica:\n\n“melhorando” → Tratamento efetivo\n“estavel” → Manutenção adequada\n“piorando” → Necessita ajuste terapêutico",
+    "crumbs": [
+      "Pente Fino Diabetes"
+    ]
+  },
+  {
+    "objectID": "pente_fino_DM.html#seção-5-tratamento---medicamentos-para-diabetes",
+    "href": "pente_fino_DM.html#seção-5-tratamento---medicamentos-para-diabetes",
+    "title": "Pente Fino Diabetes",
+    "section": "SEÇÃO 5: TRATAMENTO - MEDICAMENTOS PARA DIABETES",
+    "text": "SEÇÃO 5: TRATAMENTO - MEDICAMENTOS PARA DIABETES\n\nnucleo_cronico_atual\n\nTipo: String (texto longo)\nDescrição: Lista de TODOS os medicamentos crônicos prescritos\nFormato: Separados por ” / ”\nExemplo: “Metformina 850mg / Losartana 50mg / Sinvastatina 20mg”\nUso: Visão geral do regime terapêutico\n\n\n\nmedicamentos_cronicos_normalizados\n\nTipo: String\nDescrição: Lista padronizada de medicamentos crônicos\nDiferença do anterior: Nomes normalizados, doses extraíveis\nUso: Análise computacional de doses e classes\n\n\n\ntotal_medicamentos_cronicos\n\nTipo: Integer\nDescrição: Número total de medicamentos crônicos em uso\nValores: 0-20+ (tipicamente 3-10)\nUso: Identificar polifarmácia\n\n\n\ntto_DM_tendencia\n\nTipo: String\nDescrição: Esquema terapêutico atual para diabetes\nValores possíveis:\n\n“Sem tratamento medicamentoso”: Não usa antidiabéticos\n“Monoterapia oral”: 1 classe oral (ex: só metformina)\n“Terapia dupla oral”: 2 classes orais\n“Terapia tripla oral”: 3 classes orais\n“Insulina isolada”: Só insulina\n“Insulina + oral”: Combinação\n“Terapia complexa”: 4+ classes\n\nUso: Avaliar intensidade do tratamento\n\n\n\nqtd_classes_dm\n\nTipo: Integer\nValores: 0-6\nDescrição: Número de classes terapêuticas de antidiabéticos em uso\nClasses incluídas:\n\nBiguanidas (metformina)\nSulfonilureias (gliclazida, glibenclamida)\nInsulinas\nSGLT2-i (dapagliflozina, empagliflozina)\nGLP-1 agonistas\nInibidores DPP-4\n\nInterpretação:\n\n0: Tratamento não medicamentoso\n1: Monoterapia\n2-3: Terapia combinada (adequado)\n4+: Terapia complexa (considerar revisão)\n\n\n\n\ndose_diaria_metformina\n\nTipo: Float\nUnidade: mg/dia\nValores: 0-3000 mg (tipicamente 500-2500 mg)\nDescrição: Dose total diária de metformina\nReferência:\n\n500-1000 mg/dia: Dose baixa\n1500-2000 mg/dia: Dose padrão\n2000-2550 mg/dia: Dose máxima\n\n\n\n\ndose_diaria_insulina_ui\n\nTipo: Float\nUnidade: UI/dia (Unidades Internacionais)\nValores: 0-200 UI/dia (tipicamente 10-100 UI)\nDescrição: Dose total diária de insulina (todas as insulinas somadas)\nReferência:\n\n&lt; 30 UI/dia: Dose baixa\n30-60 UI/dia: Dose moderada\n\n60 UI/dia: Dose alta",
+    "crumbs": [
+      "Pente Fino Diabetes"
+    ]
+  },
+  {
+    "objectID": "pente_fino_DM.html#seção-6-polifarmácia",
+    "href": "pente_fino_DM.html#seção-6-polifarmácia",
+    "title": "Pente Fino Diabetes",
+    "section": "SEÇÃO 6: POLIFARMÁCIA",
+    "text": "SEÇÃO 6: POLIFARMÁCIA\n\npolifarmacia\n\nTipo: Boolean\nValores: TRUE/FALSE\nDefinição: Paciente usa 5 ou mais medicamentos crônicos simultaneamente\nImplicação: Aumento do risco de:\n\nInterações medicamentosas\nEfeitos adversos\nBaixa adesão\nErros de administração\n\n\n\n\nhiperpolifarmacia\n\nTipo: Boolean\nValores: TRUE/FALSE\nDefinição: Paciente usa 10 ou mais medicamentos crônicos simultaneamente\nImplicação: Risco ainda maior que polifarmácia simples",
+    "crumbs": [
+      "Pente Fino Diabetes"
+    ]
+  },
+  {
+    "objectID": "pente_fino_DM.html#seção-7-mudanças-de-tratamento",
+    "href": "pente_fino_DM.html#seção-7-mudanças-de-tratamento",
+    "title": "Pente Fino Diabetes",
+    "section": "SEÇÃO 7: MUDANÇAS DE TRATAMENTO",
+    "text": "SEÇÃO 7: MUDANÇAS DE TRATAMENTO\n\nhouve_mudanca_prescricao_nesta_consulta\n\nTipo: Integer\nValores: 0 ou 1\nDescrição: Indica se houve mudança no núcleo crônico NESTA consulta\nCritério: Comparação com o núcleo da consulta anterior\nMudanças consideradas:\n\nAdição de medicamento\nRemoção de medicamento\nTroca de medicamento\nMudança de dose\n\n\n\n\ndias_desde_mudanca_prescricao_real\n\nTipo: Integer\nUnidade: Dias\nDescrição: Dias desde a última mudança REAL detectada no tratamento\nValores:\n\n0: Houve mudança nesta consulta\nNULL: Nunca houve mudança\n1-730: Dias desde última mudança\n\nUso: Avaliar inércia terapêutica\n\n\n\nnucleo_anterior\n\nTipo: String\nDescrição: Núcleo crônico da consulta imediatamente anterior\nUso: Comparar com nucleo_cronico_atual para identificar mudanças\n\n\n\nqtd_classes_anterior\n\nTipo: Integer\nDescrição: Número de classes de antidiabéticos na consulta anterior\nUso: Identificar se houve intensificação/simplificação do tratamento DM\n\n\n\ndose_metformina_anterior\n\nTipo: Float\nUnidade: mg/dia\nDescrição: Dose de metformina na consulta anterior\nUso: Identificar ajustes de dose\n\n\n\ndose_insulina_anterior\n\nTipo: Float\nUnidade: UI/dia\nDescrição: Dose de insulina na consulta anterior\nUso: Identificar ajustes de dose (titulação)",
+    "crumbs": [
+      "Pente Fino Diabetes"
+    ]
+  },
+  {
+    "objectID": "pente_fino_DM.html#seção-8-lacunas-de-cuidado---diabetes",
+    "href": "pente_fino_DM.html#seção-8-lacunas-de-cuidado---diabetes",
+    "title": "Pente Fino Diabetes",
+    "section": "SEÇÃO 8: LACUNAS DE CUIDADO - DIABETES",
+    "text": "SEÇÃO 8: LACUNAS DE CUIDADO - DIABETES\n\nlacuna_DM_sem_CID\n\nTipo: Boolean\nValores: TRUE/FALSE\nDescrição: Lacuna 1.2 - Paciente tem diabetes mas nunca teve CID documentado\nCritério:\n\nDM = TRUE (por exames/medicamentos)\nE nunca teve CID E10-E14 registrado\n\nImportância: Afeta codificação, estatísticas, repasse de recursos\n\n\n\nlacuna_DM_sem_HbA1c_recente\n\nTipo: Boolean\nValores: TRUE/FALSE\nDescrição: Lacuna 6.1 - Paciente diabético sem HbA1c nos últimos 180 dias\nCritério:\n\nDM = TRUE\nE dias_desde_hba1c_medida &gt; 180 OU dias_desde_hba1c_medida IS NULL\n\nProtocolo recomendado: HbA1c a cada 3-6 meses\n\n\n\nlacuna_DM_descontrolado\n\nTipo: Boolean\nValores: TRUE/FALSE\nDescrição: Lacuna 6.2 - Diabetes descontrolado (HbA1c acima da meta)\nCritério:\n\nstatus_controle_glicemico = 'descontrolado'\nHbA1c &gt; meta individualizada\n\nAção recomendada: Ajuste terapêutico\n\n\n\nlacuna_DM_inercia_terapeutica\n\nTipo: Boolean\nValores: TRUE/FALSE\nDescrição: Lacuna 6.3 - Diabetes descontrolado SEM ajuste há ≥ 180 dias\nCritério:\n\nHbA1c &gt; meta\nE dias_desde_mudanca_prescricao_real ≥ 180 OU nunca houve mudança\n\nDefinição de inércia: Falha em intensificar tratamento quando indicado\nExceções consideradas:\n\nAjuste recente (&lt; 180 dias)\nContraindicações\n\n\n\n\nlacuna_DM_piorando_sem_ajuste\n\nTipo: Boolean\nValores: TRUE/FALSE\nDescrição: Lacuna 6.4 - HbA1c piorando sem resposta terapêutica\nCritério:\n\ntendencia_hba1c = 'piorando'\nE dias_desde_mudanca_prescricao_real ≥ 90 OU nunca houve mudança\n\nImportância: Indica perda de oportunidade de intervenção precoce\n\n\n\nDM_ajuste_ativo\n\nTipo: Boolean\nValores: TRUE/FALSE\nDescrição: Flag positivo - Houve ajuste terapêutico nos últimos 180 dias\nCritério:\n\ndias_desde_mudanca_prescricao_real &lt; 180\n\nUso: Identificar manejo ativo (contraponto às lacunas)",
+    "crumbs": [
+      "Pente Fino Diabetes"
+    ]
+  },
+  {
+    "objectID": "pente_fino_DM.html#seção-9-totalizadores-do-paciente",
+    "href": "pente_fino_DM.html#seção-9-totalizadores-do-paciente",
+    "title": "Pente Fino Diabetes",
+    "section": "SEÇÃO 9: TOTALIZADORES DO PACIENTE",
+    "text": "SEÇÃO 9: TOTALIZADORES DO PACIENTE\n\ntotal_consultas_paciente\n\nTipo: Integer\nDescrição: Total de consultas do paciente em TODO o período\nUso: Avaliar engajamento no cuidado\n\n\n\ntotal_medicas_paciente\n\nTipo: Integer\nDescrição: Total de consultas MÉDICAS do paciente\nUso: Avaliar acesso à consulta médica\n\n\n\ntotal_hba1c_paciente\n\nTipo: Integer\nDescrição: Total de medições de HbA1c do paciente\nUso: Avaliar adequação do monitoramento\n\n\n\nconsultas_validadas\n\nTipo: Integer\nDescrição: Total de consultas do paciente (redundante com total_consultas_paciente)\nOrigem: CTE pacientes_filtrados_final\n\n\n\nmedicoes_hba1c_validadas\n\nTipo: Integer\nDescrição: Número de valores DISTINTOS de HbA1c (aproximado)\nUso: Confirmar critério de inclusão (≥ 3 medições)",
+    "crumbs": [
+      "Pente Fino Diabetes"
+    ]
+  },
+  {
+    "objectID": "pente_fino_DM.html#casos-de-uso---exemplos-de-análise",
+    "href": "pente_fino_DM.html#casos-de-uso---exemplos-de-análise",
+    "title": "Pente Fino Diabetes",
+    "section": "📊 CASOS DE USO - EXEMPLOS DE ANÁLISE",
+    "text": "📊 CASOS DE USO - EXEMPLOS DE ANÁLISE\n\nExemplo 1: Identificar pacientes com inércia terapêutica grave\nWHERE lacuna_DM_inercia_terapeutica = TRUE\n  AND dias_desde_mudanca_prescricao_real &gt; 365\n  AND hba1c &gt; 9.0\n\n\nExemplo 2: Monitorar resposta ao ajuste terapêutico\nWHERE DM_ajuste_ativo = TRUE\n  AND tendencia_hba1c = 'melhorando'\n\n\nExemplo 3: Pacientes em risco de descompensação\nWHERE tendencia_hba1c = 'piorando'\n  AND status_controle_glicemico = 'descontrolado'\n  AND lacuna_DM_piorando_sem_ajuste = TRUE\n\n\nExemplo 4: Avaliar intensidade do tratamento vs controle\nSELECT \n  qtd_classes_dm,\n  AVG(hba1c) as hba1c_media,\n  SUM(CASE WHEN status_controle_glicemico = 'controlado' THEN 1 ELSE 0 END) / COUNT(*) as taxa_controle\nGROUP BY qtd_classes_dm",
+    "crumbs": [
+      "Pente Fino Diabetes"
+    ]
+  },
+  {
+    "objectID": "pente_fino_DM.html#notas-importantes",
+    "href": "pente_fino_DM.html#notas-importantes",
+    "title": "Pente Fino Diabetes",
+    "section": "⚠️ NOTAS IMPORTANTES",
+    "text": "⚠️ NOTAS IMPORTANTES\n\nForward-fill: Valores de HbA1c se repetem entre consultas até nova medição\nPersistência de diagnósticos: DM, HAS, CI, ICC etc. uma vez TRUE, permanecem TRUE\nLacunas são cumulativas: Um paciente pode ter múltiplas lacunas simultaneamente\nInterpretação contextualizada: Sempre considerar idade, comorbidades e meta individualizada",
+    "crumbs": [
+      "Pente Fino Diabetes"
+    ]
   }
 ]

@@ -1,0 +1,463 @@
+# Pente Fino Diabetes {.unnumbered}
+
+
+
+
+## **SEÇÃO 1: IDENTIFICAÇÃO E CONSULTA**
+
+### `cpf`
+- **Tipo:** String (11 dígitos)
+- **Descrição:** Identificador único do paciente
+- **Uso:** Agrupar todas as consultas do mesmo paciente
+
+### `entrada_data`
+- **Tipo:** Date
+- **Descrição:** Data da consulta/episódio assistencial
+- **Uso:** Ordenação temporal das consultas
+
+### `consulta_numero`
+- **Tipo:** Integer
+- **Descrição:** Número sequencial da consulta para cada paciente (1, 2, 3...)
+- **Uso:** Identificar primeira consulta, progressão temporal
+
+### `profissional_especialidade`
+- **Tipo:** String
+- **Valores comuns:** 
+  - "Médico clínico geral"
+  - "Enfermeiro"
+  - "Médico cardiologista"
+  - "Técnico de enfermagem"
+- **Uso:** Identificar tipo de atendimento
+
+---
+
+## **SEÇÃO 2: DIAGNÓSTICO - MORBIDADES PRINCIPAIS**
+
+### `DM`
+- **Tipo:** Boolean
+- **Valores:** TRUE/FALSE
+- **Descrição:** Paciente tem diagnóstico de Diabetes Mellitus
+- **Critérios:**
+  - CID E10-E14, O24, ou complicações (H360, G632, etc.)
+  - OU HbA1c ≥ 6.5%
+  - OU Glicemia jejum ≥ 126 mg/dL
+  - OU uso de antidiabéticos (metformina, insulina, etc.)
+- **Persistência:** Uma vez TRUE, permanece TRUE em todas consultas subsequentes
+
+### `pre_DM`
+- **Tipo:** Boolean
+- **Valores:** TRUE/FALSE
+- **Descrição:** Paciente tem pré-diabetes (apenas se NÃO for diabético)
+- **Critérios:**
+  - Glicemia jejum entre 100-125 mg/dL
+  - OU HbA1c entre 5.7-6.4%
+- **Nota:** Se `DM = TRUE`, então `pre_DM = FALSE`
+
+### `HAS`
+- **Tipo:** Boolean
+- **Valores:** TRUE/FALSE
+- **Descrição:** Hipertensão Arterial Sistêmica
+- **Critérios:**
+  - CID I10-I16, O10-O11
+  - OU PA ≥ 180/110 mmHg
+  - OU uso de anti-hipertensivos
+
+### `CI`
+- **Tipo:** Boolean
+- **Valores:** TRUE/FALSE
+- **Descrição:** Cardiopatia Isquêmica (angina, IAM, etc.)
+- **Critérios:** CID I20-I25
+
+### `ICC`
+- **Tipo:** Boolean
+- **Valores:** TRUE/FALSE
+- **Descrição:** Insuficiência Cardíaca Congestiva
+- **Critérios:** CID I11.0, I13.0, I42.x, I43, I50, P29.0
+
+### `IRC`
+- **Tipo:** Boolean
+- **Valores:** TRUE/FALSE
+- **Descrição:** Insuficiência Renal Crônica
+- **Critérios:**
+  - CID N18, N19, I12.0, I13.1, etc.
+  - OU eGFR indica estágio G2-G5 (tabela MM_eGFR)
+
+---
+
+## **SEÇÃO 3: CONTROLE GLICÊMICO - MEDIÇÕES**
+
+### `hemoglobina_glicada_ff`
+- **Tipo:** Float
+- **Unidade:** % (percentual)
+- **Descrição:** Último valor de HbA1c medido (com forward-fill)
+- **Interpretação:**
+  - < 5.7%: Normal
+  - 5.7-6.4%: Pré-diabetes
+  - ≥ 6.5%: Diabetes
+  - < 7.0%: Controlado (meta padrão)
+  - ≥ 7.0%: Descontrolado
+- **Forward-fill:** Repete o último valor medido até nova medição
+
+### `hba1c_anterior`
+- **Tipo:** Float
+- **Unidade:** %
+- **Descrição:** Valor da **penúltima** medição REAL de HbA1c
+- **Valores:** NULL se é a primeira medição do paciente
+- **Uso:** Comparar com HbA1c atual para calcular tendência
+
+### `dias_desde_hba1c_anterior`
+- **Tipo:** Integer
+- **Unidade:** Dias
+- **Descrição:** Número de dias **entre** as duas últimas medições de HbA1c
+- **Valores:** 
+  - NULL: Paciente nunca teve HbA1c medida
+  - NULL: É a primeira medição do paciente
+  - 0-730: Intervalo normal entre medições
+- **Interpretação:**
+  - < 90 dias: Intervalo curto (não usar para tendência)
+  - 90-180 dias: Intervalo ideal para monitoramento
+  - 180-365 dias: Intervalo aceitável
+  - > 365 dias: Intervalo muito longo
+
+### `variacao_hba1c`
+- **Tipo:** Float
+- **Unidade:** Pontos percentuais (pp)
+- **Descrição:** Diferença entre HbA1c atual e anterior (atual - anterior)
+- **Cálculo:** `hba1c - hba1c_anterior`
+- **Interpretação:**
+  - < -0.5 pp: Melhora significativa
+  - -0.5 a +0.5 pp: Estável
+  - > +0.5 pp: Piora significativa
+- **Exemplo:** 9.5% → 7.8% = -1.7 pp (melhorou)
+
+### `dias_desde_hba1c_medida`
+- **Tipo:** Integer
+- **Unidade:** Dias
+- **Descrição:** Dias desde a **última medição real** de HbA1c até a consulta atual
+- **Uso:** Identificar se HbA1c está "fresca" ou "antiga"
+- **Interpretação:**
+  - 0-90 dias: Medição recente
+  - 91-180 dias: Medição ainda válida
+  - > 180 dias: Medição antiga (precisa renovar)
+
+### `data_hba1c_anterior`
+- **Tipo:** Date
+- **Descrição:** Data em que a penúltima HbA1c foi medida
+- **Uso:** Contextualizar a comparação temporal
+
+---
+
+## **SEÇÃO 4: METAS E STATUS DE CONTROLE**
+
+### `meta_hba1c`
+- **Tipo:** Float
+- **Unidade:** %
+- **Valores possíveis:** 7.0, 7.5, 8.0
+- **Descrição:** Meta individualizada de HbA1c para o paciente
+- **Critérios de definição:**
+  - **7.0%** (meta padrão): Pacientes jovens/saudáveis
+  - **7.5%**: Idade 60-75 anos OU complicações moderadas
+  - **8.0%**: Idade ≥ 75 anos OU múltiplas complicações/comorbidades graves
+- **Complicações consideradas:** ICC, IRC, CI, stroke, demência
+
+### `status_controle_glicemico`
+- **Tipo:** String
+- **Valores possíveis:**
+  - **"controlado"**: HbA1c ≤ meta individualizada
+  - **"descontrolado"**: HbA1c > meta individualizada
+  - **"sem_dados"**: Não há HbA1c medida
+- **Exemplo:** Meta 7.5%, HbA1c 7.2% → "controlado"
+
+### `tendencia_hba1c`
+- **Tipo:** String
+- **Valores possíveis:**
+
+**Para pacientes COM diabetes (DM = TRUE):**
+  - **"sem_dados"**: Nenhum exame de HbA1c realizado
+  - **"sem_referencia_previa"**: Apenas 1 exame (não há anterior para comparar)
+  - **"melhorando"**: HbA1c caiu > 0.5 pp em relação à anterior
+  - **"piorando"**: HbA1c subiu > 0.5 pp em relação à anterior
+  - **"estavel"**: Variação entre -0.5 e +0.5 pp
+
+**Para pacientes SEM diabetes (DM = FALSE) - Rastreamento:**
+  - **"rastreio - normal"**: HbA1c < 5.7%
+  - **"rastreio - pre_diabetes"**: HbA1c 5.7-6.4%
+  - **"rastreio - provavel_diabetes"**: HbA1c ≥ 6.5%
+
+- **Interpretação clínica:**
+  - "melhorando" → Tratamento efetivo
+  - "estavel" → Manutenção adequada
+  - "piorando" → Necessita ajuste terapêutico
+
+---
+
+## **SEÇÃO 5: TRATAMENTO - MEDICAMENTOS PARA DIABETES**
+
+### `nucleo_cronico_atual`
+- **Tipo:** String (texto longo)
+- **Descrição:** Lista de TODOS os medicamentos crônicos prescritos
+- **Formato:** Separados por " / "
+- **Exemplo:** "Metformina 850mg / Losartana 50mg / Sinvastatina 20mg"
+- **Uso:** Visão geral do regime terapêutico
+
+### `medicamentos_cronicos_normalizados`
+- **Tipo:** String
+- **Descrição:** Lista padronizada de medicamentos crônicos
+- **Diferença do anterior:** Nomes normalizados, doses extraíveis
+- **Uso:** Análise computacional de doses e classes
+
+### `total_medicamentos_cronicos`
+- **Tipo:** Integer
+- **Descrição:** Número total de medicamentos crônicos em uso
+- **Valores:** 0-20+ (tipicamente 3-10)
+- **Uso:** Identificar polifarmácia
+
+### `tto_DM_tendencia`
+- **Tipo:** String
+- **Descrição:** Esquema terapêutico atual para diabetes
+- **Valores possíveis:**
+  - **"Sem tratamento medicamentoso"**: Não usa antidiabéticos
+  - **"Monoterapia oral"**: 1 classe oral (ex: só metformina)
+  - **"Terapia dupla oral"**: 2 classes orais
+  - **"Terapia tripla oral"**: 3 classes orais
+  - **"Insulina isolada"**: Só insulina
+  - **"Insulina + oral"**: Combinação
+  - **"Terapia complexa"**: 4+ classes
+- **Uso:** Avaliar intensidade do tratamento
+
+### `qtd_classes_dm`
+- **Tipo:** Integer
+- **Valores:** 0-6
+- **Descrição:** Número de classes terapêuticas de antidiabéticos em uso
+- **Classes incluídas:**
+  1. Biguanidas (metformina)
+  2. Sulfonilureias (gliclazida, glibenclamida)
+  3. Insulinas
+  4. SGLT2-i (dapagliflozina, empagliflozina)
+  5. GLP-1 agonistas
+  6. Inibidores DPP-4
+- **Interpretação:**
+  - 0: Tratamento não medicamentoso
+  - 1: Monoterapia
+  - 2-3: Terapia combinada (adequado)
+  - 4+: Terapia complexa (considerar revisão)
+
+### `dose_diaria_metformina`
+- **Tipo:** Float
+- **Unidade:** mg/dia
+- **Valores:** 0-3000 mg (tipicamente 500-2500 mg)
+- **Descrição:** Dose total diária de metformina
+- **Referência:**
+  - 500-1000 mg/dia: Dose baixa
+  - 1500-2000 mg/dia: Dose padrão
+  - 2000-2550 mg/dia: Dose máxima
+
+### `dose_diaria_insulina_ui`
+- **Tipo:** Float
+- **Unidade:** UI/dia (Unidades Internacionais)
+- **Valores:** 0-200 UI/dia (tipicamente 10-100 UI)
+- **Descrição:** Dose total diária de insulina (todas as insulinas somadas)
+- **Referência:**
+  - < 30 UI/dia: Dose baixa
+  - 30-60 UI/dia: Dose moderada
+  - > 60 UI/dia: Dose alta
+
+---
+
+## **SEÇÃO 6: POLIFARMÁCIA**
+
+### `polifarmacia`
+- **Tipo:** Boolean
+- **Valores:** TRUE/FALSE
+- **Definição:** Paciente usa **5 ou mais** medicamentos crônicos simultaneamente
+- **Implicação:** Aumento do risco de:
+  - Interações medicamentosas
+  - Efeitos adversos
+  - Baixa adesão
+  - Erros de administração
+
+### `hiperpolifarmacia`
+- **Tipo:** Boolean
+- **Valores:** TRUE/FALSE
+- **Definição:** Paciente usa **10 ou mais** medicamentos crônicos simultaneamente
+- **Implicação:** Risco ainda maior que polifarmácia simples
+
+---
+
+## **SEÇÃO 7: MUDANÇAS DE TRATAMENTO**
+
+### `houve_mudanca_prescricao_nesta_consulta`
+- **Tipo:** Integer
+- **Valores:** 0 ou 1
+- **Descrição:** Indica se houve mudança no núcleo crônico NESTA consulta
+- **Critério:** Comparação com o núcleo da consulta anterior
+- **Mudanças consideradas:**
+  - Adição de medicamento
+  - Remoção de medicamento
+  - Troca de medicamento
+  - Mudança de dose
+
+### `dias_desde_mudanca_prescricao_real`
+- **Tipo:** Integer
+- **Unidade:** Dias
+- **Descrição:** Dias desde a última mudança REAL detectada no tratamento
+- **Valores:**
+  - 0: Houve mudança nesta consulta
+  - NULL: Nunca houve mudança
+  - 1-730: Dias desde última mudança
+- **Uso:** Avaliar inércia terapêutica
+
+### `nucleo_anterior`
+- **Tipo:** String
+- **Descrição:** Núcleo crônico da consulta **imediatamente anterior**
+- **Uso:** Comparar com `nucleo_cronico_atual` para identificar mudanças
+
+### `qtd_classes_anterior`
+- **Tipo:** Integer
+- **Descrição:** Número de classes de antidiabéticos na consulta anterior
+- **Uso:** Identificar se houve intensificação/simplificação do tratamento DM
+
+### `dose_metformina_anterior`
+- **Tipo:** Float
+- **Unidade:** mg/dia
+- **Descrição:** Dose de metformina na consulta anterior
+- **Uso:** Identificar ajustes de dose
+
+### `dose_insulina_anterior`
+- **Tipo:** Float
+- **Unidade:** UI/dia
+- **Descrição:** Dose de insulina na consulta anterior
+- **Uso:** Identificar ajustes de dose (titulação)
+
+---
+
+## **SEÇÃO 8: LACUNAS DE CUIDADO - DIABETES**
+
+### `lacuna_DM_sem_CID`
+- **Tipo:** Boolean
+- **Valores:** TRUE/FALSE
+- **Descrição:** **Lacuna 1.2** - Paciente tem diabetes mas nunca teve CID documentado
+- **Critério:**
+  - `DM = TRUE` (por exames/medicamentos)
+  - E nunca teve CID E10-E14 registrado
+- **Importância:** Afeta codificação, estatísticas, repasse de recursos
+
+### `lacuna_DM_sem_HbA1c_recente`
+- **Tipo:** Boolean
+- **Valores:** TRUE/FALSE
+- **Descrição:** **Lacuna 6.1** - Paciente diabético sem HbA1c nos últimos 180 dias
+- **Critério:**
+  - `DM = TRUE`
+  - E `dias_desde_hba1c_medida > 180` OU `dias_desde_hba1c_medida IS NULL`
+- **Protocolo recomendado:** HbA1c a cada 3-6 meses
+
+### `lacuna_DM_descontrolado`
+- **Tipo:** Boolean
+- **Valores:** TRUE/FALSE
+- **Descrição:** **Lacuna 6.2** - Diabetes descontrolado (HbA1c acima da meta)
+- **Critério:**
+  - `status_controle_glicemico = 'descontrolado'`
+  - HbA1c > meta individualizada
+- **Ação recomendada:** Ajuste terapêutico
+
+### `lacuna_DM_inercia_terapeutica`
+- **Tipo:** Boolean
+- **Valores:** TRUE/FALSE
+- **Descrição:** **Lacuna 6.3** - Diabetes descontrolado SEM ajuste há ≥ 180 dias
+- **Critério:**
+  - HbA1c > meta
+  - E `dias_desde_mudanca_prescricao_real ≥ 180` OU nunca houve mudança
+- **Definição de inércia:** Falha em intensificar tratamento quando indicado
+- **Exceções consideradas:**
+  - Ajuste recente (< 180 dias)
+  - Contraindicações
+
+### `lacuna_DM_piorando_sem_ajuste`
+- **Tipo:** Boolean
+- **Valores:** TRUE/FALSE
+- **Descrição:** **Lacuna 6.4** - HbA1c piorando sem resposta terapêutica
+- **Critério:**
+  - `tendencia_hba1c = 'piorando'`
+  - E `dias_desde_mudanca_prescricao_real ≥ 90` OU nunca houve mudança
+- **Importância:** Indica perda de oportunidade de intervenção precoce
+
+### `DM_ajuste_ativo`
+- **Tipo:** Boolean
+- **Valores:** TRUE/FALSE
+- **Descrição:** **Flag positivo** - Houve ajuste terapêutico nos últimos 180 dias
+- **Critério:**
+  - `dias_desde_mudanca_prescricao_real < 180`
+- **Uso:** Identificar manejo ativo (contraponto às lacunas)
+
+---
+
+## **SEÇÃO 9: TOTALIZADORES DO PACIENTE**
+
+### `total_consultas_paciente`
+- **Tipo:** Integer
+- **Descrição:** Total de consultas do paciente em TODO o período
+- **Uso:** Avaliar engajamento no cuidado
+
+### `total_medicas_paciente`
+- **Tipo:** Integer
+- **Descrição:** Total de consultas MÉDICAS do paciente
+- **Uso:** Avaliar acesso à consulta médica
+
+### `total_hba1c_paciente`
+- **Tipo:** Integer
+- **Descrição:** Total de medições de HbA1c do paciente
+- **Uso:** Avaliar adequação do monitoramento
+
+### `consultas_validadas`
+- **Tipo:** Integer
+- **Descrição:** Total de consultas do paciente (redundante com `total_consultas_paciente`)
+- **Origem:** CTE `pacientes_filtrados_final`
+
+### `medicoes_hba1c_validadas`
+- **Tipo:** Integer
+- **Descrição:** Número de valores DISTINTOS de HbA1c (aproximado)
+- **Uso:** Confirmar critério de inclusão (≥ 3 medições)
+
+---
+
+## **📊 CASOS DE USO - EXEMPLOS DE ANÁLISE**
+
+### **Exemplo 1: Identificar pacientes com inércia terapêutica grave**
+```sql
+WHERE lacuna_DM_inercia_terapeutica = TRUE
+  AND dias_desde_mudanca_prescricao_real > 365
+  AND hba1c > 9.0
+```
+
+### **Exemplo 2: Monitorar resposta ao ajuste terapêutico**
+```sql
+WHERE DM_ajuste_ativo = TRUE
+  AND tendencia_hba1c = 'melhorando'
+```
+
+### **Exemplo 3: Pacientes em risco de descompensação**
+```sql
+WHERE tendencia_hba1c = 'piorando'
+  AND status_controle_glicemico = 'descontrolado'
+  AND lacuna_DM_piorando_sem_ajuste = TRUE
+```
+
+### **Exemplo 4: Avaliar intensidade do tratamento vs controle**
+```sql
+SELECT 
+  qtd_classes_dm,
+  AVG(hba1c) as hba1c_media,
+  SUM(CASE WHEN status_controle_glicemico = 'controlado' THEN 1 ELSE 0 END) / COUNT(*) as taxa_controle
+GROUP BY qtd_classes_dm
+```
+
+---
+
+## **⚠️ NOTAS IMPORTANTES**
+
+1. **Forward-fill:** Valores de HbA1c se repetem entre consultas até nova medição
+2. **Persistência de diagnósticos:** DM, HAS, CI, ICC etc. uma vez TRUE, permanecem TRUE
+3. **Lacunas são cumulativas:** Um paciente pode ter múltiplas lacunas simultaneamente
+4. **Interpretação contextualizada:** Sempre considerar idade, comorbidades e meta individualizada
+
+---
