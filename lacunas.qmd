@@ -1,0 +1,1206 @@
+# 📋 LACUNAS DE CUIDADO - {.unnumbered}
+
+## 📖 Índice
+
+1. [🩸 Hipertensão Arterial](#hipertensao)
+2. [🍬 Diabetes Mellitus](#diabetes)
+3. [🔴 Cardiopatia Isquêmica](#cardiopatia)
+4. [💔 Insuficiência Cardíaca](#icc)
+5. [🧪 Insuficiência Renal Crônica](#irc)
+6. [⚠️ Uso Inadequado de Medicamentos](#uso-inadequado)
+
+---
+
+<a name="hipertensao"></a>
+## 🩸 CATEGORIA 1: HIPERTENSÃO ARTERIAL
+
+---
+
+### 1.1. Adulto sem rastreamento de PA em 365 dias
+
+**Código:** `lacuna_rastreio_PA_adulto`
+
+**Regra:**
+```sql
+CASE
+    WHEN idade >= 18
+        AND HAS IS NULL  -- Não tem diagnóstico de HAS
+        AND dias_desde_ultima_pa > 365
+    THEN TRUE
+    ELSE FALSE
+END
+```
+
+**Condições:**
+- Paciente com idade ≥18 anos
+- SEM diagnóstico de hipertensão arterial (HAS IS NULL)
+- Última medida de PA há mais de 365 dias (>1 ano)
+
+**Por que é importante:**
+A hipertensão arterial sistêmica (HAS) é a condição crônica mais prevalente no Brasil, afetando 32,3% dos adultos brasileiros segundo a Pesquisa Nacional de Saúde 2019. É o principal fator de risco modificável para doenças cardiovasculares, cerebrovascular e doença renal crônica. A HAS é assintomática em mais de 90% dos casos, tornando o rastreamento universal a única forma efetiva de identificação precoce. Aproximadamente 30-40% dos hipertensos desconhecem sua condição, permanecendo expostos a risco cardiovascular elevado por anos.
+
+**Por que a ausência é uma lacuna:**
+Sem rastreamento regular, pacientes hipertensos permanecem sem diagnóstico e tratamento, acumulando dano vascular silencioso. A cada ano sem detecção, há progressão de lesões em órgãos-alvo (coração, cérebro, rins, retina, vasos). Estudos demonstram que o intervalo entre o início da HAS e o diagnóstico pode ultrapassar 10 anos, período em que o risco de eventos cardiovasculares aumenta progressivamente. O rastreamento universal é recomendado por todas as diretrizes nacionais e internacionais (Diretriz Brasileira de Hipertensão 2020, ESC/ESH 2023, AHA/ACC 2017).
+
+**Benefício para o paciente:**
+A identificação precoce através do rastreamento permite início de tratamento em fase assintomática, quando as intervenções são mais efetivas. O controle adequado da PA reduz: (1) risco de AVC em 35-40%, (2) risco de infarto agudo do miocárdio em 20-25%, (3) risco de insuficiência cardíaca em 50%, (4) risco de progressão para doença renal crônica em 30-40%. Cada redução de 10 mmHg na PA sistólica se associa a 20% menos eventos cardiovasculares maiores.
+
+---
+
+### 1.2. Hipertenso sem medição de PA em 180 dias
+
+**Código:** `lacuna_PA_hipertenso_180d`
+
+**Regra:**
+```sql
+CASE
+    WHEN HAS IS NOT NULL
+        AND dias_desde_ultima_pa > 180
+    THEN TRUE
+    ELSE FALSE
+END
+```
+
+**Condições:**
+- Paciente COM diagnóstico de hipertensão arterial (HAS IS NOT NULL)
+- Última medida de PA há mais de 180 dias (>6 meses)
+
+**Por que é importante:**
+Pacientes hipertensos requerem monitoramento regular da pressão arterial para avaliar efetividade do tratamento, identificar descontrole pressórico precocemente, detectar efeitos adversos de medicamentos e ajustar terapêutica conforme necessário. A PA é um parâmetro dinâmico que pode variar com aderência medicamentosa, mudanças de peso, estresse, progressão de doença renal, interações medicamentosas e progressão natural da doença. Intervalos superiores a 6 meses sem monitoramento aumentam significativamente o risco de descontrole não detectado.
+
+**Por que a ausência é uma lacuna:**
+A ausência de monitoramento regular impossibilita: (1) ajustes terapêuticos necessários, (2) identificação de não-aderência medicamentosa, (3) detecção precoce de hipertensão resistente, (4) avaliação de resposta a mudanças no estilo de vida. Diretrizes recomendam avaliação a cada 3-6 meses para hipertensos controlados e mensal para descontrolados. Pacientes sem monitoramento há mais de 6 meses apresentam taxas de controle pressórico 40-50% inferiores aos monitorados regularmente.
+
+**Benefício para o paciente:**
+O monitoramento regular permite: (1) manutenção do controle pressórico adequado, (2) identificação e correção precoce de descontroles, (3) ajuste oportuno de medicações, (4) reforço de aderência terapêutica, (5) detecção de efeitos adversos, (6) otimização da proteção cardiovascular. Hipertensos com monitoramento regular apresentam redução de 25-35% em eventos cardiovasculares comparados aos sem monitoramento adequado.
+
+---
+
+### 1.3. HAS <80 anos descontrolado (≥140/90 mmHg)
+
+**Código:** `lacuna_HAS_descontrolado_menor80`
+
+**Regra:**
+```sql
+CASE
+    WHEN HAS IS NOT NULL
+        AND idade < 80
+        AND dias_desde_ultima_pa <= 180  -- PA recente
+        AND (pressao_sistolica >= 140 OR pressao_diastolica >= 90)
+    THEN TRUE
+    ELSE FALSE
+END
+```
+
+**Condições:**
+- Paciente COM diagnóstico de HAS
+- Idade <80 anos
+- Medida de PA recente (últimos 180 dias)
+- PA sistólica ≥140 mmHg OU PA diastólica ≥90 mmHg
+
+**Por que é importante:**
+A meta de PA <140/90 mmHg para hipertensos adultos <80 anos está solidamente estabelecida por ensaios clínicos randomizados e metanálises envolvendo centenas de milhares de pacientes. Esta meta representa o melhor equilíbrio entre benefício cardiovascular e segurança. Pacientes com PA persistentemente acima desta meta apresentam risco cardiovascular significativamente elevado, com progressão acelerada de lesões em órgãos-alvo. O descontrole pressórico é a principal causa de eventos cardiovasculares evitáveis na atenção primária.
+
+**Por que a ausência é uma lacuna:**
+PA descontrolada indica tratamento inadequado (subdosagem, monoterapia insuficiente, não-aderência, hipertensão resistente não reconhecida) ou necessidade de intensificação terapêutica. Manter pacientes com PA ≥140/90 mmHg sem ajuste de tratamento representa perda de oportunidade de prevenção cardiovascular. Cada mês de descontrole acumula dano vascular adicional. Estudos demonstram que 70% dos hipertensos descontrolados podem alcançar controle com ajustes terapêuticos adequados.
+
+**Benefício para o paciente:**
+A intensificação do tratamento para alcançar meta de PA <140/90 mmHg proporciona: (1) redução de 35-40% no risco de AVC, (2) redução de 20-25% no risco de infarto, (3) redução de 50% no risco de insuficiência cardíaca, (4) redução de 30% na progressão de doença renal crônica, (5) redução de retinopatia hipertensiva, (6) redução de demência vascular. O tratamento adequado pode prevenir 1 evento cardiovascular a cada 20-30 pacientes tratados ao longo de 5 anos.
+
+---
+
+### 1.4. HAS ≥80 anos descontrolado (≥150/90 mmHg)
+
+**Código:** `lacuna_HAS_descontrolado_80mais`
+
+**Regra:**
+```sql
+CASE
+    WHEN HAS IS NOT NULL
+        AND idade >= 80
+        AND dias_desde_ultima_pa <= 180
+        AND (pressao_sistolica >= 150 OR pressao_diastolica >= 90)
+    THEN TRUE
+    ELSE FALSE
+END
+```
+
+**Condições:**
+- Paciente COM diagnóstico de HAS
+- Idade ≥80 anos
+- Medida de PA recente (últimos 180 dias)
+- PA sistólica ≥150 mmHg OU PA diastólica ≥90 mmHg
+
+**Por que é importante:**
+Em idosos ≥80 anos, a meta de PA é menos restritiva (< 150/90 mmHg vs <140/90 mmHg em adultos mais jovens) baseada em evidências do estudo HYVET e diretrizes específicas para esta população. Esta meta reconhece o equilíbrio entre benefício cardiovascular e risco de hipotensão, quedas e eventos adversos em muito idosos. Mesmo com meta menos rigorosa, o controle pressórico mantém benefícios substanciais de redução de AVC e insuficiência cardíaca nesta população de alto risco.
+
+**Por que a ausência é uma lacuna:**
+Idosos ≥80 anos com PA ≥150/90 mmHg apresentam risco cardiovascular muito elevado, particularmente para AVC e insuficiência cardíaca. O descontrole pressórico nesta faixa etária frequentemente reflete polifarmácia inadequada, não-aderência por efeitos adversos, ou falta de ajuste terapêutico considerando comorbidades. Manter PA ≥150/90 mmHg sem ação representa perda importante de proteção cardiovascular, especialmente contra AVC, principal causa de dependência nesta população.
+
+**Benefício para o paciente:**
+Alcançar meta de PA <150/90 mmHg em octogenários proporciona: (1) redução de 30% em AVC (principal benefício), (2) redução de 40% em insuficiência cardíaca, (3) redução de mortalidade cardiovascular, (4) preservação de independência funcional ao prevenir AVC incapacitante. O estudo HYVET demonstrou redução de 21% em mortalidade geral com tratamento adequado. Os benefícios superam riscos quando a meta menos restritiva é respeitada.
+
+---
+
+### 1.5. Creatinina não solicitada em 365 dias (HAS/DM)
+
+**Código:** `lacuna_creatinina_HAS_DM`
+
+**Regra:**
+```sql
+CASE
+    WHEN (HAS IS NOT NULL OR DM IS NOT NULL)
+        AND COALESCE(tem_creatinina_365d, FALSE) = FALSE
+    THEN TRUE
+    ELSE FALSE
+END
+```
+
+**Condições:**
+- Paciente COM diagnóstico de HAS OU DM
+- Sem solicitação de creatinina nos últimos 365 dias
+
+**Por que é importante:**
+A creatinina sérica é fundamental para: (1) calcular taxa de filtração glomerular estimada (TFGe), melhor indicador de função renal, (2) estadiar doença renal crônica (DRC), (3) ajustar doses de medicamentos excretados pelos rins, (4) identificar nefrotoxicidade medicamentosa, (5) monitorar progressão de lesão renal. HAS e DM são as duas principais causas de DRC (representam 60-70% dos casos), tornando a avaliação renal anual obrigatória nestas populações. A DRC é assintomática até estágios avançados, exigindo rastreamento laboratorial sistemático.
+
+**Por que a ausência é uma lacuna:**
+Sem avaliação de creatinina/TFGe, pacientes com DRC inicial ou moderada não são identificados, permanecendo sem intervenções protetoras renais (controle pressórico rigoroso, IECA/BRA, SGLT2i, ajuste de nefrotóxicos). Aproximadamente 10-15% dos hipertensos e 30-40% dos diabéticos desenvolvem DRC, mas apenas 20-30% são diagnosticados oportunamente. A progressão de DRC G3a para G4-G5 pode ser prevenida ou retardada significativamente quando a DRC é identificada e tratada precocemente.
+
+**Benefício para o paciente:**
+A solicitação anual de creatinina com cálculo de TFGe permite: (1) diagnóstico precoce de DRC em estágios tratáveis, (2) implementação de medidas renoprotetoras (IECA/BRA, SGLT2i, controle pressórico rigoroso), (3) ajuste correto de doses medicamentosas evitando toxicidade, (4) suspensão ou ajuste de nefrotóxicos, (5) planejamento de tratamento renal substitutivo quando necessário, (6) redução de progressão para diálise. Intervenções em DRC G3 podem reduzir progressão para G4-G5 em 30-50%.
+
+---
+
+### 1.6. Colesterol não solicitado em 365 dias (HAS/DM)
+
+**Código:** `lacuna_colesterol_HAS_DM`
+
+**Regra:**
+```sql
+CASE
+    WHEN (HAS IS NOT NULL OR DM IS NOT NULL)
+        AND COALESCE(tem_colesterol_365d, FALSE) = FALSE
+    THEN TRUE
+    ELSE FALSE
+END
+```
+
+**Condições:**
+- Paciente COM diagnóstico de HAS OU DM
+- Sem solicitação de perfil lipídico nos últimos 365 dias
+
+**Por que é importante:**
+O perfil lipídico (colesterol total, LDL, HDL, triglicerídeos) é essencial para: (1) estratificação de risco cardiovascular, (2) indicação e ajuste de terapia com estatinas, (3) identificação de dislipidemia (presente em 60% dos hipertensos e 70% dos diabéticos), (4) monitoramento de eficácia e segurança de estatinas, (5) detecção de hipertrigliceridemia que exige manejo adicional. HAS e DM conferem risco cardiovascular elevado que frequentemente requer tratamento hipolipemiante independentemente dos níveis de LDL. A avaliação anual permite ajustes terapêuticos oportunos.
+
+**Por que a ausência é uma lacuna:**
+Sem perfil lipídico, pacientes com dislipidemia não tratada ou inadequadamente tratada permanecem expostos a risco cardiovascular residual elevado. A dislipidemia, especialmente LDL-colesterol elevado, é fator causal direto de aterosclerose e eventos cardiovasculares. Hipertensos e diabéticos frequentemente requerem estatinas em prevenção primária ou secundária, mas sem monitoramento laboratorial não é possível: (1) confirmar indicação terapêutica, (2) avaliar alcance de metas de LDL, (3) detectar efeitos adversos (elevação de transaminases, miopatia), (4) identificar hipertrigliceridemia grave (risco de pancreatite).
+
+**Benefício para o paciente:**
+A avaliação anual do perfil lipídico permite: (1) indicação apropriada de estatinas quando necessário, (2) ajuste de doses para alcançar metas de LDL, (3) redução de 20-30% em eventos cardiovasculares com uso otimizado de estatinas, (4) prevenção de pancreatite aguda em casos de hipertrigliceridemia grave, (5) detecção precoce de efeitos adversos permitindo ajustes seguros, (6) otimização da proteção cardiovascular global. Cada redução de 40 mg/dL no LDL-c reduz risco cardiovascular em aproximadamente 20%.
+
+---
+
+### 1.7. EAS (urina) não solicitado em 365 dias (HAS/DM)
+
+**Código:** `lacuna_eas_HAS_DM`
+
+**Regra:**
+```sql
+CASE
+    WHEN (HAS IS NOT NULL OR DM IS NOT NULL)
+        AND COALESCE(tem_eas_365d, FALSE) = FALSE
+    THEN TRUE
+    ELSE FALSE
+END
+```
+
+**Condições:**
+- Paciente COM diagnóstico de HAS OU DM
+- Sem solicitação de EAS (elementos anormais e sedimento urinário) nos últimos 365 dias
+
+**Por que é importante:**
+O exame de urina (EAS) detecta: (1) proteinúria/albuminúria (marcador precoce de lesão renal), (2) hematúria (doença glomerular, neoplasia urológica), (3) leucocitúria (infecção urinária frequente em diabéticos), (4) glicosúria (controle glicêmico inadequado), (5) cetonúria (risco em diabéticos), (6) cilindrúria (doença renal ativa). Em hipertensos e diabéticos, a proteinúria é marcador independente de risco cardiovascular e renal, frequentemente precedendo a redução da TFGe. O EAS é exame simples, de baixo custo, que fornece informações valiosas sobre lesão renal e trato urinário.
+
+**Por que a ausência é uma lacuna:**
+Sem EAS, a proteinúria/albuminúria não é detectada, impedindo: (1) diagnóstico de DRC em fase inicial (proteinúria pode preceder queda de TFGe em anos), (2) estadiamento completo de DRC (classificação CKD requer tanto TFGe quanto albuminúria), (3) indicação de terapias renoprotetoras específicas para pacientes com albuminúria, (4) monitoramento de resposta a IECA/BRA (que devem reduzir proteinúria). A presença de albuminúria duplica ou triplica o risco cardiovascular independentemente da TFGe. Infecções urinárias assintomáticas em diabéticos também não são diagnosticadas.
+
+**Benefício para o paciente:**
+A solicitação anual de EAS permite: (1) diagnóstico precoce de nefropatia diabética/hipertensiva em fase inicial reversível, (2) estratificação de risco cardiovascular mais precisa, (3) indicação de terapias renoprotetoras (IECA/BRA, SGLT2i) quando albuminúria presente, (4) monitoramento de eficácia de intervenções renoprotetoras, (5) detecção de infecções urinárias assintomáticas (comuns em diabéticos), (6) identificação de hematúria que requer investigação urológica. Tratamento de albuminúria reduz progressão de DRC em 30-40% e eventos cardiovasculares em 20-25%.
+
+---
+
+### 1.8. ECG não solicitado em 365 dias (HAS/DM)
+
+**Código:** `lacuna_ecg_HAS_DM`
+
+**Regra:**
+```sql
+CASE
+    WHEN (HAS IS NOT NULL OR DM IS NOT NULL)
+        AND COALESCE(tem_ecg_365d, FALSE) = FALSE
+    THEN TRUE
+    ELSE FALSE
+END
+```
+
+**Condições:**
+- Paciente COM diagnóstico de HAS OU DM
+- Sem solicitação de ECG nos últimos 365 dias
+
+**Por que é importante:**
+O eletrocardiograma (ECG) detecta: (1) hipertrofia ventricular esquerda (HVE) - indicador de lesão de órgão-alvo e risco cardiovascular elevado, (2) isquemia miocárdica silenciosa (comum em diabéticos), (3) infarto prévio não reconhecido, (4) arritmias (fibrilação atrial frequente em hipertensos/diabéticos), (5) distúrbios de condução, (6) efeitos cardiotóxicos de medicamentos. A HVE está presente em 15-30% dos hipertensos e confere risco cardiovascular 2-4 vezes maior. Diabéticos frequentemente apresentam isquemia silenciosa (neuropatia diabética autonômica impede dor torácica típica).
+
+**Por que a ausência é uma lacuna:**
+Sem ECG, lesões cardíacas significativas não são identificadas: (1) HVE indica necessidade de controle pressórico mais rigoroso e pode modificar escolha terapêutica, (2) fibrilação atrial não diagnosticada expõe paciente a risco tromboembólico sem anticoagulação apropriada, (3) isquemia silenciosa em diabéticos impede diagnóstico de doença coronariana que requer tratamento específico, (4) infarto silencioso prévio altera estratificação de risco e conduta. Aproximadamente 20-30% dos diabéticos >40 anos têm isquemia silenciosa, e 30-40% dos hipertensos têm HVE.
+
+**Benefício para o paciente:**
+A realização anual de ECG permite: (1) identificação de HVE indicando necessidade de intensificação do controle pressórico, (2) diagnóstico de fibrilação atrial e indicação de anticoagulação prevenindo AVC, (3) detecção de isquemia silenciosa possibilitando investigação e tratamento de doença coronariana, (4) reconhecimento de infarto prévio alterando manejo para prevenção secundária, (5) detecção de arritmias ventriculares que requerem avaliação especializada, (6) identificação de distúrbios de condução que contraindicam certos medicamentos. A detecção e tratamento de HVE pode reverter parcialmente a hipertrofia reduzindo risco cardiovascular em 20-30%.
+
+---
+
+### 1.9. IMC não calculável (falta altura/peso) em HAS/DM
+
+**Código:** `lacuna_IMC_HAS_DM`
+
+**Regra:**
+```sql
+CASE
+    WHEN (HAS IS NOT NULL OR DM IS NOT NULL)
+        AND (altura IS NULL OR peso IS NULL)
+    THEN TRUE
+    ELSE FALSE
+END
+```
+
+**Condições:**
+- Paciente COM diagnóstico de HAS OU DM
+- Sem registro de altura OU peso impossibilitando cálculo do IMC
+
+**Por que é importante:**
+O Índice de Massa Corporal (IMC) é indicador fundamental para: (1) diagnóstico de obesidade (presente em 60-70% dos hipertensos e diabéticos tipo 2), (2) estratificação de risco cardiometabólico, (3) estabelecimento de metas de perda de peso, (4) monitoramento de resposta a intervenções nutricionais, (5) ajuste de doses medicamentosas que variam com peso, (6) avaliação de desnutrição em idosos/pacientes graves. Obesidade é fator de risco modificável que, quando tratado, melhora controle pressórico e glicêmico. Perda de 5-10% do peso corporal reduz PA em 5-20 mmHg e HbA1c em 0.5-1.0%.
+
+**Por que a ausência é uma lacuna:**
+Sem dados antropométricos, não é possível: (1) diagnosticar formalmente obesidade (critério: IMC ≥30 kg/m²), (2) estabelecer metas quantitativas de perda de peso, (3) monitorar efetividade de intervenções nutricionais e atividade física, (4) documentar progressão ou regressão de obesidade, (5) estratificar adequadamente risco cardiovascular, (6) ajustar doses de medicamentos pelo peso. A obesidade não identificada/documentada impede reconhecimento de fator de risco tratável. Impossibilita também cálculo de TFGe pela fórmula CKD-EPI quando creatinina disponível mas peso ausente.
+
+**Benefício para o paciente:**
+O registro regular de peso e altura permite: (1) diagnóstico formal de obesidade possibilitando discussão terapêutica específica, (2) estabelecimento de metas realistas de perda de peso (5-10% inicial), (3) monitoramento objetivo de progressos incentivando aderência, (4) documentação de benefícios motivando continuidade, (5) identificação precoce de ganho ponderal permitindo intervenção antes de agravamento, (6) ajuste apropriado de medicamentos. Cada 1 kg de peso perdido reduz PA em aproximadamente 1 mmHg. Perda de 10 kg pode permitir redução ou suspensão de anti-hipertensivos em pacientes bem controlados.
+
+---
+
+<a name="diabetes"></a>
+## 🍬 CATEGORIA 2: DIABETES MELLITUS
+
+---
+
+### 2.1. DM sem HbA1c recente (>180 dias)
+
+**Código:** `lacuna_DM_sem_HbA1c_recente`
+
+**Regra:**
+```sql
+CASE
+    WHEN DM IS NOT NULL
+        AND (hba1c_atual IS NULL OR dias_desde_ultima_hba1c > 180)
+    THEN TRUE
+    ELSE FALSE
+END
+```
+
+**Condições:**
+- Paciente COM diagnóstico de diabetes mellitus
+- Sem HbA1c disponível OU última HbA1c há mais de 180 dias (>6 meses)
+
+**Por que é importante:**
+A hemoglobina glicada (HbA1c) é o padrão-ouro para avaliação do controle glicêmico, refletindo a glicemia média dos últimos 2-3 meses. É superior à glicemia de jejum pois: (1) não sofre variação pré-analítica (não requer jejum), (2) representa controle glicêmico integrado ao longo do tempo, (3) correlaciona diretamente com risco de complicações microvasculares (retinopatia, nefropatia, neuropatia) e macrovasculares. Cada 1% de redução na HbA1c reduz risco de complicações microvasculares em 25-35%. Diretrizes recomendam monitoramento semestral em diabéticos não controlados e anual em controlados estáveis.
+
+**Por que a ausência é uma lacuna:**
+Sem HbA1c recente, não é possível: (1) avaliar adequação do controle glicêmico atual, (2) identificar necessidade de intensificação terapêutica, (3) detectar descontrole progressivo antes de complicações, (4) monitorar resposta a ajustes terapêuticos, (5) estratificar risco de complicações micro e macrovasculares. Pacientes diabéticos podem ter glicemias capilares/ocasionais aparentemente aceitáveis mas HbA1c elevada indicando controle inadequado na maioria do tempo. Aproximadamente 40-50% dos diabéticos em atenção primária não atingem meta de HbA1c, mas sem monitoramento este descontrole não é identificado.
+
+**Benefício para o paciente:**
+A solicitação semestral de HbA1c permite: (1) identificação precoce de descontrole possibilitando ajustes terapêuticos oportunos, (2) prevenção de complicações microvasculares (retinopatia que pode levar à cegueira, nefropatia progredindo para diálise, neuropatia causando amputações), (3) redução de risco cardiovascular, (4) otimização do tratamento alcançando meta individualizada, (5) reforço de aderência ao mostrar objetivamente impacto de mudanças no estilo de vida e medicações. Alcançar meta de HbA1c <7% reduz complicações microvasculares em 25% e macrovasculares em 10% comparado a HbA1c >8%.
+
+---
+
+### 2.2. DM descontrolado (HbA1c acima da meta)
+
+**Código:** `lacuna_DM_descontrolado`
+
+**Regra:**
+```sql
+CASE
+    WHEN DM IS NOT NULL
+        AND hba1c_atual IS NOT NULL
+        AND dias_desde_ultima_hba1c <= 180
+        AND hba1c_atual > CASE
+            WHEN idade < 60 THEN 7.0
+            WHEN idade >= 60 AND idade < 70 THEN 7.5
+            WHEN idade >= 70 THEN 8.0
+            ELSE 7.0
+        END
+    THEN TRUE
+    ELSE FALSE
+END
+```
+
+**Condições:**
+- Paciente COM diagnóstico de DM
+- HbA1c recente (últimos 180 dias)
+- HbA1c acima da meta individualizada por idade:
+  - <60 anos: meta HbA1c ≤7.0%
+  - 60-69 anos: meta HbA1c ≤7.5%
+  - ≥70 anos: meta HbA1c ≤8.0%
+
+**Por que é importante:**
+Metas de HbA1c são individualizadas por idade considerando: (1) balanço entre benefício (redução de complicações) e riscos (hipoglicemia, polifarmácia), (2) expectativa de vida e tempo necessário para benefício de controle intensivo, (3) presença de comorbidades e fragilidade. Adultos <60 anos beneficiam-se de controle mais rigoroso (HbA1c <7%) pois têm décadas pela frente para desenvolver complicações. Idosos ≥70 anos têm metas menos restritivas (HbA1c <8%) para minimizar risco de hipoglicemia. HbA1c acima da meta indica tratamento inadequado requerendo intensificação.
+
+**Por que a ausência é uma lacuna:**
+DM descontrolado (HbA1c acima da meta) indica: (1) tratamento insuficiente (monoterapia inadequada, subdosagem, escolha terapêutica subótima), (2) não-aderência medicamentosa não reconhecida, (3) falha em intensificar tratamento ("inércia clínica"), (4) falta de educação em diabetes adequada. Manter pacientes com HbA1c acima da meta sem ajuste terapêutico representa exposição desnecessária a risco de complicações. Cada trimestre de descontrole acumula dano vascular irreversível. Estudos demonstram que "inércia clínica" (não intensificar tratamento quando HbA1c acima da meta) é extremamente prevalente e principal causa de controle inadequado.
+
+**Benefício para o paciente:**
+A intensificação terapêutica para alcançar meta de HbA1c proporciona: (1) redução de 25-35% em complicações microvasculares (retinopatia, nefropatia, neuropatia) para cada 1% de redução na HbA1c, (2) redução de 10-15% em eventos cardiovasculares, (3) prevenção de amputações (neuropatia + doença vascular), (4) prevenção de cegueira (retinopatia diabética), (5) prevenção de progressão para diálise (nefropatia diabética), (6) redução de hospitalizações por descompensação. Alcançar meta individualizada otimiza benefícios minimizando riscos de hipoglicemia.
+
+---
+
+### 2.3. DM+HAS com PA descontrolada (>135/80 mmHg)
+
+**Código:** `lacuna_DM_HAS_PA_descontrolada`
+
+**Regra:**
+```sql
+CASE
+    WHEN DM IS NOT NULL
+        AND HAS IS NOT NULL
+        AND dias_desde_ultima_pa <= 180
+        AND (pressao_sistolica > 135 OR pressao_diastolica > 80)
+    THEN TRUE
+    ELSE FALSE
+END
+```
+
+**Condições:**
+- Paciente COM diagnóstico de DM E HAS
+- PA medida recentemente (últimos 180 dias)
+- PA sistólica >135 mmHg OU PA diastólica >80 mmHg
+
+**Por que é importante:**
+Diabéticos hipertensos requerem meta de PA mais rigorosa (<135/80 mmHg) comparada a hipertensos não-diabéticos (<140/90 mmHg) devido a: (1) risco cardiovascular muito elevado pela sinergia entre DM e HAS, (2) maior benefício de controle pressórico rigoroso na prevenção de nefropatia diabética, (3) efeito aditivo de ambas condições na progressão de aterosclerose. A combinação DM+HAS multiplica (não apenas soma) o risco cardiovascular, exigindo controle mais estrito de ambos fatores. Cada redução de 10 mmHg na PA sistólica reduz risco de eventos cardiovasculares em 20% e progressão de nefropatia em 30% em diabéticos.
+
+**Por que a ausência é uma lacuna:**
+PA >135/80 mmHg em diabéticos hipertensos indica tratamento inadequado e exposição a risco cardiovascular e renal muito elevado. A coexistência de DM e HAS é particularmente deletéria para os rins (nefropatia diabética é acelerada por hipertensão), sistema cardiovascular (infarto e AVC) e circulação periférica (doença arterial obstrutiva, pé diabético). Manter PA acima desta meta em diabético representa perda importante de oportunidade de proteção cardiovascular e renal. A nefropatia diabética é a principal causa de diálise no Brasil, e o controle pressórico rigoroso é a intervenção mais efetiva para preveni-la.
+
+**Benefício para o paciente:**
+Alcançar meta de PA <135/80 mmHg em diabéticos proporciona: (1) redução de 30-40% na progressão de nefropatia diabética, (2) redução de 40% no risco de AVC, (3) redução de 20% no risco de infarto, (4) redução de 35% em proteinúria (marcador de lesão renal e risco cardiovascular), (5) redução de progressão de retinopatia diabética, (6) menor risco de amputação por melhor perfusão periférica. O controle pressórico rigoroso em diabéticos pode prevenir ou retardar a progressão para diálise em 5-10 anos.
+
+---
+
+### 2.4. HbA1c não solicitado em 365 dias (DM)
+
+**Código:** `lacuna_DM_hba1c_nao_solicitado`
+
+**Regra:**
+```sql
+CASE
+    WHEN DM IS NOT NULL
+        AND COALESCE(tem_hba1c_solicitado_365d, FALSE) = FALSE
+    THEN TRUE
+    ELSE FALSE
+END
+```
+
+**Condições:**
+- Paciente COM diagnóstico de DM
+- Sem solicitação de HbA1c nos últimos 365 dias
+
+**Por que é importante:**
+Esta lacuna complementa a lacuna de HbA1c não realizado, identificando casos onde o exame não foi sequer solicitado (mesmo que disponível no sistema). Captura situações de: (1) falta de solicitação por desconhecimento da importância, (2) perda de seguimento do paciente diabético, (3) falha no rastreamento de exames pendentes, (4) desorganização do processo de cuidado. A não solicitação é ainda mais grave que a não realização, pois indica que nem o primeiro passo (prescrição do exame) foi tomado. Reflete gap no cuidado do diabetes que é condição que requer monitoramento laboratorial regular obrigatório.
+
+**Por que a ausência é uma lacuna:**
+A não solicitação de HbA1c há mais de 1 ano indica ruptura no acompanhamento do diabetes. Diabéticos sem monitoramento de HbA1c permanecem sem avaliação objetiva do controle glicêmico, impossibilitando: (1) detecção de descontrole, (2) ajustes terapêuticos baseados em evidência, (3) estratificação de risco de complicações, (4) educação do paciente com dados concretos. A ausência de solicitação frequentemente indica que o paciente está perdido no seguimento ou que o diabetes não está sendo ativamente gerenciado. Representa falha no cumprimento de protocolo básico de cuidado do diabetes.
+
+**Benefício para o paciente:**
+A solicitação regular de HbA1c garante: (1) acompanhamento ativo e estruturado do diabetes, (2) possibilidade de ajustes terapêuticos baseados em evidência objetiva, (3) prevenção de complicações através de controle adequado, (4) engajamento do paciente ao ter parâmetro objetivo para acompanhar, (5) cumprimento de protocolo mínimo de cuidado do diabetes, (6) redução de risco de perda de seguimento. A simples solicitação regular de HbA1c melhora desfechos independentemente ao reforçar a importância do controle glicêmico e facilitar ajustes terapêuticos.
+
+---
+
+### 2.5. Microalbuminúria não solicitada em 365 dias (DM)
+
+**Código:** `lacuna_DM_microalbuminuria_nao_solicitado`
+
+**Regra:**
+```sql
+CASE
+    WHEN DM IS NOT NULL
+        AND COALESCE(tem_microalbuminuria_365d, FALSE) = FALSE
+    THEN TRUE
+    ELSE FALSE
+END
+```
+
+**Condições:**
+- Paciente COM diagnóstico de DM
+- Sem solicitação de microalbuminúria (ou relação albumina/creatinina urinária) nos últimos 365 dias
+
+**Por que é importante:**
+A microalbuminúria (albuminúria 30-300 mg/24h ou relação albumina/creatinina 30-300 mg/g) é: (1) marcador precoce de nefropatia diabética, detectável anos antes da queda da TFGe, (2) indicador independente de risco cardiovascular elevado (duplica risco de eventos), (3) alvo terapêutico responsivo a intervenções (IECA/BRA, SGLT2i, controle glicêmico/pressórico), (4) fator modificador de conduta terapêutica. A detecção de microalbuminúria indica necessidade de intensificação do controle glicêmico e pressórico, além de indicação formal para IECA/BRA e SGLT2i. Diretrizes internacionais recomendam rastreamento anual de albuminúria em todos diabéticos a partir do diagnóstico.
+
+**Por que a ausência é uma lacuna:**
+Sem rastreamento de albuminúria, a nefropatia diabética incipiente não é identificada, perdendo-se a janela terapêutica onde intervenções são mais efetivas. Aproximadamente 30-40% dos diabéticos desenvolvem nefropatia ao longo da vida, mas o estágio de microalbuminúria (reversível) precede em anos o estágio de macroalbuminúria (irreversível) e queda de TFGe. Pacientes com microalbuminúria não detectada não recebem terapias renoprotetoras específicas (IECA/BRA, SGLT2i) que podem prevenir progressão. A albuminúria também identifica diabéticos com risco cardiovascular muito elevado que se beneficiam de tratamento mais agressivo.
+
+**Benefício para o paciente:**
+A solicitação anual de microalbuminúria permite: (1) diagnóstico de nefropatia diabética em estágio inicial reversível, (2) indicação de terapias renoprotetoras (IECA/BRA reduzem albuminúria em 30-50%, SGLT2i em 30-40%), (3) intensificação do controle glicêmico e pressórico com metas mais rigorosas, (4) estratificação de risco cardiovascular mais precisa, (5) monitoramento de resposta terapêutica (albuminúria deve reduzir com tratamento adequado). Intervir em fase de microalbuminúria pode prevenir ou retardar progressão para macroalbuminúria e insuficiência renal terminal em 10-20 anos.
+
+---
+
+### 2.6. Sem exame do pé em 365 dias (DM)
+
+**Código:** `lacuna_DM_sem_exame_pe_365d`
+
+**Regra:**
+```sql
+CASE
+    WHEN DM IS NOT NULL
+        AND COALESCE(teve_exame_pe_365d, FALSE) = FALSE
+    THEN TRUE
+    ELSE FALSE
+END
+```
+
+**Condições:**
+- Paciente COM diagnóstico de DM
+- Sem exame do pé diabético registrado nos últimos 365 dias
+
+**Por que é importante:**
+O exame do pé diabético é procedimento preventivo fundamental que avalia: (1) neuropatia periférica (teste de monofilamento, sensibilidade vibratória, reflexos), (2) doença arterial obstrutiva periférica (palpação de pulsos, tempo de enchimento capilar), (3) deformidades estruturais (dedos em garra, hálux valgo, proeminências ósseas), (4) calosidades e pontos de pressão, (5) lesões ativas (úlceras, fissuras, micoses), (6) cuidados inadequados (unhas mal cortadas, calçados inapropriados). A combinação de neuropatia + doença vascular + trauma mínimo leva a úlceras que podem evoluir para amputação. Diabetes é a principal causa de amputação não traumática no Brasil.
+
+**Por que a ausência é uma lacuna:**
+Sem exame anual dos pés, pacientes em risco de ulceração e amputação não são identificados. A neuropatia diabética é progressiva e frequentemente assintomática (paciente perde sensibilidade mas não percebe), levando a traumas desapercebidos que evoluem para úlceras. A doença arterial periférica compromete cicatrização transformando lesões triviais em úlceras crônicas. Aproximadamente 15-25% dos diabéticos desenvolvem úlcera de pé ao longo da vida, e 40-70% das amputações não traumáticas ocorrem em diabéticos. O exame anual permite identificar pacientes de alto risco e implementar medidas preventivas (educação, calçados adequados, podologia) que reduzem ulceração/amputação em 50-60%.
+
+**Benefício para o paciente:**
+O exame anual do pé diabético proporciona: (1) identificação precoce de neuropatia sensitiva (perda de sensibilidade protetora), (2) detecção de doença arterial periférica permitindo encaminhamento vascular, (3) identificação de deformidades requerendo calçados especiais, (4) tratamento precoce de calosidades e micoses prevenindo portas de entrada para infecção, (5) educação específica sobre cuidados com os pés, (6) encaminhamento para podologia/ortopedia quando necessário. A implementação de programa estruturado de prevenção do pé diabético reduz taxa de amputação em 50-85%.
+
+---
+
+### 2.7. Sem exame do pé em 180 dias (DM)
+
+**Código:** `lacuna_DM_sem_exame_pe_180d`
+
+**Regra:**
+```sql
+CASE
+    WHEN DM IS NOT NULL
+        AND COALESCE(teve_exame_pe_180d, FALSE) = FALSE
+    THEN TRUE
+    ELSE FALSE
+END
+```
+
+**Condições:**
+- Paciente COM diagnóstico de DM
+- Sem exame do pé diabético registrado nos últimos 180 dias
+
+**Por que é importante:**
+Esta lacuna estabelece critério mais rigoroso (semestral vs anual) para exame do pé diabético, potencialmente identificando pacientes de risco mais elevado ou em acompanhamento inadequado. Embora diretrizes preconizem exame anual para pacientes de risco habitual, pacientes com neuropatia estabelecida, doença arterial periférica, deformidades, história de úlcera prévia ou controle glicêmico inadequado beneficiam-se de avaliação mais frequente (semestral ou trimestral). O intervalo de 180 dias permite duas avaliações anuais capturando mudanças mais rapidamente.
+
+**Por que a ausência é uma lacuna:**
+Ausência de exame há mais de 6 meses pode indicar: (1) paciente de alto risco sem acompanhamento adequado, (2) perda de seguimento do cuidado do diabetes, (3) falta de protocolo estruturado de avaliação do pé. Pacientes com neuropatia estabelecida ou história de úlcera/amputação prévia apresentam risco muito elevado de recorrência e requerem vigilância mais frequente. Lesões podem surgir e progredir rapidamente em pacientes de alto risco, tornando intervalo de 12 meses excessivamente longo. Sistemas organizados com avaliação semestral demonstram reduções ainda maiores em taxas de ulceração e amputação.
+
+**Benefício para o paciente:**
+Avaliação semestral dos pés proporciona: (1) detecção mais precoce de lesões incipientes permitindo intervenção antes de complicações, (2) reforço educacional mais frequente sobre cuidados preventivos, (3) oportunidade de ajuste de intervenções (calçados, órteses) conforme evolução, (4) tratamento mais ágil de calosidades/micoses/unhas problemáticas, (5) acompanhamento mais próximo de pacientes de alto risco, (6) maior engajamento do paciente nos cuidados preventivos. Em pacientes de alto risco, avaliação semestral vs anual pode reduzir incidência de ulceração em 20-30% adicional.
+
+---
+
+### 2.8. DM nunca teve exame do pé
+
+**Código:** `lacuna_DM_nunca_teve_exame_pe`
+
+**Regra:**
+```sql
+CASE
+    WHEN DM IS NOT NULL
+        AND DATE_DIFF(CURRENT_DATE(), DM, DAY) > 365
+        AND data_ultimo_exame_pe IS NULL
+    THEN TRUE
+    ELSE FALSE
+END
+```
+
+**Condições:**
+- Paciente COM diagnóstico de DM há mais de 1 ano
+- NUNCA teve exame do pé diabético registrado
+
+**Por que é importante:**
+Esta lacuna identifica falha grave no cuidado do diabetes: pacientes diabéticos há mais de 1 ano que NUNCA foram avaliados quanto ao risco de pé diabético. Representa gap fundamental no seguimento pois o exame do pé é componente essencial e obrigatório do cuidado do diabetes desde o diagnóstico. A ausência completa de avaliação indica: (1) falta de protocolo estruturado de cuidado do diabetes, (2) desconhecimento da importância da prevenção do pé diabético, (3) possível perda total de seguimento, (4) falha crítica na qualidade do cuidado. É indicador de baixa qualidade assistencial.
+
+**Por que a ausência é uma lacuna:**
+Diabéticos que nunca foram avaliados podem já ter neuropatia, doença vascular ou deformidades não diagnosticadas, permanecendo sob risco não reconhecido de ulceração e amputação. A neuropatia pode desenvolver-se desde os primeiros anos do diabetes, especialmente se controle glicêmico inadequado. Pacientes sem exame não recebem educação preventiva sobre cuidados com os pés, não são orientados sobre calçados adequados, não têm acesso a podologia quando necessário. Representa falha completa na prevenção de complicação devastadora (amputação) que é amplamente evitável com medidas simples.
+
+**Benefício para o paciente:**
+Realizar o primeiro exame do pé em diabético permite: (1) estabelecer linha de base de risco (pés de baixo, moderado ou alto risco), (2) detectar neuropatia ou doença vascular já presente, (3) iniciar educação preventiva estruturada, (4) prescrever calçados adequados se necessário, (5) encaminhar para especialista quando alterações presentes, (6) estabelecer plano de seguimento baseado em risco, (7) prevenir primeira ulceração. Aproximadamente 80-85% das amputações são precedidas por úlcera que poderia ter sido prevenida com avaliação e educação adequadas.
+
+---
+
+### 2.9. DM complicado sem SGLT2i
+
+**Código:** `lacuna_DM_complicado_sem_SGLT2`
+
+**Regra:**
+```sql
+CASE
+    WHEN DM IS NOT NULL
+        AND (ICC IS NOT NULL OR IRC IS NOT NULL OR CI IS NOT NULL)
+        AND COALESCE(DATE_DIFF(CURRENT_DATE(), data_ultima_SGLT2, DAY), 999999) > 365
+    THEN TRUE
+    ELSE FALSE
+END
+```
+
+**Condições:**
+- Paciente COM diagnóstico de DM
+- COM complicação cardiovascular/renal: ICC OU IRC OU CI
+- Sem prescrição de inibidor SGLT2 nos últimos 365 dias
+
+**Por que é importante:**
+Inibidores do SGLT2 (dapagliflozina, empagliflozina) revolucionaram o tratamento do diabetes ao demonstrar benefícios independentes do controle glicêmico: (1) redução de 30-35% em hospitalização por insuficiência cardíaca, (2) redução de 30-40% em progressão de doença renal crônica, (3) redução de 10-15% em mortalidade cardiovascular, (4) redução de eventos cardiovasculares em pacientes com doença estabelecida. Estes benefícios ocorrem independentemente do nível de HbA1c, estabelecendo SGLT2i como medicação cardioprotetora e renoprotetora além de antidiabética. Diretrizes internacionais recomendam SGLT2i como tratamento preferencial em diabéticos com ICC, IRC ou doença cardiovascular aterosclerótica.
+
+**Por que a ausência é uma lacuna:**
+Diabéticos com ICC, IRC ou CI sem SGLT2i estão sendo privados de medicação com benefício comprovado em desfechos duros (morte, hospitalização, progressão de DRC). Estas são complicações graves que definem pacientes de altíssimo risco, onde benefícios de SGLT2i são ainda maiores. A não prescrição pode refletir: (1) desconhecimento de evidências recentes, (2) inércia terapêutica, (3) falta de acesso (embora disponível no SUS), (4) barreiras equivocadas (ex: temer hipoglicemia que é rara com SGLT2i monoterapia). Manter diabéticos complicados sem SGLT2i representa perda substancial de oportunidade terapêutica.
+
+**Benefício para o paciente:**
+Iniciar SGLT2i em diabético complicado proporciona: (1) redução de 30-35% em internações por descompensação de ICC, (2) redução de 30-40% na velocidade de progressão de IRC (pode retardar diálise em anos), (3) redução de 10-15% em mortalidade cardiovascular, (4) redução de 20-25% em eventos cardiovasculares maiores (infarto, AVC), (5) benefício adicional no controle glicêmico (redução de 0.5-1.0% na HbA1c), (6) perda de peso modesta (2-3 kg). O NNT (número necessário tratar) para prevenir 1 hospitalização por ICC é ~20-30 pacientes/ano, tornando SGLT2i uma das intervenções mais efetivas em diabetes.
+
+---
+
+### 2.10. Hipertenso sem rastreio de DM em 365 dias
+
+**Código:** `lacuna_rastreio_DM_hipertenso`
+
+**Regra:**
+```sql
+CASE
+    WHEN HAS IS NOT NULL
+        AND DM IS NULL
+        AND (glicemia IS NULL OR dias_desde_ultima_glicemia > 365)
+        AND (hba1c_atual IS NULL OR dias_desde_ultima_hba1c > 365)
+    THEN TRUE
+    ELSE FALSE
+END
+```
+
+**Condições:**
+- Paciente COM diagnóstico de HAS
+- SEM diagnóstico de DM
+- Sem glicemia nos últimos 365 dias E sem HbA1c nos últimos 365 dias
+
+**Por que é importante:**
+Hipertensos apresentam risco aumentado de diabetes devido a: (1) fatores de risco compartilhados (obesidade, resistência insulínica, sedentarismo), (2) fisiopatologia comum (síndrome metabólica), (3) sobreposição de 50-60% entre as condições. Aproximadamente 30-40% dos hipertensos desenvolvem diabetes ao longo do tempo. O rastreamento permite diagnóstico precoce de diabetes ou pré-diabetes, quando intervenções preventivas (mudanças no estilo de vida, metformina em pré-diabetes) são mais efetivas. Diretrizes recomendam rastreamento anual de diabetes em todos hipertensos pela alta prevalência e forte associação.
+
+**Por que a ausência é uma lacuna:**
+Hipertensos sem rastreamento de diabetes podem permanecer anos com diabetes não diagnosticado, acumulando risco de complicações micro e macrovasculares. O diabetes é frequentemente assintomático em estágios iniciais, requerendo rastreamento laboratorial para detecção. Aproximadamente 20-30% dos diabéticos não sabem que têm a doença. A combinação não diagnosticada de HAS+DM multiplica o risco cardiovascular, e ambas condições requerem tratamento específico. A identificação de pré-diabetes permite intervenção preventiva que pode retardar ou prevenir progressão para diabetes estabelecido.
+
+**Benefício para o paciente:**
+O rastreamento anual de diabetes em hipertensos permite: (1) diagnóstico precoce de diabetes possibilitando tratamento antes de complicações, (2) identificação de pré-diabetes com oportunidade de prevenir diabetes (mudanças no estilo de vida reduzem progressão em 50-70%), (3) estratificação de risco cardiovascular mais precisa, (4) ajuste de metas terapêuticas (hipertensos diabéticos requerem meta de PA mais rigorosa), (5) rastreamento de complicações quando diabetes identificado, (6) início de metformina em pré-diabetes quando indicado. Diagnóstico e tratamento precoce de diabetes pode prevenir ou retardar complicações microvasculares que levam anos para desenvolver.
+
+---
+
+### 2.11. Adulto ≥45 anos sem rastreio DM em 3 anos
+
+**Código:** `lacuna_rastreio_DM_45mais`
+
+**Regra:**
+```sql
+CASE
+    WHEN idade >= 45
+        AND DM IS NULL
+        AND (glicemia IS NULL OR dias_desde_ultima_glicemia > 1095)
+        AND (hba1c_atual IS NULL OR dias_desde_ultima_hba1c > 1095)
+    THEN TRUE
+    ELSE FALSE
+END
+```
+
+**Condições:**
+- Idade ≥45 anos
+- SEM diagnóstico de DM
+- Sem glicemia há mais de 1095 dias (>3 anos) E sem HbA1c há mais de 3 anos
+
+**Por que é importante:**
+A idade ≥45 anos é fator de risco independente para diabetes tipo 2 devido a: (1) declínio progressivo da função das células beta pancreáticas, (2) aumento de resistência insulínica com envelhecimento, (3) acúmulo de outros fatores de risco (ganho de peso, sedentarismo, sarcopenia). A prevalência de diabetes aumenta acentuadamente após 45 anos, atingindo 20-30% em maiores de 60 anos. O rastreamento trienal a partir dos 45 anos é recomendado por diretrizes da ADA (American Diabetes Association) e SBD (Sociedade Brasileira de Diabetes) para população geral, independente de outros fatores de risco.
+
+**Por que a ausência é uma lacuna:**
+Adultos ≥45 anos sem rastreamento há mais de 3 anos podem ter diabetes não diagnosticado, permanecendo sob risco de complicações. O diabetes tipo 2 desenvolve-se gradualmente ao longo de anos, frequentemente precedido por pré-diabetes (5-10 anos antes do diabetes estabelecido). Sem rastreamento, pacientes perdem a janela de pré-diabetes onde intervenções preventivas são altamente efetivas. Aproximadamente 50% dos diabéticos permanecem não diagnosticados por 5-7 anos, período em que complicações microvasculares podem já estar iniciando. O rastreamento trienal balanceia benefícios de detecção precoce com custo-efetividade.
+
+**Benefício para o paciente:**
+O rastreamento trienal de diabetes após 45 anos permite: (1) diagnóstico de pré-diabetes com oportunidade de prevenir progressão (intervenções no estilo de vida reduzem progressão em 50-70%), (2) diagnóstico precoce de diabetes antes de complicações sintomáticas, (3) início de tratamento em fase onde complicações microvasculares são preveníveis, (4) identificação de pacientes que se beneficiam de mudanças intensivas no estilo de vida, (5) estratificação de risco cardiovascular, (6) oportunidade de rastreamento de outras condições associadas (dislipidemia, HAS). Diagnóstico e tratamento de diabetes em estágio inicial pode prevenir ou retardar complicações microvasculares (retinopatia, nefropatia, neuropatia) que levam 5-10 anos para desenvolver.
+
+---
+
+<a name="cardiopatia"></a>
+## 🔴 CATEGORIA 3: CARDIOPATIA ISQUÊMICA
+
+---
+
+### 3.1. CI sem AAS
+
+**Código:** `lacuna_CI_sem_AAS`
+
+**Regra:**
+```sql
+CASE
+    WHEN CI IS NOT NULL 
+        AND COALESCE(DATE_DIFF(CURRENT_DATE(), data_ultima_AAS, DAY), 999999) > 365
+        AND COALESCE(DATE_DIFF(CURRENT_DATE(), data_ultima_anticoag, DAY), 999999) > 365
+    THEN TRUE 
+    ELSE FALSE
+END
+```
+
+**Condições:**
+- Paciente COM diagnóstico de cardiopatia isquêmica
+- Sem prescrição de AAS (ácido acetilsalicílico) nos últimos 365 dias
+- E sem prescrição de anticoagulante nos últimos 365 dias (exceção)
+
+**Por que é importante:**
+O ácido acetilsalicílico (AAS) é terapia antiagregante fundamental em prevenção secundária de eventos cardiovasculares em pacientes com doença coronariana estabelecida. Metanálises de grandes ensaios clínicos demonstram que AAS reduz: (1) risco de infarto do miocárdio recorrente em 20-25%, (2) risco de AVC isquêmico em 15-20%, (3) risco de morte cardiovascular em 10-15%. O benefício absoluto é maior quanto maior o risco basal, tornando AAS essencial em pacientes com CI onde o risco de eventos recorrentes é elevado. É medicação de baixo custo, amplamente disponível, com perfil de segurança bem estabelecido em prevenção secundária.
+
+**Por que a ausência é uma lacuna:**
+Pacientes com CI sem AAS estão sob risco substancialmente aumentado de eventos cardiovasculares recorrentes (reinfarto, AVC, morte). A não prescrição pode refletar: (1) contraindicação não documentada (sangramento ativo, alergia), (2) descontinuação por evento adverso menor sem considerar alternativas, (3) inércia terapêutica ou esquecimento, (4) falta de reconhecimento da CI como indicação absoluta. A única exceção válida é paciente em anticoagulação plena (ex: fibrilação atrial), onde anticoagulante substitui antiagregação. Manter pacientes com CI sem antiagregação representa exposição desnecessária a risco muito elevado de eventos recorrentes potencialmente fatais.
+
+**Benefício para o paciente:**
+Iniciar ou retomar AAS em paciente com CI proporciona: (1) redução de 20-25% no risco de infarto recorrente, (2) redução de 15-20% no risco de AVC, (3) redução de 10-15% em mortalidade cardiovascular, (4) proteção contínua contra eventos trombóticos coronarianos e cerebrovasculares. O NNT (número necessário tratar) é aproximadamente 50-60 pacientes/ano para prevenir 1 evento cardiovascular maior. Em pacientes com infarto prévio, o benefício é ainda maior (NNT ~30-40). A medicação é bem tolerada na maioria dos casos, com eventos adversos graves (sangramento significativo) em <2% ao ano.
+
+---
+
+### 3.2. CI sem estatina de alta intensidade
+
+**Código:** `lacuna_CI_sem_estatina_alta`
+
+**Regra:**
+```sql
+CASE
+    WHEN CI IS NOT NULL 
+        AND COALESCE(DATE_DIFF(CURRENT_DATE(), data_ultima_estatina_alta, DAY), 999999) > 365
+    THEN TRUE 
+    ELSE FALSE
+END
+```
+
+**Condições:**
+- Paciente COM diagnóstico de CI
+- Sem prescrição de estatina de alta intensidade nos últimos 365 dias
+
+**Por que é importante:**
+Estatinas de alta intensidade (atorvastatina 40-80mg, rosuvastatina 20-40mg) são tratamento padrão-ouro em prevenção secundária de eventos cardiovasculares em pacientes com doença coronariana. Reduzem LDL-colesterol em 50-60% e demonstram: (1) redução de 25-30% em eventos cardiovasculares maiores, (2) redução de 15-20% em mortalidade cardiovascular, (3) estabilização de placas ateroscleróticas reduzindo risco de ruptura, (4) efeitos pleiotrópicos anti-inflamatórios e antitrombóticos. Diretrizes recomendam estatina de alta intensidade independentemente do nível basal de LDL em todos pacientes com CI, visando redução máxima possível de LDL (meta <55 mg/dL).
+
+**Por que a ausência é uma lacuna:**
+Pacientes com CI sem estatina de alta intensidade estão sendo subtratados, perdendo benefício comprovado em redução de eventos recorrentes. Estudos demonstram que intensidade da terapia com estatina correlaciona diretamente com redução de eventos (quanto maior a redução de LDL, maior o benefício). Estatinas de intensidade moderada são inferiores às de alta intensidade em prevenção secundária. A não prescrição pode refletar: (1) uso de estatina de baixa/moderada intensidade (subtratamento), (2) descontinuação por eventos adversos leves sem tentativa de outras estatinas, (3) falta de atualização sobre evidências. Cada 40 mg/dL de redução adicional em LDL reduz eventos em ~20%.
+
+**Benefício para o paciente:**
+Iniciar estatina de alta intensidade em paciente com CI proporciona: (1) redução de 25-30% em reinfarto, (2) redução de 20% em necessidade de revascularização, (3) redução de 15-20% em mortalidade cardiovascular, (4) redução de 15-20% em AVC, (5) estabilização de placas coronarianas reduzindo eventos agudos, (6) alcance de meta de LDL <55 mg/dL recomendada por diretrizes. O NNT é aproximadamente 25-30 pacientes/ano para prevenir 1 evento cardiovascular maior. Benefício inicia precocemente (primeiros 6-12 meses) e é sustentado a longo prazo.
+
+---
+
+### 3.3. CI sem qualquer estatina
+
+**Código:** `lacuna_CI_sem_estatina_qualquer`
+
+**Regra:**
+```sql
+CASE
+    WHEN CI IS NOT NULL 
+        AND COALESCE(DATE_DIFF(CURRENT_DATE(), data_ultima_estatina_qualquer, DAY), 999999) > 365
+    THEN TRUE 
+    ELSE FALSE
+END
+```
+
+**Condições:**
+- Paciente COM diagnóstico de CI
+- Sem prescrição de QUALQUER estatina (alta, moderada ou baixa intensidade) nos últimos 365 dias
+
+**Por que é importante:**
+Esta lacuna identifica gap ainda mais grave: pacientes com CI completamente sem estatinas. Enquanto a lacuna anterior (sem estatina de alta intensidade) captura subtratamento, esta captura ausência total de terapia hipolipemiante. Estatinas são Classe I de recomendação (indicação absoluta) em TODAS as diretrizes de prevenção secundária cardiovascular. Ausência completa de estatina em paciente com CI representa falha crítica no cuidado, pois estatinas são uma das intervenções mais efetivas em redução de mortalidade e eventos recorrentes em coronariopatas. Benefício das estatinas em CI é independente do nível basal de LDL.
+
+**Por que a ausência é uma lacuna:**
+Pacientes com CI sem qualquer estatina estão sendo gravemente subtratados, perdendo um dos pilares fundamentais da prevenção secundária. A ausência pode refletir: (1) contraindicação não documentada (extremamente rara - <2% dos pacientes), (2) intolerância a múltiplas estatinas (raro, <5%), (3) descontinuação por evento adverso sem retentativa, (4) inércia terapêutica grave, (5) perda de seguimento. Mesmo estatinas de baixa/moderada intensidade (se alta intensidade não tolerada) conferem benefício substancial. Manter coronariopata sem estatina expõe a risco inaceitavelmente alto de eventos recorrentes e morte prematura.
+
+**Benefício para o paciente:**
+Iniciar qualquer estatina em paciente com CI proporciona: (1) redução de 20-30% em eventos cardiovasculares maiores mesmo com estatina de moderada intensidade, (2) redução de 10-20% em mortalidade cardiovascular, (3) redução de reinfarto e necessidade de revascularização, (4) estabilização de doença aterosclerótica, (5) redução de progressão de estenoses coronarianas. Em pacientes que não toleram estatinas de alta intensidade, estatinas de moderada intensidade ou rosuvastatina em baixas doses (5-10mg) ainda conferem benefício importante. A alternativa de não usar estatina alguma é inaceitável em coronariopata exceto contraindicação absoluta documentada.
+
+---
+
+### 3.4. CI+ICC sem betabloqueador
+
+**Código:** `lacuna_CI_ICC_sem_BB`
+
+**Regra:**
+```sql
+CASE
+    WHEN CI IS NOT NULL 
+        AND ICC IS NOT NULL
+        AND COALESCE(DATE_DIFF(CURRENT_DATE(), data_ultima_BB, DAY), 999999) > 365
+    THEN TRUE 
+    ELSE FALSE
+END
+```
+
+**Condições:**
+- Paciente COM diagnóstico de CI E ICC
+- Sem prescrição de betabloqueador nos últimos 365 dias
+
+**Por que é importante:**
+Betabloqueadores são medicação de benefício dual em pacientes com CI+ICC: (1) reduzem mortalidade e reinternação em ICC (benefício classe I), (2) reduzem eventos isquêmicos recorrentes em CI (especialmente pós-infarto), (3) melhoram função ventricular ao reduzir consumo miocárdico de oxigênio, (4) reduzem arritmias ventriculares, (5) controlam frequência cardíaca otimizando enchimento ventricular. Estudos demonstram redução de 30-35% em mortalidade e 25-30% em reinternação por ICC com uso de betabloqueadores. Em pacientes com CI+ICC (frequentemente com disfunção ventricular isquêmica), betabloqueadores são dos medicamentos mais importantes.
+
+**Por que a ausência é uma lacuna:**
+Pacientes com CI+ICC sem betabloqueador estão sendo privados de medicação com benefício comprovado em mortalidade. A não prescrição pode refletar: (1) contraindicações superestimadas (asma/DPOC leve não contraindicam betabloqueadores cardiosseletivos), (2) receio de efeitos adversos (frequentemente transitórios e manejáveis), (3) inércia terapêutica, (4) falta de titulação adequada (betabloqueadores requerem início em baixas doses e titulação progressiva). A combinação CI+ICC define paciente de altíssimo risco onde benefício de betabloqueadores é máximo. Manter estes pacientes sem betabloqueador representa perda substancial de oportunidade terapêutica.
+
+**Benefício para o paciente:**
+Iniciar betabloqueador em paciente com CI+ICC proporciona: (1) redução de 30-35% em mortalidade (um dos maiores benefícios em cardiologia), (2) redução de 25-30% em reinternações por ICC, (3) melhora de sintomas de ICC (dispneia, fadiga, edema), (4) redução de eventos isquêmicos recorrentes, (5) melhora da fração de ejeção ventricular em 5-10 pontos percentuais, (6) redução de arritmias ventriculares e morte súbita. O NNT para prevenir 1 morte é aproximadamente 25-30 pacientes/ano. Betabloqueadores cardiosseletivos (bisoprolol, carvedilol, metoprolol succinato) são bem tolerados na maioria dos casos quando titulados adequadamente.
+
+---
+
+<a name="icc"></a>
+## 💔 CATEGORIA 4: INSUFICIÊNCIA CARDÍACA
+
+---
+
+### 4.1. ICC sem SGLT2i
+
+**Código:** `lacuna_ICC_sem_SGLT2`
+
+**Regra:**
+```sql
+CASE
+    WHEN ICC IS NOT NULL
+        AND COALESCE(DATE_DIFF(CURRENT_DATE(), data_ultima_SGLT2, DAY), 999999) > 365
+    THEN TRUE 
+    ELSE FALSE
+END
+```
+
+**Condições:**
+- Paciente COM diagnóstico de ICC
+- Sem prescrição de inibidor SGLT2 nos últimos 365 dias
+
+**Por que é importante:**
+Inibidores do SGLT2 (dapagliflozina, empagliflozina) representam avanço revolucionário no tratamento da ICC ao demonstrar: (1) redução de 25-30% em hospitalização por descompensação de ICC, (2) redução de 15-20% em mortalidade cardiovascular, (3) melhora de sintomas e qualidade de vida, (4) benefício independente da presença de diabetes (efetivos em diabéticos e não-diabéticos), (5) benefício tanto em ICC com fração de ejeção reduzida quanto preservada. Estes benefícios se somam aos de outras medicações (IECA/BRA, betabloqueadores). Diretrizes recentes (ESC 2021, AHA/ACC 2022) elevaram SGLT2i a Classe I de recomendação (indicação absoluta) em ICC.
+
+**Por que a ausência é uma lacuna:**
+Pacientes com ICC sem SGLT2i estão sendo privados de medicação com benefício comprovado robusto em desfechos duros (morte, hospitalização). SGLT2i demonstraram benefício consistente em todos subgrupos de ICC (com/sem diabetes, com FE reduzida/preservada, todas classes funcionais). A não prescrição pode refletar: (1) desconhecimento de evidências recentes (medicação relativamente nova para ICC), (2) percepção incorreta de ser exclusiva para diabéticos, (3) falta de acesso (embora disponível no SUS), (4) inércia terapêutica. Manter pacientes com ICC sem SGLT2i representa perda substancial de oportunidade terapêutica com impacto em mortalidade e qualidade de vida.
+
+**Benefício para o paciente:**
+Iniciar SGLT2i em paciente com ICC proporciona: (1) redução de 25-30% em hospitalizações por descompensação (principal causa de internação em idosos), (2) redução de 15-20% em mortalidade cardiovascular, (3) melhora de sintomas (dispneia, fadiga) e qualidade de vida em semanas, (4) proteção renal adicional (redução de progressão de DRC), (5) perda de peso modesta (1-2 kg), (6) efeito sinérgico com outras medicações de ICC. O NNT para prevenir 1 hospitalização é ~20-25 pacientes/ano. Benefício inicia precocemente (primeiros 1-3 meses) e é sustentado. SGLT2i são geralmente bem tolerados com poucos efeitos adversos.
+
+---
+
+### 4.2. ICC sem IECA/BRA
+
+**Código:** `lacuna_ICC_sem_IECA_BRA`
+
+**Regra:**
+```sql
+CASE
+    WHEN ICC IS NOT NULL
+        AND COALESCE(DATE_DIFF(CURRENT_DATE(), data_ultima_IECA, DAY), 999999) > 365
+        AND COALESCE(DATE_DIFF(CURRENT_DATE(), data_ultima_BRA, DAY), 999999) > 365
+    THEN TRUE 
+    ELSE FALSE
+END
+```
+
+**Condições:**
+- Paciente COM diagnóstico de ICC
+- Sem prescrição de IECA (inibidores da ECA) nos últimos 365 dias
+- E sem prescrição de BRA (bloqueadores do receptor de angiotensina) nos últimos 365 dias
+
+**Por que é importante:**
+IECA/BRA são pilares fundamentais do tratamento de ICC há décadas, com benefício comprovado em: (1) redução de 20-25% em mortalidade, (2) redução de 30-35% em hospitalizações por ICC, (3) melhora de sintomas e capacidade funcional, (4) redução de progressão da disfunção ventricular, (5) remodelamento reverso do ventrículo (melhora da geometria e função cardíaca). Atuam bloqueando sistema renina-angiotensina-aldosterona (SRAA) que está hiperativado na ICC, causando vasoconstrição, retenção de sódio/água e remodelamento cardíaco deletério. São Classe I de recomendação em todas as diretrizes de ICC.
+
+**Por que a ausência é uma lacuna:**
+Pacientes com ICC sem IECA/BRA estão sendo gravemente subtratados, perdendo um dos pilares terapêuticos fundamentais da ICC. A não prescrição pode refletar: (1) contraindicação documentada (hipotensão sintomática, insuficiência renal avançada, hipercalemia), (2) descontinuação por tosse (IECA) sem tentativa de BRA, (3) receio de hipotensão ou piora de função renal (frequentemente manejáveis), (4) inércia terapêutica. BRA são alternativa aos IECA com eficácia similar mas sem causar tosse. Manter pacientes com ICC sem bloqueio do SRAA (IECA ou BRA) representa falha terapêutica grave exceto contraindicação absoluta documentada.
+
+**Benefício para o paciente:**
+Iniciar IECA ou BRA em paciente com ICC proporciona: (1) redução de 20-25% em mortalidade, (2) redução de 30-35% em hospitalizações, (3) melhora de sintomas (dispneia, fadiga, edema) em 2-4 semanas, (4) melhora da capacidade funcional e qualidade de vida, (5) remodelamento reverso ventricular (melhora da fração de ejeção em 5-10 pontos), (6) redução de progressão da ICC. O NNT para prevenir 1 morte é ~30-40 pacientes/ano. IECA são preferíveis (custo menor, experiência maior), mas BRA são alternativa equivalente quando IECA não tolerado. Titulação adequada até dose-alvo otimiza benefícios.
+
+---
+
+### 4.3. ICC sem INRA (sacubitril/valsartana)
+
+**Código:** `lacuna_ICC_sem_INRA`
+
+**Regra:**
+```sql
+CASE
+    WHEN ICC IS NOT NULL
+        AND COALESCE(DATE_DIFF(CURRENT_DATE(), data_ultima_INRA, DAY), 999999) > 365
+    THEN TRUE 
+    ELSE FALSE
+END
+```
+
+**Condições:**
+- Paciente COM diagnóstico de ICC
+- Sem prescrição de INRA (inibidor da neprilisina e receptor de angiotensina - sacubitril/valsartana) nos últimos 365 dias
+
+**Por que é importante:**
+INRA (sacubitril/valsartana) é medicação mais recente para ICC que demonstrou superioridade sobre IECA isolado em: (1) redução adicional de 20% em mortalidade cardiovascular comparado a enalapril, (2) redução adicional de 21% em hospitalização por ICC, (3) melhora mais rápida de sintomas, (4) redução de 50% em necessidade de assistência ventricular ou transplante cardíaco. Combina bloqueio do SRAA (valsartana) com inibição da neprilisina (sacubitril), enzima que degrada peptídeos natriuréticos. É considerado tratamento preferencial sobre IECA/BRA isolados em ICC com fração de ejeção reduzida sintomática, sendo Classe I em diretrizes recentes.
+
+**Por que a ausência é uma lacuna:**
+Esta lacuna identifica pacientes com ICC que poderiam se beneficiar de INRA mas não estão recebendo. A não prescrição pode refletar: (1) alto custo (limitando acesso mesmo com disponibilidade no SUS), (2) complexidade de substituição (requer suspensão de IECA por 36h antes), (3) desconhecimento de superioridade sobre IECA, (4) falta de acesso em alguns serviços, (5) critérios restritos de elegibilidade em alguns protocolos. Diretrizes recomendam considerar INRA para substituir IECA/BRA em pacientes com ICC sintomática (classes II-IV) com FE ≤40% que permanecem sintomáticos apesar de terapia otimizada. Não prescrever INRA em paciente elegível representa perda de benefício adicional em mortalidade.
+
+**Benefício para o paciente:**
+Substituir IECA/BRA por INRA em paciente com ICC proporciona: (1) redução adicional de 20% em mortalidade cardiovascular (vs continuar IECA), (2) redução adicional de 21% em hospitalização por ICC, (3) melhora mais rápida e sustentada de sintomas e qualidade de vida, (4) redução de risco de necessidade de terapias avançadas (assistência ventricular, transplante), (5) maior probabilidade de remodelamento reverso. O NNT para prevenir 1 morte adicional (vs IECA) é ~35-40 pacientes/ano. Benefício é maior em pacientes mais sintomáticos. Principal limitação é custo, mas disponibilidade no SUS torna acessível.
+
+---
+
+### 4.4. ICC sem antagonista mineralocorticoide
+
+**Código:** `lacuna_ICC_sem_ARM`
+
+**Regra:**
+```sql
+CASE
+    WHEN ICC IS NOT NULL
+        AND COALESCE(DATE_DIFF(CURRENT_DATE(), data_ultima_ARM, DAY), 999999) > 365
+    THEN TRUE 
+    ELSE FALSE
+END
+```
+
+**Condições:**
+- Paciente COM diagnóstico de ICC
+- Sem prescrição de antagonista mineralocorticoide (espironolactona ou eplerenona) nos últimos 365 dias
+
+**Por que é importante:**
+Antagonistas mineralocorticoides (ARM - espironolactona, eplerenona) são medicação essencial em ICC ao bloquear aldosterona, hormônio que: (1) causa retenção de sódio/água e depleção de potássio, (2) promove fibrose miocárdica e vascular, (3) está elevado na ICC apesar de IECA/BRA. Estudos demonstram que ARM adicionado a IECA+betabloqueador reduz: (1) mortalidade em 25-30%, (2) hospitalização por ICC em 30-35%, (3) progressão da disfunção ventricular. É Classe I de recomendação em ICC sintomática (classe II-IV) com FE ≤35-40%. Espironolactona é de baixo custo e amplamente disponível.
+
+**Por que a ausência é uma lacuna:**
+Pacientes com ICC sem ARM estão perdendo benefício adicional importante em mortalidade e hospitalização. ARM é o quarto pilar do tratamento de ICC (junto com IECA/BRA, betabloqueador, SGLT2i) e deve ser considerado em todos pacientes sintomáticos. A não prescrição pode refletar: (1) receio de hipercalemia (que ocorre em <5% quando função renal preservada e potássio monitorado), (2) receio de ginecomastia (10-15% com espironolactona, rara com eplerenona), (3) falta de monitoramento adequado de potássio/creatinina, (4) inércia terapêutica. Contraindicações verdadeiras são limitadas: IRC avançada (Cr >2.5 mg/dL), hipercalemia basal (K >5.0 mEq/L).
+
+**Benefício para o paciente:**
+Iniciar ARM em paciente com ICC proporciona: (1) redução de 25-30% em mortalidade, (2) redução de 30-35% em hospitalizações por ICC, (3) redução de progressão da disfunção ventricular, (4) melhora de sintomas, (5) redução de arritmias ventriculares e morte súbita, (6) atenuação de fibrose miocárdica. O NNT para prevenir 1 morte é ~20-25 pacientes/ano. Espironolactona em doses baixas (12.5-25mg/dia) é geralmente bem tolerada. Monitoramento de potássio e creatinina após 1-2 semanas do início e periodicamente depois permite manejo seguro. Ginecomastia (espironolactona) é manejável com redução de dose ou troca para eplerenona.
+
+---
+
+### 4.5. ICC sem SRAA e sem hidralazina+nitrato
+
+**Código:** `lacuna_ICC_sem_SRAA_e_sem_hidralazina_nitrato`
+
+**Regra:**
+```sql
+CASE
+    WHEN ICC IS NOT NULL
+        AND COALESCE(DATE_DIFF(CURRENT_DATE(), data_ultima_IECA, DAY), 999999) > 365
+        AND COALESCE(DATE_DIFF(CURRENT_DATE(), data_ultima_BRA, DAY), 999999) > 365
+        AND COALESCE(DATE_DIFF(CURRENT_DATE(), data_ultima_INRA, DAY), 999999) > 365
+        AND (COALESCE(DATE_DIFF(CURRENT_DATE(), data_ultima_hidralazina, DAY), 999999) > 365
+            OR COALESCE(DATE_DIFF(CURRENT_DATE(), data_ultima_nitrato, DAY), 999999) > 365)
+    THEN TRUE 
+    ELSE FALSE
+END
+```
+
+**Condições:**
+- Paciente COM diagnóstico de ICC
+- Sem IECA nos últimos 365 dias
+- E sem BRA nos últimos 365 dias
+- E sem INRA nos últimos 365 dias
+- E sem hidralazina nos últimos 365 dias OU sem nitrato nos últimos 365 dias
+
+**Por que é importante:**
+Esta lacuna identifica falha terapêutica crítica: pacientes com ICC sem NENHUM bloqueio do SRAA (IECA/BRA/INRA) E sem terapia vasodilatadora alternativa (hidralazina+nitrato). O bloqueio do SRAA é ESSENCIAL no tratamento da ICC, sendo Classe I de recomendação absoluta. A única exceção aceitável é contraindicação absoluta a todos bloqueadores do SRAA (extremamente raro), situação em que hidralazina+nitrato é alternativa comprovada. A combinação hidralazina+isossorbida (vasodilatação arterial+venosa) demonstrou benefício em mortalidade, embora inferior a IECA/BRA.
+
+**Por que a ausência é uma lacuna:**
+ICC sem bloqueio do SRAA (IECA/BRA/INRA) nem vasodilatação alternativa (hidralazina+nitrato) representa subtratamento gravíssimo. Pacientes nesta situação: (1) permanecem com SRAA hiperativado causando vasoconstrição, retenção de sódio/água e remodelamento deletério, (2) têm mortalidade significativamente maior, (3) apresentam progressão mais rápida da ICC, (4) têm sintomas menos controlados. Esta lacuna deve ser extremamente rara, ocorrendo apenas em: (1) contraindicação documentada a TODOS bloqueadores SRAA + contraindicação a hidralazina+nitrato, (2) perda completa de seguimento, (3) inércia terapêutica grave. Representa falha crítica na qualidade do cuidado.
+
+**Benefício para o paciente:**
+Iniciar bloqueio do SRAA (IECA/BRA/INRA) ou alternativa (hidralazina+nitrato) proporciona: (1) redução de 20-30% em mortalidade, (2) redução de 30-40% em hospitalizações, (3) melhora substancial de sintomas e qualidade de vida, (4) redução de progressão da ICC, (5) remodelamento reverso ventricular. Todos os esforços devem ser feitos para iniciar IECA/BRA/INRA: (1) titulação cuidadosa desde doses muito baixas, (2) manejo de hipotensão (ajustar diuréticos), (3) monitoramento de função renal/potássio, (4) tentativa de todos os três agentes antes de considerar intolerância verdadeira. Hidralazina+nitrato é alternativa quando SRAA absolutamente contraindicado.
+
+---
+
+### 4.6. ICC com BCC não-DHP (contraindicado)
+
+**Código:** `lacuna_ICC_uso_BCC_nao_DHP`
+
+**Regra:**
+```sql
+CASE
+    WHEN ICC IS NOT NULL
+        AND COALESCE(DATE_DIFF(CURRENT_DATE(), data_ultima_BCC_nao_DHP, DAY), 999999) <= 180
+    THEN TRUE 
+    ELSE FALSE
+END
+```
+
+**Condições:**
+- Paciente COM diagnóstico de ICC
+- COM prescrição recente (últimos 180 dias) de bloqueador de canal de cálcio não-diidropiridínico (diltiazem, verapamil)
+
+**Por que é importante:**
+Esta lacuna identifica USO INADEQUADO de medicação: bloqueadores de canal de cálcio não-diidropiridínicos (BCC não-DHP: diltiazem, verapamil) são CONTRAINDICADOS em ICC com fração de ejeção reduzida pois: (1) têm efeito inotrópico negativo (reduzem contratilidade cardíaca), (2) podem precipitar ou agravar descompensação de ICC, (3) aumentam mortalidade em ICC (demonstrado em ensaios clínicos), (4) não têm benefício em ICC. São diferentes dos BCC diidropiridínicos (anlodipino, nifedipino) que são neutros em ICC. BCC não-DHP são apropriados para controle de frequência em fibrilação atrial, mas contraindicados em ICC com FE reduzida.
+
+**Por que a ausência é uma lacuna (neste caso, presença da medicação):**
+Uso de BCC não-DHP em ICC representa prescrição inadequada potencialmente deletéria. Pode causar: (1) piora de sintomas de ICC (dispneia, edema, fadiga), (2) descompensação aguda requerendo hospitalização, (3) aumento de mortalidade. O uso pode refletar: (1) prescrição para controle de FA em paciente com ICC sem considerar contraindicação, (2) prescrição para controle pressórico sem conhecimento de contraindicação em ICC, (3) continuação de medicação iniciada antes do diagnóstico de ICC, (4) falta de revisão adequada do esquema terapêutico. Betabloqueadores são preferíveis para controle de frequência em FA+ICC.
+
+**Benefício para o paciente:**
+Suspender BCC não-DHP em paciente com ICC proporciona: (1) redução de risco de descompensação de ICC, (2) melhora potencial de sintomas se medicação estava causando piora, (3) eliminação de efeito inotrópico negativo deletério, (4) oportunidade de otimizar medicações benéficas (betabloqueadores para controle de FC em FA). Se BCC estava sendo usado para controle de frequência em FA, betabloqueadores são alternativa superior (benefício adicional em ICC). Se estava sendo usado para hipertensão, outras classes são mais apropriadas em ICC (IECA/BRA, hidralazina, diuréticos). A suspensão remove medicação potencialmente prejudicial.
+
+---
+
+### 4.7. ICC com uso de AINE (inadequado)
+
+**Código:** `lacuna_ICC_uso_AINE`
+
+**Regra:**
+```sql
+CASE
+    WHEN ICC IS NOT NULL
+        AND COALESCE(DATE_DIFF(CURRENT_DATE(), data_ultima_AINE, DAY), 999999) <= 180
+    THEN TRUE 
+    ELSE FALSE
+END
+```
+
+**Condições:**
+- Paciente COM diagnóstico de ICC
+- COM prescrição recente (últimos 180 dias) de anti-inflamatório não esteroidal (AINE)
+
+**Por que é importante:**
+Esta lacuna identifica USO INADEQUADO: AINEs (ibuprofeno, naproxeno, diclofenaco, etc.) são deletérios em ICC pois: (1) causam retenção de sódio e água (edema, congestão), (2) podem precipitar descompensação aguda de ICC, (3) atenuam efeito de diuréticos, (4) podem causar insuficiência renal aguda (já comprometida em ICC), (5) aumentam pressão arterial, (6) aumentam risco de hospitalização por ICC em 50-100%. Diretrizes contraindicam uso crônico de AINEs em ICC. AINEs são frequentemente prescritos para dor musculoesquelética, mas em pacientes com ICC os riscos superam benefícios.
+
+**Por que a ausência é uma lacuna (neste caso, presença da medicação):**
+Uso crônico de AINE em ICC representa prescrição inadequada com riscos cardiovasculares e renais significativos. Pode causar: (1) descompensação aguda de ICC por retenção de sódio/água (principal causa de internação), (2) piora de função renal já comprometida, (3) antagonismo ao efeito de diuréticos reduzindo eficácia, (4) elevação da pressão arterial dificultando controle, (5) aumento de eventos cardiovasculares (infarto, AVC). O uso pode refletar: (1) prescrição para dor crônica sem considerar ICC, (2) automedicação não documentada, (3) continuação de AINE iniciado antes da ICC, (4) desconhecimento de contraindicação relativa. Alternativas analgésicas mais seguras existem (paracetamol, opioides fracos, analgésicos tópicos).
+
+**Benefício para o paciente:**
+Suspender AINE em paciente com ICC proporciona: (1) redução de 40-50% no risco de descompensação e hospitalização por ICC, (2) melhora de eficácia de diuréticos permitindo melhor controle de congestão, (3) proteção da função renal (frequentemente limítrofe em ICC), (4) facilitação do controle pressórico, (5) redução de risco de eventos cardiovasculares. Alternativas para manejo de dor devem ser implementadas: (1) paracetamol (doses adequadas, seguro em ICC), (2) tramadol ou codeína para dor moderada/severa, (3) AINEs tópicos (diclofenaco gel) com absorção sistêmica mínima, (4) medidas não farmacológicas (fisioterapia, calor/frio local). A suspensão remove fator de risco importante para descompensação.
+
+---
+
+### 4.8. Diurético de alça sem ICC (inadequado)
+
+**Código:** `lacuna_diur_alca_sem_ICC`
+
+**Regra:**
+```sql
+CASE
+    WHEN ICC IS NULL
+        AND COALESCE(DATE_DIFF(CURRENT_DATE(), data_ultima_diuretico_alca, DAY), 999999) <= 180
+    THEN TRUE 
+    ELSE FALSE
+END
+```
+
+**Condições:**
+- Paciente SEM diagnóstico de ICC
+- COM prescrição recente (últimos 180 dias) de diurético de alça (furosemida, bumetanida)
+
+**Por que é importante:**
+Esta lacuna identifica USO POTENCIALMENTE INADEQUADO: diuréticos de alça (furosemida, bumetanida) são diuréticos potentes indicados principalmente para: (1) ICC com congestão/edema, (2) síndrome nefrótica, (3) insuficiência renal avançada, (4) edema refratário a tiazídicos. Em pacientes SEM ICC, o uso pode ser inadequado pois: (1) diuréticos tiazídicos são preferíveis para hipertensão (melhor evidência em redução de eventos CV), (2) diuréticos de alça causam mais distúrbios eletrolíticos (hipocalemia, hipomagnesemia), (3) podem indicar edema de outra etiologia não investigada, (4) podem estar sendo usados inadequadamente. A presença sinaliza necessidade de revisão da indicação.
+
+**Por que a ausência é uma lacuna (neste caso, presença da medicação):**
+Uso de diurético de alça sem ICC diagnosticado pode indicar: (1) ICC não diagnosticada (paciente com sintomas de congestão/edema atribuídos a outras causas), (2) uso inadequado para hipertensão quando tiazídico seria mais apropriado, (3) edema de membros inferiores por insuficiência venosa tratado com diurético sistêmico, (4) prescrição sem indicação clara, (5) continuação de medicação iniciada durante hospitalização sem revisão posterior. Representa oportunidade de: (1) investigar possível ICC não diagnosticada, (2) otimizar terapia anti-hipertensiva substituindo por tiazídico, (3) investigar causa de edema, (4) descontinuar medicação se sem indicação clara.
+
+**Benefício para o paciente:**
+Revisar uso de diurético de alça em paciente sem ICC permite: (1) diagnóstico de ICC se sintomas sugestivos presentes (dispneia, edema, ortopneia), (2) otimização de anti-hipertensivos substituindo por tiazídico (melhor evidência em HAS), (3) investigação de causa de edema (insuficiência venosa, linfedema, nefropatia), (4) redução de efeitos adversos (hipocalemia, hipomagnesemia, depleção de volume), (5) descontinuação se sem indicação clara. Se ICC presente mas não diagnosticada, possibilita início de terapias modificadoras de doença (IECA/BRA, betabloqueadores, SGLT2i). Se uso inadequado, permite simplificação do esquema terapêutico.
+
+---
+
+<a name="irc"></a>
+## 🧪 CATEGORIA 5: INSUFICIÊNCIA RENAL CRÔNICA
+
+---
+
+### 5.1. IRC sem SGLT2i
+
+**Código:** `lacuna_IRC_sem_SGLT2`
+
+**Regra:**
+```sql
+CASE
+    WHEN IRC IS NOT NULL
+        AND COALESCE(DATE_DIFF(CURRENT_DATE(), data_ultima_SGLT2, DAY), 999999) > 365
+    THEN TRUE 
+    ELSE FALSE
+END
+```
+
+**Condições:**
+- Paciente COM diagnóstico de IRC (insuficiência renal crônica)
+- Sem prescrição de inibidor SGLT2 nos últimos 365 dias
+
+**Por que é importante:**
+Inibidores do SGLT2 são medicação transformadora no tratamento de DRC ao demonstrar renoproteção robusta independentemente da presença de diabetes: (1) redução de 30-40% na velocidade de progressão da DRC (preservação da TFGe), (2) redução de 30-40% em albuminúria (marcador de lesão renal), (3) redução de 30% no risco de insuficiência renal terminal ou morte renal, (4) redução de 25-30% em hospitalização por ICC (frequente em DRC), (5) benefício em todas as causas de DRC (diabética, hipertensiva, glomerular). Estudos DAPA-CKD e EMPA-KIDNEY demonstraram benefício dramático em retardar progressão para diálise. SGLT2i são Classe I em diretrizes de DRC (KDIGO 2022).
+
+**Por que a ausência é uma lacuna:**
+Pacientes com IRC sem SGLT2i estão perdendo medicação com maior impacto em retardar progressão para diálise. DRC é progressiva e irreversível, mas SGLT2i podem retardar progressão substancialmente, potencialmente adiando diálise por anos. A não prescrição pode refletar: (1) desconhecimento de evidências recentes de renoproteção (estudos publicados 2020-2023), (2) percepção incorreta de que SGLT2i são exclusivos para diabéticos, (3) receio de piora de função renal inicial (queda transitória de TFGe esperada, não deletéria), (4) falta de acesso. SGLT2i são indicados em DRC G2-G4 (TFGe 20-90 mL/min) com ou sem diabetes.
+
+**Benefício para o paciente:**
+Iniciar SGLT2i em paciente com IRC proporciona: (1) redução de 30-40% na velocidade de declínio da TFGe (preservação de função renal), (2) retardo da progressão para diálise em 2-5 anos em média, (3) redução de 30-40% em albuminúria, (4) redução de 25-30% em hospitalização por ICC (complicação frequente em DRC), (5) redução de mortalidade cardiovascular, (6) melhor qualidade de vida ao retardar diálise. O NNT para prevenir 1 evento renal maior (diálise, transplante, morte renal) é ~15-20 pacientes/ano. Benefício é maior quanto mais precoce o início. SGLT2i são geralmente bem tolerados em DRC, com infecção geniturinária como principal efeito adverso (5-8%).
+
+---
+
+<a name="uso-inadequado"></a>
+## ⚠️ CATEGORIA 6: USO INADEQUADO DE MEDICAMENTOS
+
+---
+
+### 6.1. IECA + BRA concomitante
+
+**Código:** `lacuna_IECA_BRA_concomitante`
+
+**Regra:**
+```sql
+CASE
+    WHEN COALESCE(DATE_DIFF(CURRENT_DATE(), data_ultima_IECA, DAY), 999999) <= 180
+        AND COALESCE(DATE_DIFF(CURRENT_DATE(), data_ultima_BRA, DAY), 999999) <= 180
+    THEN TRUE 
+    ELSE FALSE
+END
+```
+
+**Condições:**
+- Paciente COM prescrição recente (últimos 180 dias) de IECA (inibidor da ECA)
+- E COM prescrição recente (últimos 180 dias) de BRA (bloqueador do receptor de angiotensina)
+- Simultaneamente (uso concomitante)
+
+**Por que é importante:**
+Esta lacuna identifica COMBINAÇÃO CONTRAINDICADA: uso simultâneo de IECA + BRA (duplo bloqueio do SRAA) foi testado em ensaios clínicos e demonstrou: (1) aumento de eventos adversos graves (hipotensão sintomática, hipercalemia, insuficiência renal aguda) SEM benefício adicional, (2) aumento de 50-100% em hipercalemia, (3) aumento de piora aguda de função renal, (4) aumento de hipotensão sintomática com quedas/síncope. O estudo ONTARGET demonstrou que combinação IECA+BRA aumenta danos sem benefícios. Diretrizes CONTRAINDICAM explicitamente esta combinação desde 2013.
+
+**Por que a ausência é uma lacuna (neste caso, presença da combinação):**
+Uso concomitante de IECA + BRA expõe paciente a riscos aumentados sem benefício. Pode causar: (1) hipercalemia grave (K >6.0 mEq/L) com risco de arritmia fatal, (2) insuficiência renal aguda por hipoperfusão, (3) hipotensão sintomática com síncope e quedas (especialmente em idosos), (4) hospitalizações por eventos adversos. A combinação pode refletar: (1) "cascata de prescrição" (adicionar BRA quando IECA em dose subterapêutica seria suficiente), (2) desconhecimento de evidências recentes contraindicando combinação, (3) continuação de ambos medicamentos sem revisão. Representa prescrição potencialmente perigosa que deve ser corrigida.
+
+**Benefício para o paciente:**
+Descontinuar um dos medicamentos (IECA ou BRA, manter apenas um) proporciona: (1) redução de 50-70% no risco de hipercalemia grave, (2) redução de risco de insuficiência renal aguda, (3) redução de hipotensão sintomática e quedas, (4) simplificação do esquema terapêutico, (5) manutenção de benefício do bloqueio do SRAA (monoterapia é efetiva), (6) redução de custo medicamentoso. A escolha de qual descontinuar deve considerar: (1) qual está em dose adequada, (2) qual é melhor tolerado, (3) custo (IECA geralmente mais barato). IECA são preferíveis na maioria dos casos, BRA são alternativa quando IECA não tolerado (tosse).
+
+---
+
+### 6.2. ICC com INRA + IECA concomitante (perigoso)
+
+**Código:** `lacuna_ICC_INRA_IECA_concomitante`
+
+**Regra:**
+```sql
+CASE
+    WHEN ICC IS NOT NULL
+        AND COALESCE(DATE_DIFF(CURRENT_DATE(), data_ultima_INRA, DAY), 999999) <= 180
+        AND COALESCE(DATE_DIFF(CURRENT_DATE(), data_ultima_IECA, DAY), 999999) <= 180
+    THEN TRUE 
+    ELSE FALSE
+END
+```
+
+**Condições:**
+- Paciente COM diagnóstico de ICC
+- COM prescrição recente de INRA (sacubitril/valsartana) nos últimos 180 dias
+- E COM prescrição recente de IECA nos últimos 180 dias
+- Simultaneamente (uso concomitante)
+
+**Por que é importante:**
+Esta lacuna identifica COMBINAÇÃO CONTRAINDICADA e PERIGOSA: uso simultâneo de INRA (que contém valsartana - um BRA) com IECA é EXPLICITAMENTE CONTRAINDICADO por: (1) aumento dramático de risco de angioedema (edema de língua/glote potencialmente fatal), (2) aumento excessivo de hipotensão, (3) aumento de hipercalemia e disfunção renal. INRA contém inibidor da neprilisina (sacubitril) que aumenta níveis de bradicinina; IECA também aumenta bradicinina; a combinação multiplica risco de angioedema. INRA SUBSTITUI IECA/BRA, não deve ser usado concomitantemente. Bula do INRA exige intervalo mínimo de 36 horas após última dose de IECA antes de iniciar INRA.
+
+**Por que a ausência é uma lacuna (neste caso, presença da combinação):**
+Uso concomitante de INRA + IECA expõe paciente a risco inaceitável de angioedema potencialmente fatal. Pode causar: (1) angioedema de vias aéreas (língua, glote, laringe) requerendo intubação emergencial, (2) angioedema intestinal (dor abdominal intensa, necessitando avaliação cirúrgica), (3) hipotensão severa, (4) hipercalemia grave, (5) insuficiência renal aguda. A combinação pode refletir: (1) início de INRA sem suspensão prévia de IECA (erro de prescrição grave), (2) continuação inadvertida de IECA após iniciar INRA, (3) falta de conhecimento sobre contraindicação absoluta. Representa erro de prescrição grave que requer correção imediata.
+
+**Benefício para o paciente:**
+Descontinuar IECA imediatamente (manter apenas INRA) proporciona: (1) redução dramática de risco de angioedema potencialmente fatal, (2) redução de risco de hipotensão severa, (3) redução de hipercalemia e disfunção renal, (4) manutenção de benefício do INRA (que é superior a IECA isolado em ICC), (5) eliminação de combinação perigosa. IECA deve ser descontinuado imediatamente quando INRA iniciado. Se houver dúvida sobre qual foi prescrito mais recentemente, clarificar e manter apenas INRA (que tem benefício superior em ICC). Esta é emergência de segurança medicamentosa que requer ação imediata.
+
+---
+
+## 📚 **REFERÊNCIAS BIBLIOGRÁFICAS PRINCIPAIS**
+
+### Hipertensão Arterial:
+- Diretrizes Brasileiras de Hipertensão Arterial – 2020. Arq Bras Cardiol 2021; 116(3):516-658
+- 2018 ESC/ESH Guidelines for the management of arterial hypertension. European Heart Journal 2018; 39:3021-3104
+- SPRINT Research Group. N Engl J Med 2015; 373:2103-2116
+
+### Diabetes Mellitus:
+- Diretrizes Sociedade Brasileira de Diabetes 2023
+- ADA Standards of Medical Care in Diabetes—2024. Diabetes Care 2024; 47(Suppl 1)
+- UK Prospective Diabetes Study (UKPDS) Group. Lancet 1998; 352:837-853
+- ADVANCE Collaborative Group. N Engl J Med 2008; 358:2560-2572
+
+### SGLT2 Inibidores:
+- DAPA-HF Trial. N Engl J Med 2019; 381:1995-2008
+- EMPEROR-Reduced Trial. N Engl J Med 2020; 383:1413-1424
+- DAPA-CKD Trial. N Engl J Med 2020; 383:1436-1446
+- EMPA-KIDNEY Trial. N Engl J Med 2023; 388:117-127
+
+### Cardiopatia Isquêmica:
+- 2021 ACC/AHA/SCAI Guideline for Coronary Artery Revascularization. J Am Coll Cardiol 2022; 79:e21-e129
+- Antithrombotic Trialists' Collaboration. BMJ 2002; 324:71-86
+- Cholesterol Treatment Trialists' Collaboration. Lancet 2010; 376:1670-1681
+
+### Insuficiência Cardíaca:
+- 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J 2021; 42:3599-3726
+- 2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure. J Am Coll Cardiol 2022; 79:e263-e421
+- PARADIGM-HF Trial (INRA). N Engl J Med 2014; 371:993-1004
+- RALES Trial (espironolactona). N Engl J Med 1999; 341:709-717
+
+### Doença Renal Crônica:
+- KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease
+- Kidney Disease: Improving Global Outcomes (KDIGO) CKD Work Group
+
+---
+
+## 📊 **GLOSSÁRIO DE TERMOS**
+
+**ARM** - Antagonista do Receptor Mineralocorticoide (espironolactona, eplerenona)
+
+**BRA** - Bloqueador do Receptor de Angiotensina (losartana, valsartana, etc.)
+
+**BCC não-DHP** - Bloqueador de Canal de Cálcio não-Diidropiridínico (diltiazem, verapamil)
+
+**CI** - Cardiopatia Isquêmica
+
+**DM** - Diabetes Mellitus
+
+**DRC** - Doença Renal Crônica
+
+**HAS** - Hipertensão Arterial Sistêmica
+
+**HbA1c** - Hemoglobina Glicada
+
+**ICC** - Insuficiência Cardíaca Congestiva
+
+**IECA** - Inibidor da Enzima Conversora de Angiotensina (enalapril, captopril, etc.)
+
+**IMC** - Índice de Massa Corporal
+
+**INRA** - Inibidor da Neprilisina e Receptor de Angiotensina (sacubitril/valsartana)
+
+**IRC** - Insuficiência Renal Crônica
+
+**NNT** - Number Needed to Treat (número de pacientes que precisam ser tratados para prevenir 1 evento)
+
+**PA** - Pressão Arterial
+
+**SGLT2i** - Inibidor do Cotransportador Sódio-Glicose tipo 2 (dapagliflozina, empagliflozina)
+
+**SRAA** - Sistema Renina-Angiotensina-Aldosterona
+
+**TFGe** - Taxa de Filtração Glomerular estimada
+
+---
+
+## ✅ **CONSIDERAÇÕES FINAIS**
+
+Esta documentação detalha as 35 lacunas de cuidado implementadas no sistema, organizadas em 6 categorias clínicas principais. Cada lacuna foi criteriosamente definida baseada em:
+
+1. **Evidências científicas robustas** de ensaios clínicos randomizados e metanálises
+2. **Diretrizes nacionais e internacionais** das principais sociedades médicas
+3. **Aplicabilidade na Atenção Primária à Saúde** considerando recursos disponíveis no SUS
+4. **Impacto em desfechos duros** (mortalidade, hospitalização, progressão de doença)
+
+As lacunas representam **oportunidades de melhoria no cuidado** onde intervenções comprovadamente efetivas não estão sendo implementadas. A identificação sistemática destas lacunas permite:
+
+- Priorização de pacientes para intervenções
+- Monitoramento de qualidade do cuidado
+- Educação continuada das equipes
+- Melhoria de desfechos clínicos
+
+**Importante:** As lacunas devem ser interpretadas no contexto clínico individual de cada paciente. Contraindicações legítimas, preferências do paciente e situações clínicas especiais devem sempre ser consideradas na tomada de decisão.
+
+---
+
+**Documento elaborado em:** 13 de novembro de 2025  
+**Versão:** 1.0  
+**Base de evidências:** Atualizada até novembro de 2025

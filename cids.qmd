@@ -3,571 +3,1756 @@
 Aqui estão apenas as listas de CIDs usados nos códigos para identificação de casos. Não foram considerados outras regras aqui como exames laboratoriais, medidas de pressão arterial ou prescrição de medicamentos específicos. Estas informações estão nos capítulos específicos de cada morbidade.
 
 
+## 📊 VISÃO GERAL
 
-## Hipertensão Arterial
+Este documento descreve os **56 critérios diagnósticos** implementados para identificação de morbidades crônicas, utilizando múltiplas fontes de dados:
 
+- **CID-10** (Classificação Internacional de Doenças)
+- **Medidas clínicas** (Pressão arterial, glicemia, HbA1c, eGFR)
+- **Prescrições medicamentosas** (Classes terapêuticas)
+- **Bases de dados externas** (HIV, eGFR)
 
-* **I10** – Hipertensão essencial (primária)
-* **I11** – Doença cardíaca hipertensiva
-* **I12** – Doença renal hipertensiva
-* **I13** – Doença cardiorrenal hipertensiva
-* **I14** - Hipertensão pulmonar
-* **I15** – Hipertensão secundária
-* **I16** – Crise hipertensiva
-* **O10** - Hipertensão pre-existente complicando gravidez, prato ou puerpério
-* **O11** -	Distúrbio hipertensivo pré-existente com proteinúria superposta
+### 🎯 Princípio de Persistência
 
+**Regra geral:** Uma vez detectada uma morbidade crônica, ela persiste em todos os registros subsequentes do paciente.
 
-## Hipertensão relacionada com a gestação
-
-* **O10** - Hipertensão pre-existente complicando gravidez, prato ou puerpério
-* **O11** -	Distúrbio hipertensivo pré-existente com proteinúria superposta
-* **O13** – Hipertensão gestacional (induzida pela gravidez) sem proteinúria significativa
-* **O14** - Hipertensao gestacional (induzida pela gravidez) com proteinúria significativa
-* **O15** - Eclâmpsia
-* **O16** - Hipertensão materna não especificada
-
-## Suspeita de hipertensão
-
-* **R030** – Leitura anormal de pressão arterial, sem diagnóstico de hipertensão
+**Exceção:** Pré-diabetes não persiste se o paciente progredir para diabetes.
 
 ---
 
-### Diabetes Mellitus - incluindo tipo 1 e tipo 2
-
-* **E10** – Diabetes mellitus insulino-dependente (Tipo 1)
-* **E11** – Diabetes mellitus não insulino-dependente (Tipo 2)
-* **E12** – Diabetes mellitus relacionado à desnutrição
-* **E13** – Outros diabetes mellitus especificados
-* **E14** – Diabetes mellitus não especificado
-* **H360** – Retinopatia diabética (H36.0)
-* **H280** – Catarata diabética (H28.0)
-* **G632** – Polineuropatia diabética (G63.2)
-* **G590** – Mononeuropatia diabética (G59.0)
-* **N083** – Nefropatia diabética (N08.3)
-* **M142** – Artropatia diabética (M14.2)
+## 🏥 MORBIDADES ANALISADAS - Critérios e Algoritmos de Identificação
 
 ---
 
-### Cardiopatia isquêmica
-
-* **I20** - Angina pectoris
-* **I21** – Infarto agudo do miocárdio
-* **I22** – Infarto do miocárdio recorrente
-* **I23** - complicações relacionados a IAM
-* **I248** - Outras formas de doença isquêmica aguda do coração
-* **I249** - Doença isquêmica aguda do coração NE
-* **I25** – Doença isquêmica crônica do coração
-* **Z951** - Presença de enxerto ou ponto aortocoronária
-* **Z955** - presença de angioplastia coronária
-
----
-
-### Insuficiência cardíaca (independente da fração de ejeção)
-
-* **I110** – Doença cardíaca hipertensiva com insuficiência cardíaca
-* **I130** – Doença cardiorrenal hipertensiva com insuficiência cardíaca
-* **I132** – Doença cardiorrenal hipertensiva com insuficiência cardíaca e renal
-* **I50** – Insuficiência cardíaca
-* **I517** - Cardiomegalia
-* **I278** – Outras doenças pulmonares do coração 
-* **I279** - Cor pulmonale
+1. [Doenças Cardiovasculares](#cardiovasculares)
+2. [Doenças Metabólicas](#metabolicas)
+3. [Doenças Renais](#renais)
+4. [Doenças Respiratórias](#respiratorias)
+5. [Doenças Neurológicas e Psiquiátricas](#neuro-psiq)
+6. [Neoplasias](#neoplasias)
+7. [Doenças Hematológicas](#hematologicas)
+8. [Doenças Gastrointestinais](#gastrointestinais)
+9. [Doenças Reumatológicas](#reumatologicas)
+10. [Doenças Infecciosas](#infecciosas)
+11. [Transtornos por Uso de Substâncias](#substancias)
+12. [Distúrbios Nutricionais](#nutricionais)
 
 ---
 
-### Acidente vascular cerebral
-
-* **I60 a I69** - doenças cerebrovasculares
-* **G45** – Acidentes isquêmicos transitórios e síndromes correlatas
-* **G46** – Síndromes vasculares do encéfalo em doenças cerebrovasculares
-* **H340** – Oclusão arterial retiniana (H34.0)
+<a name="cardiovasculares"></a>
+# 1. DOENÇAS CARDIOVASCULARES
 
 ---
 
-### Doença renal crônica
+## 1.1. HIPERTENSÃO ARTERIAL SISTÊMICA (HAS)
 
-* **I120** – Doença renal hipertensiva com insuficiência renal
-* **I131** – Doença cardiorrenal hipertensiva com insuficiência renal
-* **I132** – Doença cardiorrenal hipertensiva com ICC e insuficiência renal
-* **N03** – Síndrome nefrítica crônica
-* **N18** – Doença renal crônica
-* **N19** – Insuficiência renal não especificada
-* **N250** – Osteodistrofia renal
-* **Z490|Z491|Z492** – Atendimentos para diálise/hemodiálise/peritoneal
-* **T861** - Rejeição de rim transplantado
-* **Z940** – Rim transplantado
-* **Z992** – Dependência de diálise
+### **Descrição:**
+Pressão arterial sistólica ≥ 140 mmHg e/ou diastólica ≥ 90 mmHg em adultos, ou diagnóstico prévio de hipertensão com uso de anti-hipertensivos.
 
----
+### **Critérios de Inclusão:**
+- **CID-10:** I10, I11, I12, I13, I15
+- **Uso de anti-hipertensivos:** IECA, BRA, diuréticos tiazídicos, beta-bloqueadores, bloqueadores de canal de cálcio
 
-### Demência
+### **Variável:**
+- `HAS` (DATE) - Data do primeiro diagnóstico
 
-* **F00** – Demência na doença de Alzheimer
-* **F01** – Demência vascular
-* **F02** – Demência em outras doenças classificadas em outra parte
-* **F03** – Demência não especificada
-* **F051** – Delirium superposto a demência
-* **G30** – Doença de Alzheimer
-* **G310** – Atrofia cortical circunscrita
-* **G311** – Degeneração corticobasal / outras degenerações frontotemporais
+### **Algoritmo de Identificação:**
 
----
+```sql
+-- Identificação de HAS
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)I1[0-5]') 
+    THEN ea.entrada_data 
+END) AS HAS,
 
-### Doença pulmonar obstrutiva crônica
+-- Validação cruzada com medicamentos
+CASE 
+    WHEN HAS IS NOT NULL 
+         OR uso_IECA = TRUE 
+         OR uso_BRA = TRUE 
+         OR uso_diuretico_tiazidico = TRUE
+         OR uso_beta_bloqueador = TRUE
+         OR uso_bloqueador_canal_calcio = TRUE
+    THEN TRUE 
+    ELSE FALSE 
+END AS tem_HAS_validado
+```
 
-* **I278** – Outras doenças pulmonares do coração 
-* **I279** - Cor pulmonale
-* **J43** – Enfisema
-* **J44** – Outras doenças pulmonares obstrutivas crônicas
-* **J60–J67** – Pneumoconioses (carvão, asbestos, sílica etc.)
-* **J684** - afecções respiratórias crÔnicas por produtos químicos, gases e vapores
-* **J701** - Manifestações pulmonares crônicas e outras, devidas a radiação
-* **J703** – Manifestações pulmonares crônicas e outras por agentes químicos/gases/fumos (J70.1, J70.3)
-* **J841** - outras doenças pulmonares intersticiais com fibrose
-
-
-### Asma
-
-**falta criar o código**
-
-* **J40** – Bronquite aguda ou crônica
-* **J41** – Bronquite crônica simples
-* **J42** – Bronquite crônica NE
-* **J45** - Asma
-* **J46** - Mal asmático
+### **CIDs Específicos:**
+| CID | Descrição |
+|-----|-----------|
+| I10 | Hipertensão essencial (primária) |
+| I11 | Doença cardíaca hipertensiva |
+| I12 | Doença renal hipertensiva |
+| I13 | Doença cardíaca e renal hipertensiva |
+| I15 | Hipertensão secundária |
 
 ---
 
-### Doença péptica
+## 1.2. CARDIOPATIA ISQUÊMICA (CI)
 
-**falta revisar**
+### **Descrição:**
+Doença arterial coronariana, incluindo angina, infarto agudo do miocárdio (IAM) e suas sequelas.
 
-* **K25** – Úlcera gástrica
-* **K26** – Úlcera duodenal
-* **K27** – Úlcera péptica de local não especificado
-* **K28** – Úlcera gastroyeyunal
+### **Critérios de Inclusão:**
+- **CID-10:** I20-I25
+- **Procedimentos:** Angioplastia, revascularização miocárdica
+- **Uso de AAS/Clopidogrel** como indicador adicional
 
----
+### **Variável:**
+- `CI` (DATE) - Data do primeiro diagnóstico
 
-### Neoplasia de mama
+### **Algoritmo de Identificação:**
 
-* **C50** - Neoplasia de mama
+```sql
+-- Identificação de Cardiopatia Isquêmica
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)I2[0-5]') 
+    THEN ea.entrada_data 
+END) AS CI,
 
-### Neoplasia de colo uterino
+-- CIDs mais específicos
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)(I21|I22)') -- IAM
+    THEN ea.entrada_data 
+END) AS data_IAM,
 
-* **C53** - Neoplasia de colo uterino
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)I20') -- Angina
+    THEN ea.entrada_data 
+END) AS data_angina
+```
 
-### Neoplasia de genitais femininos
-
-* **C51|C52|C54|C55|C56|C57|C58** - Neoplasias estritas às mulheres (exceto mama e colo uterino)
-
-### Neoplasia de genitais masculinos
-
-* **C60|C61|C62|C63** - Neoplasias estritas aos homens
-
-
-### Neoplasias gerais
-
-* **C00** – Neoplasia maligna do lábio
-* **C01** – Neoplasia maligna da base da língua
-* **C02** – Neoplasia maligna de outras partes e das não especificadas da língua
-* **C03** – Neoplasia maligna da gengiva
-* **C04** – Neoplasia maligna do assoalho da boca
-* **C05** – Neoplasia maligna do palato
-* **C06** – Neoplasia maligna de outras partes e das não especificadas da boca
-* **C07** – Neoplasia maligna da glândula parótida
-* **C08** – Neoplasia maligna de outras glândulas salivares maiores e das não especificadas
-* **C09** – Neoplasia maligna da amígdala
-* **C10** – Neoplasia maligna da orofaringe
-* **C11** – Neoplasia maligna da nasofaringe
-* **C12** – Neoplasia maligna do seio piriforme
-* **C13** – Neoplasia maligna da hipofaringe
-* **C14** – Neoplasia maligna de outros sítios e dos mal definidos do lábio, cavidade oral e faringe
-* **C15** – Neoplasia maligna do esôfago
-* **C16** – Neoplasia maligna do estômago
-* **C17** – Neoplasia maligna do intestino delgado
-* **C18** – Neoplasia maligna do cólon
-* **C19** – Neoplasia maligna da junção retossigmoide
-* **C20** – Neoplasia maligna do reto
-* **C21** – Ânus e canal anal
-* **C22** – Fígado e vias biliares intra-hepáticas
-* **C23** – Vesícula biliar
-* **C24** – Outras partes das vias biliares
-* **C25** – Pâncreas
-* **C26** – Órgãos digestivos mal definidos
-* **C30** – Cavidade nasal e ouvido médio
-* **C31** – Seios paranasais
-* **C32** – Laringe
-* **C33** – Traqueia
-* **C34** – Brônquios e pulmão
-* **C37** – Timo
-* **C38** – Coração, mediastino e pleura
-* **C39** – Aparelho respiratório e órgãos intratorácicos mal definidos
-* **C40** – Ossos e cartilagens articulares dos membros
-* **C41** – Ossos e cartilagens articulares de outros locais
-* **C43** – Melanoma maligno da pele
-* **C45** – Mesotelioma
-* **C46** – Sarcoma de Kaposi
-* **C47** – Nervos periféricos e sistema nervoso autônomo
-* **C48** – Retroperitônio e peritônio
-* **C49** – Tecido conjuntivo e outros tecidos moles
-* **C64–C68** – Rim, pelve renal, ureteres, bexiga, outros órgãos urinários
-* **C69** - olhos e anexos
-* **C70** – Meninges
-* **C71** – Encéfalo
-* **C72** – Medula espinal, nervos cranianos e outras partes do SNC
-* **C73** – Glândula tireoide
-* **C74** – Glândula supra-renal
-* **C75** – Outras glândulas endócrinas e estruturas correlatas
-* **C76** – Sítios mal definidos
-* **C77** – Linfonodos secundários e não especificados
-* **C78** – Metástases em órgãos respiratórios e digestivos
-* **C79** – Metástases em outros locais
-* **C80** – Neoplasia maligna, sem especificação de sítio
-* **C81** – Doença de Hodgkin
-* **C82** – Linfoma não Hodgkin folicular
-* **C83** – Linfoma não Hodgkin difuso
-* **C84** – Linfomas de células T/NK cutâneos
-* **C85** – Outros linfomas não Hodgkin
-* **C88** – Doenças imunoproliferativas malignas
-* **C90** – Mieloma múltiplo e neoplasias plasmocitárias
-* **C91** – Leucemias linfóides
-* **C92** – Leucemias mieloides
-* **C93** – Leucemias monocíticas
-* **C94** – Outras leucemias de células especificadas
-* **C95** – Leucemia de célula não especificada
-* **C96** – Outras neoplasias malignas do tecido linfóide, hematopoiético e correlatos
-* **C97** – Neoplasias malignas primárias de múltiplos sítios independentes
+### **CIDs Específicos:**
+| CID | Descrição |
+|-----|-----------|
+| I20 | Angina pectoris |
+| I21 | Infarto agudo do miocárdio |
+| I22 | Infarto do miocárdio recorrente |
+| I23 | Complicações após IAM |
+| I24 | Outras doenças isquêmicas agudas do coração |
+| I25 | Doença isquêmica crônica do coração |
 
 ---
 
+## 1.3. INSUFICIÊNCIA CARDÍACA CONGESTIVA (ICC)
 
-### Insuficiência hepática
+### **Descrição:**
+Síndrome clínica caracterizada pela incapacidade do coração em bombear sangue adequadamente.
 
-**falta revisar**
+### **Critérios de Inclusão:**
+- **CID-10:** I50
+- **Uso de diuréticos de alça** como indicador adicional
 
-* **B18** – Hepatite viral crônica
-* **I85|I859|I864|I982** – Varizes esofágicas/portal; hipertensão portal; síndrome hepatorrenal (I98.2)
-* **K700|K701|K702|K703|K704|K709** – Transtornos mentais e comportamentais/ doença hepática alcoólica (K70.x)
-* **K711|K713|K715|K717** – Insuficiência hepática aguda/subaguda; hep. tóxica; hep. crônica tóxica
-* **K721|K729** – Insuficiência hepática não classificada em outra parte / não especificada
-* **K73** – Hepatite crônica, não classificada em outra parte
-* **K74** – Fibrose e cirrose hepática
-* **K760–K769** – Outras doenças do fígado (fígado gorduroso não alcoólico, hepatite não especificada etc.)
-* **Z944** – Fígado transplantado
+### **Variável:**
+- `ICC` (DATE) - Data do primeiro diagnóstico
 
----
+### **Algoritmo de Identificação:**
 
-### SIDA
+```sql
+-- Identificação de ICC
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)I50') 
+    THEN ea.entrada_data 
+END) AS ICC,
 
-**falta revisar**
+-- Validação com medicamentos específicos
+CASE 
+    WHEN ICC IS NOT NULL 
+         OR (uso_diuretico_ansa = TRUE AND (CI IS NOT NULL OR HAS IS NOT NULL))
+    THEN TRUE 
+    ELSE FALSE 
+END AS tem_ICC_provavel
+```
 
-* **B20|B21|B22|B24** – Doenças por HIV (AIDS)
-* **Z21** – Estado de infecção assintomática pelo HIV
-* **R75** – Evidência laboratorial do HIV
-* **O987** – Doenças maternas por HIV complicando a gravidez, parto e puerpério (O98.7)
-* **P352** – Infecção congênita por HIV (P35.2)
-
----
-
-### Hipotireoidismo
-
-**falta revisar**
-
-* **E00** – Síndrome congênita por deficiência de iodo (cretinismo)
-* **E01** – Transtornos tireoidianos e afecções relacionadas à deficiência de iodo
-* **E02** – Hipotireoidismo subclínico por deficiência de iodo
-* **E03** – Outros hipotireoidismos
-* **E890** – Hipotireoidismo pós-procedimentos (E89.0)
+### **CIDs Específicos:**
+| CID | Descrição |
+|-----|-----------|
+| I50.0 | Insuficiência cardíaca congestiva |
+| I50.1 | Insuficiência ventricular esquerda |
+| I50.9 | Insuficiência cardíaca não especificada |
 
 ---
 
-### Arritmias cardíacas
+## 1.4. ACIDENTE VASCULAR CEREBRAL (STROKE)
 
-**falta revisar**
+### **Descrição:**
+Evento cerebrovascular agudo (isquêmico ou hemorrágico) e suas sequelas.
 
-* **I441|I442|I443** – Bloqueios atrioventriculares de 1º, 2º, 3º graus
-* **I456** – Síndrome de Wolff-Parkinson-White
-* **I459** – Transtornos da condução não especificados
-* **I47** – Taquicardias paroxísticas
-* **I48** – Fibrilação e flutter atriais
-* **I49** – Outras arritmias cardíacas
-* **R000|R001|R008** – Taquicardia / Bradicardia / Outros sinais e sintomas do coração
-* **T821** – Complicações de dispositivos protéticos cardíacos
-* **Z450** – Ajuste e manutenção de marcapasso
-* **Z950** – Presença de prótese valvar cardíaca
+### **Critérios de Inclusão:**
+- **CID-10:** I60-I69, G45 (AIT)
 
----
+### **Variável:**
+- `stroke` (DATE) - Data do primeiro diagnóstico
 
-### Coagulopatias
+### **Algoritmo de Identificação:**
 
-**falta revisar**
+```sql
+-- Identificação de AVC/Stroke
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)(I6[0-9]|G45)') 
+    THEN ea.entrada_data 
+END) AS stroke,
 
-* **D65** – Coagulação intravascular disseminada
-* **D66** – Hemofilia A
-* **D67** – Hemofilia B
-* **D68** – Outros defeitos de coagulação
-* **D691** – Púrpura alérgica (Henoch-Schönlein)
-* **D693** – Púrpura trombocitopênica idiopática crônica
-* **D694** – Púrpura não especificada
-* **D695** – Trombocitopenia secundária
-* **D696** – Outros transtornos de coagulação especificados
+-- Separar por tipo
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)(I63|I64)') -- Isquêmico
+    THEN ea.entrada_data 
+END) AS stroke_isquemico,
 
----
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)(I60|I61|I62)') -- Hemorrágico
+    THEN ea.entrada_data 
+END) AS stroke_hemorragico,
 
-### Doenças reumatológicas
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)G45') -- AIT
+    THEN ea.entrada_data 
+END) AS AIT
+```
 
-**falta revisar**
-
-* **L940|L941|L943** – Esclerodermias/ paniculites localizadas (códigos L94.x)
-* **M05|M06** – Artrite reumatoide (soropositiva / outras)
-* **M08** – Artrite juvenil
-* **M120|M123** – Transtornos do tecido conjuntivo induzidos por drogas (M12.0) / osteoartrite pós-inflamatória (M12.3)
-* **M30|M310|M313** – Poliarterite nodosa e vasculites; doença de Kawasaki; granulomatose de Wegener
-* **M32** – Lúpus eritematoso sistêmico
-* **M33** – Dermatomiosite/polimiosite
-* **M34** – Esclerodermia sistêmica
-* **M35** – Outras doenças sistêmicas do tecido conjuntivo
-* **M45** – Espondilite anquilosante
-* **M461|M468|M469** – Outras espondilopatias inflamatórias (M46.x)
-
----
-
-### Cardiomiopatias e doenças valvares
-
-**falta revisar**
-
-* **A520** – Cardiopatia sifilítica (A52.0)
-* **I05|I06|I07|I08** – Doenças valvares reumáticas (mitral, aórtica, tricúspide, múltiplas)
-* **I091|I098** – Outras doenças cardíacas reumáticas (I09.1, I09.8)
-* **I34|I35|I36|I37** – Doenças não reumáticas das válvulas mitral, aórtica, tricúspide e pulmonar
-* **I38|I39** – Endocardite não especificada / Endocardite em doenças classificadas em outra parte
-* **Q230|Q231|Q232|Q233** – Malformações congênitas das válvulas (Q23.x)
-* **Z952|Z953|Z954** – Presença de substitutos valvares (mitral, aórtico, tricúspide)
-
-* **I420** – Miocardiopatia dilatada 
-* **I426** – Miocardiopatia alcoólica
-* **I427** – Miocardiopatia devido a drogas e outros agentes externos
-* **I427** – Miocardiopatia devido a doenças endócrinas
-* **I428** – Outras miocardiopatias (I42.8)
-* **I429** – Miocardiopatia não especificada (I42.9)
-* **I43** – Miocardiopatia em doenças classificadas em outra parte
-* **I44** - BAV e do ramo esquerdo - Transtornos de condução
+### **CIDs Específicos:**
+| CID | Descrição |
+|-----|-----------|
+| I60 | Hemorragia subaracnóidea |
+| I61 | Hemorragia intracerebral |
+| I62 | Outras hemorragias intracranianas não traumáticas |
+| I63 | Infarto cerebral |
+| I64 | AVC não especificado (isquêmico ou hemorrágico) |
+| I65-I66 | Oclusão/estenose de artérias cerebrais |
+| I67 | Outras doenças cerebrovasculares |
+| I68 | Transtornos cerebrovasculares em doenças classificadas em outra parte |
+| I69 | Sequelas de doenças cerebrovasculares |
+| G45 | Acidentes isquêmicos cerebrais transitórios (AIT) |
 
 ---
 
-### Circulação pulmonar
+## 1.5. ARRITMIAS CARDÍACAS
 
-**falta revisar**
+### **Descrição:**
+Distúrbios do ritmo cardíaco, incluindo fibrilação atrial, flutter, taquicardias e bradicardias.
 
-* **I26** – Embolia pulmonar
-* **I27** – Outras doenças do coração pulmonar (hipertensão pulmonar, etc.)
-* **I280|I288|I289** – Doenças de vasos pulmonares (I28.0, I28.8, I28.9)
+### **Critérios de Inclusão:**
+- **CID-10:** I47-I49
 
----
+### **Variável:**
+- `arritmia` (DATE) - Data do primeiro diagnóstico
 
-### Doenças neurológicas
+### **Algoritmo de Identificação:**
 
-**falta revisar**
+```sql
+-- Identificação de Arritmias
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)I4[7-9]') 
+    THEN ea.entrada_data 
+END) AS arritmia,
 
-* **G10–G13** – Doenças hereditárias e degenerativas do SNC
-* **G20–G22** – Doenças extrapiramidais e transtornos do movimento (Parkinson, etc.)
-* **G254|G255** – Outras síndromes cerebelares (G25.4-G25.5)
-* **G312|G318|G319** – Outras degenerações do SNC (G31.2, G31.8, G31.9)
-* **G32** – Transtornos degenerativos do SNC em outras doenças
-* **G35–G37** – Esclerose múltipla e afins
-* **G40|G41** – Epilepsia e estado de mal epiléptico
-* **G931|G934** – Edema cerebral / Encefalopatia não especificada
-* **R470** – Disfasia/afasia não especificada
-* **R56** – Convulsões não classificadas em outra parte
+-- Fibrilação Atrial especificamente (mais importante)
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)I48') 
+    THEN ea.entrada_data 
+END) AS fibrilacao_atrial
+```
 
----
-
-### Doenças vasculares periféricas
-
-**falta revisar**
-
-* **I70** – Aterosclerose
-* **I71** – Aneurisma e dissecção da aorta
-* **I731|I738|I739** – Doenças arteriais periféricas (I73.1, I73.8, I73.9)
-* **I771** – Doença de Buerger (tromboangeíte obliterante)
-* **I790|I792** – Aterosclerose de outros vasos / Doença de Raynaud secundária
-* **K551|K558|K559** – Transtornos vasculares do intestino (isquemia mesentérica etc.)
-* **Z958|Z959** – Presença de enxertos e implantes vasculares
+### **CIDs Específicos:**
+| CID | Descrição |
+|-----|-----------|
+| I47 | Taquicardia paroxística |
+| I48 | Fibrilação e flutter atrial |
+| I49 | Outras arritmias cardíacas |
 
 ---
 
-### Dislipidemia
+## 1.6. DOENÇAS VALVARES
 
-**falta revisar**
+### **Descrição:**
+Doenças das válvulas cardíacas (mitral, aórtica, tricúspide, pulmonar).
 
-* **E78** – Transtornos do metabolismo de lipoproteínas e outras lipidemias
+### **Critérios de Inclusão:**
+- **CID-10:** I05-I09, I34-I39
 
----
+### **Variável:**
+- `valvular` (DATE) - Data do primeiro diagnóstico
 
-### Obesidade
+### **Algoritmo de Identificação:**
 
-**falta revisar**
+```sql
+-- Identificação de Doenças Valvares
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)(I0[5-9]|I3[4-9])') 
+    THEN ea.entrada_data 
+END) AS valvular
+```
 
-* **E66** – Obesidade
-
----
-
-### Anemias
-
-**falta revisar**
-
-* **D50** – Anemia por deficiência de ferro
-* **D51** – Anemia por deficiência de vitamina B12
-* **D52** – Anemia por deficiência de folato
-* **D53** – Outras anemias nutricionais
-
----
-
-### Etilismo
-
-**falta revisar**
-
-* **F10** – Transtornos mentais e comportamentais devidos ao uso de álcool
-* **E52** – Deficiência de niacina (pelagra)
-* **G621** – Polineuropatia alcoólica (G62.1)
-* **I426** – Miocardiopatia alcoólica (I42.6)
-* **K292** – Gastrite alcoólica (K29.2)
-* **K700|K703|K709** – Doença hepática alcoólica (esteatose, hepatite, cirrose)
-* **T51** – Efeito tóxico do álcool
-* **Z502** – Tratamento de desintoxicação alcoólica
-* **Z714** – Aconselhamento por uso de álcool
-* **Z721** – Problemas relacionados ao uso de álcool
+### **CIDs Específicos:**
+| CID | Descrição |
+|-----|-----------|
+| I05 | Doenças reumáticas da válvula mitral |
+| I06 | Doenças reumáticas da válvula aórtica |
+| I07 | Doenças reumáticas da válvula tricúspide |
+| I08 | Doenças de múltiplas válvulas |
+| I09 | Outras doenças reumáticas do coração |
+| I34 | Transtornos não reumáticos da válvula mitral |
+| I35 | Transtornos não reumáticos da válvula aórtica |
+| I36 | Transtornos não reumáticos da válvula tricúspide |
+| I37 | Transtornos da válvula pulmonar |
+| I38 | Endocardite |
+| I39 | Endocardite e transtornos valvulares em doenças classificadas em outra parte |
 
 ---
 
-### Drogadição
-
-**falta revisar**
-
-* **F11–F16, F18–F19** – Transtornos por uso de opioides, canabinoides, sedativos/hipnóticos, cocaína, outros/estimulantes, solventes/inalantes e múltiplas drogas
-* **Z715** – Aconselhamento por abuso de drogas
-* **Z722** – Problemas relacionados ao uso de drogas
+<a name="metabolicas"></a>
+# 2. DOENÇAS METABÓLICAS
 
 ---
 
-### Esquizofrenia e Psicoses
+## 2.1. DIABETES MELLITUS (DM)
 
-* **F20** → Esquizofrenia
-* **F21** → Transtorno esquizotípico
-* **F22** → Transtornos delirantes persistentes
-* **F23** → Transtornos psicóticos agudos e transitórios
-* **F25** → Transtornos esquizoafetivos
-* **F28** → Outros transtornos psicóticos não orgânicos especificados
-* **F29** → Psicose não orgânica não especificada
-* **F31** → Transtorno afetivo bipolar
+### **Descrição:**
+Distúrbio metabólico caracterizado por hiperglicemia crônica, diagnosticado por glicemia de jejum ≥ 126 mg/dL, HbA1c ≥ 6.5%, ou uso de antidiabéticos.
+
+### **Critérios de Inclusão:**
+- **CID-10:** E10-E14
+- **HbA1c ≥ 6.5%**
+- **Glicemia de jejum ≥ 126 mg/dL** (2+ medidas)
+- **Uso de antidiabéticos:** Metformina, insulina, sulfonilureias, iDPP4, iSGLT2, agonistas GLP-1
+
+### **Variáveis:**
+- `DM` (DATE) - Data do primeiro diagnóstico de diabetes
+- `pre_DM` (DATE) - Data do diagnóstico de pré-diabetes (se não progrediu para DM)
+
+### **Algoritmo de Identificação:**
+
+```sql
+-- ========================================
+-- IDENTIFICAÇÃO DE DIABETES MELLITUS
+-- ========================================
+
+-- Diabetes por CID
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)E1[0-4]') 
+    THEN ea.entrada_data 
+END) AS DM_por_CID,
+
+-- Diabetes por HbA1c
+MIN(CASE 
+    WHEN lab.nome_exame LIKE '%HEMOGLOBINA GLICOSILADA%'
+         AND SAFE_CAST(lab.resultado AS FLOAT64) >= 6.5
+    THEN lab.data_resultado 
+END) AS DM_por_A1C,
+
+-- Diabetes por glicemia de jejum (2+ medidas)
+MIN(CASE 
+    WHEN lab.nome_exame LIKE '%GLICOSE%'
+         AND SAFE_CAST(lab.resultado AS FLOAT64) >= 126
+         AND (
+             SELECT COUNT(*) 
+             FROM laboratorio l2 
+             WHERE l2.cpf = lab.cpf 
+               AND l2.nome_exame LIKE '%GLICOSE%'
+               AND SAFE_CAST(l2.resultado AS FLOAT64) >= 126
+               AND l2.data_resultado <= lab.data_resultado
+         ) >= 2
+    THEN lab.data_resultado 
+END) AS DM_por_glicemia,
+
+-- Diabetes por uso de medicamentos
+MIN(CASE 
+    WHEN med.nome_medicamento LIKE ANY (
+        '%METFORMINA%', '%INSULINA%', '%GLIBENCLAMIDA%', 
+        '%GLICLAZIDA%', '%GLIMEPIRIDA%', '%DAPAGLIFLOZINA%',
+        '%EMPAGLIFLOZINA%', '%SITAGLIPTINA%', '%VILDAGLIPTINA%',
+        '%LIRAGLUTIDA%', '%SEMAGLUTIDA%'
+    )
+    THEN med.data_prescricao 
+END) AS DM_por_medicamento,
+
+-- ========================================
+-- CONSOLIDAÇÃO: Data mais antiga
+-- ========================================
+LEAST(
+    DM_por_CID,
+    DM_por_A1C,
+    DM_por_glicemia,
+    DM_por_medicamento
+) AS DM,
+
+-- ========================================
+-- PRÉ-DIABETES
+-- ========================================
+
+-- Pré-diabetes por HbA1c (5.7-6.4%)
+MIN(CASE 
+    WHEN lab.nome_exame LIKE '%HEMOGLOBINA GLICOSILADA%'
+         AND SAFE_CAST(lab.resultado AS FLOAT64) BETWEEN 5.7 AND 6.4
+    THEN lab.data_resultado 
+END) AS pre_DM_por_A1C,
+
+-- Pré-diabetes por glicemia de jejum (100-125 mg/dL)
+MIN(CASE 
+    WHEN lab.nome_exame LIKE '%GLICOSE%'
+         AND SAFE_CAST(lab.resultado AS FLOAT64) BETWEEN 100 AND 125
+    THEN lab.data_resultado 
+END) AS pre_DM_por_glicemia,
+
+-- Consolidação pré-DM
+CASE 
+    WHEN DM IS NULL  -- Só se não tem diabetes
+    THEN LEAST(pre_DM_por_A1C, pre_DM_por_glicemia)
+    ELSE NULL  -- Se tem DM, pre_DM = NULL
+END AS pre_DM,
+
+-- ========================================
+-- LÓGICA DE PROGRESSÃO
+-- ========================================
+
+-- Tempo entre pré-DM e DM (se progrediu)
+CASE 
+    WHEN DM IS NOT NULL AND pre_DM_original IS NOT NULL
+    THEN DATE_DIFF(DM, pre_DM_original, DAY)
+    ELSE NULL
+END AS dias_preDM_ate_DM,
+
+-- Flag de progressão
+CASE 
+    WHEN DM IS NOT NULL AND pre_DM_original IS NOT NULL
+    THEN TRUE
+    ELSE FALSE
+END AS progrediu_preDM_para_DM
+```
+
+### **CIDs Específicos:**
+| CID | Descrição |
+|-----|-----------|
+| E10 | Diabetes mellitus tipo 1 |
+| E11 | Diabetes mellitus tipo 2 |
+| E12 | Diabetes mellitus relacionado à desnutrição |
+| E13 | Outros tipos especificados de diabetes mellitus |
+| E14 | Diabetes mellitus não especificado |
+
+### **Subcategorias por Complicações:**
+- **E1x.0** - Com coma
+- **E1x.1** - Com cetoacidose
+- **E1x.2** - Com complicações renais
+- **E1x.3** - Com complicações oftálmicas
+- **E1x.4** - Com complicações neurológicas
+- **E1x.5** - Com complicações circulatórias periféricas
+- **E1x.6** - Com outras complicações especificadas
+- **E1x.7** - Com complicações múltiplas
+- **E1x.8** - Com complicações não especificadas
+- **E1x.9** - Sem complicações
 
 ---
 
-### Depressão
+## 2.2. OBESIDADE
 
+### **Descrição:**
+IMC ≥ 30 kg/m² ou diagnóstico de obesidade por CID-10.
 
+### **Critérios de Inclusão:**
+- **CID-10:** E66
+- **IMC ≥ 30 kg/m²** (calculado de peso e altura)
 
-* **F32|F33** – Episódio depressivo / Transtorno depressivo recorrente
-* **F34** – Transtornos de humor persistentes
-* **F38** – Outros transtornos de humor (afetivos)
-* **F39** – Transtorno de humor (afetivo) não especificado
-* **F40–F41** Transtornos de ansiedade
+### **Variáveis:**
+- `obesidade` (DATE) - Data do diagnóstico por CID
+- `obesidade_consolidada` (DATE) - Data do diagnóstico por CID **OU** primeira medida com IMC ≥ 30
 
----
+### **Algoritmo de Identificação:**
 
-### Retardo Mental
+```sql
+-- ========================================
+-- OBESIDADE POR CID
+-- ========================================
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)E66') 
+    THEN ea.entrada_data 
+END) AS obesidade,
 
-* **F70** – Deficiência intelectual leve
-* **F71** – Moderada
-* **F72** – Grave
-* **F73** – Profunda
-* **F78** – Outra especificada
-* **F79** – Não especificada
+-- ========================================
+-- OBESIDADE POR IMC
+-- ========================================
 
----
+-- Cálculo do IMC
+peso_mais_recente / POWER(altura_mais_recente, 2) AS IMC_mais_recente,
 
-### Hipertireoidismo
+-- Data da primeira medida com IMC ≥ 30
+MIN(CASE 
+    WHEN (peso / POWER(altura, 2)) >= 30
+    THEN data_medicao
+END) AS obesidade_por_IMC,
 
-**falta revisar**
+-- ========================================
+-- CONSOLIDAÇÃO
+-- ========================================
+LEAST(obesidade, obesidade_por_IMC) AS obesidade_consolidada,
 
-* **E05** – Tireotoxicose (hipertireoidismo)
-* **E06** – Tireoidite
+-- Classificação do IMC
+CASE 
+    WHEN IMC_mais_recente < 18.5 THEN 'Baixo peso'
+    WHEN IMC_mais_recente BETWEEN 18.5 AND 24.9 THEN 'Normal'
+    WHEN IMC_mais_recente BETWEEN 25.0 AND 29.9 THEN 'Sobrepeso'
+    WHEN IMC_mais_recente BETWEEN 30.0 AND 34.9 THEN 'Obesidade Grau I'
+    WHEN IMC_mais_recente BETWEEN 35.0 AND 39.9 THEN 'Obesidade Grau II'
+    WHEN IMC_mais_recente >= 40.0 THEN 'Obesidade Grau III'
+END AS classificacao_IMC
+```
 
----
-
-### Desnutrição
-
-**falta revisar**
-
-* **E40–E46** – Kwashiorkor; marasmo; kwashiorkor marasmático; desnutrição grave/moderada/leve; retardo de desenvolvimento por desnutrição; desnutrição não especificada
-
----
-
-### Deficiências motoras
-
-**falta revisar**
-
-* **G041** – Mielite infecciosa (G04.1)
-* **G114** – Ataxia hereditária espástica (G11.4)
-* **G801** – Diplegia espástica infantil (G80.1)
-* **G802** – Tetraplegia infantil (G80.2)
-* **G81** – Hemiplegia
-* **G82** – Paraplegia e tetraplegia
-* **G830–G834** – Monoplegias / síndromes paralíticas (G83.0–G83.4)
-* **G839** – Transtorno paralítico não especificado (G83.9)
-* **R26** – Anormalidades da marcha e da mobilidade
-
----
-
-### Doenças dos olhos
-
-**falta revisar**
-
-* **H16|H17|H18** – Ceratites; cicatrizes/opacidades corneanas; outros transtornos da córnea
-* **H20|H21|H22** – Uveítes/iridociclites e correlatos
-* **H25|H26|H28** – Cataratas (senis, outras, em doenças classificadas em outra parte)
-* **H30–H36** – Doenças da retina (coriorretinites, oclusões, DMRI, retinopatias)
-* **H40|H42** – Glaucoma (e em doenças classificadas em outra parte)
-* **H44** – Transtornos do globo ocular (endoftalmite, panoftalmite, atrofia bulbar)
-* **H46–H48** – Neurite óptica e outros transtornos do nervo óptico
-* **H53|H54** – Distúrbios visuais e cegueira/baixa visão
+### **CIDs Específicos:**
+| CID | Descrição |
+|-----|-----------|
+| E66.0 | Obesidade devida a excesso de calorias |
+| E66.1 | Obesidade induzida por drogas |
+| E66.2 | Obesidade extrema com hipoventilação alveolar |
+| E66.8 | Outra obesidade |
+| E66.9 | Obesidade não especificada |
 
 ---
 
-### Doenças dos ouvidos
+## 2.3. DISLIPIDEMIA
 
-**falta revisar**
+### **Descrição:**
+Alterações no perfil lipídico (colesterol total, LDL, HDL, triglicerídeos) ou uso de hipolipemiantes.
 
-* **H72** – Perfuração da membrana timpânica
-* **H80** – Otosclerose
-* **H81** – Transtornos da função vestibular
-* **H82** – Síndromes vertiginosas em doenças classificadas em outra parte
-* **H90** – Perda auditiva condutiva e/ou neurossensorial
-* **H91** – Outros transtornos da audição
+### **Critérios de Inclusão:**
+- **CID-10:** E78
+- **Colesterol total ≥ 200 mg/dL**
+- **LDL ≥ 130 mg/dL** (ou ≥ 100 em alto risco CV)
+- **HDL < 40 mg/dL** (homens) ou < 50 mg/dL (mulheres)
+- **Triglicerídeos ≥ 150 mg/dL**
+- **Uso de estatinas ou fibratos**
+
+### **Variáveis:**
+- `dislipidemia_por_CID` (DATE) - Data do diagnóstico por CID
+- `dislipidemia` (DATE) - Data do diagnóstico (CID ou laboratorial)
+
+### **Algoritmo de Identificação:**
+
+```sql
+-- ========================================
+-- DISLIPIDEMIA POR CID
+-- ========================================
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)E78') 
+    THEN ea.entrada_data 
+END) AS dislipidemia_por_CID,
+
+-- ========================================
+-- DISLIPIDEMIA POR EXAMES
+-- ========================================
+
+-- Por Colesterol Total elevado
+MIN(CASE 
+    WHEN lab.nome_exame LIKE '%COLESTEROL TOTAL%'
+         AND SAFE_CAST(lab.resultado AS FLOAT64) >= 200
+    THEN lab.data_resultado 
+END) AS dislipidemia_por_colesterol_total,
+
+-- Por LDL elevado
+MIN(CASE 
+    WHEN lab.nome_exame LIKE '%LDL%'
+         AND SAFE_CAST(lab.resultado AS FLOAT64) >= 130
+    THEN lab.data_resultado 
+END) AS dislipidemia_por_LDL,
+
+-- Por HDL baixo
+MIN(CASE 
+    WHEN lab.nome_exame LIKE '%HDL%'
+         AND SAFE_CAST(lab.resultado AS FLOAT64) < 40  -- Simplificado
+    THEN lab.data_resultado 
+END) AS dislipidemia_por_HDL,
+
+-- Por Triglicerídeos elevados
+MIN(CASE 
+    WHEN lab.nome_exame LIKE '%TRIGLICERID%'
+         AND SAFE_CAST(lab.resultado AS FLOAT64) >= 150
+    THEN lab.data_resultado 
+END) AS dislipidemia_por_TG,
+
+-- Por uso de estatina/fibrato
+MIN(CASE 
+    WHEN med.nome_medicamento LIKE ANY (
+        '%SINVASTATINA%', '%ATORVASTATINA%', '%ROSUVASTATINA%',
+        '%PRAVASTATINA%', '%BEZAFIBRATO%', '%FENOFIBRATO%'
+    )
+    THEN med.data_prescricao 
+END) AS dislipidemia_por_medicamento,
+
+-- ========================================
+-- CONSOLIDAÇÃO
+-- ========================================
+LEAST(
+    dislipidemia_por_CID,
+    dislipidemia_por_colesterol_total,
+    dislipidemia_por_LDL,
+    dislipidemia_por_HDL,
+    dislipidemia_por_TG,
+    dislipidemia_por_medicamento
+) AS dislipidemia
+```
+
+### **CIDs Específicos:**
+| CID | Descrição |
+|-----|-----------|
+| E78.0 | Hipercolesterolemia pura |
+| E78.1 | Hipergliceridemia pura |
+| E78.2 | Hiperlipidemia mista |
+| E78.3 | Hiperquilomicronemia |
+| E78.4 | Outras hiperlipidemias |
+| E78.5 | Hiperlipidemia não especificada |
+| E78.6 | Deficiência de lipoproteínas |
 
 ---
 
-### Má formações
+## 2.4. DOENÇAS DA TIREOIDE
 
-**falta revisar**
+### **Descrição:**
+Distúrbios da glândula tireoide, incluindo hipo e hipertireoidismo, tireoidites, nódulos.
 
-* **Q00–Q07** – Malformações congênitas do SNC (anencefalia, encefalocele, hidrocefalia, espinha bífida etc.)
-* **Q35–Q37** – Fendas orais (palatina/labial)
-* **Q60–Q62** – Malformações renais e do trato urinário
-* **Q80–Q81** – Ictiose congênita; epidermólise bolhosa hereditária
-* **Q90–Q99** – Anomalias cromossômicas (Down, Edwards, Patau, Turner, outras)
+### **Critérios de Inclusão:**
+- **CID-10:** E00-E07
+- **Uso de levotiroxina** (hipotireoidismo)
+- **TSH anormal:** < 0.4 ou > 4.5 mUI/L
+
+### **Variável:**
+- `tireoide` (DATE) - Data do primeiro diagnóstico
+
+### **Algoritmo de Identificação:**
+
+```sql
+-- ========================================
+-- DOENÇAS DA TIREOIDE
+-- ========================================
+
+-- Por CID
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)E0[0-7]') 
+    THEN ea.entrada_data 
+END) AS tireoide_por_CID,
+
+-- Por TSH alterado
+MIN(CASE 
+    WHEN lab.nome_exame LIKE '%TSH%'
+         AND (SAFE_CAST(lab.resultado AS FLOAT64) < 0.4 
+              OR SAFE_CAST(lab.resultado AS FLOAT64) > 4.5)
+    THEN lab.data_resultado 
+END) AS tireoide_por_TSH,
+
+-- Por uso de levotiroxina
+MIN(CASE 
+    WHEN med.nome_medicamento LIKE '%LEVOTIROXINA%'
+    THEN med.data_prescricao 
+END) AS tireoide_por_medicamento,
+
+-- Consolidação
+LEAST(
+    tireoide_por_CID,
+    tireoide_por_TSH,
+    tireoide_por_medicamento
+) AS tireoide,
+
+-- ========================================
+-- CLASSIFICAÇÃO
+-- ========================================
+
+-- Hipotireoidismo (mais comum)
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)E0[23]') 
+         OR uso_levotiroxina = TRUE
+    THEN ea.entrada_data 
+END) AS hipotireoidismo,
+
+-- Hipertireoidismo
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)E05') 
+    THEN ea.entrada_data 
+END) AS hipertireoidismo
+```
+
+### **CIDs Específicos:**
+| CID | Descrição |
+|-----|-----------|
+| E00 | Síndrome da deficiência congênita de iodo |
+| E01 | Transtornos tireoidianos relacionados à deficiência de iodo |
+| E02 | Hipotireoidismo subclínico por deficiência de iodo |
+| E03 | Outros hipotireoidismos |
+| E04 | Outros bócios não tóxicos |
+| E05 | Tireotoxicose (hipertireoidismo) |
+| E06 | Tireoidite |
+| E07 | Outros transtornos da tireoide |
 
 ---
 
-### Doenças da pele
-
-**falta revisar**
-
-* **L10–L14** – Pênfigo, penfigoide e outras dermatoses bolhosas
-* **L40–L41** – Psoríase e parapsoríases
-* **L89** – Úlcera por pressão
-* **L90** – Transtornos atróficos da pele
-* **L93** – Lúpus eritematoso cutâneo
+<a name="renais"></a>
+# 3. DOENÇAS RENAIS
 
 ---
+
+## 3.1. INSUFICIÊNCIA RENAL CRÔNICA (IRC) / DOENÇA RENAL CRÔNICA (DRC)
+
+### **Descrição:**
+Perda progressiva e irreversível da função renal, definida por TFG < 60 mL/min/1.73m² por ≥ 3 meses ou presença de lesão renal.
+
+### **Critérios de Inclusão:**
+- **CID-10:** N18, N19
+- **TFG (CKD-EPI) < 60 mL/min/1.73m²** em 2+ medidas com ≥ 90 dias de intervalo
+- **Creatinina persistentemente elevada**
+
+### **Variáveis:**
+- `IRC` (DATE) - Data do primeiro diagnóstico
+- `estagio_DRC` (STRING) - Estágio da DRC: G1, G2, G3a, G3b, G4, G5
+- `TFG_CKD_EPI` (FLOAT) - Taxa de filtração glomerular estimada
+
+### **Algoritmo de Identificação:**
+
+```sql
+-- ========================================
+-- CÁLCULO DA TFG (CKD-EPI)
+-- ========================================
+
+-- Fórmula CKD-EPI (simplificada)
+CASE 
+    -- Mulheres, creatinina ≤ 0.7
+    WHEN genero = 'feminino' AND creatinina_mais_recente <= 0.7
+    THEN 144 * POWER(creatinina_mais_recente / 0.7, -0.329) * POWER(0.993, idade)
+    
+    -- Mulheres, creatinina > 0.7
+    WHEN genero = 'feminino' AND creatinina_mais_recente > 0.7
+    THEN 144 * POWER(creatinina_mais_recente / 0.7, -1.209) * POWER(0.993, idade)
+    
+    -- Homens, creatinina ≤ 0.9
+    WHEN genero = 'masculino' AND creatinina_mais_recente <= 0.9
+    THEN 141 * POWER(creatinina_mais_recente / 0.9, -0.411) * POWER(0.993, idade)
+    
+    -- Homens, creatinina > 0.9
+    WHEN genero = 'masculino' AND creatinina_mais_recente > 0.9
+    THEN 141 * POWER(creatinina_mais_recente / 0.9, -1.209) * POWER(0.993, idade)
+    
+    ELSE NULL
+END AS TFG_CKD_EPI,
+
+-- ========================================
+-- ESTADIAMENTO DA DRC
+-- ========================================
+
+CASE 
+    WHEN TFG_CKD_EPI >= 90 THEN 'G1'   -- Normal ou aumentada
+    WHEN TFG_CKD_EPI BETWEEN 60 AND 89 THEN 'G2'   -- Levemente diminuída
+    WHEN TFG_CKD_EPI BETWEEN 45 AND 59 THEN 'G3a'  -- Leve a moderadamente diminuída
+    WHEN TFG_CKD_EPI BETWEEN 30 AND 44 THEN 'G3b'  -- Moderada a gravemente diminuída
+    WHEN TFG_CKD_EPI BETWEEN 15 AND 29 THEN 'G4'   -- Gravemente diminuída
+    WHEN TFG_CKD_EPI < 15 THEN 'G5'   -- Falência renal
+    ELSE NULL
+END AS estagio_DRC,
+
+-- ========================================
+-- IDENTIFICAÇÃO DE IRC
+-- ========================================
+
+-- Por CID
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)N1[89]') 
+    THEN ea.entrada_data 
+END) AS IRC_por_CID,
+
+-- Por TFG < 60 persistente (2+ medidas com ≥ 90 dias)
+MIN(CASE 
+    WHEN TFG_CKD_EPI < 60
+         AND (
+             SELECT COUNT(*) 
+             FROM creatininas c2 
+             WHERE c2.cpf = c.cpf 
+               AND c2.TFG < 60
+               AND DATE_DIFF(c2.data, c.data, DAY) >= 90
+               AND c2.data <= c.data
+         ) >= 2
+    THEN data_creatinina
+END) AS IRC_por_TFG,
+
+-- Consolidação
+LEAST(IRC_por_CID, IRC_por_TFG) AS IRC,
+
+-- ========================================
+-- PROGRESSÃO DA DRC
+-- ========================================
+
+-- Velocidade de perda de TFG
+(TFG_penultimo - TFG_mais_recente) / 
+    (DATE_DIFF(data_creatinina_mais_recente, data_creatinina_penultimo, DAY) / 365.25) 
+    AS delta_TFG_ano,
+
+-- Classificação de progressão
+CASE 
+    WHEN delta_TFG_ano < 2 THEN 'estável'
+    WHEN delta_TFG_ano BETWEEN 2 AND 5 THEN 'progressao_lenta'
+    WHEN delta_TFG_ano > 5 THEN 'progressao_rapida'
+END AS progressao_DRC
+```
+
+### **CIDs Específicos:**
+| CID | Descrição |
+|-----|-----------|
+| N18.0 | Doença renal em estágio final |
+| N18.1 | Doença renal crônica, estágio 1 |
+| N18.2 | Doença renal crônica, estágio 2 |
+| N18.3 | Doença renal crônica, estágio 3 |
+| N18.4 | Doença renal crônica, estágio 4 |
+| N18.5 | Doença renal crônica, estágio 5 |
+| N18.8 | Outra doença renal crônica |
+| N18.9 | Doença renal crônica não especificada |
+| N19 | Insuficiência renal não especificada |
+
+### **Classificação KDIGO:**
+
+| Estágio | TFG (mL/min/1.73m²) | Descrição |
+|---------|---------------------|-----------|
+| G1 | ≥ 90 | Normal ou aumentada |
+| G2 | 60-89 | Levemente diminuída |
+| G3a | 45-59 | Leve a moderadamente diminuída |
+| G3b | 30-44 | Moderada a gravemente diminuída |
+| G4 | 15-29 | Gravemente diminuída |
+| G5 | < 15 | Falência renal |
+
+---
+
+<a name="respiratorias"></a>
+# 4. DOENÇAS RESPIRATÓRIAS
+
+---
+
+## 4.1. DOENÇA PULMONAR OBSTRUTIVA CRÔNICA (COPD)
+
+### **Descrição:**
+Limitação crônica do fluxo aéreo, geralmente progressiva, associada a resposta inflamatória anormal a partículas ou gases nocivos.
+
+### **Critérios de Inclusão:**
+- **CID-10:** J44
+
+### **Variável:**
+- `COPD` (DATE) - Data do primeiro diagnóstico
+
+### **Algoritmo de Identificação:**
+
+```sql
+-- Identificação de COPD
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)J44') 
+    THEN ea.entrada_data 
+END) AS COPD
+```
+
+### **CIDs Específicos:**
+| CID | Descrição |
+|-----|-----------|
+| J44.0 | DPOC com infecção respiratória aguda do trato respiratório inferior |
+| J44.1 | DPOC com exacerbação aguda não especificada |
+| J44.8 | Outras formas especificadas de DPOC |
+| J44.9 | DPOC não especificada |
+
+---
+
+## 4.2. ASMA
+
+### **Descrição:**
+Doença inflamatória crônica das vias aéreas, caracterizada por hiper-responsividade brônquica e obstrução variável ao fluxo aéreo.
+
+### **Critérios de Inclusão:**
+- **CID-10:** J45, J46
+
+### **Variável:**
+- `asthma` (DATE) - Data do primeiro diagnóstico
+
+### **Algoritmo de Identificação:**
+
+```sql
+-- Identificação de Asma
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)J4[56]') 
+    THEN ea.entrada_data 
+END) AS asthma
+```
+
+### **CIDs Específicos:**
+| CID | Descrição |
+|-----|-----------|
+| J45.0 | Asma predominantemente alérgica |
+| J45.1 | Asma não alérgica |
+| J45.8 | Asma mista |
+| J45.9 | Asma não especificada |
+| J46 | Estado de mal asmático |
+
+---
+
+<a name="neuro-psiq"></a>
+# 5. DOENÇAS NEUROLÓGICAS E PSIQUIÁTRICAS
+
+---
+
+## 5.1. DEMÊNCIAS
+
+### **Descrição:**
+Síndrome caracterizada por declínio cognitivo progressivo, incluindo Alzheimer, demência vascular, demência com corpos de Lewy, entre outras.
+
+### **Critérios de Inclusão:**
+- **CID-10:** F00-F03, G30, G31
+
+### **Variável:**
+- `dementia` (DATE) - Data do primeiro diagnóstico
+
+### **Algoritmo de Identificação:**
+
+```sql
+-- Identificação de Demências
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)(F0[0-3]|G3[01])') 
+    THEN ea.entrada_data 
+END) AS dementia,
+
+-- Alzheimer especificamente
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)(F00|G30)') 
+    THEN ea.entrada_data 
+END) AS alzheimer,
+
+-- Demência vascular
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)F01') 
+    THEN ea.entrada_data 
+END) AS demencia_vascular
+```
+
+### **CIDs Específicos:**
+| CID | Descrição |
+|-----|-----------|
+| F00 | Demência na doença de Alzheimer |
+| F01 | Demência vascular |
+| F02 | Demência em outras doenças classificadas em outra parte |
+| F03 | Demência não especificada |
+| G30 | Doença de Alzheimer |
+| G31 | Outras doenças degenerativas do sistema nervoso |
+
+---
+
+## 5.2. EPILEPSIA
+
+### **Descrição:**
+Distúrbio neurológico caracterizado por predisposição a crises epilépticas recorrentes.
+
+### **Critérios de Inclusão:**
+- **CID-10:** G40, G41
+
+### **Variável:**
+- `epilepsy` (DATE) - Data do primeiro diagnóstico
+
+### **Algoritmo de Identificação:**
+
+```sql
+-- Identificação de Epilepsia
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)G4[01]') 
+    THEN ea.entrada_data 
+END) AS epilepsy
+```
+
+### **CIDs Específicos:**
+| CID | Descrição |
+|-----|-----------|
+| G40 | Epilepsia |
+| G41 | Estado de mal epiléptico |
+
+---
+
+## 5.3. PARKINSONISMO
+
+### **Descrição:**
+Síndrome caracterizada por tremor, rigidez, bradicinesia e instabilidade postural. Inclui doença de Parkinson idiopática e parkinsonismos secundários.
+
+### **Critérios de Inclusão:**
+- **CID-10:** G20, G21, G22
+
+### **Variável:**
+- `parkinsonism` (DATE) - Data do primeiro diagnóstico
+
+### **Algoritmo de Identificação:**
+
+```sql
+-- Identificação de Parkinsonismo
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)G2[012]') 
+    THEN ea.entrada_data 
+END) AS parkinsonism,
+
+-- Parkinson idiopático
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)G20') 
+    THEN ea.entrada_data 
+END) AS parkinson_idiopatico
+```
+
+### **CIDs Específicos:**
+| CID | Descrição |
+|-----|-----------|
+| G20 | Doença de Parkinson |
+| G21 | Parkinsonismo secundário |
+| G22 | Parkinsonismo em doenças classificadas em outra parte |
+
+---
+
+## 5.4. DEPRESSÃO E ANSIEDADE
+
+### **Descrição:**
+Transtornos do humor e de ansiedade, incluindo depressão maior, distimia, transtorno de ansiedade generalizada, transtorno do pânico, fobias.
+
+### **Critérios de Inclusão:**
+- **CID-10:** F32, F33, F34.1 (depressão), F40, F41 (ansiedade)
+
+### **Variável:**
+- `depre_ansiedade` (DATE) - Data do primeiro diagnóstico
+
+### **Algoritmo de Identificação:**
+
+```sql
+-- Identificação de Depressão/Ansiedade
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)(F3[234]|F4[01])') 
+    THEN ea.entrada_data 
+END) AS depre_ansiedade,
+
+-- Depressão isoladamente
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)(F32|F33|F341)') 
+    THEN ea.entrada_data 
+END) AS depressao,
+
+-- Ansiedade isoladamente
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)F4[01]') 
+    THEN ea.entrada_data 
+END) AS ansiedade
+```
+
+### **CIDs Específicos:**
+
+**Depressão:**
+| CID | Descrição |
+|-----|-----------|
+| F32 | Episódio depressivo |
+| F33 | Transtorno depressivo recorrente |
+| F34.1 | Distimia |
+
+**Ansiedade:**
+| CID | Descrição |
+|-----|-----------|
+| F40 | Transtornos fóbico-ansiosos |
+| F41 | Outros transtornos ansiosos |
+
+---
+
+## 5.5. TRANSTORNOS PSICÓTICOS
+
+### **Descrição:**
+Transtornos mentais graves caracterizados por perda de contato com a realidade, incluindo esquizofrenia, transtorno esquizoafetivo, transtorno delirante.
+
+### **Critérios de Inclusão:**
+- **CID-10:** F20-F29
+
+### **Variável:**
+- `psicoses` (DATE) - Data do primeiro diagnóstico
+
+### **Algoritmo de Identificação:**
+
+```sql
+-- Identificação de Psicoses
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)F2[0-9]') 
+    THEN ea.entrada_data 
+END) AS psicoses,
+
+-- Esquizofrenia especificamente
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)F20') 
+    THEN ea.entrada_data 
+END) AS esquizofrenia
+```
+
+### **CIDs Específicos:**
+| CID | Descrição |
+|-----|-----------|
+| F20 | Esquizofrenia |
+| F21 | Transtorno esquizotípico |
+| F22 | Transtornos delirantes persistentes |
+| F23 | Transtornos psicóticos agudos e transitórios |
+| F24 | Transtorno delirante induzido |
+| F25 | Transtornos esquizoafetivos |
+| F28 | Outros transtornos psicóticos não orgânicos |
+| F29 | Psicose não orgânica não especificada |
+
+---
+
+<a name="neoplasias"></a>
+# 6. NEOPLASIAS
+
+---
+
+## 6.1. NEOPLASIAS (CÂNCER)
+
+### **Descrição:**
+Crescimento anormal e descontrolado de células, incluindo tumores malignos de diferentes localizações.
+
+### **Critérios de Inclusão:**
+- **CID-10:** C00-C97 (neoplasias malignas), D00-D09 (in situ)
+
+### **Variáveis:**
+- `neoplasia_ambos_os_sexos` (DATE) - Neoplasias que acometem ambos os sexos
+- `neoplasia_feminina_estrita` (DATE) - Neoplasias exclusivas de mulheres
+- `neoplasia_masculina_estrita` (DATE) - Neoplasias exclusivas de homens
+
+### **Algoritmo de Identificação:**
+
+```sql
+-- ========================================
+-- NEOPLASIAS AMBOS OS SEXOS
+-- ========================================
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)(C0[0-9]|C1[0-9]|C2[0-6]|C3[0-9]|C4[0-3]|C4[5-9]|C[567][0-9]|C8[0-9]|C9[0-7]|D0[0-9])') 
+         AND NOT REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)(C5[0-8]|C60|C61|C62|C63)')  -- Excluir específicos
+    THEN ea.entrada_data 
+END) AS neoplasia_ambos_os_sexos,
+
+-- ========================================
+-- NEOPLASIAS FEMININAS ESTRITAS
+-- ========================================
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)(C5[0-8])')  -- C50-C58
+         AND genero = 'feminino'
+    THEN ea.entrada_data 
+END) AS neoplasia_feminina_estrita,
+
+-- ========================================
+-- NEOPLASIAS MASCULINAS ESTRITAS
+-- ========================================
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)(C60|C61|C62|C63)')  -- Próstata, testículo, etc
+         AND genero = 'masculino'
+    THEN ea.entrada_data 
+END) AS neoplasia_masculina_estrita,
+
+-- ========================================
+-- TIPOS ESPECÍFICOS MAIS COMUNS
+-- ========================================
+
+-- Mama (C50)
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)C50') 
+    THEN ea.entrada_data 
+END) AS ca_mama,
+
+-- Próstata (C61)
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)C61') 
+         AND genero = 'masculino'
+    THEN ea.entrada_data 
+END) AS ca_prostata,
+
+-- Colo do útero (C53)
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)C53') 
+         AND genero = 'feminino'
+    THEN ea.entrada_data 
+END) AS ca_colo_utero,
+
+-- Pulmão (C34)
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)C34') 
+    THEN ea.entrada_data 
+END) AS ca_pulmao,
+
+-- Colorretal (C18-C20)
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)(C18|C19|C20)') 
+    THEN ea.entrada_data 
+END) AS ca_colorretal,
+
+-- Estômago (C16)
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)C16') 
+    THEN ea.entrada_data 
+END) AS ca_estomago,
+
+-- Pele (C43-C44)
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)(C43|C44)') 
+    THEN ea.entrada_data 
+END) AS ca_pele
+```
+
+### **Principais CIDs por Localização:**
+
+**Neoplasias Femininas:**
+| CID | Descrição |
+|-----|-----------|
+| C50 | Neoplasia maligna da mama |
+| C51 | Neoplasia maligna da vulva |
+| C52 | Neoplasia maligna da vagina |
+| C53 | Neoplasia maligna do colo do útero |
+| C54 | Neoplasia maligna do corpo do útero |
+| C55 | Neoplasia maligna do útero porção não especificada |
+| C56 | Neoplasia maligna do ovário |
+| C57 | Neoplasia maligna de outros órgãos genitais femininos |
+| C58 | Neoplasia maligna da placenta |
+
+**Neoplasias Masculinas:**
+| CID | Descrição |
+|-----|-----------|
+| C60 | Neoplasia maligna do pênis |
+| C61 | Neoplasia maligna da próstata |
+| C62 | Neoplasia maligna dos testículos |
+| C63 | Neoplasia maligna de outros órgãos genitais masculinos |
+
+**Neoplasias Comuns (Ambos os Sexos):**
+| CID | Descrição |
+|-----|-----------|
+| C15 | Neoplasia maligna do esôfago |
+| C16 | Neoplasia maligna do estômago |
+| C18 | Neoplasia maligna do cólon |
+| C19 | Neoplasia maligna da junção retossigmoide |
+| C20 | Neoplasia maligna do reto |
+| C22 | Neoplasia maligna do fígado e vias biliares intra-hepáticas |
+| C25 | Neoplasia maligna do pâncreas |
+| C34 | Neoplasia maligna dos brônquios e pulmões |
+| C43 | Melanoma maligno de pele |
+| C44 | Outras neoplasias malignas da pele |
+| C64 | Neoplasia maligna do rim |
+| C67 | Neoplasia maligna da bexiga |
+| C73 | Neoplasia maligna da glândula tireoide |
+| C91 | Leucemia linfoide |
+| C92 | Leucemia mieloide |
+
+---
+
+<a name="hematologicas"></a>
+# 7. DOENÇAS HEMATOLÓGICAS
+
+---
+
+## 7.1. ANEMIAS
+
+### **Descrição:**
+Redução da concentração de hemoglobina no sangue, com múltiplas etiologias (ferropriva, megaloblástica, hemolítica, etc.).
+
+### **Critérios de Inclusão:**
+- **CID-10:** D50-D64
+- **Hemoglobina < 13 g/dL** (homens) ou < 12 g/dL (mulheres)
+
+### **Variável:**
+- `anemias` (DATE) - Data do primeiro diagnóstico
+
+### **Algoritmo de Identificação:**
+
+```sql
+-- ========================================
+-- ANEMIAS POR CID
+-- ========================================
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)D[56][0-4]') 
+    THEN ea.entrada_data 
+END) AS anemias_por_CID,
+
+-- ========================================
+-- ANEMIAS POR HEMOGLOBINA BAIXA
+-- ========================================
+MIN(CASE 
+    WHEN lab.nome_exame LIKE '%HEMOGLOBINA%'
+         AND (
+             (genero = 'masculino' AND SAFE_CAST(lab.resultado AS FLOAT64) < 13.0) OR
+             (genero = 'feminino' AND SAFE_CAST(lab.resultado AS FLOAT64) < 12.0)
+         )
+    THEN lab.data_resultado 
+END) AS anemias_por_hemoglobina,
+
+-- Consolidação
+LEAST(anemias_por_CID, anemias_por_hemoglobina) AS anemias,
+
+-- ========================================
+-- TIPOS ESPECÍFICOS
+-- ========================================
+
+-- Anemia ferropriva (mais comum)
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)D50') 
+    THEN ea.entrada_data 
+END) AS anemia_ferropriva,
+
+-- Anemia megaloblástica / B12
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)(D51|D52)') 
+    THEN ea.entrada_data 
+END) AS anemia_megaloblastica
+```
+
+### **CIDs Específicos:**
+| CID | Descrição |
+|-----|-----------|
+| D50 | Anemia por deficiência de ferro |
+| D51 | Anemia por deficiência de vitamina B12 |
+| D52 | Anemia por deficiência de folato |
+| D53 | Outras anemias nutricionais |
+| D55 | Anemia devido a transtornos enzimáticos |
+| D56 | Talassemia |
+| D57 | Transtornos falciformes |
+| D58 | Outras anemias hemolíticas hereditárias |
+| D59 | Anemia hemolítica adquirida |
+| D60 | Aplasia pura da série vermelha adquirida |
+| D61 | Outras anemias aplásticas |
+| D62 | Anemia pós-hemorrágica aguda |
+| D63 | Anemia em doenças crônicas classificadas em outra parte |
+| D64 | Outras anemias |
+
+---
+
+<a name="gastrointestinais"></a>
+# 8. DOENÇAS GASTROINTESTINAIS
+
+---
+
+## 8.1. HEPATOPATIAS
+
+### **Descrição:**
+Doenças do fígado, incluindo hepatites crônicas, cirrose, esteatose hepática.
+
+### **Critérios de Inclusão:**
+- **CID-10:** K70-K77, B18 (hepatites crônicas)
+
+### **Variável:**
+- `liver` (DATE) - Data do primeiro diagnóstico
+
+### **Algoritmo de Identificação:**
+
+```sql
+-- Identificação de Hepatopatias
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)(K7[0-7]|B18)') 
+    THEN ea.entrada_data 
+END) AS liver,
+
+-- Cirrose especificamente
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)K74') 
+    THEN ea.entrada_data 
+END) AS cirrose,
+
+-- Hepatite crônica viral
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)B18') 
+    THEN ea.entrada_data 
+END) AS hepatite_cronica_viral
+```
+
+### **CIDs Específicos:**
+| CID | Descrição |
+|-----|-----------|
+| B18 | Hepatite viral crônica |
+| K70 | Doença alcoólica do fígado |
+| K71 | Doença tóxica do fígado |
+| K72 | Insuficiência hepática |
+| K73 | Hepatite crônica |
+| K74 | Fibrose e cirrose hepáticas |
+| K75 | Outras doenças inflamatórias do fígado |
+| K76 | Outras doenças do fígado |
+| K77 | Transtornos do fígado em doenças classificadas em outra parte |
+
+---
+
+## 8.2. DOENÇA ULCEROSA PÉPTICA
+
+### **Descrição:**
+Úlceras gástricas e duodenais.
+
+### **Critérios de Inclusão:**
+- **CID-10:** K25-K28
+
+### **Variável:**
+- `peptic` (DATE) - Data do primeiro diagnóstico
+
+### **Algoritmo de Identificação:**
+
+```sql
+-- Identificação de Úlcera Péptica
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)K2[5-8]') 
+    THEN ea.entrada_data 
+END) AS peptic
+```
+
+### **CIDs Específicos:**
+| CID | Descrição |
+|-----|-----------|
+| K25 | Úlcera gástrica |
+| K26 | Úlcera duodenal |
+| K27 | Úlcera péptica de localização não especificada |
+| K28 | Úlcera gastrojejunal |
+
+---
+
+<a name="reumatologicas"></a>
+# 9. DOENÇAS REUMATOLÓGICAS
+
+---
+
+## 9.1. DOENÇAS REUMATOLÓGICAS
+
+### **Descrição:**
+Doenças do tecido conjuntivo e autoimunes, incluindo artrite reumatoide, lúpus, espondilite anquilosante, artrose.
+
+### **Critérios de Inclusão:**
+- **CID-10:** M05-M14 (artropatias inflamatórias), M15-M19 (artroses), M30-M36 (doenças sistêmicas do tecido conjuntivo)
+
+### **Variável:**
+- `reumato` (DATE) - Data do primeiro diagnóstico
+
+### **Algoritmo de Identificação:**
+
+```sql
+-- Identificação de Doenças Reumatológicas
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)(M0[5-9]|M1[0-9]|M3[0-6])') 
+    THEN ea.entrada_data 
+END) AS reumato,
+
+-- Artrite Reumatoide
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)M05') 
+    THEN ea.entrada_data 
+END) AS artrite_reumatoide,
+
+-- Lúpus Eritematoso Sistêmico
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)M32') 
+    THEN ea.entrada_data 
+END) AS lupus,
+
+-- Artrose
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)M1[5-9]') 
+    THEN ea.entrada_data 
+END) AS artrose
+```
+
+### **CIDs Específicos:**
+
+**Artropatias Inflamatórias:**
+| CID | Descrição |
+|-----|-----------|
+| M05 | Artrite reumatoide soropositiva |
+| M06 | Outras artrites reumatoides |
+| M07 | Artropatias psoriásicas e enteropáticas |
+| M08 | Artrite juvenil |
+| M09 | Artrite juvenil em doenças classificadas em outra parte |
+| M10 | Gota |
+| M11 | Outras artropatias por cristais |
+| M12 | Outras artropatias específicas |
+| M13 | Outras artrites |
+| M14 | Artropatias em outras doenças classificadas em outra parte |
+
+**Artroses:**
+| CID | Descrição |
+|-----|-----------|
+| M15 | Poliartrose |
+| M16 | Coxartrose (artrose do quadril) |
+| M17 | Gonartrose (artrose do joelho) |
+| M18 | Artrose da primeira articulação carpometacarpiana |
+| M19 | Outras artroses |
+
+**Doenças Sistêmicas do Tecido Conjuntivo:**
+| CID | Descrição |
+|-----|-----------|
+| M30 | Poliarterite nodosa e afecções correlatas |
+| M31 | Outras vasculopatias necrotizantes |
+| M32 | Lúpus eritematoso sistêmico |
+| M33 | Dermatopoliomiosite |
+| M34 | Esclerose sistêmica |
+| M35 | Outras afecções sistêmicas do tecido conjuntivo |
+| M36 | Doenças sistêmicas do tecido conjuntivo em doenças classificadas em outra parte |
+
+---
+
+<a name="infecciosas"></a>
+# 10. DOENÇAS INFECCIOSAS
+
+---
+
+## 10.1. HIV/AIDS
+
+### **Descrição:**
+Infecção pelo vírus da imunodeficiência humana.
+
+### **Critérios de Inclusão:**
+- **CID-10:** B20-B24
+
+### **Variável:**
+- `HIV` (DATE) - Data do primeiro diagnóstico
+
+### **Algoritmo de Identificação:**
+
+```sql
+-- Identificação de HIV/AIDS
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)B2[0-4]') 
+    THEN ea.entrada_data 
+END) AS HIV
+```
+
+### **CIDs Específicos:**
+| CID | Descrição |
+|-----|-----------|
+| B20 | Doença pelo HIV resultando em doenças infecciosas e parasitárias |
+| B21 | Doença pelo HIV resultando em neoplasias malignas |
+| B22 | Doença pelo HIV resultando em outras doenças especificadas |
+| B23 | Doença pelo HIV resultando em outras doenças |
+| B24 | Doença pelo HIV não especificada |
+
+---
+
+<a name="substancias"></a>
+# 11. TRANSTORNOS POR USO DE SUBSTÂNCIAS
+
+---
+
+## 11.1. TRANSTORNOS RELACIONADOS AO ÁLCOOL
+
+### **Descrição:**
+Uso nocivo, dependência e outras condições relacionadas ao consumo de álcool.
+
+### **Critérios de Inclusão:**
+- **CID-10:** F10
+
+### **Variável:**
+- `alcool` (DATE) - Data do primeiro diagnóstico
+
+### **Algoritmo de Identificação:**
+
+```sql
+-- Identificação de Transtornos por Álcool
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)F10') 
+    THEN ea.entrada_data 
+END) AS alcool,
+
+-- Dependência especificamente
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)F102') 
+    THEN ea.entrada_data 
+END) AS dependencia_alcool
+```
+
+### **CIDs Específicos:**
+| CID | Descrição |
+|-----|-----------|
+| F10.0 | Intoxicação aguda |
+| F10.1 | Uso nocivo |
+| F10.2 | Síndrome de dependência |
+| F10.3 | Síndrome de abstinência |
+| F10.4 | Síndrome de abstinência com delirium |
+| F10.5 | Transtorno psicótico |
+| F10.6 | Síndrome amnésica |
+| F10.7 | Transtorno psicótico residual ou de instalação tardia |
+| F10.8 | Outros transtornos mentais ou comportamentais |
+| F10.9 | Transtorno mental ou comportamental não especificado |
+
+---
+
+## 11.2. TRANSTORNOS RELACIONADOS A DROGAS
+
+### **Descrição:**
+Uso, abuso e dependência de substâncias psicoativas (exceto álcool e tabaco).
+
+### **Critérios de Inclusão:**
+- **CID-10:** F11-F19 (exceto F17 - tabaco)
+
+### **Variável:**
+- `drogas` (DATE) - Data do primeiro diagnóstico
+
+### **Algoritmo de Identificação:**
+
+```sql
+-- Identificação de Transtornos por Drogas
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)F1[1-689]')  -- F11-F16, F18-F19
+    THEN ea.entrada_data 
+END) AS drogas,
+
+-- Opioides
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)F11') 
+    THEN ea.entrada_data 
+END) AS drogas_opioides,
+
+-- Canabinoides
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)F12') 
+    THEN ea.entrada_data 
+END) AS drogas_cannabis,
+
+-- Cocaína
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)F14') 
+    THEN ea.entrada_data 
+END) AS drogas_cocaina,
+
+-- Múltiplas drogas
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)F19') 
+    THEN ea.entrada_data 
+END) AS drogas_multiplas
+```
+
+### **CIDs Específicos:**
+| CID | Descrição |
+|-----|-----------|
+| F11 | Transtornos mentais e comportamentais devidos ao uso de opiáceos |
+| F12 | Transtornos mentais e comportamentais devidos ao uso de canabinoides |
+| F13 | Transtornos mentais e comportamentais devidos ao uso de sedativos e hipnóticos |
+| F14 | Transtornos mentais e comportamentais devidos ao uso de cocaína |
+| F15 | Transtornos mentais e comportamentais devidos ao uso de outros estimulantes, inclusive a cafeína |
+| F16 | Transtornos mentais e comportamentais devidos ao uso de alucinógenos |
+| F18 | Transtornos mentais e comportamentais devidos ao uso de solventes voláteis |
+| F19 | Transtornos mentais e comportamentais devidos ao uso de múltiplas drogas |
+
+---
+
+## 11.3. TABAGISMO
+
+### **Descrição:**
+Dependência de tabaco/nicotina.
+
+### **Critérios de Inclusão:**
+- **CID-10:** F17, Z72.0
+
+### **Variável:**
+- `tabaco` (DATE) - Data do primeiro diagnóstico
+
+### **Algoritmo de Identificação:**
+
+```sql
+-- Identificação de Tabagismo
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)(F17|Z720)') 
+    THEN ea.entrada_data 
+END) AS tabaco
+```
+
+### **CIDs Específicos:**
+| CID | Descrição |
+|-----|-----------|
+| F17 | Transtornos mentais e comportamentais devidos ao uso de fumo |
+| Z72.0 | Uso de tabaco |
+
+---
+
+<a name="nutricionais"></a>
+# 12. DISTÚRBIOS NUTRICIONAIS
+
+---
+
+## 12.1. DESNUTRIÇÃO
+
+### **Descrição:**
+Deficiência nutricional proteico-calórica.
+
+### **Critérios de Inclusão:**
+- **CID-10:** E40-E46
+- **IMC < 18.5 kg/m²** persistente
+
+### **Variável:**
+- `desnutricao` (DATE) - Data do primeiro diagnóstico
+
+### **Algoritmo de Identificação:**
+
+```sql
+-- ========================================
+-- DESNUTRIÇÃO POR CID
+-- ========================================
+MAX(CASE 
+    WHEN REGEXP_CONTAINS(ea.condicoes_avaliadas, r'(?i)E4[0-6]') 
+    THEN ea.entrada_data 
+END) AS desnutricao_por_CID,
+
+-- ========================================
+-- DESNUTRIÇÃO POR IMC
+-- ========================================
+MIN(CASE 
+    WHEN IMC_mais_recente < 18.5
+         AND (
+             SELECT COUNT(*) 
+             FROM medidas m2 
+             WHERE m2.cpf = m.cpf 
+               AND (m2.peso / POWER(m2.altura, 2)) < 18.5
+               AND m2.data_medicao <= m.data_medicao
+         ) >= 2  -- Persistente
+    THEN data_medicao
+END) AS desnutricao_por_IMC,
+
+-- Consolidação
+LEAST(desnutricao_por_CID, desnutricao_por_IMC) AS desnutricao
+```
+
+### **CIDs Específicos:**
+| CID | Descrição |
+|-----|-----------|
+| E40 | Kwashiorkor |
+| E41 | Marasmo nutricional |
+| E42 | Kwashiorkor marasmático |
+| E43 | Desnutrição proteico-calórica grave não especificada |
+| E44 | Desnutrição proteico-calórica de graus moderado e leve |
+| E45 | Atraso do desenvolvimento devido à desnutrição proteico-calórica |
+| E46 | Desnutrição proteico-calórica não especificada |
+
+---
+
+# 📊 RESUMO GERAL DAS MORBIDADES
+
+## Total de Condições Rastreadas: **40+**
+
+### Por Categoria:
+- **Cardiovasculares:** 6 condições (HAS, CI, ICC, Stroke, Arritmia, Valvular)
+- **Metabólicas:** 4 condições (DM, Pré-DM, Obesidade, Dislipidemia, Tireoide)
+- **Renais:** 1 condição (IRC/DRC com estadiamento)
+- **Respiratórias:** 2 condições (COPD, Asma)
+- **Neurológicas:** 3 condições (Demência, Epilepsia, Parkinsonismo)
+- **Psiquiátricas:** 3 condições (Depressão/Ansiedade, Psicoses, combinadas)
+- **Neoplasias:** 10+ tipos específicos
+- **Hematológicas:** 2+ tipos (Anemias)
+- **Gastrointestinais:** 2 condições (Hepatopatias, Úlcera péptica)
+- **Reumatológicas:** 3+ tipos (AR, Lúpus, Artrose)
+- **Infecciosas:** 1 condição (HIV)
+- **Uso de Substâncias:** 3 condições (Álcool, Drogas, Tabaco)
+- **Nutricionais:** 1 condição (Desnutrição)
+
+---
+
+## 🔍 METODOLOGIA GERAL DE IDENTIFICAÇÃO
+
+Todas as morbidades seguem um **algoritmo de identificação multimodal**:
+
+1. **Identificação por CID-10** (episódios assistenciais)
+2. **Identificação por exames laboratoriais** (quando aplicável)
+3. **Identificação por uso de medicamentos** (validação cruzada)
+4. **Consolidação** - Data mais antiga entre as fontes
+5. **Validação** - Persistência/confirmação em múltiplas medidas
+
+---
+
+**Este documento serve como referência técnica completa para o sistema de identificação de morbidades do Navegador Clínico.** 🧭
+
+## Bases de Dados:
+
+- `rj-sms.saude_historico_clinico.episodio_assistencial`
+- `rj-sms.saude_historico_clinico.paciente`
+- `rj-sms.brutos_prontuario_vitacare_historico.hiv`
+- `rj-sms-sandbox.sub_pav_us.MM_eGFR`
+- `rj-sms-sandbox.sub_pav_us.PA_A1C_glic_cpf_fix`
+
+---
+
+**Documento criado em:** 02/11/2025  
+**Versão:** 1.0  
+**Autores:** Equipe de Analytics - SMS Rio de Janeiro
