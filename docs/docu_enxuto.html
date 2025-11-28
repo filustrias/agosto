@@ -1,0 +1,3109 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Documentação da tabela fato (MM_exames_e_risco_A1C) – Multimorbidade</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./pente_fino_HAS.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-cf0de2a877c7d4b42ae21f6d8e35c82d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-d79f8217e01dd2a5306137134a907536.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-cf0de2a877c7d4b42ae21f6d8e35c82d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./docu_enxuto.html">Documentação da tabela fato (MM_exames_e_risco_A1C)</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="./logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Multimorbidade</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Apresentação</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./etapas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Etapas</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CIDs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CIDs</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./HAS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hipertensão arterial</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DM.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Diabetes Mellitus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CI.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Síndromes Coronarianas</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ICC.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Insuficiência Cardíaca</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./IRC.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Doença renal crônica</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./MM.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Multimorbidade</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./PoliF.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Polifarmácia</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fragil.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fragilidade em idosos</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lacunas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">📋 LACUNAS DE CUIDADO -</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pilula_CI.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Pílulas Síndrome Coronariana Crônica</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pilulas_IC.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Pílulas para Insuficiência Cardíaca</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./implementacao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Implementação</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rastreios.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Rastreios neoplasias</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pente_fino_DM.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Pente Fino Diabetes</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pente_fino_HAS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Pente Fino HAS</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./docu_enxuto.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Documentação da tabela fato (MM_exames_e_risco_A1C)</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#visão-geral" id="toc-visão-geral" class="nav-link active" data-scroll-target="#visão-geral">Visão Geral</a>
+  <ul class="collapse">
+  <li><a href="#objetivo" id="toc-objetivo" class="nav-link" data-scroll-target="#objetivo">Objetivo</a></li>
+  <li><a href="#localização" id="toc-localização" class="nav-link" data-scroll-target="#localização">Localização</a></li>
+  <li><a href="#granularidade" id="toc-granularidade" class="nav-link" data-scroll-target="#granularidade">Granularidade</a></li>
+  <li><a href="#critérios-de-inclusão" id="toc-critérios-de-inclusão" class="nav-link" data-scroll-target="#critérios-de-inclusão">Critérios de Inclusão</a></li>
+  <li><a href="#ctes-envolvidas" id="toc-ctes-envolvidas" class="nav-link" data-scroll-target="#ctes-envolvidas">CTEs Envolvidas</a></li>
+  <li><a href="#uso-no-dashboard" id="toc-uso-no-dashboard" class="nav-link" data-scroll-target="#uso-no-dashboard">Uso no Dashboard</a></li>
+  </ul></li>
+  <li><a href="#seção-2-exames-laboratoriais" id="toc-seção-2-exames-laboratoriais" class="nav-link" data-scroll-target="#seção-2-exames-laboratoriais">Seção 2: Exames Laboratoriais</a>
+  <ul class="collapse">
+  <li><a href="#objetivo-clínico" id="toc-objetivo-clínico" class="nav-link" data-scroll-target="#objetivo-clínico">Objetivo Clínico</a></li>
+  <li><a href="#exames-capturados" id="toc-exames-capturados" class="nav-link" data-scroll-target="#exames-capturados">Exames Capturados</a></li>
+  <li><a href="#ctes-envolvidas-1" id="toc-ctes-envolvidas-1" class="nav-link" data-scroll-target="#ctes-envolvidas-1">CTEs Envolvidas</a></li>
+  <li><a href="#uso-no-dashboard-1" id="toc-uso-no-dashboard-1" class="nav-link" data-scroll-target="#uso-no-dashboard-1">Uso no Dashboard</a></li>
+  </ul></li>
+  <li><a href="#seção-3-dados-demográficos-e-de-cadastro" id="toc-seção-3-dados-demográficos-e-de-cadastro" class="nav-link" data-scroll-target="#seção-3-dados-demográficos-e-de-cadastro">Seção 3: Dados Demográficos e de Cadastro</a>
+  <ul class="collapse">
+  <li><a href="#objetivo-clínico-1" id="toc-objetivo-clínico-1" class="nav-link" data-scroll-target="#objetivo-clínico-1">Objetivo Clínico</a></li>
+  <li><a href="#cte-dados_paciente" id="toc-cte-dados_paciente" class="nav-link" data-scroll-target="#cte-dados_paciente">CTE: <code>dados_paciente</code></a></li>
+  <li><a href="#uso-no-dashboard-2" id="toc-uso-no-dashboard-2" class="nav-link" data-scroll-target="#uso-no-dashboard-2">Uso no Dashboard</a></li>
+  </ul></li>
+  <li><a href="#seção-4-medidas-antropométricas" id="toc-seção-4-medidas-antropométricas" class="nav-link" data-scroll-target="#seção-4-medidas-antropométricas">Seção 4: Medidas Antropométricas</a>
+  <ul class="collapse">
+  <li><a href="#objetivo-clínico-2" id="toc-objetivo-clínico-2" class="nav-link" data-scroll-target="#objetivo-clínico-2">Objetivo Clínico</a></li>
+  <li><a href="#cte-ultimas_medidas_antropometricas" id="toc-cte-ultimas_medidas_antropometricas" class="nav-link" data-scroll-target="#cte-ultimas_medidas_antropometricas">CTE: <code>ultimas_medidas_antropometricas</code></a></li>
+  <li><a href="#uso-no-dashboard-3" id="toc-uso-no-dashboard-3" class="nav-link" data-scroll-target="#uso-no-dashboard-3">Uso no Dashboard</a></li>
+  </ul></li>
+  <li><a href="#seção-5-morbidades-por-cid" id="toc-seção-5-morbidades-por-cid" class="nav-link" data-scroll-target="#seção-5-morbidades-por-cid">Seção 5: Morbidades por CID</a>
+  <ul class="collapse">
+  <li><a href="#objetivo-clínico-3" id="toc-objetivo-clínico-3" class="nav-link" data-scroll-target="#objetivo-clínico-3">Objetivo Clínico</a></li>
+  <li><a href="#ctes-envolvidas-2" id="toc-ctes-envolvidas-2" class="nav-link" data-scroll-target="#ctes-envolvidas-2">CTEs Envolvidas</a></li>
+  <li><a href="#catálogo-de-morbidades" id="toc-catálogo-de-morbidades" class="nav-link" data-scroll-target="#catálogo-de-morbidades">Catálogo de Morbidades</a></li>
+  <li><a href="#uso-no-dashboard-4" id="toc-uso-no-dashboard-4" class="nav-link" data-scroll-target="#uso-no-dashboard-4">Uso no Dashboard</a></li>
+  </ul></li>
+  <li><a href="#seção-5b-critérios-expandidos-de-has" id="toc-seção-5b-critérios-expandidos-de-has" class="nav-link" data-scroll-target="#seção-5b-critérios-expandidos-de-has">Seção 5B: Critérios Expandidos de HAS</a>
+  <ul class="collapse">
+  <li><a href="#objetivo-clínico-4" id="toc-objetivo-clínico-4" class="nav-link" data-scroll-target="#objetivo-clínico-4">Objetivo Clínico</a></li>
+  <li><a href="#ctes-envolvidas-3" id="toc-ctes-envolvidas-3" class="nav-link" data-scroll-target="#ctes-envolvidas-3">CTEs Envolvidas</a></li>
+  <li><a href="#uso-no-dashboard-5" id="toc-uso-no-dashboard-5" class="nav-link" data-scroll-target="#uso-no-dashboard-5">Uso no Dashboard</a></li>
+  <li><a href="#ctes-envolvidas-4" id="toc-ctes-envolvidas-4" class="nav-link" data-scroll-target="#ctes-envolvidas-4">CTEs Envolvidas</a></li>
+  <li><a href="#uso-no-dashboard-6" id="toc-uso-no-dashboard-6" class="nav-link" data-scroll-target="#uso-no-dashboard-6">Uso no Dashboard</a></li>
+  <li><a href="#ctes-envolvidas-5" id="toc-ctes-envolvidas-5" class="nav-link" data-scroll-target="#ctes-envolvidas-5">CTEs Envolvidas</a></li>
+  <li><a href="#uso-no-dashboard-7" id="toc-uso-no-dashboard-7" class="nav-link" data-scroll-target="#uso-no-dashboard-7">Uso no Dashboard</a></li>
+  <li><a href="#ctes-envolvidas-6" id="toc-ctes-envolvidas-6" class="nav-link" data-scroll-target="#ctes-envolvidas-6">CTEs Envolvidas</a></li>
+  <li><a href="#ctes-envolvidas-7" id="toc-ctes-envolvidas-7" class="nav-link" data-scroll-target="#ctes-envolvidas-7">CTEs Envolvidas</a></li>
+  <li><a href="#uso-no-dashboard-8" id="toc-uso-no-dashboard-8" class="nav-link" data-scroll-target="#uso-no-dashboard-8">Uso no Dashboard</a></li>
+  <li><a href="#cálculo-do-egfr-ckd-epi-2021" id="toc-cálculo-do-egfr-ckd-epi-2021" class="nav-link" data-scroll-target="#cálculo-do-egfr-ckd-epi-2021">Cálculo do eGFR (CKD-EPI 2021)</a></li>
+  <li><a href="#estadiamento-ckd-ckd_stage" id="toc-estadiamento-ckd-ckd_stage" class="nav-link" data-scroll-target="#estadiamento-ckd-ckd_stage">Estadiamento CKD (<code>ckd_stage</code>)</a></li>
+  <li><a href="#ctes-envolvidas-8" id="toc-ctes-envolvidas-8" class="nav-link" data-scroll-target="#ctes-envolvidas-8">CTEs Envolvidas</a></li>
+  <li><a href="#classes-terapêuticas-e-padrões-regex" id="toc-classes-terapêuticas-e-padrões-regex" class="nav-link" data-scroll-target="#classes-terapêuticas-e-padrões-regex">Classes Terapêuticas e Padrões REGEX</a></li>
+  <li><a href="#exames-monitorados" id="toc-exames-monitorados" class="nav-link" data-scroll-target="#exames-monitorados">Exames Monitorados</a></li>
+  <li><a href="#cte-pontuacao_framingham" id="toc-cte-pontuacao_framingham" class="nav-link" data-scroll-target="#cte-pontuacao_framingham">CTE: <code>pontuacao_framingham</code></a></li>
+  <li><a href="#categorias-de-risco" id="toc-categorias-de-risco" class="nav-link" data-scroll-target="#categorias-de-risco">Categorias de Risco</a></li>
+  <li><a href="#cte-charlson_componentes" id="toc-cte-charlson_componentes" class="nav-link" data-scroll-target="#cte-charlson_componentes">CTE: <code>charlson_componentes</code></a></li>
+  <li><a href="#pesos-por-morbidade" id="toc-pesos-por-morbidade" class="nav-link" data-scroll-target="#pesos-por-morbidade">Pesos por Morbidade</a></li>
+  <li><a href="#pontos-por-polifarmácia" id="toc-pontos-por-polifarmácia" class="nav-link" data-scroll-target="#pontos-por-polifarmácia">Pontos por Polifarmácia</a></li>
+  <li><a href="#estratificação" id="toc-estratificação" class="nav-link" data-scroll-target="#estratificação">Estratificação</a></li>
+  <li><a href="#uso-no-select-final" id="toc-uso-no-select-final" class="nav-link" data-scroll-target="#uso-no-select-final">Uso no SELECT Final</a></li>
+  <li><a href="#categoria-2-cardiopatia-isquêmica" id="toc-categoria-2-cardiopatia-isquêmica" class="nav-link" data-scroll-target="#categoria-2-cardiopatia-isquêmica">Categoria 2: Cardiopatia Isquêmica</a></li>
+  <li><a href="#estratificação-sbc" id="toc-estratificação-sbc" class="nav-link" data-scroll-target="#estratificação-sbc">Estratificação SBC</a></li>
+  <li><a href="#ckd-epi-2021" id="toc-ckd-epi-2021" class="nav-link" data-scroll-target="#ckd-epi-2021">CKD-EPI 2021</a></li>
+  <li><a href="#atp-iii-dislipidemia" id="toc-atp-iii-dislipidemia" class="nav-link" data-scroll-target="#atp-iii-dislipidemia">ATP III (Dislipidemia)</a></li>
+  <li><a href="#charlson-comorbidity-index" id="toc-charlson-comorbidity-index" class="nav-link" data-scroll-target="#charlson-comorbidity-index">Charlson Comorbidity Index</a></li>
+  <li><a href="#metas-de-controle" id="toc-metas-de-controle" class="nav-link" data-scroll-target="#metas-de-controle">Metas de Controle</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Documentação da tabela fato (MM_exames_e_risco_A1C)</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="visão-geral" class="level2">
+<h2 class="anchored" data-anchor-id="visão-geral">Visão Geral</h2>
+<section id="objetivo" class="level3">
+<h3 class="anchored" data-anchor-id="objetivo">Objetivo</h3>
+<p>A tabela <code>rj-sms-sandbox.sub_pav_us.MM_exames_e_risco_A1C</code> é a <strong>tabela fato principal</strong> do Navegador Clínico de Multimorbidade. Consolida dados de múltiplas fontes em <strong>uma linha por paciente (CPF)</strong>, integrando:</p>
+<ul>
+<li>Dados demográficos e de cadastro na ESF</li>
+<li>56 morbidades identificadas por CID</li>
+<li>Diagnósticos expandidos de HAS e DM (CID + medidas + medicamentos)</li>
+<li>Exames laboratoriais e medidas antropométricas</li>
+<li>Cálculos de risco cardiovascular (Framingham + estratificação SBC)</li>
+<li>Índice de Charlson modificado</li>
+<li>Histórico de controle de condições crônicas</li>
+<li>Mais de 30 lacunas de cuidado identificadas</li>
+</ul>
+</section>
+<section id="localização" class="level3">
+<h3 class="anchored" data-anchor-id="localização">Localização</h3>
+<pre><code>Projeto: rj-sms-sandbox
+Dataset: sub_pav_us
+Tabela: MM_exames_e_risco_A1C</code></pre>
+</section>
+<section id="granularidade" class="level3">
+<h3 class="anchored" data-anchor-id="granularidade">Granularidade</h3>
+<p><strong>1 linha por CPF</strong> - cada paciente aparece uma única vez na tabela final.</p>
+</section>
+<section id="critérios-de-inclusão" class="level3">
+<h3 class="anchored" data-anchor-id="critérios-de-inclusão">Critérios de Inclusão</h3>
+<ul>
+<li>CPF válido (não nulo)</li>
+<li>Sem indicador de óbito (<code>obito_indicador = FALSE</code>)</li>
+<li>Sem data de óbito (<code>obito_data IS NULL</code>)</li>
+<li>Cadastrado em ESF (não ESB - Equipe de Saúde Bucal)</li>
+<li>INE de cadastro não nulo</li>
+</ul>
+<hr>
+<p>## Arquitetura de Dados</p>
+<p>### Fluxo Geral das CTEs</p>
+<pre><code>┌─────────────────────────────────────────────────────────────────────────────┐
+│                           FONTES DE DADOS                                    │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ • brutos_prontuario_vitacare_historico.hiv                                  │
+│ • brutos_prontuario_vitacare_historico.acto                                 │
+│ • saude_historico_clinico.episodio_assistencial                             │
+│ • saude_historico_clinico.exame                                             │
+│ • saude_historico_clinico.paciente                                          │
+│ • brutos_cientificalab.solicitacoes/exames/resultados                       │
+│ • brutos_prontuario_vitacare.atendimento                                    │
+│ • sub_pav_us.indicadores_vitacare_fix (tabela auxiliar com correções)       │
+│ • sub_pav_us.PA_A1C_glic_cpf_fix (tabela auxiliar com correções)            │
+│ • sub_pav_us.MM_mantidos_alterados_ultimas (medicamentos crônicos)          │
+│ • saude_dados_mestres.estabelecimento                                       │
+└─────────────────────────────────────────────────────────────────────────────┘
+│
+▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                        SEÇÃO 1: HIV/AIDS                                     │
+│  hiv_cpf_raw → hiv_cpf → exames_hiv_cpf_raw → exames_hiv_cpf_last           │
+│                       → hiv_completo                                         │
+└─────────────────────────────────────────────────────────────────────────────┘
+│
+▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                   SEÇÃO 2: EXAMES LABORATORIAIS                              │
+│  exames_historico ─┐                                                         │
+│  exames_cientifica ┼→ todos_exames → exames_filtrados → exames_mais_recentes │
+│                    │                                  → exames_pivot          │
+└─────────────────────────────────────────────────────────────────────────────┘
+│
+▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                   SEÇÃO 3: DADOS DEMOGRÁFICOS                                │
+│                        dados_paciente                                        │
+└─────────────────────────────────────────────────────────────────────────────┘
+│
+▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                SEÇÃO 4: MEDIDAS ANTROPOMÉTRICAS                              │
+│                 ultimas_medidas_antropometricas                              │
+│            (fontes: indicadores_vitacare_fix + episodio)                     │
+└─────────────────────────────────────────────────────────────────────────────┘
+│
+▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                   SEÇÃO 5: MORBIDADES POR CID                                │
+│              morbidades_base → morbidades_por_cid                            │
+│                    (56 condições clínicas)                                   │
+└─────────────────────────────────────────────────────────────────────────────┘
+│
+▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│              SEÇÃO 5B: CRITÉRIOS EXPANDIDOS HAS                              │
+│  todas_medidas_pa → criterios_has_medidas                                    │
+│                   → criterios_has_medicamentos                               │
+└─────────────────────────────────────────────────────────────────────────────┘
+│
+▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│              SEÇÃO 5C: CRITÉRIOS EXPANDIDOS DM                               │
+│  todas_medidas_glicemia → criterios_dm_medidas                               │
+│                         → criterios_dm_medicamentos                          │
+└─────────────────────────────────────────────────────────────────────────────┘
+│
+▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│              SEÇÃO 5D: CONSOLIDAÇÃO HAS + DM                                 │
+│                      has_dm_consolidado                                      │
+└─────────────────────────────────────────────────────────────────────────────┘
+│
+▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│              SEÇÃO 5E: PROGRESSÃO GLICÊMICA                                  │
+│  hba1c_progressao → progressao_glicemica                                     │
+│  historico_controle_glicemia → resumo_controle_glicemia                      │
+│  ultimas_medidas_glicemia                                                    │
+└─────────────────────────────────────────────────────────────────────────────┘
+│
+▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│              SEÇÃO 5F: PROGRESSÃO PRESSÓRICA                                 │
+│  todas_medidas_pa_completas → pa_progressao → progressao_pressao             │
+│  historico_controle_pa → resumo_controle_pa                                  │
+│  ultimas_medidas_pa                                                          │
+└─────────────────────────────────────────────────────────────────────────────┘
+│
+▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                   SEÇÃO 6: CONSULTAS                                         │
+│  contagem_consultas_detalhada → intervalos_consultas → contagem_consultas    │
+└─────────────────────────────────────────────────────────────────────────────┘
+│
+▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│              SEÇÃO 7: CONSOLIDAÇÃO COM eGFR                                  │
+│  dados_consolidados (JOIN de todas as CTEs anteriores)                       │
+│  + Cálculo CKD-EPI 2021 + Estadiamento CKD                                   │
+└─────────────────────────────────────────────────────────────────────────────┘
+│
+▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│           SEÇÃO 7A: MORBIDADES CONSOLIDADAS                                  │
+│  dados_com_irc → dados_com_hiv → dados_com_dislipidemia                      │
+└─────────────────────────────────────────────────────────────────────────────┘
+│
+▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│           SEÇÃO 7B: MULTIMORBIDADE                                           │
+│  morbidades_array → dados_com_multimorbidade                                 │
+└─────────────────────────────────────────────────────────────────────────────┘
+│
+▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│           SEÇÃO 9: FRAMINGHAM                                                │
+│  pontuacao_framingham → risco_calculado                                      │
+└─────────────────────────────────────────────────────────────────────────────┘
+│
+▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│           SEÇÃO 10: RISCO CARDIOVASCULAR SBC                                 │
+│               risco_cardiovascular_estratificado                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+│
+▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│           SEÇÃO 11: CHARLSON INDEX                                           │
+│  charlson_componentes → charlson_final                                       │
+│  (inclui JOIN com MM_mantidos_alterados_ultimas para polifarmácia)           │
+└─────────────────────────────────────────────────────────────────────────────┘
+│
+▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│           BENCHMARK DE CONSULTAS                                             │
+│               benchmark_consultas                                            │
+└─────────────────────────────────────────────────────────────────────────────┘
+│
+▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                      SELECT FINAL                                            │
+│  • Todos os campos consolidados                                              │
+│  • Lacunas de cuidado calculadas                                             │
+│  • Flags de inequidade                                                       │
+│  • Ordenação por risco cardiovascular                                        │
+└─────────────────────────────────────────────────────────────────────────────┘</code></pre>
+<hr>
+<p>## Seção 1: Identificação de HIV/AIDS</p>
+<p>### Objetivo Clínico Identificar pacientes com HIV/AIDS utilizando <strong>duas fontes complementares</strong>: 1. Base específica de HIV do Vitacare (registro histórico) 2. Exames de CD4 e carga viral do episódio assistencial</p>
+</section>
+<section id="ctes-envolvidas" class="level3">
+<h3 class="anchored" data-anchor-id="ctes-envolvidas">CTEs Envolvidas</h3>
+<section id="hiv_cpf_raw" class="level4">
+<h4 class="anchored" data-anchor-id="hiv_cpf_raw"><code>hiv_cpf_raw</code></h4>
+<p><strong>Fonte</strong>: <code>brutos_prontuario_vitacare_historico.hiv</code> + <code>brutos_prontuario_vitacare_historico.acto</code></p>
+<p><strong>Objetivo</strong>: Extrair CPFs de pacientes com registro na base de HIV do Vitacare.</p>
+<p><strong>Campos capturados</strong>: - <code>id_prontuario_global</code>: Identificador do prontuário - <code>id_cnes</code>: Unidade de saúde - <code>ano_diagnostico</code>: Ano do diagnóstico de AIDS (campo <code>aids_doenca_atual_ano_1_teste</code>) - <code>cpf</code>: CPF limpo (apenas dígitos, via REGEXP_REPLACE)</p>
+<p><strong>Regra de negócio</strong>: Remove caracteres não numéricos do CPF.</p>
+</section>
+<section id="hiv_cpf" class="level4">
+<h4 class="anchored" data-anchor-id="hiv_cpf"><code>hiv_cpf</code></h4>
+<p><strong>Objetivo</strong>: Deduplica a CTE anterior, mantendo apenas CPFs com 11 dígitos.</p>
+<p><strong>Regra de deduplicação</strong>: <code>ROW_NUMBER() OVER (PARTITION BY cpf ORDER BY id_prontuario_global DESC)</code> - mantém o registro mais recente por prontuário.</p>
+</section>
+<section id="exames_hiv_cpf_raw" class="level4">
+<h4 class="anchored" data-anchor-id="exames_hiv_cpf_raw"><code>exames_hiv_cpf_raw</code></h4>
+<p><strong>Fonte</strong>: <code>saude_historico_clinico.episodio_assistencial</code> (campo <code>exames_realizados</code>)</p>
+<p><strong>Objetivo</strong>: Identificar pacientes com exames de CD4 ou carga viral, indicativos de HIV.</p>
+<p><strong>Padrão REGEX utilizado</strong>: <code>sql REGEXP_CONTAINS(er.descricao, r'(?i)\b(cd4|cv|carga viral)\b')</code></p>
+<p><strong>Campos capturados</strong>: - <code>id_hci</code>: ID do episódio - <code>entrada_data</code>: Data do exame - <code>tipo</code>, <code>descricao</code>: Detalhes do exame - <code>cpf</code>: CPF limpo</p>
+</section>
+<section id="exames_hiv_cpf_last" class="level4">
+<h4 class="anchored" data-anchor-id="exames_hiv_cpf_last"><code>exames_hiv_cpf_last</code></h4>
+<p><strong>Objetivo</strong>: Mantém apenas o exame mais recente por CPF.</p>
+<p><strong>Regra de deduplicação</strong>: <code>ORDER BY entrada_data DESC, id_hci DESC</code></p>
+</section>
+<section id="hiv_completo" class="level4">
+<h4 class="anchored" data-anchor-id="hiv_completo"><code>hiv_completo</code></h4>
+<p><strong>Objetivo</strong>: Consolida as duas fontes de HIV em uma única CTE.</p>
+<p><strong>Campos produzidos</strong>: | Campo | Tipo | Descrição | |——-|——|———–| | <code>cpf</code> | STRING | CPF do paciente | | <code>id_prontuario_global</code> | STRING | ID do prontuário Vitacare | | <code>id_cnes</code> | STRING | Unidade onde foi registrado | | <code>ano_diagnostico</code> | STRING | Ano do diagnóstico de AIDS | | <code>data_ultimo_exame_hiv</code> | DATE | Data do último CD4/CV | | <code>data_diagnostico_hiv</code> | DATE | Ano convertido para DATE (01/01/ano) |</p>
+<p><strong>Validação do ano de diagnóstico</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>SAFE_CAST(ano_diagnostico <span class="kw">AS</span> INT64) <span class="op">&gt;=</span> <span class="dv">1980</span>  <span class="co">-- HIV surgiu nos anos 80</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>SAFE_CAST(ano_diagnostico <span class="kw">AS</span> INT64) <span class="op">&lt;=</span> <span class="fu">EXTRACT</span>(<span class="dt">YEAR</span> <span class="kw">FROM</span> <span class="fu">CURRENT_DATE</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="uso-no-dashboard" class="level3">
+<h3 class="anchored" data-anchor-id="uso-no-dashboard">Uso no Dashboard</h3>
+<ul>
+<li>Identificação de pacientes com HIV para acompanhamento diferenciado</li>
+<li>Cálculo de multimorbidade (HIV conta como uma morbidade)</li>
+<li>Lacunas de cuidado específicas para PVHIV</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="seção-2-exames-laboratoriais" class="level2">
+<h2 class="anchored" data-anchor-id="seção-2-exames-laboratoriais">Seção 2: Exames Laboratoriais</h2>
+<section id="objetivo-clínico" class="level3">
+<h3 class="anchored" data-anchor-id="objetivo-clínico">Objetivo Clínico</h3>
+<p>Consolidar resultados de exames laboratoriais de <strong>múltiplas fontes</strong>, mantendo apenas o resultado mais recente de cada tipo de exame por paciente.</p>
+</section>
+<section id="exames-capturados" class="level3">
+<h3 class="anchored" data-anchor-id="exames-capturados">Exames Capturados</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Código</th>
+<th>Exame</th>
+<th>Faixa Válida</th>
+<th>Unidade</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CRE</td>
+<td>Creatinina</td>
+<td>0.2 - 15</td>
+<td>mg/dL</td>
+</tr>
+<tr class="even">
+<td>COL</td>
+<td>Colesterol Total</td>
+<td>50 - 600</td>
+<td>mg/dL</td>
+</tr>
+<tr class="odd">
+<td>HDL</td>
+<td>HDL-Colesterol</td>
+<td>10 - 150</td>
+<td>mg/dL</td>
+</tr>
+<tr class="even">
+<td>LDL</td>
+<td>LDL-Colesterol</td>
+<td>20 - 400</td>
+<td>mg/dL</td>
+</tr>
+<tr class="odd">
+<td>TRI</td>
+<td>Triglicerídeos</td>
+<td>20 - 1000</td>
+<td>mg/dL</td>
+</tr>
+<tr class="even">
+<td>GLI/GLU</td>
+<td>Glicemia</td>
+<td>30 - 500</td>
+<td>mg/dL</td>
+</tr>
+<tr class="odd">
+<td>HGL</td>
+<td>Hemoglobina Glicada</td>
+<td>3 - 20</td>
+<td>%</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="ctes-envolvidas-1" class="level3">
+<h3 class="anchored" data-anchor-id="ctes-envolvidas-1">CTEs Envolvidas</h3>
+<section id="exames_historico" class="level4">
+<h4 class="anchored" data-anchor-id="exames_historico"><code>exames_historico</code></h4>
+<p><strong>Fonte</strong>: <code>saude_historico_clinico.exame</code> (UNNEST do array <code>exames</code>)</p>
+<p><strong>Objetivo</strong>: Extrair exames da base histórica consolidada.</p>
+<p><strong>Campos capturados</strong>: - <code>paciente_cpf</code> - <code>cod_exame</code>: Código do exame (CRE, COL, etc.) - <code>unidade</code> - <code>resultado_num</code>: Resultado convertido para FLOAT64 - <code>data_exame</code>: Data parseada do formato <code>%d/%m/%Y %H:%M:%S</code></p>
+<p><strong>Filtros aplicados</strong>: - Resultado não nulo - Código do exame na lista definida - CPF não nulo - Resultado &gt; 0 e &lt; 10000 (sanidade)</p>
+</section>
+<section id="exames_cientifica" class="level4">
+<h4 class="anchored" data-anchor-id="exames_cientifica"><code>exames_cientifica</code></h4>
+<p><strong>Fonte</strong>: <code>brutos_cientificalab.solicitacoes</code> + <code>brutos_cientificalab.exames</code> + <code>brutos_cientificalab.resultados</code></p>
+<p><strong>Objetivo</strong>: Extrair exames do laboratório Científica (rede municipal).</p>
+<p><strong>Estrutura de JOINs</strong>:</p>
+<pre><code>solicitacoes (paciente_cpf) 
+    → exames (cod_apoio, data_assinatura) 
+    → resultados (resultado)</code></pre>
+<p><strong>Mesmos filtros de validação da CTE anterior</strong>.</p>
+</section>
+<section id="todos_exames" class="level4">
+<h4 class="anchored" data-anchor-id="todos_exames"><code>todos_exames</code></h4>
+<p><strong>Objetivo</strong>: UNION ALL das fontes de exames.</p>
+</section>
+<section id="exames_filtrados" class="level4">
+<h4 class="anchored" data-anchor-id="exames_filtrados"><code>exames_filtrados</code></h4>
+<p><strong>Objetivo</strong>: Aplica filtros de faixa válida específicos por tipo de exame.</p>
+<p><strong>Regras de filtragem</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>(cod_exame <span class="op">=</span> <span class="st">'COL'</span> <span class="kw">AND</span> resultado_num <span class="kw">BETWEEN</span> <span class="dv">50</span> <span class="kw">AND</span> <span class="dv">600</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">OR</span> (cod_exame <span class="op">=</span> <span class="st">'HDL'</span> <span class="kw">AND</span> resultado_num <span class="kw">BETWEEN</span> <span class="dv">10</span> <span class="kw">AND</span> <span class="dv">150</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="kw">OR</span> (cod_exame <span class="op">=</span> <span class="st">'LDL'</span> <span class="kw">AND</span> resultado_num <span class="kw">BETWEEN</span> <span class="dv">20</span> <span class="kw">AND</span> <span class="dv">400</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="kw">OR</span> (cod_exame <span class="op">=</span> <span class="st">'TRI'</span> <span class="kw">AND</span> resultado_num <span class="kw">BETWEEN</span> <span class="dv">20</span> <span class="kw">AND</span> <span class="dv">1000</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="kw">OR</span> (cod_exame <span class="op">=</span> <span class="st">'GLI'</span> <span class="kw">AND</span> resultado_num <span class="kw">BETWEEN</span> <span class="dv">30</span> <span class="kw">AND</span> <span class="dv">500</span>)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="kw">OR</span> (cod_exame <span class="op">=</span> <span class="st">'GLU'</span> <span class="kw">AND</span> resultado_num <span class="kw">BETWEEN</span> <span class="dv">30</span> <span class="kw">AND</span> <span class="dv">500</span>)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="kw">OR</span> (cod_exame <span class="op">=</span> <span class="st">'HGL'</span> <span class="kw">AND</span> resultado_num <span class="kw">BETWEEN</span> <span class="dv">3</span> <span class="kw">AND</span> <span class="dv">20</span> <span class="kw">AND</span> unidade <span class="op">=</span> <span class="st">'%'</span>)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="kw">OR</span> (cod_exame <span class="op">=</span> <span class="st">'CRE'</span> <span class="kw">AND</span> resultado_num <span class="kw">BETWEEN</span> <span class="fl">0.2</span> <span class="kw">AND</span> <span class="dv">15</span> <span class="kw">AND</span> unidade <span class="op">=</span> <span class="st">'mg/dL'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="exames_mais_recentes" class="level4">
+<h4 class="anchored" data-anchor-id="exames_mais_recentes"><code>exames_mais_recentes</code></h4>
+<p><strong>Objetivo</strong>: Mantém apenas o exame mais recente de cada tipo por CPF.</p>
+<p><strong>Regra</strong>: <code>ROW_NUMBER() OVER (PARTITION BY paciente_cpf, cod_exame ORDER BY data_exame DESC) = 1</code></p>
+</section>
+<section id="exames_pivot" class="level4">
+<h4 class="anchored" data-anchor-id="exames_pivot"><code>exames_pivot</code></h4>
+<p><strong>Objetivo</strong>: Transpõe os exames de linhas para colunas, criando uma estrutura de 1 linha por paciente.</p>
+<p><strong>Campos produzidos</strong>: | Campo | Descrição | |——-|———–| | <code>cpf</code> | CPF do paciente | | <code>creatinina</code> | Último valor de creatinina | | <code>colesterol_total</code> | Último valor de colesterol total | | <code>hdl</code> | Último valor de HDL | | <code>ldl</code> | Último valor de LDL | | <code>triglicerides</code> | Último valor de triglicerídeos | | <code>glicemia</code> | Último valor de glicemia (GLI ou GLU, com COALESCE) | | <code>hba1c</code> | Último valor de HbA1c | | <code>data_creatinina</code> | Data do exame de creatinina | | <code>data_colesterol</code> | Data do exame de colesterol | | <code>data_hdl</code> | Data do exame de HDL | | <code>data_ldl</code> | Data do exame de LDL | | <code>data_glicemia</code> | Data do exame de glicemia | | <code>data_hba1c</code> | Data do exame de HbA1c | | <code>dias_desde_ultimo_exame</code> | Dias desde o exame mais recente (entre CRE, COL, HDL, LDL) | | <code>dias_desde_ultima_glicemia</code> | Dias desde última glicemia |</p>
+</section>
+</section>
+<section id="uso-no-dashboard-1" class="level3">
+<h3 class="anchored" data-anchor-id="uso-no-dashboard-1">Uso no Dashboard</h3>
+<ul>
+<li>Cálculo de eGFR (requer creatinina)</li>
+<li>Estratificação de risco cardiovascular (requer perfil lipídico)</li>
+<li>Classificação de dislipidemia (ATP III)</li>
+<li>Controle glicêmico em diabéticos</li>
+<li>Identificação de lacunas de exames laboratoriais</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="seção-3-dados-demográficos-e-de-cadastro" class="level2">
+<h2 class="anchored" data-anchor-id="seção-3-dados-demográficos-e-de-cadastro">Seção 3: Dados Demográficos e de Cadastro</h2>
+<section id="objetivo-clínico-1" class="level3">
+<h3 class="anchored" data-anchor-id="objetivo-clínico-1">Objetivo Clínico</h3>
+<p>Estabelecer a <strong>base de pacientes</strong> com seus dados demográficos e vínculo com a ESF (Equipe de Saúde da Família).</p>
+</section>
+<section id="cte-dados_paciente" class="level3">
+<h3 class="anchored" data-anchor-id="cte-dados_paciente">CTE: <code>dados_paciente</code></h3>
+<p><strong>Fonte</strong>: <code>saude_historico_clinico.paciente</code> + <code>saude_dados_mestres.estabelecimento</code></p>
+<p><strong>Campos produzidos</strong>:</p>
+<section id="dados-pessoais" class="level4">
+<h4 class="anchored" data-anchor-id="dados-pessoais">Dados Pessoais</h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Campo</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>cpf</code></td>
+<td>STRING</td>
+<td>CPF do paciente</td>
+</tr>
+<tr class="even">
+<td><code>nome</code></td>
+<td>STRING</td>
+<td>Nome completo</td>
+</tr>
+<tr class="odd">
+<td><code>genero</code></td>
+<td>STRING</td>
+<td>“masculino” ou “feminino”</td>
+</tr>
+<tr class="even">
+<td><code>data_nascimento</code></td>
+<td>DATE</td>
+<td>Data de nascimento</td>
+</tr>
+<tr class="odd">
+<td><code>idade</code></td>
+<td>INT64</td>
+<td>Idade calculada em anos</td>
+</tr>
+<tr class="even">
+<td><code>raca</code></td>
+<td>STRING</td>
+<td>Raça/cor autodeclarada</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="dados-de-cadastro-na-esf" class="level4">
+<h4 class="anchored" data-anchor-id="dados-de-cadastro-na-esf">Dados de Cadastro na ESF</h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Campo</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>id_ine_cadastro</code></td>
+<td>STRING</td>
+<td>INE da equipe de cadastro</td>
+</tr>
+<tr class="even">
+<td><code>nome_esf_cadastro</code></td>
+<td>STRING</td>
+<td>Nome da ESF (sem numeração romana)</td>
+</tr>
+<tr class="odd">
+<td><code>id_cnes_cadastro</code></td>
+<td>STRING</td>
+<td>CNES da unidade de cadastro</td>
+</tr>
+<tr class="even">
+<td><code>nome_clinica_cadastro</code></td>
+<td>STRING</td>
+<td>Nome da unidade (corrigido)</td>
+</tr>
+<tr class="odd">
+<td><code>nome_medico_esf_cadastro</code></td>
+<td>STRING</td>
+<td>Médico da equipe</td>
+</tr>
+<tr class="even">
+<td><code>nome_enfermeiro_esf_cadastro</code></td>
+<td>STRING</td>
+<td>Enfermeiro da equipe</td>
+</tr>
+<tr class="odd">
+<td><code>area_programatica_cadastro</code></td>
+<td>STRING</td>
+<td>AP do estabelecimento</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Transformações aplicadas</strong>:</p>
+<ol type="1">
+<li><strong>Remoção de numeração romana do nome da ESF</strong>:</li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">REGEXP_REPLACE</span>(</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    p.equipe_saude_familia[SAFE_OFFSET(<span class="dv">0</span>)].nome,</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    r<span class="st">'\s+(I|II|III|IV|V|VI|VII|VIII|IX|X|XI|XII|XIII|XIV|XV|XVI|XVII|XVIII|XIX|XX)\s*$'</span>, </span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">''</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ol start="2" type="1">
+<li><strong>Correção de nome de unidade específica</strong>:</li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">REPLACE</span>(</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    p.equipe_saude_familia[SAFE_OFFSET(<span class="dv">0</span>)].clinica_familia.nome,</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Policlinica Newton Bethlem'</span>, </span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'CMS Newton Bethlem'</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Filtros de exclusão</strong>: - CPF nulo - Óbito registrado (<code>obito_indicador = TRUE</code> ou <code>obito_data IS NOT NULL</code>) - ESB (Equipe de Saúde Bucal): <code>NOT REGEXP_CONTAINS(UPPER(...), r'ESB')</code> - INE nulo</p>
+<p><strong>Nota importante</strong>: O array <code>equipe_saude_familia</code> é acessado com <code>SAFE_OFFSET(0)</code> porque contém apenas um elemento por paciente (descoberta durante desenvolvimento).</p>
+</section>
+</section>
+<section id="uso-no-dashboard-2" class="level3">
+<h3 class="anchored" data-anchor-id="uso-no-dashboard-2">Uso no Dashboard</h3>
+<ul>
+<li>Filtros hierárquicos (AP → Unidade → ESF)</li>
+<li>Identificação de profissionais responsáveis</li>
+<li>Cálculos que dependem de idade e gênero (eGFR, Framingham)</li>
+<li>Estratificação populacional</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="seção-4-medidas-antropométricas" class="level2">
+<h2 class="anchored" data-anchor-id="seção-4-medidas-antropométricas">Seção 4: Medidas Antropométricas</h2>
+<section id="objetivo-clínico-2" class="level3">
+<h3 class="anchored" data-anchor-id="objetivo-clínico-2">Objetivo Clínico</h3>
+<p>Obter as medidas mais recentes de peso, altura e IMC para cálculo de obesidade e avaliação nutricional.</p>
+</section>
+<section id="cte-ultimas_medidas_antropometricas" class="level3">
+<h3 class="anchored" data-anchor-id="cte-ultimas_medidas_antropometricas">CTE: <code>ultimas_medidas_antropometricas</code></h3>
+<p><strong>Fontes</strong>: 1. <code>sub_pav_us.indicadores_vitacare_fix</code> - Dados corrigidos do Vitacare 2. <code>saude_historico_clinico.episodio_assistencial</code> - Episódios assistenciais</p>
+<p><strong>Campos produzidos</strong>: | Campo | Tipo | Descrição | |——-|——|———–| | <code>cpf</code> | STRING | CPF do paciente | | <code>peso</code> | FLOAT64 | Peso em kg | | <code>altura</code> | FLOAT64 | Altura em metros | | <code>IMC</code> | FLOAT64 | Índice de Massa Corporal calculado | | <code>obesidade_por_IMC</code> | BOOL | TRUE se IMC ≥ 30 | | <code>data_peso</code> | DATE | Data da medição do peso | | <code>data_altura</code> | DATE | Data da medição da altura | | <code>fonte</code> | STRING | “vitacare” ou “episodio_assistencial” |</p>
+<p><strong>Lógica de consolidação</strong>: 1. UNION ALL das duas fontes 2. Deduplicação mantendo o registro mais recente: <code>ORDER BY COALESCE(data_peso, data_altura) DESC</code> 3. Uma única linha por CPF (<code>rn_final = 1</code>)</p>
+<p><strong>Cálculo do IMC</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ROUND</span>(peso <span class="op">/</span> <span class="fu">POWER</span>(altura, <span class="dv">2</span>), <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Critério de obesidade</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>IMC <span class="op">&gt;=</span> <span class="dv">30</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="uso-no-dashboard-3" class="level3">
+<h3 class="anchored" data-anchor-id="uso-no-dashboard-3">Uso no Dashboard</h3>
+<ul>
+<li>Classificação nutricional</li>
+<li>Identificação de obesidade (morbidade)</li>
+<li>Lacuna de IMC não calculável (falta peso ou altura)</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="seção-5-morbidades-por-cid" class="level2">
+<h2 class="anchored" data-anchor-id="seção-5-morbidades-por-cid">Seção 5: Morbidades por CID</h2>
+<section id="objetivo-clínico-3" class="level3">
+<h3 class="anchored" data-anchor-id="objetivo-clínico-3">Objetivo Clínico</h3>
+<p>Identificar <strong>56 condições clínicas</strong> através de códigos CID registrados nos episódios assistenciais. Para cada condição, captura-se a <strong>primeira data de diagnóstico</strong>.</p>
+</section>
+<section id="ctes-envolvidas-2" class="level3">
+<h3 class="anchored" data-anchor-id="ctes-envolvidas-2">CTEs Envolvidas</h3>
+<section id="morbidades_base" class="level4">
+<h4 class="anchored" data-anchor-id="morbidades_base"><code>morbidades_base</code></h4>
+<p><strong>Fonte</strong>: <code>saude_historico_clinico.episodio_assistencial</code> (UNNEST de <code>condicoes</code>)</p>
+<p><strong>Objetivo</strong>: Extrair todos os pares CPF + CID + Data de entrada.</p>
+<p><strong>Campos</strong>: - <code>cpf</code>: CPF limpo (11 dígitos) - <code>entrada_data</code>: Data do registro - <code>cid</code>: Código CID</p>
+</section>
+<section id="morbidades_por_cid" class="level4">
+<h4 class="anchored" data-anchor-id="morbidades_por_cid"><code>morbidades_por_cid</code></h4>
+<p><strong>Objetivo</strong>: Agrupa por CPF e identifica a <strong>primeira data</strong> (MIN) de cada condição.</p>
+<p><strong>Deduplicação</strong>: <code>QUALIFY ROW_NUMBER() OVER (PARTITION BY cpf ORDER BY cpf) = 1</code></p>
+</section>
+</section>
+<section id="catálogo-de-morbidades" class="level3">
+<h3 class="anchored" data-anchor-id="catálogo-de-morbidades">Catálogo de Morbidades</h3>
+<section id="seção-1-morbidades-principais" class="level4">
+<h4 class="anchored" data-anchor-id="seção-1-morbidades-principais">Seção 1: Morbidades Principais</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 32%">
+<col style="width: 45%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Campo</th>
+<th>Condição</th>
+<th>Padrão REGEX</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>HAS</code></td>
+<td>Hipertensão Arterial</td>
+<td><code>^(I1[0-6]\|O1[01])</code></td>
+</tr>
+<tr class="even">
+<td><code>DM</code></td>
+<td>Diabetes Mellitus</td>
+<td><code>^(E1[0-4]\|O24\|H360\|H280\|G632\|G590\|G990\|N083\|M142)</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Nota</strong>: HAS e DM são posteriormente expandidos com critérios de medidas e medicamentos.</p>
+</section>
+<section id="seção-2-cardiovasculares" class="level4">
+<h4 class="anchored" data-anchor-id="seção-2-cardiovasculares">Seção 2: Cardiovasculares</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 32%">
+<col style="width: 45%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Campo</th>
+<th>Condição</th>
+<th>Padrão REGEX</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>CI</code></td>
+<td>Cardiopatia Isquêmica</td>
+<td><code>^(I2[0-5]\|Z95[15])</code></td>
+</tr>
+<tr class="even">
+<td><code>ICC</code></td>
+<td>Insuficiência Cardíaca</td>
+<td><code>^(I110\|I13[02]\|I42[0-9]\|I43\|I50\|I517\|P290)</code></td>
+</tr>
+<tr class="odd">
+<td><code>stroke</code></td>
+<td>AVC/Stroke</td>
+<td><code>^(I6\|G4[56]\|H340)</code></td>
+</tr>
+<tr class="even">
+<td><code>arritmia</code></td>
+<td>Arritmias (incl.&nbsp;FA)</td>
+<td><code>^(I44[1-3]\|I45[69]\|I4[7-9]\|R00[018]\|T821\|Z45[05]\|Z950)</code></td>
+</tr>
+<tr class="odd">
+<td><code>valvular</code></td>
+<td>Doença Valvar</td>
+<td><code>^(A520\|I0[5-9]\|I34\|I3[5-9]\|Q23[0-3]\|Z95[2-4])</code></td>
+</tr>
+<tr class="even">
+<td><code>circ_pulm</code></td>
+<td>Circulação Pulmonar</td>
+<td><code>^(I2[6-8])</code></td>
+</tr>
+<tr class="odd">
+<td><code>vascular_periferica</code></td>
+<td>Doença Vascular Periférica</td>
+<td><code>^(I7[01]\|I73[189]\|I77[12]\|I79[02]\|K55[189]\|Z95[89])</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="seção-3-neurológicas" class="level4">
+<h4 class="anchored" data-anchor-id="seção-3-neurológicas">Seção 3: Neurológicas</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 32%">
+<col style="width: 45%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Campo</th>
+<th>Condição</th>
+<th>Padrão REGEX</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>epilepsy</code></td>
+<td>Epilepsia</td>
+<td><code>^(G4[01])</code></td>
+</tr>
+<tr class="even">
+<td><code>parkinsonism</code></td>
+<td>Parkinsonismo</td>
+<td><code>^(G2[0-2])</code></td>
+</tr>
+<tr class="odd">
+<td><code>multiple_sclerosis</code></td>
+<td>Esclerose Múltipla</td>
+<td><code>^G35</code></td>
+</tr>
+<tr class="even">
+<td><code>neuro</code></td>
+<td>Outras Neurológicas</td>
+<td><code>^(G1[0-3]\|G25[45]\|G31[012]\|G3[2367]\|G93[14]\|R470\|R56)</code></td>
+</tr>
+<tr class="odd">
+<td><code>dementia</code></td>
+<td>Demência</td>
+<td><code>^(F0[0-35]\|G30)</code></td>
+</tr>
+<tr class="even">
+<td><code>plegia</code></td>
+<td>Plegia/Paralisia</td>
+<td><code>^(G041\|G114\|G80[12]\|G8[1-3])</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="seção-4-psiquiátricas" class="level4">
+<h4 class="anchored" data-anchor-id="seção-4-psiquiátricas">Seção 4: Psiquiátricas</h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Campo</th>
+<th>Condição</th>
+<th>Padrão REGEX</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>psicoses</code></td>
+<td>Psicoses e Transtorno Bipolar</td>
+<td><code>^(F2[0-9]\|F31)</code></td>
+</tr>
+<tr class="even">
+<td><code>depre_ansiedade</code></td>
+<td>Depressão e Ansiedade</td>
+<td><code>^(F3[2-49]\|F4[01])</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Nota</strong>: <code>depre_ansiedade</code> não entra no cálculo de multimorbidade (decisão clínica).</p>
+</section>
+<section id="seção-5-pulmonares" class="level4">
+<h4 class="anchored" data-anchor-id="seção-5-pulmonares">Seção 5: Pulmonares</h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Campo</th>
+<th>Condição</th>
+<th>Padrão REGEX</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>COPD</code></td>
+<td>DPOC</td>
+<td><code>^(I27[89]\|J4[0-4]\|J47\|J6[0-7]\|J684\|J70[13])</code></td>
+</tr>
+<tr class="even">
+<td><code>asthma</code></td>
+<td>Asma</td>
+<td><code>^(J4[56])</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="seção-6-neoplasias" class="level4">
+<h4 class="anchored" data-anchor-id="seção-6-neoplasias">Seção 6: Neoplasias</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 32%">
+<col style="width: 45%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Campo</th>
+<th>Condição</th>
+<th>Padrão REGEX</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>neoplasia_mama</code></td>
+<td>Neoplasia de Mama</td>
+<td><code>^C50</code></td>
+</tr>
+<tr class="even">
+<td><code>neoplasia_colo_uterino</code></td>
+<td>Neoplasia de Colo Uterino</td>
+<td><code>^C53</code></td>
+</tr>
+<tr class="odd">
+<td><code>neoplasia_feminina_estrita</code></td>
+<td>Outras Neoplasias Femininas</td>
+<td><code>^(C5[1-28])</code></td>
+</tr>
+<tr class="even">
+<td><code>neoplasia_masculina_estrita</code></td>
+<td>Neoplasias Masculinas</td>
+<td><code>^(C6[0-3])</code></td>
+</tr>
+<tr class="odd">
+<td><code>leukemia</code></td>
+<td>Leucemia</td>
+<td><code>^(C9[1-5])</code></td>
+</tr>
+<tr class="even">
+<td><code>lymphoma</code></td>
+<td>Linfoma</td>
+<td><code>^(C8[1-6]\|C96)</code></td>
+</tr>
+<tr class="odd">
+<td><code>metastasis</code></td>
+<td>Metástase</td>
+<td><code>^(C7[7-9]\|C80)</code></td>
+</tr>
+<tr class="even">
+<td><code>neoplasia_ambos_os_sexos</code></td>
+<td>Outras Neoplasias</td>
+<td><code>^(C[0-4][0-9]\|C[567][0-9])</code> excluindo as específicas</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="seção-7-renais-e-metabólicas" class="level4">
+<h4 class="anchored" data-anchor-id="seção-7-renais-e-metabólicas">Seção 7: Renais e Metabólicas</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 32%">
+<col style="width: 45%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Campo</th>
+<th>Condição</th>
+<th>Padrão REGEX</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>IRC_por_CID</code></td>
+<td>DRC por CID</td>
+<td><code>^(I120\|I131\|N03[2-7]\|N05[2-7]\|N1[89]\|N250\|Z49[0-2]\|Z940\|Z992)</code></td>
+</tr>
+<tr class="even">
+<td><code>dislipidemia_por_CID</code></td>
+<td>Dislipidemia por CID</td>
+<td><code>^E78</code></td>
+</tr>
+<tr class="odd">
+<td><code>obesidade</code></td>
+<td>Obesidade</td>
+<td><code>^E66</code></td>
+</tr>
+<tr class="even">
+<td><code>tireoide</code></td>
+<td>Doenças da Tireoide</td>
+<td><code>^(E0[0-3]\|E05\|E06\|E890)</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="seção-8-hematológicas" class="level4">
+<h4 class="anchored" data-anchor-id="seção-8-hematológicas">Seção 8: Hematológicas</h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Campo</th>
+<th>Condição</th>
+<th>Padrão REGEX</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>coagulo</code></td>
+<td>Distúrbios de Coagulação</td>
+<td><code>^(D6[5-9])</code></td>
+</tr>
+<tr class="even">
+<td><code>anemias</code></td>
+<td>Anemias</td>
+<td><code>^(D5[0-3])</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Nota</strong>: <code>anemias</code> não entra no cálculo de multimorbidade.</p>
+</section>
+<section id="seção-9-reumatológicas" class="level4">
+<h4 class="anchored" data-anchor-id="seção-9-reumatológicas">Seção 9: Reumatológicas</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 32%">
+<col style="width: 45%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Campo</th>
+<th>Condição</th>
+<th>Padrão REGEX</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>reumato</code></td>
+<td>Doenças Reumatológicas</td>
+<td><code>^(L93\|L94[013]\|M0[5-68]\|M12[03]\|M3[0-5]\|M4[5-6])</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="seção-10-uso-de-substâncias" class="level4">
+<h4 class="anchored" data-anchor-id="seção-10-uso-de-substâncias">Seção 10: Uso de Substâncias</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 32%">
+<col style="width: 45%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Campo</th>
+<th>Condição</th>
+<th>Padrão REGEX</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>alcool</code></td>
+<td>Transtornos por Álcool</td>
+<td><code>^(F10\|E52\|G621\|I426\|K292\|K70\|T51\|Z502\|Z714\|Z721)</code></td>
+</tr>
+<tr class="even">
+<td><code>drogas</code></td>
+<td>Transtornos por Drogas</td>
+<td><code>^(F1[1-9]\|Z715\|Z722)</code></td>
+</tr>
+<tr class="odd">
+<td><code>tabaco</code></td>
+<td>Tabagismo</td>
+<td><code>^(F17\|Z716)</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Nota</strong>: <code>tabaco</code> não entra no cálculo de multimorbidade, mas é usado no Framingham.</p>
+</section>
+<section id="seção-11-gastrointestinais" class="level4">
+<h4 class="anchored" data-anchor-id="seção-11-gastrointestinais">Seção 11: Gastrointestinais</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 32%">
+<col style="width: 45%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Campo</th>
+<th>Condição</th>
+<th>Padrão REGEX</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>peptic</code></td>
+<td>Doença Péptica</td>
+<td><code>^(K2[5-8])</code></td>
+</tr>
+<tr class="even">
+<td><code>liver</code></td>
+<td>Doença Hepática</td>
+<td><code>^(B18\|I8[56]\|I982\|K70\|K71[1357]\|K72[19]\|K7[3-6]\|Z944)</code></td>
+</tr>
+<tr class="odd">
+<td><code>diverticular_disease</code></td>
+<td>Doença Diverticular</td>
+<td><code>^K57</code></td>
+</tr>
+<tr class="even">
+<td><code>ibd</code></td>
+<td>Doença Inflamatória Intestinal</td>
+<td><code>^(K5[01])</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Nota</strong>: <code>peptic</code> não entra no cálculo de multimorbidade.</p>
+</section>
+<section id="seção-12-infecciosas" class="level4">
+<h4 class="anchored" data-anchor-id="seção-12-infecciosas">Seção 12: Infecciosas</h4>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Campo</th>
+<th>Condição</th>
+<th>Padrão REGEX</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>SIDA</code></td>
+<td>HIV/AIDS por CID</td>
+<td><code>^(B2[0-4]\|Z21\|R75\|O987\|P352)</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="seção-13-outras" class="level4">
+<h4 class="anchored" data-anchor-id="seção-13-outras">Seção 13: Outras</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 32%">
+<col style="width: 45%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Campo</th>
+<th>Condição</th>
+<th>Padrão REGEX</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>desnutricao</code></td>
+<td>Desnutrição</td>
+<td><code>^(E4[0-36])</code></td>
+</tr>
+<tr class="even">
+<td><code>retardo_mental</code></td>
+<td>Deficiência Intelectual</td>
+<td><code>^(F7[0-9])</code></td>
+</tr>
+<tr class="odd">
+<td><code>olhos</code></td>
+<td>Doenças Oculares</td>
+<td><code>^(H18\|H201\|H2[56]\|H33\|H360\|H4[026]\|H46\|H540)</code></td>
+</tr>
+<tr class="even">
+<td><code>ouvidos</code></td>
+<td>Doenças Auditivas</td>
+<td><code>^(H9[01])</code></td>
+</tr>
+<tr class="odd">
+<td><code>ma_formacoes</code></td>
+<td>Malformações Congênitas</td>
+<td><code>^(Q0[0-7]\|Q3[5-7]\|Q6[0-2]\|Q8[01]\|Q9[0-9])</code></td>
+</tr>
+<tr class="even">
+<td><code>pele</code></td>
+<td>Doenças de Pele</td>
+<td><code>^(L1[0-49]\|L20\|L4[013]\|L80\|L89\|L90\|L990\|Q85[01])</code></td>
+</tr>
+<tr class="odd">
+<td><code>painful_condition</code></td>
+<td>Condições Dolorosas Crônicas</td>
+<td><code>^(R52[12]\|M79[27]\|G89[034])</code></td>
+</tr>
+<tr class="even">
+<td><code>prostate_disorder</code></td>
+<td>Doenças da Próstata</td>
+<td><code>^(N4[0-2])</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="uso-no-dashboard-4" class="level3">
+<h3 class="anchored" data-anchor-id="uso-no-dashboard-4">Uso no Dashboard</h3>
+<ul>
+<li>Identificação de condições crônicas</li>
+<li>Cálculo de multimorbidade</li>
+<li>Estratificação por condição específica</li>
+<li>Índice de Charlson</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="seção-5b-critérios-expandidos-de-has" class="level2">
+<h2 class="anchored" data-anchor-id="seção-5b-critérios-expandidos-de-has">Seção 5B: Critérios Expandidos de HAS</h2>
+<section id="objetivo-clínico-4" class="level3">
+<h3 class="anchored" data-anchor-id="objetivo-clínico-4">Objetivo Clínico</h3>
+<p>Expandir o diagnóstico de HAS além do CID, incluindo: 1. Medidas de PA críticas (≥180/110) 2. Medidas de PA alteradas repetidas (≥140/90 em 2 ou mais ocasiões) 3. Uso de medicamentos anti-hipertensivos</p>
+</section>
+<section id="ctes-envolvidas-3" class="level3">
+<h3 class="anchored" data-anchor-id="ctes-envolvidas-3">CTEs Envolvidas</h3>
+<section id="todas_medidas_pa" class="level4">
+<h4 class="anchored" data-anchor-id="todas_medidas_pa"><code>todas_medidas_pa</code></h4>
+<p><strong>Fonte</strong>: <code>episodio_assistencial</code> + <code>PA_A1C_glic_cpf_fix</code> (correções)</p>
+<p><strong>Objetivo</strong>: Consolidar todas as medidas de PA com valores corrigidos.</p>
+<p><strong>Campos</strong>: - <code>cpf</code> - <code>pressao_sistolica</code>: PAS corrigida - <code>pressao_diastolica</code>: PAD corrigida - <code>data_medicao</code></p>
+</section>
+<section id="criterios_has_medidas" class="level4">
+<h4 class="anchored" data-anchor-id="criterios_has_medidas"><code>criterios_has_medidas</code></h4>
+<p><strong>Objetivo</strong>: Identificar critérios de HAS baseados em medidas.</p>
+<p><strong>Campos produzidos</strong>: | Campo | Descrição | Critério | |——-|———–|———-| | <code>has_por_medida_critica</code> | Data da primeira medida crítica | PAS ≥ 180 OU PAD ≥ 110 | | <code>n_medidas_alteradas</code> | Contagem de medidas alteradas | PAS 140-179 OU PAD 90-109 | | <code>has_por_medidas_repetidas</code> | Data da 2ª medida alterada | Se n_medidas_alteradas ≥ 2 |</p>
+<p><strong>Lógica para 2ª medida</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>ARRAY_AGG(<span class="op">..</span>. <span class="kw">ORDER</span> <span class="kw">BY</span> data_medicao)[SAFE_OFFSET(<span class="dv">1</span>)]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="criterios_has_medicamentos" class="level4">
+<h4 class="anchored" data-anchor-id="criterios_has_medicamentos"><code>criterios_has_medicamentos</code></h4>
+<p><strong>Fonte</strong>: <code>episodio_assistencial</code> (UNNEST de <code>prescricoes</code>)</p>
+<p><strong>Objetivo</strong>: Identificar uso de anti-hipertensivos.</p>
+<p><strong>Padrão REGEX de anti-hipertensivos</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>REGEXP_CONTAINS(<span class="fu">UPPER</span>(presc.nome), r<span class="st">'(HIDROCLOROTIAZIDA|CLORTALIDONA|INDAPAMIDA|</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="st">CAPTOPRIL|ENALAPRIL|LISINOPRIL|RAMIPRIL|PERINDOPRIL|BENAZEPRIL|</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="st">LOSARTANA|VALSARTANA|CANDESARTANA|IRBESARTANA|OLMESARTANA|TELMISARTANA|</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="st">ANLODIPINO|NIFEDIPINO|FELODIPINO|VERAPAMIL|DILTIAZEM|</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="st">ATENOLOL|PROPRANOLOL|METOPROLOL|CARVEDILOL|BISOPROLOL|</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="st">METILDOPA|CLONIDINA|HIDRALAZINA|ALISQUIRENO)'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Campo produzido</strong>: - <code>has_por_medicamento</code>: Data da primeira prescrição de anti-hipertensivo</p>
+</section>
+</section>
+<section id="uso-no-dashboard-5" class="level3">
+<h3 class="anchored" data-anchor-id="uso-no-dashboard-5">Uso no Dashboard</h3>
+<ul>
+<li>Diagnóstico ampliado de HAS</li>
+<li>Identificação de HAS sem CID registrado</li>
+<li>Priorização de pacientes para codificação</li>
+</ul>
+<hr>
+<p>## Seção 5C: Critérios Expandidos de DM</p>
+<p>### Objetivo Clínico Expandir o diagnóstico de DM além do CID, incluindo: 1. Exames laboratoriais (glicemia ≥126 ou HbA1c ≥6.5) 2. Progressão de pré-diabetes 3. Uso de hipoglicemiantes</p>
+</section>
+<section id="ctes-envolvidas-4" class="level3">
+<h3 class="anchored" data-anchor-id="ctes-envolvidas-4">CTEs Envolvidas</h3>
+<section id="todas_medidas_glicemia" class="level4">
+<h4 class="anchored" data-anchor-id="todas_medidas_glicemia"><code>todas_medidas_glicemia</code></h4>
+<p><strong>Fonte</strong>: <code>episodio_assistencial</code> + <code>PA_A1C_glic_cpf_fix</code> (correções)</p>
+<p><strong>Campos</strong>: - <code>cpf</code> - <code>glicemia</code>: Valor corrigido - <code>hba1c</code>: Valor corrigido - <code>data_coleta</code> - <code>id_hci</code></p>
+</section>
+<section id="criterios_dm_medidas" class="level4">
+<h4 class="anchored" data-anchor-id="criterios_dm_medidas"><code>criterios_dm_medidas</code></h4>
+<p><strong>Campos produzidos</strong>: | Campo | Descrição | Critério | |——-|———–|———-| | <code>dm_por_exames</code> | Data do primeiro exame diagnóstico | Glicemia ≥ 126 OU HbA1c ≥ 6.5 | | <code>n_medidas_pre_dm</code> | Contagem de medidas pré-DM | Glicemia 100-125 OU HbA1c 5.7-6.4 | | <code>dm_por_progressao_pre_dm</code> | Data da 2ª medida de pré-DM | Se n ≥ 2, confirma DM | | <code>pre_dm_por_exames</code> | Data da primeira medida pré-DM | Para pacientes sem DM confirmado |</p>
+<p>#### <code>criterios_dm_medicamentos</code> <strong>Padrão REGEX de hipoglicemiantes FORTES</strong> (confirmam DM): <code>sql REGEXP_CONTAINS(UPPER(presc.nome), r'(GLICLAZIDA|GLIBENCLAMIDA|GLIMEPIRID|GLIPIZIDA| REPAGLINIDA|NATEGLINIDA|PIOGLITAZONA|ROSIGLITAZONA| SITAGLIPTINA|VILDAGLIPTINA|SAXAGLIPTINA|LINAGLIPTINA| EXENATIDA|DULAGLUTIDA|LIXISENATIDA|TIRZEPATIDA| INSULINA|NPH|LISPRO|ASPARTE|GLULISINA|GLARGINA|DETEMIR|DEGLUDECA)')</code></p>
+<p><strong>Campos produzidos</strong>: - <code>dm_por_medicamento_forte</code>: Data da primeira prescrição de hipoglicemiante forte - <code>tem_apenas_metformina</code>: Flag booleano (metformina isolada NÃO confirma DM)</p>
+<p><strong>Regra importante</strong>: Metformina isolada não confirma DM porque é usada para síndrome metabólica e SOP.</p>
+</section>
+</section>
+<section id="uso-no-dashboard-6" class="level3">
+<h3 class="anchored" data-anchor-id="uso-no-dashboard-6">Uso no Dashboard</h3>
+<ul>
+<li>Diagnóstico ampliado de DM</li>
+<li>Identificação de pré-diabéticos</li>
+<li>Identificação de DM sem CID registrado</li>
+</ul>
+<hr>
+<p>## Seção 5D: Consolidação HAS + DM</p>
+<p>### CTE: <code>has_dm_consolidado</code></p>
+<p><strong>Objetivo</strong>: Unificar todos os critérios de HAS e DM em uma única CTE, determinando a <strong>primeira data de diagnóstico</strong> por qualquer critério.</p>
+<p><strong>Lógica de consolidação HAS</strong>: <code>sql HAS = MIN(has_por_cid, has_por_medida_critica, has_por_medidas_repetidas, has_por_medicamento)</code> Onde MIN ignora valores NULL.</p>
+<p><strong>Lógica de consolidação DM</strong>: <code>sql DM = MIN(dm_por_cid, dm_por_exames, dm_por_progressao_pre_dm, dm_por_medicamento_forte)</code> <strong>Exceção</strong>: Se <code>tem_apenas_metformina = TRUE</code> e nenhum outro critério, DM = NULL.</p>
+<p><strong>Campos produzidos para HAS</strong>: | Campo | Descrição | |——-|———–| | <code>HAS</code> | Data do diagnóstico consolidado | | <code>has_por_cid</code> | Data do CID | | <code>has_por_medida_critica</code> | Data da PA crítica | | <code>has_por_medidas_repetidas</code> | Data da 2ª PA alterada | | <code>has_por_medicamento</code> | Data da prescrição | | <code>HAS_sem_CID</code> | TRUE se diagnosticado sem CID |</p>
+<p><strong>Campos produzidos para DM</strong>: | Campo | Descrição | |——-|———–| | <code>DM</code> | Data do diagnóstico consolidado | | <code>dm_por_cid</code> | Data do CID | | <code>dm_por_exames</code> | Data do exame diagnóstico | | <code>dm_por_progressao_pre_dm</code> | Data da progressão | | <code>dm_por_medicamento_forte</code> | Data da prescrição | | <code>DM_sem_CID</code> | TRUE se diagnosticado sem CID | | <code>pre_DM</code> | Data do pré-DM (se DM = NULL) |</p>
+<p>### Uso no Dashboard - Detalhamento da origem do diagnóstico - Identificação de subnotificação de CID - Data exata para cálculo de tempo de doença</p>
+<hr>
+<p>## Seção 5E: Progressão Glicêmica</p>
+<p>### Objetivo Clínico Avaliar a <strong>tendência temporal</strong> do controle glicêmico em diabéticos, comparando HbA1c atual com anterior.</p>
+</section>
+<section id="ctes-envolvidas-5" class="level3">
+<h3 class="anchored" data-anchor-id="ctes-envolvidas-5">CTEs Envolvidas</h3>
+<section id="hba1c_progressao" class="level4">
+<h4 class="anchored" data-anchor-id="hba1c_progressao"><code>hba1c_progressao</code></h4>
+<p><strong>Objetivo</strong>: Para cada paciente, obter a HbA1c mais recente e a anterior.</p>
+<p><strong>Usa</strong>: <code>LAG()</code> para capturar valor anterior.</p>
+<p><strong>Campos</strong>: - <code>hba1c_atual</code>, <code>data_hba1c_atual</code> - <code>hba1c_anterior</code>, <code>data_hba1c_anterior</code></p>
+</section>
+<section id="progressao_glicemica" class="level4">
+<h4 class="anchored" data-anchor-id="progressao_glicemica"><code>progressao_glicemica</code></h4>
+<p><strong>Objetivo</strong>: Classificar status e tendência do controle glicêmico.</p>
+<p><strong>Meta de HbA1c por idade</strong>: | Idade | Meta | |——-|——| | &lt; 60 anos | 7.0% | | ≥ 60 anos | 7.5% |</p>
+<p><strong>Status de controle</strong> (<code>status_controle_glicemico</code>):</p>
+<p>Para pacientes <strong>SEM DM</strong>: - <code>rastreio - normal</code>: HbA1c &lt; 5.7 - <code>rastreio - pre_diabetes</code>: HbA1c 5.7-6.4 - <code>rastreio - provável_diabetes</code>: HbA1c ≥ 6.5</p>
+<p>Para pacientes <strong>COM DM</strong>: - <code>sem_dados</code>: Sem HbA1c - <code>abaixo_da_meta</code>: Idade ≥ 70 e HbA1c &lt; 6.0 (risco de hipoglicemia) - <code>dentro_da_meta</code>: HbA1c ≤ meta - <code>fora_da_meta</code>: HbA1c &gt; meta</p>
+<p><strong>Tendência</strong> (<code>tendencia_hba1c</code>):</p>
+<p>Para pacientes <strong>SEM DM</strong>: Apenas classificação de rastreio.</p>
+<p>Para pacientes <strong>COM DM</strong>: - Se <strong>dentro/abaixo da meta</strong>: <code>estavel</code> - Se <strong>fora da meta</strong>: - <code>melhorando</code>: Queda &gt; 0.4% - <code>piorando</code>: Aumento &gt; 0.4% - <code>estavel</code>: Variação ≤ 0.4% - <code>sem_referencia_previa</code>: Sem HbA1c anterior</p>
+</section>
+<section id="historico_controle_glicemia" class="level4">
+<h4 class="anchored" data-anchor-id="historico_controle_glicemia"><code>historico_controle_glicemia</code></h4>
+<p><strong>Objetivo</strong>: Calcular dias em cada status de controle, interpolando entre medições.</p>
+<p><strong>Lógica</strong>: Para cada medição de HbA1c, calcula os dias até a próxima medição (ou até hoje se for a última). Classifica esse período como “controlado” ou “descontrolado”.</p>
+</section>
+<section id="resumo_controle_glicemia" class="level4">
+<h4 class="anchored" data-anchor-id="resumo_controle_glicemia"><code>resumo_controle_glicemia</code></h4>
+<p><strong>Campos produzidos</strong>: | Campo | Descrição | |——-|———–| | <code>dias_dm_controlado</code> | Total de dias controlado desde diagnóstico | | <code>dias_dm_descontrolado</code> | Total de dias descontrolado | | <code>dias_desde_ultima_hba1c</code> | Dias desde última medição | | <code>pct_dias_dm_controlado</code> | Percentual de dias controlado | | <code>dias_dm_controlado_365d</code> | Dias controlado nos últimos 365 dias | | <code>dias_dm_descontrolado_365d</code> | Dias descontrolado nos últimos 365 dias | | <code>pct_dias_dm_controlado_365d</code> | Percentual nos últimos 365 dias |</p>
+<p>#### <code>ultimas_medidas_glicemia</code> <strong>Objetivo</strong>: Gerar strings formatadas das últimas 3 medidas.</p>
+<p><strong>Campos</strong>: - <code>ultimas_tres_glicemias</code>: Ex: “156 mg/dL; 142 mg/dL; 138 mg/dL” - <code>ultimas_tres_A1C</code>: Ex: “7.2%; 7.8%; 8.1%”</p>
+</section>
+</section>
+<section id="uso-no-dashboard-7" class="level3">
+<h3 class="anchored" data-anchor-id="uso-no-dashboard-7">Uso no Dashboard</h3>
+<ul>
+<li>Cartão do paciente com histórico glicêmico</li>
+<li>Identificação de pacientes piorando</li>
+<li>Métricas de qualidade de controle</li>
+</ul>
+<hr>
+<p>## Seção 5F: Progressão Pressórica</p>
+<p>### Objetivo Clínico Avaliar a <strong>tendência temporal</strong> do controle pressórico em hipertensos, análogo à progressão glicêmica.</p>
+</section>
+<section id="ctes-envolvidas-6" class="level3">
+<h3 class="anchored" data-anchor-id="ctes-envolvidas-6">CTEs Envolvidas</h3>
+<section id="todas_medidas_pa_completas" class="level4">
+<h4 class="anchored" data-anchor-id="todas_medidas_pa_completas"><code>todas_medidas_pa_completas</code></h4>
+<p><strong>Objetivo</strong>: Consolidar todas as medidas de PA com correções.</p>
+</section>
+<section id="pa_progressao" class="level4">
+<h4 class="anchored" data-anchor-id="pa_progressao"><code>pa_progressao</code></h4>
+<p><strong>Objetivo</strong>: Obter PA mais recente e anterior por paciente.</p>
+</section>
+<section id="progressao_pressao" class="level4">
+<h4 class="anchored" data-anchor-id="progressao_pressao"><code>progressao_pressao</code></h4>
+<p><strong>Meta de PA por idade</strong>: | Idade | Meta PAS | Meta PAD | |——-|———-|———-| | &lt; 80 anos | 140 | 90 | | ≥ 80 anos | 150 | 90 |</p>
+<p><strong>Status de controle</strong> (<code>status_controle_pressorio</code>):</p>
+<p>Para pacientes <strong>SEM HAS</strong>: - <code>rastreio - normal</code>: PAS &lt; 120 e PAD &lt; 80 - <code>rastreio - pre_hipertensao</code>: PAS &lt; 130 e PAD &lt; 85 - <code>rastreio - limítrofe</code>: PAS &lt; 140 ou PAD &lt; 90 - <code>rastreio - provável_HAS</code>: PAS ≥ 140 ou PAD ≥ 90</p>
+<p>Para pacientes <strong>COM HAS</strong>: - <code>controlado</code>: Dentro da meta - <code>descontrolado</code>: Fora da meta</p>
+<p><strong>Tendência</strong> (<code>tendencia_pa</code>): - Se <strong>controlado</strong>: <code>estavel</code> - Se <strong>descontrolado</strong>: - <code>melhorando</code>: Queda de PAS &gt; 5 mmHg - <code>piorando</code>: Aumento de PAS &gt; 5 mmHg - <code>estavel</code>: Variação ≤ 5 mmHg</p>
+</section>
+<section id="historico_controle_pa-e-resumo_controle_pa" class="level4">
+<h4 class="anchored" data-anchor-id="historico_controle_pa-e-resumo_controle_pa"><code>historico_controle_pa</code> e <code>resumo_controle_pa</code></h4>
+<p>Análogos aos de glicemia, calculando dias controlado/descontrolado.</p>
+</section>
+<section id="ultimas_medidas_pa" class="level4">
+<h4 class="anchored" data-anchor-id="ultimas_medidas_pa"><code>ultimas_medidas_pa</code></h4>
+<p><strong>Campo</strong>: - <code>ultimas_tres_PA</code>: Ex: “138/88 mmHg; 142/92 mmHg; 156/98 mmHg”</p>
+<hr>
+<p>## Seção 6: Consultas e Longitudinalidade</p>
+<p>### Objetivo Clínico Avaliar o <strong>padrão de utilização</strong> dos serviços de saúde, identificando: - Volume de consultas - Regularidade de acompanhamento - Perfil de cuidado (médico vs enfermagem) - Longitudinalidade (consultas na unidade de cadastro vs fora)</p>
+</section>
+</section>
+<section id="ctes-envolvidas-7" class="level3">
+<h3 class="anchored" data-anchor-id="ctes-envolvidas-7">CTEs Envolvidas</h3>
+<section id="contagem_consultas_detalhada" class="level4">
+<h4 class="anchored" data-anchor-id="contagem_consultas_detalhada"><code>contagem_consultas_detalhada</code></h4>
+<p><strong>Fonte</strong>: <code>episodio_assistencial</code></p>
+<p><strong>Campos produzidos - Totais históricos</strong>: | Campo | Descrição | |——-|———–| | <code>consultas_total_historico</code> | Total de consultas (todo período) | | <code>consultas_medicas_historico</code> | Com médico | | <code>consultas_enfermagem_historico</code> | Com enfermeiro |</p>
+<p><strong>Campos produzidos - Últimos 365 dias</strong>: | Campo | Descrição | |——-|———–| | <code>consultas_365d</code> | Total nos últimos 365 dias | | <code>consultas_medicas_365d</code> | Com médico | | <code>consultas_enfermagem_365d</code> | Com enfermeiro | | <code>consultas_medicas_na_unidade_365d</code> | Médicas na unidade de cadastro | | <code>consultas_medicas_fora_365d</code> | Médicas fora da unidade | | <code>consultas_enfermagem_na_unidade_365d</code> | Enfermagem na unidade | | <code>consultas_enfermagem_fora_365d</code> | Enfermagem fora |</p>
+<p><strong>Campos de datas</strong>: - <code>data_primeira_consulta</code> - <code>data_ultima_consulta</code> - <code>data_ultima_medica</code> - <code>data_ultima_enfermagem</code></p>
+<p><strong>Regularidade</strong>: - <code>meses_com_consulta_12m</code>: Contagem de meses distintos com consulta</p>
+<p><strong>Critério de especialidade</strong>: <code>sql profissional_saude_responsavel.especialidade LIKE '%Médico%' profissional_saude_responsavel.especialidade LIKE '%Enfermeiro%'</code></p>
+</section>
+<section id="intervalos_consultas" class="level4">
+<h4 class="anchored" data-anchor-id="intervalos_consultas"><code>intervalos_consultas</code></h4>
+<p><strong>Objetivo</strong>: Calcular intervalos entre consultas consecutivas.</p>
+<p><strong>Campos</strong>: | Campo | Descrição | |——-|———–| | <code>intervalo_mediano_dias</code> | Mediana dos intervalos | | <code>intervalo_medio_dias</code> | Média dos intervalos | | <code>ultimo_intervalo_dias</code> | Intervalo entre as 2 últimas | | <code>n_intervalos</code> | Número de intervalos calculados |</p>
+<p>#### <code>contagem_consultas</code> <strong>Objetivo</strong>: Consolidar e calcular indicadores derivados.</p>
+<p><strong>Indicadores temporais</strong>: - <code>dias_desde_ultima_medica</code> - <code>dias_desde_ultima_enfermagem</code> - <code>dias_desde_ultima_consulta</code> - <code>dias_em_acompanhamento</code></p>
+<p><strong>Percentuais</strong>: - <code>pct_consultas_medico_365d</code> - <code>pct_consultas_enfermeiro_365d</code> - <code>pct_consultas_medicas_fora_365d</code> - <code>pct_consultas_medicas_na_unidade_365d</code></p>
+<p><strong>Categorias</strong>:</p>
+<p><code>perfil_cuidado_365d</code>: - <code>sem_consultas</code>: Nenhuma consulta em 365d - <code>medico_centrado</code>: ≥75% consultas com médico - <code>enfermagem_centrado</code>: ≥75% consultas com enfermeiro - <code>compartilhado</code>: 25-75% com médico - <code>indefinido</code>: Outros casos</p>
+<p><code>regularidade_acompanhamento</code>: - <code>sem_acompanhamento</code>: 0 meses - <code>esporadico</code>: 1-2 meses - <code>irregular</code>: 3-5 meses - <code>regular</code>: ≥6 meses</p>
+<p><code>baixa_longitudinalidade</code>: - <code>TRUE</code>: &gt;50% das consultas médicas fora da unidade de cadastro</p>
+</section>
+</section>
+<section id="uso-no-dashboard-8" class="level3">
+<h3 class="anchored" data-anchor-id="uso-no-dashboard-8">Uso no Dashboard</h3>
+<ul>
+<li>Identificação de pacientes sem acompanhamento</li>
+<li>Avaliação de longitudinalidade</li>
+<li>Comparação com benchmarks</li>
+</ul>
+<hr>
+<p>## Seção 7: Consolidação com eGFR</p>
+<p>### CTE: <code>dados_consolidados</code></p>
+<p><strong>Objetivo</strong>: JOIN de todas as CTEs anteriores + cálculo de eGFR.</p>
+</section>
+<section id="cálculo-do-egfr-ckd-epi-2021" class="level3">
+<h3 class="anchored" data-anchor-id="cálculo-do-egfr-ckd-epi-2021">Cálculo do eGFR (CKD-EPI 2021)</h3>
+<p><strong>Fórmula</strong>: <code>sql 142 *   POWER(     LEAST(creatinina / CASE WHEN genero = 'feminino' THEN 0.7 ELSE 0.9 END, 1),     CASE WHEN genero = 'feminino' THEN -0.241 ELSE -0.302 END   ) *   POWER(     GREATEST(creatinina / CASE WHEN genero = 'feminino' THEN 0.7 ELSE 0.9 END, 1),     -1.200   ) *   POWER(0.9938, idade) *   CASE WHEN genero = 'feminino' THEN 1.012 ELSE 1.0 END</code></p>
+<p><strong>Nota</strong>: Esta é a fórmula CKD-EPI 2021 <strong>sem ajuste racial</strong> (recomendação atual).</p>
+</section>
+<section id="estadiamento-ckd-ckd_stage" class="level3">
+<h3 class="anchored" data-anchor-id="estadiamento-ckd-ckd_stage">Estadiamento CKD (<code>ckd_stage</code>)</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>eGFR (ml/min/1.73m²)</th>
+<th>Estágio</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>≥ 90</td>
+<td>G1 - Normal ou alta</td>
+</tr>
+<tr class="even">
+<td>60-89</td>
+<td>G2 - Levemente diminuída</td>
+</tr>
+<tr class="odd">
+<td>30-59</td>
+<td>G3 - Moderadamente diminuída</td>
+</tr>
+<tr class="even">
+<td>15-29</td>
+<td>G4 - Severamente diminuída</td>
+</tr>
+<tr class="odd">
+<td>&lt; 15</td>
+<td>G5 - Falência renal</td>
+</tr>
+<tr class="even">
+<td>NULL</td>
+<td>Não avaliado</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>## Seção 7A: Morbidades Consolidadas</p>
+<p>### Objetivo Consolidar morbidades que têm <strong>múltiplas fontes de diagnóstico</strong>.</p>
+</section>
+<section id="ctes-envolvidas-8" class="level3">
+<h3 class="anchored" data-anchor-id="ctes-envolvidas-8">CTEs Envolvidas</h3>
+<section id="dados_com_irc" class="level4">
+<h4 class="anchored" data-anchor-id="dados_com_irc"><code>dados_com_irc</code></h4>
+<p><strong>Objetivo</strong>: Unificar IRC (CID ou eGFR).</p>
+<p><strong>Regra</strong>: <code>sql IRC = IRC_por_CID OU (eGFR indica G3/G4/G5 E IRC_por_CID é NULL) → usar data_creatinina</code></p>
+</section>
+<section id="dados_com_hiv" class="level4">
+<h4 class="anchored" data-anchor-id="dados_com_hiv"><code>dados_com_hiv</code></h4>
+<p><strong>Objetivo</strong>: Unificar HIV (CID ou base externa).</p>
+<p><strong>Regra</strong>: <code>sql HIV = MENOR(SIDA, data_diagnostico_hiv)</code></p>
+</section>
+<section id="dados_com_dislipidemia" class="level4">
+<h4 class="anchored" data-anchor-id="dados_com_dislipidemia"><code>dados_com_dislipidemia</code></h4>
+<p><strong>Objetivo</strong>: Classificar perfil lipídico e unificar dislipidemia.</p>
+<p><strong>Classificações ATP III</strong>:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Exame</th>
+<th>Classificação</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Colesterol Total</td>
+<td>Desejável</td>
+<td>&lt; 200</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Limítrofe alto</td>
+<td>200-239</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Alto</td>
+<td>≥ 240</td>
+</tr>
+<tr class="even">
+<td>LDL</td>
+<td>Ótimo</td>
+<td>&lt; 100</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Acima do ótimo</td>
+<td>100-129</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Limítrofe alto</td>
+<td>130-159</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Alto</td>
+<td>160-189</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Muito alto</td>
+<td>≥ 190</td>
+</tr>
+<tr class="odd">
+<td>HDL</td>
+<td>Baixo</td>
+<td>&lt; 40 (M) / &lt; 50 (F)</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Normal</td>
+<td>40-59 (M) / 50-59 (F)</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Desejável (protetor)</td>
+<td>≥ 60</td>
+</tr>
+<tr class="even">
+<td>Triglicerídeos</td>
+<td>Normal</td>
+<td>&lt; 150</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Limítrofe alto</td>
+<td>150-199</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Alto</td>
+<td>200-499</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Muito alto</td>
+<td>≥ 500</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Critérios de dislipidemia laboratorial</strong>: - <code>dislipidemia_por_CT</code>: CT ≥ 200 - <code>dislipidemia_por_LDL</code>: LDL ≥ 130 - <code>dislipidemia_por_HDL_baixo</code>: HDL &lt; 40 (M) ou &lt; 50 (F) - <code>dislipidemia_por_TG</code>: TG ≥ 150</p>
+<p><strong>Dislipidemia unificada</strong>: <code>sql dislipidemia = MENOR(dislipidemia_por_CID, data do primeiro exame alterado)</code></p>
+<hr>
+<p>## Seção 7B: Multimorbidade</p>
+<p>### CTE: <code>morbidades_array</code></p>
+<p><strong>Objetivo</strong>: Contar morbidades e identificar data da multimorbidade.</p>
+<p><strong>Morbidades incluídas no cálculo</strong> (33 condições):</p>
+<ol type="1">
+<li>HAS, DM</li>
+<li>CI, ICC, stroke, arritmia, valvular, circ_pulm, vascular_periferica</li>
+<li>epilepsy, parkinsonism, multiple_sclerosis, neuro, dementia, plegia</li>
+<li>psicoses (depre_ansiedade EXCLUÍDA)</li>
+<li>COPD, asthma</li>
+<li>neoplasia_mama, neoplasia_colo_uterino, neoplasia_feminina_estrita, neoplasia_masculina_estrita, leukemia, lymphoma, metastasis, neoplasia_ambos_os_sexos</li>
+<li>IRC, dislipidemia, obesidade, tireoide</li>
+<li>coagulo (anemias EXCLUÍDA)</li>
+<li>reumato</li>
+<li>alcool, drogas (tabaco EXCLUÍDO)</li>
+<li>liver, diverticular_disease, ibd (peptic EXCLUÍDA)</li>
+<li>HIV</li>
+</ol>
+<p><strong>Campos produzidos</strong>: | Campo | Descrição | |——-|———–| | <code>total_morbidades</code> | Contagem de morbidades distintas | | <code>multimorbidade</code> | Data da 2ª morbidade (quando se torna multimórbido) | | <code>eh_multimorbido</code> | TRUE se total_morbidades ≥ 2 |</p>
+<p><strong>Deduplicação</strong>: <code>COUNT(DISTINCT data)</code> e <code>ARRAY_AGG(DISTINCT data)</code> para evitar contagem dupla de morbidades diagnosticadas na mesma data.</p>
+<hr>
+<p>## Seção 8: Prescrições de Medicamentos</p>
+<p>### CTE: <code>ultimas_prescricoes_medicamentos</code></p>
+<p><strong>Objetivo</strong>: Identificar a data da última prescrição de cada classe terapêutica relevante.</p>
+</section>
+</section>
+<section id="classes-terapêuticas-e-padrões-regex" class="level3">
+<h3 class="anchored" data-anchor-id="classes-terapêuticas-e-padrões-regex">Classes Terapêuticas e Padrões REGEX</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 27%">
+<col style="width: 48%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Campo</th>
+<th>Classe</th>
+<th>Padrão REGEX</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>data_ultima_AAS</code></td>
+<td>Antiagregante</td>
+<td><code>ASPIRINA\|AAS\|ACIDO ACETILSALICILICO\|ÁCIDO ACETILSALICÍLICO\|SOMALGIN\|ASPIRINA PREVENT\|ECASIL</code></td>
+</tr>
+<tr class="even">
+<td><code>data_ultima_anticoag</code></td>
+<td>Anticoagulantes</td>
+<td><code>VARFARINA\|WARFARIN\|MAREVAN\|COUMADIN\|RIVAROXABAN\|XARELTO\|APIXABAN\|ELIQUIS\|DABIGATRAN\|PRADAXA\|EDOXABAN\|LIXIANA</code></td>
+</tr>
+<tr class="odd">
+<td><code>data_ultima_estatina_alta</code></td>
+<td>Estatina alta intensidade</td>
+<td><code>ATORVASTATINA.*[4-8]0\|ROSUVASTATINA.*[2-4]0</code></td>
+</tr>
+<tr class="even">
+<td><code>data_ultima_estatina_qualquer</code></td>
+<td>Qualquer estatina</td>
+<td><code>ATORVASTATINA\|ROSUVASTATINA\|SINVASTATINA\|PRAVASTATINA\|LOVASTATINA\|FLUVASTATINA\|PITAVASTATINA</code></td>
+</tr>
+<tr class="odd">
+<td><code>data_ultima_SGLT2</code></td>
+<td>Inibidores SGLT-2</td>
+<td><code>DAPAGLIFLOZINA\|FORXIGA\|EMPAGLIFLOZINA\|JARDIANCE\|CANAGLIFLOZINA\|INVOKANA\|SOTAGLIFLOZINA</code></td>
+</tr>
+<tr class="even">
+<td><code>data_ultima_BB</code></td>
+<td>Betabloqueadores</td>
+<td><code>METOPROLOL.*SUCCINATO\|CARVEDILOL\|BISOPROLOL\|COREG\|CONCOR\|SELOZOK.*ZOK</code></td>
+</tr>
+<tr class="odd">
+<td><code>data_ultima_IECA</code></td>
+<td>IECA</td>
+<td><code>CAPTOPRIL\|ENALAPRIL\|LISINOPRIL\|RAMIPRIL\|PERINDOPRIL\|BENAZEPRIL\|FOSINOPRIL\|QUINAPRIL\|TRANDOLAPRIL</code></td>
+</tr>
+<tr class="even">
+<td><code>data_ultima_BRA</code></td>
+<td>BRA</td>
+<td><code>LOSARTANA\|VALSARTANA\|CANDESARTANA\|IRBESARTANA\|OLMESARTANA\|TELMISARTANA\|AZILSARTANA\|EPROSARTANA</code></td>
+</tr>
+<tr class="odd">
+<td><code>data_ultima_INRA</code></td>
+<td>INRA (Sacubitril)</td>
+<td><code>SACUBITRIL\|ENTRESTO</code></td>
+</tr>
+<tr class="even">
+<td><code>data_ultima_diuretico_alca</code></td>
+<td>Diurético de alça</td>
+<td><code>FUROSEMIDA\|BUMETANIDA\|TORASEMIDA\|LASIX</code></td>
+</tr>
+<tr class="odd">
+<td><code>data_ultima_ARM</code></td>
+<td>Antagonista Mineralocorticoide</td>
+<td><code>ESPIRONOLACTONA\|ALDACTONE\|EPLERENONA\|INSPRA</code></td>
+</tr>
+<tr class="even">
+<td><code>data_ultima_BCC_nao_DHP</code></td>
+<td>BCC não-dihidropiridínico</td>
+<td><code>VERAPAMIL\|DILTIAZEM\|CARDIZEM</code></td>
+</tr>
+<tr class="odd">
+<td><code>data_ultima_AINE</code></td>
+<td>Anti-inflamatórios</td>
+<td><code>IBUPROFENO\|DICLOFENACO\|NAPROXENO\|CETOPROFENO\|PIROXICAM\|MELOXICAM\|NIMESULIDA\|INDOMETACINA\|ACECLOFENACO</code></td>
+</tr>
+<tr class="even">
+<td><code>data_ultima_hidralazina</code></td>
+<td>Hidralazina</td>
+<td><code>HIDRALAZINA</code></td>
+</tr>
+<tr class="odd">
+<td><code>data_ultima_nitrato</code></td>
+<td>Nitratos</td>
+<td><code>ISOSSORBIDA\|MONONITRATO\|DINITRATO\|PROPATILNITRATO</code></td>
+</tr>
+<tr class="even">
+<td><code>data_ultima_digoxina</code></td>
+<td>Digoxina</td>
+<td><code>DIGOXINA\|LANOXIN</code></td>
+</tr>
+</tbody>
+</table>
+<p>### Uso no Dashboard - Identificação de lacunas de prescrição - Detecção de combinações inadequadas - Avaliação de adesão a guidelines</p>
+<hr>
+<p>## Seção 9: Exames Solicitados</p>
+<p>### CTE: <code>exames_solicitados_365d</code></p>
+<p><strong>Fonte</strong>: <code>brutos_prontuario_vitacare.atendimento</code> (campo <code>exames_solicitados</code>)</p>
+<p><strong>Objetivo</strong>: Verificar se exames essenciais foram solicitados nos últimos 365 dias.</p>
+</section>
+<section id="exames-monitorados" class="level3">
+<h3 class="anchored" data-anchor-id="exames-monitorados">Exames Monitorados</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 32%">
+<col style="width: 45%">
+<col style="width: 22%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Campo (tem_X_365d)</th>
+<th>Campo (data_solicitacao_X)</th>
+<th>Padrão REGEX</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>tem_creatinina_365d</code></td>
+<td><code>data_solicitacao_creatinina</code></td>
+<td><code>CREATININA</code></td>
+</tr>
+<tr class="even">
+<td><code>tem_colesterol_365d</code></td>
+<td><code>data_solicitacao_colesterol</code></td>
+<td><code>COLESTEROL\|HDL\|LDL\|TRIGLICERID</code></td>
+</tr>
+<tr class="odd">
+<td><code>tem_eas_365d</code></td>
+<td><code>data_solicitacao_eas</code></td>
+<td><code>URINA\|CARACTERES\|SEDIMENTO\|EAS</code></td>
+</tr>
+<tr class="even">
+<td><code>tem_ecg_365d</code></td>
+<td><code>data_solicitacao_ecg</code></td>
+<td><code>ELETROCARDIOGRAMA\|ECG</code></td>
+</tr>
+<tr class="odd">
+<td><code>tem_hba1c_solicitado_365d</code></td>
+<td><code>data_solicitacao_hba1c</code></td>
+<td><code>HEMOGLOBINA.*GLICO\|HEMOGLOBINA.*GLICADA\|HBA1C</code></td>
+</tr>
+<tr class="even">
+<td><code>tem_glicemia_365d</code></td>
+<td><code>data_solicitacao_glicemia</code></td>
+<td><code>GLICOSE\|GLICEMIA</code></td>
+</tr>
+<tr class="odd">
+<td><code>tem_microalbuminuria_365d</code></td>
+<td><code>data_solicitacao_microalbuminuria</code></td>
+<td><code>MICROALBUMIN</code></td>
+</tr>
+<tr class="even">
+<td><code>tem_hemograma_365d</code></td>
+<td><code>data_solicitacao_hemograma</code></td>
+<td><code>HEMOGRAMA</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>## Seção 10: Exame do Pé Diabético</p>
+<p>### CTE: <code>exame_pe_diabetico</code></p>
+<p><strong>Fonte</strong>: <code>brutos_prontuario_vitacare.atendimento</code> (campo <code>soap_plano_procedimentos_clinicos</code>)</p>
+<p><strong>Padrão REGEX</strong>: <code>sql REGEXP_CONTAINS(UPPER(...), r'EXAME.*PÉ.*DIABÉTICO|PÉ.*DIABÉTICO')</code></p>
+<p><strong>Campos produzidos</strong>: | Campo | Descrição | |——-|———–| | <code>teve_exame_pe_365d</code> | TRUE se teve nos últimos 365 dias | | <code>teve_exame_pe_180d</code> | TRUE se teve nos últimos 180 dias | | <code>data_ultimo_exame_pe</code> | Data do último exame | | <code>dias_desde_ultimo_exame_pe</code> | Dias desde o último |</p>
+<hr>
+<p>## Seção 11: Escore de Framingham</p>
+<p>### Objetivo Clínico Calcular o <strong>risco cardiovascular em 10 anos</strong> usando o escore de Framingham tradicional.</p>
+</section>
+<section id="cte-pontuacao_framingham" class="level3">
+<h3 class="anchored" data-anchor-id="cte-pontuacao_framingham">CTE: <code>pontuacao_framingham</code></h3>
+<p><strong>Componentes pontuados</strong>:</p>
+<p>#### Pontos por Idade (Masculino) | Faixa | Pontos | |——-|——–| | 30-34 | -1 | | 35-39 | 0 | | 40-44 | 1 | | 45-49 | 2 | | 50-54 | 3 | | 55-59 | 4 | | 60-64 | 5 | | 65-69 | 6 | | 70-74 | 7 | | ≥75 | 8 |</p>
+<p>#### Pontos por Idade (Feminino) | Faixa | Pontos | |——-|——–| | 30-34 | -9 | | 35-39 | -4 | | 40-44 | 0 | | 45-49 | 3 | | 50-54 | 6 | | 55-59 | 7 | | 60-64 | 8 | | ≥65 | 8 |</p>
+<p>#### Pontos por Colesterol Total | CT (mg/dL) | Masculino | Feminino | |————|———–|———-| | &lt; 160 | -3 | -2 | | 160-199 | 0 | 0 | | 200-239 | 1 | 1 | | 240-279 | 2 | 1 | | ≥ 280 | 3 | 3 |</p>
+<p>#### Pontos por HDL | HDL (mg/dL) | Masculino | Feminino | |————-|———–|———-| | &lt; 35 | 2 | 5 | | 35-44 | 1 | 2 | | 45-49 | 0 | 1 | | 50-59 | 0 | 0 | | ≥ 60 | -1 | -2 |</p>
+<p>#### Pontos por PAS (sem tratamento) | PAS (mmHg) | Masculino | Feminino | |————|———–|———-| | &lt; 120 | 0 | -3 | | 120-129 | 0 | 0 | | 130-139 | 1 | 1 | | 140-159 | 2 | 2 | | ≥ 160 | 3 | 4 |</p>
+<p>#### Pontos por PAS (com tratamento/HAS) | PAS (mmHg) | Masculino | Feminino | |————|———–|———-| | &lt; 120 | 0 | -1 | | 120-129 | 2 | 2 | | 130-139 | 3 | 3 | | 140-159 | 4 | 5 | | ≥ 160 | 5 | 6 |</p>
+<p>#### Pontos por Diabetes | Gênero | Pontos | |——–|——–| | Masculino | 2 | | Feminino | 4 |</p>
+<p>#### Pontos por Tabagismo | | Pontos | |-|——–| | Ambos | 2 |</p>
+<p>### CTE: <code>risco_calculado</code></p>
+<p><strong>Campos produzidos</strong>: - <code>pontos_totais</code>: Soma de todos os componentes - <code>percentual_risco_10_anos</code>: Risco em % (tabela de conversão)</p>
+<p><strong>Tabela de conversão (Masculino)</strong>: | Pontos | Risco % | |——–|———| | ≤ -3 | 1.0 | | -2 | 1.1 | | … | … | | 17 | 29.4 | | ≥ 18 | 30.0 |</p>
+<hr>
+<p>## Seção 12: Risco Cardiovascular - Estratificação SBC</p>
+<p>### CTE: <code>risco_cardiovascular_estratificado</code></p>
+<p>### Objetivo Reclassificar o risco cardiovascular segundo diretrizes da <strong>Sociedade Brasileira de Cardiologia</strong>, que considera condições clínicas que elevam automaticamente o risco.</p>
+</section>
+<section id="categorias-de-risco" class="level3">
+<h3 class="anchored" data-anchor-id="categorias-de-risco">Categorias de Risco</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Categoria</th>
+<th>Critérios</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>MUITO ALTO</strong></td>
+<td>CI, stroke ou vascular_periferica (aterosclerose significativa)</td>
+</tr>
+<tr class="even">
+<td><strong>ALTO</strong></td>
+<td>IRC, eGFR &lt; 60, ou LDL ≥ 190</td>
+</tr>
+<tr class="odd">
+<td><strong>INTERMEDIÁRIO</strong></td>
+<td>DM sem aterosclerose, ou Framingham 5-20% (M) / 5-10% (F)</td>
+</tr>
+<tr class="even">
+<td><strong>BAIXO</strong></td>
+<td>Framingham &lt; 5%</td>
+</tr>
+</tbody>
+</table>
+<p>### Campos Produzidos</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 38%">
+<col style="width: 61%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>tipo_estratificacao</code></td>
+<td>“reclassificado_muito_alto”, “reclassificado_alto”, “diabetes_avaliar_framingham”, “usar_framingham”</td>
+</tr>
+<tr class="even">
+<td><code>percentual_risco_final</code></td>
+<td>Risco formatado (ex: “&gt;30%”, “12.5%”)</td>
+</tr>
+<tr class="odd">
+<td><code>categoria_risco_final</code></td>
+<td>“MUITO ALTO”, “ALTO”, “INTERMEDIÁRIO”, “BAIXO”, “NÃO CLASSIFICADO”</td>
+</tr>
+<tr class="even">
+<td><code>motivo_reclassificacao</code></td>
+<td>Texto explicativo da reclassificação</td>
+</tr>
+<tr class="odd">
+<td><code>variaveis_usadas_calculo</code></td>
+<td>Lista de variáveis disponíveis</td>
+</tr>
+<tr class="even">
+<td><code>variaveis_ausentes_calculo</code></td>
+<td>Lista de variáveis faltantes</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>## Seção 13: Índice de Charlson</p>
+<p>### Objetivo Clínico Calcular o <strong>Charlson Comorbidity Index modificado</strong>, incluindo pontuação por idade e polifarmácia.</p>
+</section>
+<section id="cte-charlson_componentes" class="level3">
+<h3 class="anchored" data-anchor-id="cte-charlson_componentes">CTE: <code>charlson_componentes</code></h3>
+</section>
+<section id="pesos-por-morbidade" class="level3">
+<h3 class="anchored" data-anchor-id="pesos-por-morbidade">Pesos por Morbidade</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 35%">
+<col style="width: 64%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Peso</th>
+<th>Condições</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>CI, ICC, vascular_periferica, dementia, COPD, peptic, DM sem IRC, alcool, arritmia, psicoses, HIV</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>DM com IRC, plegia, IRC sem DM, neoplasias sólidas, leukemia, lymphoma</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>liver (doença hepática)</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>metastasis</td>
+</tr>
+</tbody>
+</table>
+<p>### Pontos por Idade</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Faixa</th>
+<th>Pontos</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>&lt; 40</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>40-49</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>50-59</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>60-69</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>70-79</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>≥ 80</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<p>### CTE: <code>charlson_final</code></p>
+<p><strong>JOIN com</strong>: <code>MM_mantidos_alterados_ultimas</code> (tabela de medicamentos crônicos)</p>
+</section>
+<section id="pontos-por-polifarmácia" class="level3">
+<h3 class="anchored" data-anchor-id="pontos-por-polifarmácia">Pontos por Polifarmácia</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Medicamentos crônicos</th>
+<th>Pontos</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0-4</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>5-9 (polifarmácia)</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>≥ 10 (hiperpolifarmácia)</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p>### Campos Produzidos</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 38%">
+<col style="width: 61%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>charlson_pontos_morbidades</code></td>
+<td>Pontos das comorbidades</td>
+</tr>
+<tr class="even">
+<td><code>charlson_pontos_idade</code></td>
+<td>Pontos da idade</td>
+</tr>
+<tr class="odd">
+<td><code>charlson_pontos_polifarmacia</code></td>
+<td>Pontos da polifarmácia</td>
+</tr>
+<tr class="even">
+<td><code>charlson_score</code></td>
+<td>Score total</td>
+</tr>
+<tr class="odd">
+<td><code>charlson_categoria</code></td>
+<td>“Baixo” (≤2), “Moderado” (3-6), “Alto” (7-9), “Muito Alto” (≥10)</td>
+</tr>
+<tr class="even">
+<td><code>total_medicamentos_cronicos</code></td>
+<td>Contagem de medicamentos</td>
+</tr>
+<tr class="odd">
+<td><code>nucleo_cronico_atual</code></td>
+<td>Lista de medicamentos normalizados</td>
+</tr>
+<tr class="even">
+<td><code>polifarmacia</code></td>
+<td>TRUE se 5-9 medicamentos</td>
+</tr>
+<tr class="odd">
+<td><code>hiperpolifarmacia</code></td>
+<td>TRUE se ≥10 medicamentos</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>## Seção 14: Benchmark de Consultas</p>
+<p>### CTE: <code>benchmark_consultas</code></p>
+<p>### Objetivo Criar <strong>grupos de referência</strong> para comparação de padrões de consulta.</p>
+</section>
+<section id="estratificação" class="level3">
+<h3 class="anchored" data-anchor-id="estratificação">Estratificação</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Dimensão</th>
+<th>Categorias</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Faixa etária</td>
+<td>&lt;40, 40-59, 60-79, 80+</td>
+</tr>
+<tr class="even">
+<td>Gênero</td>
+<td>masculino, feminino</td>
+</tr>
+<tr class="odd">
+<td>Risco Charlson</td>
+<td>baixo (≤2), moderado (3-6), alto (≥7)</td>
+</tr>
+</tbody>
+</table>
+<p>### Métricas Calculadas por Grupo</p>
+<ul>
+<li><code>percentis_consultas_365d</code>: Array com P25, P50, P75, P100</li>
+<li><code>percentis_intervalo_mediano</code>: Array com P25, P50, P75, P100</li>
+<li><code>media_consultas_365d</code>: Média de consultas no grupo</li>
+<li><code>media_intervalo_mediano</code>: Média do intervalo no grupo</li>
+<li><code>n_pacientes_grupo</code>: Tamanho do grupo de referência</li>
+</ul>
+</section>
+<section id="uso-no-select-final" class="level3">
+<h3 class="anchored" data-anchor-id="uso-no-select-final">Uso no SELECT Final</h3>
+<p>Comparação individual vs grupo: - <code>percentil_intervalo_vs_grupo</code>: “abaixo_p25”, “p25_p50”, “p50_p75”, “acima_p75” - <code>percentil_consultas_vs_grupo</code>: Idem</p>
+<p>Flags de inequidade: - <code>alto_risco_baixo_acesso</code>: Charlson ≥7 e consultas &lt; P25 do grupo - <code>baixo_risco_alto_acesso</code>: Charlson ≤2 e consultas &gt; P75 do grupo - <code>alto_risco_intervalo_longo</code>: Charlson ≥7 e intervalo &gt; P75 do grupo</p>
+<hr>
+<p>## Glossário de Lacunas de Cuidado</p>
+<p>### Definição Lacunas de cuidado são <strong>indicadores booleanos</strong> que identificam situações onde o cuidado não está alinhado com guidelines ou boas práticas.</p>
+</section>
+<section id="categoria-2-cardiopatia-isquêmica" class="level3">
+<h3 class="anchored" data-anchor-id="categoria-2-cardiopatia-isquêmica">Categoria 2: Cardiopatia Isquêmica</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 30%">
+<col style="width: 27%">
+<col style="width: 19%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Lacuna</th>
+<th>Descrição</th>
+<th>Critério</th>
+<th>Prazo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>lacuna_CI_sem_AAS</code></td>
+<td>CI sem antiagregação</td>
+<td>CI presente E sem AAS há &gt;365d E sem anticoag há &gt;365d</td>
+<td>365 dias</td>
+</tr>
+<tr class="even">
+<td><code>lacuna_CI_sem_estatina_alta</code></td>
+<td>CI sem estatina de alta intensidade</td>
+<td>CI presente E sem estatina alta há &gt;365d</td>
+<td>365 dias</td>
+</tr>
+<tr class="odd">
+<td><code>lacuna_CI_sem_estatina_qualquer</code></td>
+<td>CI sem nenhuma estatina</td>
+<td>CI presente E sem estatina há &gt;365d</td>
+<td>365 dias</td>
+</tr>
+<tr class="even">
+<td><code>lacuna_CI_ICC_sem_BB</code></td>
+<td>CI+ICC sem betabloqueador</td>
+<td>CI E ICC E sem BB há &gt;365d</td>
+<td>365 dias</td>
+</tr>
+</tbody>
+</table>
+<p>### Categoria 3: ICC e Uso Inadequado</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 30%">
+<col style="width: 27%">
+<col style="width: 19%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Lacuna</th>
+<th>Descrição</th>
+<th>Critério</th>
+<th>Prazo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>lacuna_ICC_sem_SGLT2</code></td>
+<td>ICC sem iSGLT2</td>
+<td>ICC presente E sem SGLT2 há &gt;365d</td>
+<td>365 dias</td>
+</tr>
+<tr class="even">
+<td><code>lacuna_ICC_sem_IECA_BRA</code></td>
+<td>ICC sem bloqueio SRAA</td>
+<td>ICC E sem IECA há &gt;365d E sem BRA há &gt;365d</td>
+<td>365 dias</td>
+</tr>
+<tr class="odd">
+<td><code>lacuna_ICC_sem_INRA</code></td>
+<td>ICC sem sacubitril</td>
+<td>ICC E sem INRA há &gt;365d</td>
+<td>365 dias</td>
+</tr>
+<tr class="even">
+<td><code>lacuna_IECA_BRA_concomitante</code></td>
+<td>Uso inadequado IECA+BRA</td>
+<td>IECA há ≤180d E BRA há ≤180d</td>
+<td>-</td>
+</tr>
+<tr class="odd">
+<td><code>lacuna_diur_alca_sem_ICC</code></td>
+<td>Diurético de alça sem ICC</td>
+<td>Sem ICC E diurético alça há ≤180d</td>
+<td>-</td>
+</tr>
+<tr class="even">
+<td><code>lacuna_ICC_sem_ARM</code></td>
+<td>ICC sem espironolactona</td>
+<td>ICC E sem ARM há &gt;365d</td>
+<td>365 dias</td>
+</tr>
+<tr class="odd">
+<td><code>lacuna_ICC_INRA_IECA_concomitante</code></td>
+<td>Combinação perigosa</td>
+<td>ICC E INRA há ≤180d E IECA há ≤180d</td>
+<td>-</td>
+</tr>
+<tr class="even">
+<td><code>lacuna_ICC_uso_BCC_nao_DHP</code></td>
+<td>BCC contraindicado em ICC</td>
+<td>ICC E BCC não-DHP há ≤180d</td>
+<td>-</td>
+</tr>
+<tr class="odd">
+<td><code>lacuna_ICC_uso_AINE</code></td>
+<td>AINE inadequado em ICC</td>
+<td>ICC E AINE há ≤180d</td>
+<td>-</td>
+</tr>
+<tr class="even">
+<td><code>lacuna_IRC_sem_SGLT2</code></td>
+<td>IRC sem iSGLT2</td>
+<td>IRC E sem SGLT2 há &gt;365d</td>
+<td>365 dias</td>
+</tr>
+<tr class="odd">
+<td><code>lacuna_DM_complicado_sem_SGLT2</code></td>
+<td>DM complicado sem iSGLT2</td>
+<td>DM E (ICC ou IRC ou CI) E sem SGLT2 há &gt;365d</td>
+<td>365 dias</td>
+</tr>
+<tr class="even">
+<td><code>lacuna_IRC_sem_iECA_ou_BRA</code></td>
+<td>IRC sem bloqueio SRAA</td>
+<td>IRC E sem IECA há &gt;365d E sem BRA há &gt;365d</td>
+<td>365 dias</td>
+</tr>
+<tr class="odd">
+<td><code>lacuna_ICC_sem_SRAA_e_sem_hidralazina_nitrato</code></td>
+<td>ICC sem vasodilatador</td>
+<td>ICC E sem IECA/BRA/INRA há &gt;365d E sem hidralazina/nitrato há &gt;365d</td>
+<td>365 dias</td>
+</tr>
+</tbody>
+</table>
+<p>### Categoria 4: Fibrilação Atrial</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 30%">
+<col style="width: 27%">
+<col style="width: 19%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Lacuna</th>
+<th>Descrição</th>
+<th>Critério</th>
+<th>Prazo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>lacuna_FA_sem_anticoagulacao</code></td>
+<td>FA sem anticoagulação</td>
+<td>arritmia E sem anticoag há &gt;365d</td>
+<td>365 dias</td>
+</tr>
+<tr class="even">
+<td><code>lacuna_FA_sem_controle_FC</code></td>
+<td>FA sem controle de frequência</td>
+<td>arritmia E sem BB há &gt;365d E sem digoxina há &gt;365d</td>
+<td>365 dias</td>
+</tr>
+<tr class="odd">
+<td><code>lacuna_FA_ICC_sem_digoxina</code></td>
+<td>FA+ICC sem digoxina</td>
+<td>arritmia E ICC E sem digoxina há &gt;365d</td>
+<td>365 dias</td>
+</tr>
+</tbody>
+</table>
+<p>### Categoria 6: Diabetes</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 37%">
+<col style="width: 34%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Lacuna</th>
+<th>Descrição</th>
+<th>Critério</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>lacuna_DM_sem_HbA1c_recente</code></td>
+<td>DM sem monitoramento</td>
+<td>DM E (HbA1c NULL ou dias_desde &gt;180)</td>
+</tr>
+<tr class="even">
+<td><code>lacuna_DM_descontrolado</code></td>
+<td>DM fora da meta</td>
+<td>DM E HbA1c &gt; meta (ajustada por idade) E HbA1c recente</td>
+</tr>
+<tr class="odd">
+<td><code>DM_controlado</code></td>
+<td>Flag positivo</td>
+<td>DM E HbA1c ≤ meta E HbA1c recente</td>
+</tr>
+<tr class="even">
+<td><code>DM_piorando</code></td>
+<td>Tendência negativa</td>
+<td>DM E aumento HbA1c &gt; 0.5% E intervalo ≥90d</td>
+</tr>
+<tr class="odd">
+<td><code>DM_melhorando</code></td>
+<td>Tendência positiva</td>
+<td>DM E redução HbA1c &gt; 0.5% E intervalo ≥90d</td>
+</tr>
+</tbody>
+</table>
+<p>### Lacunas de Exames Laboratoriais</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 37%">
+<col style="width: 34%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Lacuna</th>
+<th>Descrição</th>
+<th>Critério</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>lacuna_creatinina_HAS_DM</code></td>
+<td>Sem creatinina</td>
+<td>(HAS ou DM) E sem creatinina solicitada 365d</td>
+</tr>
+<tr class="even">
+<td><code>lacuna_colesterol_HAS_DM</code></td>
+<td>Sem perfil lipídico</td>
+<td>(HAS ou DM) E sem colesterol solicitado 365d</td>
+</tr>
+<tr class="odd">
+<td><code>lacuna_eas_HAS_DM</code></td>
+<td>Sem EAS</td>
+<td>(HAS ou DM) E sem EAS solicitado 365d</td>
+</tr>
+<tr class="even">
+<td><code>lacuna_ecg_HAS_DM</code></td>
+<td>Sem ECG</td>
+<td>(HAS ou DM) E sem ECG solicitado 365d</td>
+</tr>
+<tr class="odd">
+<td><code>lacuna_DM_hba1c_nao_solicitado</code></td>
+<td>DM sem HbA1c solicitada</td>
+<td>DM E sem HbA1c solicitada 365d</td>
+</tr>
+<tr class="even">
+<td><code>lacuna_DM_microalbuminuria_nao_solicitado</code></td>
+<td>DM sem microalbuminúria</td>
+<td>DM E sem microalbuminúria solicitada 365d</td>
+</tr>
+</tbody>
+</table>
+<p>### Lacunas de Medidas</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 37%">
+<col style="width: 34%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Lacuna</th>
+<th>Descrição</th>
+<th>Critério</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>lacuna_IMC_HAS_DM</code></td>
+<td>IMC não calculável</td>
+<td>(HAS ou DM) E (altura NULL ou peso NULL)</td>
+</tr>
+</tbody>
+</table>
+<p>### Lacunas de Controle Pressórico</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 37%">
+<col style="width: 34%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Lacuna</th>
+<th>Descrição</th>
+<th>Critério</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>lacuna_rastreio_PA_adulto</code></td>
+<td>Adulto sem rastreio PA</td>
+<td>idade ≥18 E sem HAS E sem PA há &gt;365d</td>
+</tr>
+<tr class="even">
+<td><code>lacuna_PA_hipertenso_180d</code></td>
+<td>Hipertenso sem PA</td>
+<td>HAS E sem PA há &gt;180d</td>
+</tr>
+<tr class="odd">
+<td><code>lacuna_HAS_descontrolado_menor80</code></td>
+<td>HAS &lt;80a descontrolado</td>
+<td>HAS E idade &lt;80 E PA ≥140/90</td>
+</tr>
+<tr class="even">
+<td><code>lacuna_HAS_descontrolado_80mais</code></td>
+<td>HAS ≥80a descontrolado</td>
+<td>HAS E idade ≥80 E PA ≥150/90</td>
+</tr>
+<tr class="odd">
+<td><code>lacuna_DM_HAS_PA_descontrolada</code></td>
+<td>DM+HAS PA &gt;135/80</td>
+<td>DM E HAS E PA &gt;135/80</td>
+</tr>
+</tbody>
+</table>
+<p>### Lacunas de Rastreio DM</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 37%">
+<col style="width: 34%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Lacuna</th>
+<th>Descrição</th>
+<th>Critério</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>lacuna_rastreio_DM_hipertenso</code></td>
+<td>Hipertenso sem rastreio DM</td>
+<td>HAS E sem DM E sem glicemia/HbA1c há &gt;365d</td>
+</tr>
+<tr class="even">
+<td><code>lacuna_rastreio_DM_45mais</code></td>
+<td>≥45a sem rastreio DM</td>
+<td>idade ≥45 E sem DM E sem glicemia/HbA1c há &gt;3 anos</td>
+</tr>
+</tbody>
+</table>
+<p>### Lacunas de Pé Diabético</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 37%">
+<col style="width: 34%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Lacuna</th>
+<th>Descrição</th>
+<th>Critério</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>lacuna_DM_sem_exame_pe_365d</code></td>
+<td>DM sem exame pé 365d</td>
+<td>DM E sem exame pé há &gt;365d</td>
+</tr>
+<tr class="even">
+<td><code>lacuna_DM_sem_exame_pe_180d</code></td>
+<td>DM sem exame pé 180d</td>
+<td>DM E sem exame pé há &gt;180d</td>
+</tr>
+<tr class="odd">
+<td><code>lacuna_DM_nunca_teve_exame_pe</code></td>
+<td>DM &gt;1a nunca teve exame</td>
+<td>DM há &gt;1 ano E nunca teve exame pé</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>## Referências Clínicas</p>
+<p>### Framingham Risk Score - Wilson PWF, et al.&nbsp;Prediction of Coronary Heart Disease Using Risk Factor Categories. Circulation. 1998.</p>
+</section>
+<section id="estratificação-sbc" class="level3">
+<h3 class="anchored" data-anchor-id="estratificação-sbc">Estratificação SBC</h3>
+<ul>
+<li>Diretrizes Brasileiras de Dislipidemias e Prevenção da Aterosclerose - 2017</li>
+</ul>
+</section>
+<section id="ckd-epi-2021" class="level3">
+<h3 class="anchored" data-anchor-id="ckd-epi-2021">CKD-EPI 2021</h3>
+<ul>
+<li>Inker LA, et al.&nbsp;New Creatinine- and Cystatin C-Based Equations to Estimate GFR without Race. NEJM. 2021.</li>
+</ul>
+</section>
+<section id="atp-iii-dislipidemia" class="level3">
+<h3 class="anchored" data-anchor-id="atp-iii-dislipidemia">ATP III (Dislipidemia)</h3>
+<ul>
+<li>Executive Summary of The Third Report of The National Cholesterol Education Program (NCEP). JAMA. 2001.</li>
+</ul>
+</section>
+<section id="charlson-comorbidity-index" class="level3">
+<h3 class="anchored" data-anchor-id="charlson-comorbidity-index">Charlson Comorbidity Index</h3>
+<ul>
+<li>Charlson ME, et al.&nbsp;A new method of classifying prognostic comorbidity in longitudinal studies. J Chronic Dis. 1987.</li>
+<li>Quan H, et al.&nbsp;Updating and Validating the Charlson Comorbidity Index. J Clin Epidemiol. 2011.</li>
+</ul>
+</section>
+<section id="metas-de-controle" class="level3">
+<h3 class="anchored" data-anchor-id="metas-de-controle">Metas de Controle</h3>
+<ul>
+<li>Diretrizes SBC para Hipertensão Arterial - 2020</li>
+<li>Diretrizes SBD para Diabetes Mellitus - 2022</li>
+<li>KDIGO Guidelines for CKD - 2024</li>
+</ul>
+<hr>
+<p>## Ordenação Final</p>
+<p>O SELECT final ordena os pacientes por prioridade clínica:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> </span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="cf">CASE</span> risco_cardiovascular  </span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="cf">WHEN</span> <span class="st">'MUITO ALTO'</span> <span class="cf">THEN</span> <span class="dv">1</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="cf">WHEN</span> <span class="st">'ALTO'</span> <span class="cf">THEN</span> <span class="dv">2</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="cf">WHEN</span> <span class="st">'INTERMEDIÁRIO'</span> <span class="cf">THEN</span> <span class="dv">3</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="cf">WHEN</span> <span class="st">'BAIXO'</span> <span class="cf">THEN</span> <span class="dv">4</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="cf">ELSE</span> <span class="dv">5</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="cf">END</span>,</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>percentual_risco_10_anos <span class="kw">DESC</span> <span class="kw">NULLS</span> <span class="fu">LAST</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Lógica</strong>: Pacientes de maior risco cardiovascular aparecem primeiro, e dentro de cada categoria, ordenados pelo percentual de risco decrescente.</p>
+<hr>
+<p>## Metadados</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Campo</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>data_calculo</code></td>
+<td>Data de execução da query</td>
+</tr>
+<tr class="even">
+<td>Granularidade</td>
+<td>1 linha por CPF</td>
+</tr>
+<tr class="odd">
+<td>Atualização</td>
+<td>Sob demanda</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><em>Documentação gerada em novembro de 2025</em> <em>Navegador Clínico - Multimorbidade | SMS-RJ</em></p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./pente_fino_HAS.html" class="pagination-link" aria-label="Pente Fino HAS">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Pente Fino HAS</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
