@@ -13,6 +13,7 @@ A tabela `rj-sms-sandbox.sub_pav_us.MM_2026_novos_cadastros` é a **tabela fato 
 - Exames laboratoriais e medidas antropométricas
 - Cálculos de risco cardiovascular (Framingham + estratificação SBC)
 - Índice de Charlson modificado com polifarmácia
+- **Escore de Carga Anticolinérgica (ACB — Anticholinergic Cognitive Burden Scale)**
 - Histórico de controle de condições crônicas
 - Mais de 30 lacunas de cuidado identificadas
 
@@ -38,7 +39,9 @@ A query principal depende de três tabelas auxiliares que devem ser geradas prev
 | 2 | `sub_pav_us.PA_A1C_glic_cpf_fix` | Medidas corrigidas de PA, glicemia e HbA1c por episódio (`id_hci`) |
 | 3 | `sub_pav_us.MM_mdes_agudos_e_classes` | Medicamentos agudos e classificação por classe terapêutica |
 | 4 | `sub_pav_us.mantidos_alterados` | Núcleo crônico por paciente com status de mudança |
-| 5 | `sub_pav_us.MM_mantidos_alterados_ultimas` | Última prescrição crônica por paciente com flags de polifarmácia |
+| 5 | `sub_pav_us.MM_mantidos_alterados_ultimas` | Última prescrição crônica por paciente com flags de polifarmácia **e escore ACB** |
+
+> **Nota sobre ACB:** A tabela `MM_mantidos_alterados_ultimas` (e sua versão `_longo`) já contêm os escores ACB calculados diretamente na pipeline de prescrições. A tabela fato consome esses escores via JOIN simples, sem recálculo.
 
 ---
 
@@ -60,7 +63,7 @@ A query principal depende de três tabelas auxiliares que devem ser geradas prev
 │ • brutos_prontuario_vitacare.ficha_a                                        │
 │ • sub_pav_us.indicadores_vitacare_fix  (tabela auxiliar pré-processada)     │
 │ • sub_pav_us.PA_A1C_glic_cpf_fix       (tabela auxiliar pré-processada)     │
-│ • sub_pav_us.MM_mantidos_alterados_ultimas (medicamentos crônicos)          │
+│ • sub_pav_us.MM_mantidos_alterados_ultimas (medicamentos crônicos + ACB)    │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -126,11 +129,13 @@ SEÇÃO 9-10: Risco Cardiovascular
 
 SEÇÃO 11: Charlson
   charlson_componentes → charlson_final
+    ↑ JOIN com MM_mantidos_alterados_ultimas
+      (medicamentos crônicos + polifarmácia + ACB)      ← NOVO
 
 SEÇÃO 12: Benchmark
   benchmark_consultas
 
-SELECT FINAL: Lacunas de cuidado + flags de inequidade
+SELECT FINAL: Lacunas de cuidado + flags de inequidade + alerta_acb + alerta_acb_idoso
 ```
 
 ---
@@ -911,6 +916,102 @@ Calcula um índice de complexidade clínica baseado no **Charlson Comorbidity In
 | `polifarmacia` | TRUE se 5–9 medicamentos |
 | `hiperpolifarmacia` | TRUE se ≥ 10 medicamentos |
 
+Os campos de medicamentos crônicos e ACB chegam via JOIN com `MM_mantidos_alterados_ultimas`:
+
+```sql
+LEFT JOIN `rj-sms-sandbox.sub_pav_us.MM_mantidos_alterados_ultimas` med
+  ON rc.cpf = med.cpf
+```
+
+---
+
+### Seção ACB — Escore de Carga Anticolinérgica
+
+**Fonte:** `sub_pav_us.MM_mantidos_alterados_ultimas` (campos `acb_*`)
+
+#### O que é o ACB
+
+A **Anticholinergic Cognitive Burden (ACB) Scale** quantifica o efeito cumulativo do uso de medicamentos com atividade anticolinérgica. Medicamentos anticolinérgicos bloqueiam receptores muscarínicos, causando efeitos periféricos (boca seca, constipação, retenção urinária) e centrais (confusão, déficit de memória, delirium, risco aumentado de demência e mortalidade).
+
+**Referência principal:** Boustani M, Campbell N, Munger S, Maidment I, Fox C. Impact of anticholinergics on the aging brain: a review and practical application. *Aging Health*. 2008;4(3):311–320.
+
+#### Pipeline de Cálculo
+
+O escore ACB é calculado **na pipeline de prescrições**, não na tabela fato:
+
+```
+brutos_prontuario_vitacare.atendimento  (prescricoes[])
+        ↓
+acb_dict  (dicionário inline — scores 1, 2, 3)
+        ↓
+dados_com_acb  (JOIN por primeira palavra do nome limpo do medicamento)
+        ↓
+medicamentos_por_prescricao  (agregação por prescrição/consulta)
+        ↓
+MM_mantidos_alterados_longo   ← scores + médias móveis por prescrição
+MM_mantidos_alterados_ultimas ← scores da última prescrição por CPF
+        ↓
+MM_2026_novos_cadastros  ← JOIN simples, sem recálculo
+```
+
+#### Pontuação Individual por Medicamento
+
+| Score | Significado | Exemplos |
+|-------|-------------|---------|
+| **1** | Possível efeito anticolinérgico em laboratório; sem evidência de efeito cognitivo clinicamente relevante | Metformina, Lorazepam, Digoxina, Omeprazol, Sertralina, Fluoxetina, Cetirizina, Clonazepam |
+| **2** | Efeito anticolinérgico estabelecido, abaixo do limiar crítico | Tramadol, Pimozida, Trifluoperazina |
+| **3** | Efeito anticolinérgico estabelecido e clinicamente relevante | Amitriptilina, Quetiapina, Olanzapina, Clozapina, Oxibutinina, Prometazina, Difenidramina, Ciclobenzaprina |
+
+#### Ponto de Corte Clínico
+
+**ACB total ≥ 3 é clinicamente relevante** (Boustani et al., 2008). Acima desse limiar há associação comprovada com comprometimento cognitivo, aumento de internações e mortalidade.
+
+#### Médias Móveis e Tendência
+
+Calculadas com funções de janela na versão `_longo` (1 linha por prescrição):
+
+- **`media_movel_acb_3`:** média do ACB nas últimas 3 prescrições crônicas (`ROWS BETWEEN 2 PRECEDING AND CURRENT ROW`)
+- **`media_movel_acb_6`:** média nas últimas 6 prescrições (`ROWS BETWEEN 5 PRECEDING AND CURRENT ROW`)
+- **`tendencia_acb`:** score atual − média das 3 prescrições anteriores. Valor positivo indica carga crescente; negativo, redução.
+
+#### Distribuição Observada na População (SMS-RJ, 2026)
+
+| Faixa ACB | N pacientes | % |
+|-----------|------------|---|
+| 0 — sem carga | 1.294.786 | 68,6% |
+| 1 — possível efeito | 386.087 | 20,5% |
+| 2 — efeito estabelecido | 51.285 | 2,7% |
+| ≥ 3 — clinicamente relevante | 155.509 | 8,2% |
+
+> **155 mil pacientes (8,2%)** apresentam carga anticolinérgica clinicamente relevante. Desses, parcela significativa tem polifarmácia associada (≥ 5 medicamentos), amplificando o risco cognitivo.
+
+#### Campos Produzidos
+
+**Vindos de `MM_mantidos_alterados_ultimas` via JOIN:**
+
+| Campo | Tipo | Descrição |
+|-------|------|-----------|
+| `acb_score_total` | INTEGER | Soma dos scores ACB de todos os medicamentos da última prescrição |
+| `acb_score_cronicos` | INTEGER | ACB apenas dos medicamentos crônicos |
+| `acb_score_agudos` | INTEGER | ACB apenas dos medicamentos agudos |
+| `n_meds_acb_positivo` | INTEGER | Número de medicamentos com ACB > 0 |
+| `n_meds_acb_alto` | INTEGER | Número de medicamentos com ACB = 3 |
+| `acb_score_maximo` | INTEGER | Score do medicamento mais anticolinérgico |
+| `medicamentos_acb_positivos` | STRING | Lista com scores (ex: `Quetiapina(3); Lorazepam(1)`) |
+| `media_movel_acb_3` | FLOAT | Média do ACB nas últimas 3 prescrições crônicas |
+| `media_movel_acb_6` | FLOAT | Média do ACB nas últimas 6 prescrições crônicas |
+| `tendencia_acb` | FLOAT | Score atual − média das 3 anteriores (positivo = aumentando) |
+| `categoria_acb` | STRING | `BAIXO` (0) / `MODERADO` (1–2) / `ALTO` (3–5) / `MUITO_ALTO` (≥ 6) |
+
+**Derivados no SELECT final da tabela fato:**
+
+| Campo | Tipo | Critério | Uso clínico |
+|-------|------|---------|-------------|
+| `alerta_acb` | BOOLEAN | `acb_score_total` ≥ 3 | Ponto de corte clínico de Boustani 2008 |
+| `alerta_acb_idoso` | BOOLEAN | `idade` ≥ 65 E `acb_score_total` ≥ 3 | Risco aumentado de demência e quedas em idosos |
+
+> **Nota clínica sobre `alerta_acb_idoso`:** Idosos têm menor reserva colinérgica central, tornando-os mais vulneráveis a cargas anticolinérgicas mesmo em doses que não causariam efeitos em adultos jovens. O critério ≥ 65 anos alinha-se com os critérios de Beers e STOPP/START para prescrição potencialmente inapropriada em idosos.
+
 ---
 
 ### Seção Benchmark
@@ -1075,6 +1176,9 @@ Calculadas no SELECT final por comparação com o benchmark do grupo:
 | Comorbidades | Charlson Comorbidity Index (Charlson et al., 1987; van Walraven 2011) |
 | Metas glicêmicas | Diretrizes SBD 2023 |
 | Metas pressóricas | 7ª Diretriz Brasileira de HAS — SBC/SBH 2016 |
+| **Carga anticolinérgica** | **Boustani M, Campbell N, Munger S, Maidment I, Fox C. Impact of anticholinergics on the aging brain: a review and practical application. *Aging Health*. 2008;4(3):311–320.** |
+| **ACB — impacto cognitivo** | **Campbell N, Boustani M, Limbil T, et al. The cognitive impact of anticholinergics: a clinical review. *Clin Interv Aging*. 2009;4:225–233.** |
+| **ACB — ponto de corte ≥ 3** | **Campbell NL, Perkins AJ, Bradt P, et al. Association of Anticholinergic Burden with Cognitive Impairment and Health Care Utilization Among a Diverse Ambulatory Older Adult Population. *Pharmacotherapy*. 2016;36(11):1123–1131.** |
 
 ---
 
