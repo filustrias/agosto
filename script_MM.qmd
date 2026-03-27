@@ -20,7 +20,7 @@ Aqui está o código para produção da tabela rj-sms-sandbox.sub_pav_us.MM_exam
 -- ============================================================================
 
 
-CREATE OR REPLACE TABLE `rj-sms-sandbox.sub_pav_us.MM_2026_novos_cadastros` AS
+CREATE OR REPLACE TABLE `rj-sms-sandbox.sub_pav_us.MM_2026_novos_cadastros_stopp_start` AS
 
 
 WITH 
@@ -3718,7 +3718,20 @@ charlson_final AS (
         
         -- Flags de polifarmácia
         COALESCE(med.polifarmacia, FALSE) AS polifarmacia,
-        COALESCE(med.hiperpolifarmacia, FALSE) AS hiperpolifarmacia
+        COALESCE(med.hiperpolifarmacia, FALSE) AS hiperpolifarmacia,
+
+        -- ACB
+        COALESCE(med.acb_score_total, 0)        AS acb_score_total,
+        COALESCE(med.acb_score_cronicos, 0)     AS acb_score_cronicos,
+        COALESCE(med.acb_score_agudos, 0)       AS acb_score_agudos,
+        COALESCE(med.n_meds_acb_positivo, 0)    AS n_meds_acb_positivo,
+        COALESCE(med.n_meds_acb_alto, 0)        AS n_meds_acb_alto,
+        med.acb_score_maximo,
+        med.medicamentos_acb_positivos,
+        med.media_movel_acb_3,
+        med.media_movel_acb_6,
+        med.tendencia_acb,
+        med.categoria_acb
     
     FROM risco_cardiovascular_estratificado rc  -- ← BASE com TODOS os campos INCLUINDO estratificação
     LEFT JOIN charlson_componentes ch ON rc.cpf = ch.cpf
@@ -3773,7 +3786,7 @@ benchmark_consultas AS (
 -- ============================================================================
 
 SELECT
-    cpf,
+    cf.cpf,
     nome,
     cf.genero,
     idade,
@@ -4767,6 +4780,29 @@ SELECT
     DATE_DIFF(CURRENT_DATE(), data_ultima_prescricao_cronica, DAY) AS dias_desde_ultima_prescricao_cronica,
     polifarmacia,
     hiperpolifarmacia,
+
+
+    -- ========================================
+    -- ESCORE ACB (Anticholinergic Cognitive Burden)
+    -- Referência: Boustani et al., Aging Health 2008;4(3):311-320
+    -- Ponto de corte clínico: ACB ≥ 3
+    -- ========================================
+
+
+    acb_score_total,
+    acb_score_cronicos,
+    acb_score_agudos,
+    n_meds_acb_positivo,
+    n_meds_acb_alto,
+    acb_score_maximo,
+    medicamentos_acb_positivos,
+    media_movel_acb_3,
+    media_movel_acb_6,
+    tendencia_acb,
+    categoria_acb,
+    CASE WHEN COALESCE(acb_score_total, 0) >= 3 THEN TRUE ELSE FALSE END AS alerta_acb,
+    CASE WHEN idade >= 65 AND COALESCE(acb_score_total, 0) >= 3 THEN TRUE ELSE FALSE END AS alerta_acb_idoso,
+
     
     -- ========================================
     -- CLASSIFICAÇÃO DE RISCO CARDIOVASCULAR
@@ -4779,6 +4815,95 @@ SELECT
     CASE WHEN colesterol_total IS NULL OR hdl IS NULL THEN TRUE ELSE FALSE END AS necessita_perfil_lipidico,
     CASE WHEN pressao_sistolica IS NULL THEN TRUE ELSE FALSE END AS necessita_aferir_pa,
     CASE WHEN egfr IS NULL AND (DM IS NOT NULL OR HAS IS NOT NULL) THEN TRUE ELSE FALSE END AS necessita_funcao_renal,
+
+
+    -- ========================================
+    -- STOPP / START / BEERS 2023
+    -- ========================================
+    -- Cardiovascular
+    ss.stopp_cv_001, ss.stopp_cv_001_365d,  -- Anti-hipert. central em idoso hipertenso
+    ss.stopp_cv_002, ss.stopp_cv_002_365d,  -- Alfa-bloqueador para HAS
+    ss.stopp_cv_003, ss.stopp_cv_003_365d,  -- Nifedipina imediata
+    ss.stopp_cv_004, ss.stopp_cv_004_365d,  -- Amiodarona 1a linha em FA sem ICC
+    ss.stopp_cv_005, ss.stopp_cv_005_365d,  -- BCC nao-DHP com ICC
+    ss.stopp_cv_006, ss.stopp_cv_006_365d,  -- Diuretico de alca para HAS sem ICC
+    ss.stopp_cv_007, ss.stopp_cv_007_365d,  -- Dronedarona com ICC
+    ss.stopp_cv_008, ss.stopp_cv_008_365d,  -- Digoxina com IRC grave
+    ss.stopp_cv_009, ss.stopp_cv_009_365d,  -- Dabigatrana com eGFR < 30
+    ss.stopp_cv_010,                         -- Rivaroxabana com eGFR < 15
+
+    -- SNC
+    ss.stopp_snc_001, ss.stopp_snc_001_365d, -- Benzodiazepínico em idoso
+    ss.stopp_snc_002, ss.stopp_snc_002_365d, -- Hipnotico Z em idoso
+    ss.stopp_snc_003, ss.stopp_snc_003_365d, -- TCA em idoso
+    ss.stopp_snc_004, ss.stopp_snc_004_365d, -- TCA com demencia
+    ss.stopp_snc_005, ss.stopp_snc_005_365d, -- Paroxetina em idoso
+    ss.stopp_snc_006, ss.stopp_snc_006_365d, -- Antipsic. tipico em idoso
+    ss.stopp_snc_007, ss.stopp_snc_007_365d, -- Antipsic. com Parkinson/demencia
+    ss.stopp_snc_008, ss.stopp_snc_008_365d, -- Metoclopramida com Parkinson
+    ss.stopp_snc_009, ss.stopp_snc_009_365d, -- Biperideno + antipsic. (cascata)
+    ss.stopp_snc_010, ss.stopp_snc_010_365d, -- Levodopa sem Parkinson
+    ss.stopp_snc_011, ss.stopp_snc_011_365d, -- Opioide forte sem indicacao clara
+
+    -- Endocrino
+    ss.stopp_end_001, ss.stopp_end_001_365d, -- Sulfonilureia longa em DM idoso
+    ss.stopp_end_002, ss.stopp_end_002_365d, -- Pioglitazona com ICC
+    ss.stopp_end_003, ss.stopp_end_003_365d, -- Metformina com eGFR < 30
+    ss.stopp_end_004, ss.stopp_end_004_365d, -- Insulina regular sem basal
+
+    -- Musculoesqueletico
+    ss.stopp_mus_001, ss.stopp_mus_001_365d, -- AINE com IRC eGFR < 50
+    ss.stopp_mus_002, ss.stopp_mus_002_365d, -- AINE com ICC
+    ss.stopp_mus_003, ss.stopp_mus_003_365d, -- AINE com HAS nao controlada
+    ss.stopp_mus_004, ss.stopp_mus_004_365d, -- AINE + anticoagulante
+    ss.stopp_mus_005, ss.stopp_mus_005_365d, -- Corticoide cronico em AR (M05/M06)
+    ss.stopp_mus_006, ss.stopp_mus_006_365d, -- Relaxante muscular em idoso
+
+    -- Anticarga anticolinergica
+    ss.stopp_acb_001, ss.stopp_acb_001_365d, -- ACB >= 4
+    ss.stopp_acb_002, ss.stopp_acb_002_365d, -- Anti-histaminico 1a geracao
+    ss.stopp_acb_003, ss.stopp_acb_003_365d, -- Anticolinergico bexiga
+    ss.stopp_acb_004, ss.stopp_acb_004_365d, -- Antiespasmódico GI
+
+    -- Renal
+    ss.stopp_ren_001, ss.stopp_ren_001_365d, -- Gabapentinoide com eGFR < 60
+    ss.stopp_ren_002, ss.stopp_ren_002_365d, -- Espironolactona com eGFR < 30
+    ss.stopp_ren_003, ss.stopp_ren_003_365d, -- Tramadol com eGFR < 30
+
+    -- Beers exclusivos
+    ss.beers_001, ss.beers_001_365d,          -- Toda sulfonilureia (Beers expande)
+    ss.beers_002, ss.beers_002_365d,          -- Warfarina em FA sem DOAC
+    ss.beers_003, ss.beers_003_365d,          -- Rivaroxabana em FA
+    ss.beers_004, ss.beers_004_365d,          -- AAS prevencao primaria >= 60a
+    ss.beers_005, ss.beers_005_365d,          -- Antipsic. com epilepsia
+    ss.beers_006, ss.beers_006_365d,          -- Opioide + BZD
+    ss.beers_007, ss.beers_007_365d,          -- ISRS + Tramadol
+
+    -- START (omissoes terapeuticas)
+    ss.start_cv_001, ss.start_cv_001_365d,   -- HAS descontrolada sem anti-hipert.
+    ss.start_cv_002, ss.start_cv_002_365d,   -- CI sem estatina
+    ss.start_cv_003, ss.start_cv_003_365d,   -- DCV sem antiplaquetario
+    ss.start_cv_004, ss.start_cv_004_365d,   -- ICC sem IECA/BRA
+    ss.start_cv_005, ss.start_cv_005_365d,   -- FA sem anticoagulacao
+    ss.start_cv_006, ss.start_cv_006_365d,   -- DM + IRC sem IECA/BRA
+    ss.start_snc_001, ss.start_snc_001_365d, -- Parkinson sem levodopa
+    ss.start_snc_002, ss.start_snc_002_365d, -- Depressao sem antidepressivo
+    ss.start_snc_003, ss.start_snc_003_365d, -- Demencia sem icolinesterase
+    ss.start_resp_001, ss.start_resp_001_365d, -- DPOC/Asma sem broncodilatador
+
+    -- Alertas clinicos
+    ss.alerta_queda_medicamentos,             -- Meds de risco de queda em idoso
+    ss.alerta_warfarina_fa,                   -- Warfarina em FA (verificar DOAC)
+    ss.alerta_egfr_ausente_gabapentinoide,    -- Gabapentinoide sem TFG conhecida
+    ss.alerta_egfr_ausente_metformina,        -- Metformina sem TFG conhecida
+    ss.alerta_cascata_biperideno,             -- Cascata biperideno + antipsic.
+
+    -- Resumos
+    ss.total_criterios_stopp,
+    ss.total_criterios_start,
+    ss.total_criterios_beers,
+    ss.alerta_prescricao_idoso_ativo,
+
     
     CURRENT_DATE() AS data_calculo
 
@@ -4796,6 +4921,8 @@ LEFT JOIN benchmark_consultas bm
         WHEN cf.charlson_score BETWEEN 3 AND 6 THEN 'moderado'
         WHEN cf.charlson_score >= 7 THEN 'alto'
     END = bm.risco_charlson
+LEFT JOIN `rj-sms-sandbox.sub_pav_us.MM_stopp_start` ss
+    ON cf.cpf = ss.cpf
 
 
 ORDER BY 
