@@ -1,6 +1,6 @@
-# Tabela MM_2026_novos_cadastros {.unnumbered}
+# Tabela MM_2026_novos_cadastros_stopp_start {.unnumbered}
 
-Aqui está o código para produção da tabela rj-sms-sandbox.sub_pav_us.MM_exames_e_risco_A1C
+Aqui está o código para produção da tabela rj-sms-sandbox.sub_pav_us.MM_2026_novos_cadastros_stopp_start
 
 ```{sql connection=}
 

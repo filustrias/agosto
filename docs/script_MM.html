@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Tabela MM_2026_novos_cadastros – Multimorbidade</title>
+<title>Tabela MM_2026_novos_cadastros_stopp_start – Multimorbidade</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -86,7 +86,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./script_MM.html">Tabela MM_2026_novos_cadastros</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./script_MM.html">Tabela MM_2026_novos_cadastros_stopp_start</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -232,7 +232,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./script_MM.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Tabela MM_2026_novos_cadastros</span></a>
+ <span class="menu-text">Tabela MM_2026_novos_cadastros_stopp_start</span></a>
   </div>
 </li>
     </ul>
@@ -248,7 +248,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Tabela MM_2026_novos_cadastros</h1>
+<h1 class="title">Tabela MM_2026_novos_cadastros_stopp_start</h1>
 </div>
 
 
@@ -265,7 +265,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Aqui está o código para produção da tabela rj-sms-sandbox.sub_pav_us.MM_exames_e_risco_A1C</p>
+<p>Aqui está o código para produção da tabela rj-sms-sandbox.sub_pav_us.MM_2026_novos_cadastros_stopp_start</p>
 <p>```{sql connection=}</p>
 <p>– ============================================================================ – TABELA: MM_EXAMES_E_RISCO – ============================================================================ – Objetivo: Consolidação por PACIENTE (1 linha/CPF) com: – - Dados demográficos e de cadastro – - 56 Morbidades (primeira data de diagnóstico) – - HIV (base externa + CD4/CV) – - Prescrições agregadas – - Exames laboratoriais (perfil lipídico, glicemia, creatinina) – - eGFR e estadiamento CKD – - Escore de Framingham – - Risco cardiovascular – - Dislipidemia (CID + laboratorial) – ============================================================================</p>
 <p>CREATE OR REPLACE TABLE <code>rj-sms-sandbox.sub_pav_us.MM_2026_novos_cadastros_stopp_start</code> AS</p>
