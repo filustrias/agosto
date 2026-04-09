@@ -1,0 +1,2286 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>MM_mantidos_alterados - Documentação Técnica – Multimorbidade</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./fragil.html" rel="next">
+<link href="./PoliF.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-cf0de2a877c7d4b42ae21f6d8e35c82d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-d79f8217e01dd2a5306137134a907536.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-cf0de2a877c7d4b42ae21f6d8e35c82d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./docu_mantidos_alterados.html">MM_mantidos_alterados - Documentação Técnica</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="./logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Multimorbidade</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Apresentação</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./etapas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Etapas</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CIDs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CIDs</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./HAS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hipertensão arterial</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./DM.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Diabetes Mellitus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./CI.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Síndromes Coronarianas</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ICC.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Insuficiência Cardíaca</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./IRC.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Doença renal crônica</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./MM.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Multimorbidade</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./PoliF.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Polifarmácia</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./docu_mantidos_alterados.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">MM_mantidos_alterados - Documentação Técnica</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fragil.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Fragilidade em idosos</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lacunas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lacunas de cuidado</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pilula_CI.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Pílulas Síndrome Coronariana Crônica</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pilulas_IC.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Pílulas para Insuficiência Cardíaca</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./implementacao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Implementação</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rastreios.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Rastreios neoplasias</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pente_fino_DM.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Pente Fino Diabetes</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pente_fino_HAS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Pente Fino HAS</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./docu_enxuto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Documentação Técnica: MM_2026_novos_cadastros</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./script_MM.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tabela MM_2026_novos_cadastros_stopp_start</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#propósito" id="toc-propósito" class="nav-link active" data-scroll-target="#propósito">1. Propósito</a></li>
+  <li><a href="#versões-da-tabela" id="toc-versões-da-tabela" class="nav-link" data-scroll-target="#versões-da-tabela">2. Versões da tabela</a></li>
+  <li><a href="#arquitetura-da-query-6-blocos" id="toc-arquitetura-da-query-6-blocos" class="nav-link" data-scroll-target="#arquitetura-da-query-6-blocos">3. Arquitetura da query (6 blocos)</a></li>
+  <li><a href="#dicionário-de-variáveis" id="toc-dicionário-de-variáveis" class="nav-link" data-scroll-target="#dicionário-de-variáveis">4. Dicionário de variáveis</a>
+  <ul class="collapse">
+  <li><a href="#identificação" id="toc-identificação" class="nav-link" data-scroll-target="#identificação">4.1 Identificação</a></li>
+  <li><a href="#medicamentos-gerais" id="toc-medicamentos-gerais" class="nav-link" data-scroll-target="#medicamentos-gerais">4.2 Medicamentos gerais</a></li>
+  <li><a href="#núcleo-crônico" id="toc-núcleo-crônico" class="nav-link" data-scroll-target="#núcleo-crônico">4.3 Núcleo crônico</a></li>
+  <li><a href="#trajetória-e-tendências-gerais" id="toc-trajetória-e-tendências-gerais" class="nav-link" data-scroll-target="#trajetória-e-tendências-gerais">4.4 Trajetória e tendências gerais</a></li>
+  <li><a href="#perfil-dm-antidiabéticos-orais" id="toc-perfil-dm-antidiabéticos-orais" class="nav-link" data-scroll-target="#perfil-dm-antidiabéticos-orais">4.5 Perfil DM — Antidiabéticos orais</a></li>
+  <li><a href="#perfil-dm-insulinas" id="toc-perfil-dm-insulinas" class="nav-link" data-scroll-target="#perfil-dm-insulinas">4.6 Perfil DM — Insulinas</a></li>
+  <li><a href="#perfil-has-anti-hipertensivos" id="toc-perfil-has-anti-hipertensivos" class="nav-link" data-scroll-target="#perfil-has-anti-hipertensivos">4.7 Perfil HAS — Anti-hipertensivos</a></li>
+  <li><a href="#alertas-clínicos-has" id="toc-alertas-clínicos-has" class="nav-link" data-scroll-target="#alertas-clínicos-has">4.8 Alertas clínicos HAS</a></li>
+  </ul></li>
+  <li><a href="#lógica-de-tendências-de-dose" id="toc-lógica-de-tendências-de-dose" class="nav-link" data-scroll-target="#lógica-de-tendências-de-dose">5. Lógica de tendências de dose</a></li>
+  <li><a href="#estimativa-de-dose-diária" id="toc-estimativa-de-dose-diária" class="nav-link" data-scroll-target="#estimativa-de-dose-diária">6. Estimativa de dose diária</a></li>
+  <li><a href="#pendências-e-limitações-conhecidas" id="toc-pendências-e-limitações-conhecidas" class="nav-link" data-scroll-target="#pendências-e-limitações-conhecidas">7. Pendências e limitações conhecidas</a></li>
+  <li><a href="#controle-de-versão-da-query" id="toc-controle-de-versão-da-query" class="nav-link" data-scroll-target="#controle-de-versão-da-query">8. Controle de versão da query</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">MM_mantidos_alterados - Documentação Técnica</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong>Projeto:</strong> Navegador Clínico de Multimorbidade — SMS-RJ<br>
+<strong>Dataset:</strong> <code>rj-sms-sandbox.sub_pav_us</code><br>
+<strong>Versões:</strong> <code>MM_mantidos_alterados_ultimas</code> · <code>MM_mantidos_alterados_longo</code><br>
+<strong>Última atualização:</strong> 2026-04-09<br>
+<strong>Fonte primária:</strong> <code>rj-sms.brutos_prontuario_vitacare.atendimento</code></p>
+<hr>
+<section id="propósito" class="level2">
+<h2 class="anchored" data-anchor-id="propósito">1. Propósito</h2>
+<p>Tabela de perfil farmacológico detalhado por paciente, construída a partir das prescrições eletrônicas do prontuário Vitacare nos últimos 365 dias. Consolida, em uma única linha por CPF (versão <code>_ultimas</code>), as informações sobre:</p>
+<ul>
+<li>Todos os medicamentos prescritos na última consulta</li>
+<li>Escore de carga anticolinérgica (ACB)</li>
+<li>Núcleo crônico de medicamentos em quatro janelas temporais</li>
+<li>Perfil detalhado de tratamento para Diabetes Mellitus (DM) — orais e insulinas</li>
+<li>Perfil detalhado de tratamento para Hipertensão Arterial Sistêmica (HAS)</li>
+<li>Snapshots comparativos (90d, 180d, 365d) e tendências de dose</li>
+</ul>
+<p>Serve como insumo direto para a tabela fato <code>MM_2026_novos_cadastros_stopp_start</code> e para os módulos de Polifarmácia e STOPP/START do Navegador Clínico.</p>
+<hr>
+</section>
+<section id="versões-da-tabela" class="level2">
+<h2 class="anchored" data-anchor-id="versões-da-tabela">2. Versões da tabela</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Versão</th>
+<th>Linhas por CPF</th>
+<th>Controle</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>_ultimas</code></td>
+<td>1 (última prescrição)</td>
+<td><code>QUALIFY ROW_NUMBER() OVER (PARTITION BY cpf ORDER BY data_prescricao DESC) = 1</code></td>
+</tr>
+<tr class="even">
+<td><code>_longo</code></td>
+<td>N (todas as prescrições)</td>
+<td><code>ORDER BY cpf, data_prescricao DESC</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="arquitetura-da-query-6-blocos" class="level2">
+<h2 class="anchored" data-anchor-id="arquitetura-da-query-6-blocos">3. Arquitetura da query (6 blocos)</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Bloco</th>
+<th>Nome</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>Dicionários</td>
+<td><code>acb_dict</code> (scores ACB por princípio ativo) e <code>sinonimos</code> (nomes comerciais → INN)</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Pipeline base</td>
+<td>Extração e normalização de medicamentos do JSON de prescrições, deduplicação, join ACB</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Núcleos crônicos</td>
+<td>Medicamentos prescritos ≥ 2x nas janelas de 90d, 180d, 365d e núcleo atual</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Trajetória</td>
+<td>Snapshots de contagem e ACB, medicamentos que entraram/saíram, tendências</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>Perfil DM oral</td>
+<td>Classificação por classe farmacológica, doses mg/dia, snapshots e tendências</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>Insulinas</td>
+<td>Classificação por tipo de ação, dose NPH em UI/dia, snapshots e tendências</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>Perfil HAS</td>
+<td>Classificação por classe, doses mg/dia, alertas clínicos, snapshots e tendências</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="dicionário-de-variáveis" class="level2">
+<h2 class="anchored" data-anchor-id="dicionário-de-variáveis">4. Dicionário de variáveis</h2>
+<section id="identificação" class="level3">
+<h3 class="anchored" data-anchor-id="identificação">4.1 Identificação</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variável</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>cpf</code></td>
+<td>STRING</td>
+<td>CPF do paciente (11 dígitos, validado por regex <code>^\d{11}$</code>)</td>
+</tr>
+<tr class="even">
+<td><code>cnes_unidade</code></td>
+<td>STRING</td>
+<td>CNES da unidade de saúde onde ocorreu a última prescrição</td>
+</tr>
+<tr class="odd">
+<td><code>data_prescricao</code></td>
+<td>DATE</td>
+<td>Data da última prescrição do paciente (versão <code>_ultimas</code>)</td>
+</tr>
+<tr class="even">
+<td><code>dias_desde_prescricao</code></td>
+<td>INT64</td>
+<td>Dias transcorridos entre a última prescrição e a data atual</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="medicamentos-gerais" class="level3">
+<h3 class="anchored" data-anchor-id="medicamentos-gerais">4.2 Medicamentos gerais</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variável</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>total_medicamentos</code></td>
+<td>INT64</td>
+<td>Número total de medicamentos na última prescrição (após deduplicação e exclusão de insumos)</td>
+</tr>
+<tr class="even">
+<td><code>score_acb_total</code></td>
+<td>INT64</td>
+<td>Soma dos escores ACB de todos os medicamentos da última prescrição. Score individual: 1 (leve), 2 (moderado), 3 (alto)</td>
+</tr>
+<tr class="odd">
+<td><code>lista_medicamentos</code></td>
+<td>STRING</td>
+<td>Lista completa de medicamentos normalizados da última prescrição, separados por <code>;</code></td>
+</tr>
+<tr class="even">
+<td><code>medicamentos_acb</code></td>
+<td>STRING</td>
+<td>Lista dos medicamentos com score ACB &gt; 0, no formato <code>Nome(score)</code>, separados por <code>;</code>. NULL se nenhum medicamento anticolinérgico</td>
+</tr>
+<tr class="odd">
+<td><code>medicamento_desconhecido</code></td>
+<td>STRING</td>
+<td>Medicamentos cujo nome normalizado não casa com nenhum princípio ativo da lista de exclusão conhecida. Usado para identificar lacunas no mapeamento. NULL se todos foram reconhecidos</td>
+</tr>
+<tr class="even">
+<td><code>data_prescricao_anterior</code></td>
+<td>DATE</td>
+<td>Data da prescrição imediatamente anterior à última</td>
+</tr>
+<tr class="odd">
+<td><code>medicamentos_anteriores</code></td>
+<td>STRING</td>
+<td>Lista de medicamentos da prescrição anterior, separados por <code>;</code></td>
+</tr>
+<tr class="even">
+<td><code>total_medicamentos_anterior</code></td>
+<td>INT64</td>
+<td>Número de medicamentos na prescrição anterior</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="núcleo-crônico" class="level3">
+<h3 class="anchored" data-anchor-id="núcleo-crônico">4.3 Núcleo crônico</h3>
+<p>O núcleo crônico é definido como o conjunto de medicamentos prescritos em pelo menos 2 consultas distintas dentro da janela temporal. O núcleo <strong>atual</strong> é a interseção do núcleo de 180 dias com os medicamentos presentes na última prescrição.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variável</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>nucleo_cronico_atual</code></td>
+<td>STRING</td>
+<td>Medicamentos crônicos presentes também na última prescrição (interseção núcleo 180d ∩ última prescrição), separados por <code>;</code></td>
+</tr>
+<tr class="even">
+<td><code>total_cronicos_atual</code></td>
+<td>INT64</td>
+<td>Número de medicamentos no núcleo crônico atual</td>
+</tr>
+<tr class="odd">
+<td><code>nucleo_cronico_90d</code></td>
+<td>STRING</td>
+<td>Medicamentos prescritos ≥ 2 vezes nos últimos 90 dias, separados por <code>;</code></td>
+</tr>
+<tr class="even">
+<td><code>total_cronicos_90d</code></td>
+<td>INT64</td>
+<td>Número de medicamentos no núcleo crônico de 90 dias</td>
+</tr>
+<tr class="odd">
+<td><code>nucleo_cronico_180d</code></td>
+<td>STRING</td>
+<td>Medicamentos prescritos ≥ 2 vezes nos últimos 180 dias, separados por <code>;</code></td>
+</tr>
+<tr class="even">
+<td><code>total_cronicos_180d</code></td>
+<td>INT64</td>
+<td>Número de medicamentos no núcleo crônico de 180 dias</td>
+</tr>
+<tr class="odd">
+<td><code>nucleo_cronico_365d</code></td>
+<td>STRING</td>
+<td>Medicamentos prescritos ≥ 2 vezes nos últimos 365 dias, separados por <code>;</code></td>
+</tr>
+<tr class="even">
+<td><code>total_cronicos_365d</code></td>
+<td>INT64</td>
+<td>Número de medicamentos no núcleo crônico de 365 dias</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="trajetória-e-tendências-gerais" class="level3">
+<h3 class="anchored" data-anchor-id="trajetória-e-tendências-gerais">4.4 Trajetória e tendências gerais</h3>
+<p>Comparação da prescrição atual com um snapshot aproximado de 180 dias atrás (janela ±30 dias).</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variável</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>medicamentos_entraram</code></td>
+<td>STRING</td>
+<td>Medicamentos presentes na última prescrição mas ausentes no snapshot de 180 dias, separados por <code>;</code></td>
+</tr>
+<tr class="even">
+<td><code>medicamentos_sairam</code></td>
+<td>STRING</td>
+<td>Medicamentos presentes no snapshot de 180 dias mas ausentes na última prescrição, separados por <code>;</code></td>
+</tr>
+<tr class="odd">
+<td><code>tendencia_polifarmacia</code></td>
+<td>STRING</td>
+<td>Tendência do número total de medicamentos vs.&nbsp;180 dias atrás. Valores: <code>AUMENTANDO</code> (&gt;20%), <code>REDUZINDO</code> (&lt;-20%), <code>ESTAVEL</code>, <code>SEM_HISTORICO</code></td>
+</tr>
+<tr class="even">
+<td><code>tendencia_acb</code></td>
+<td>STRING</td>
+<td>Tendência do score ACB total vs.&nbsp;180 dias atrás. Valores: <code>AUMENTANDO</code> (+&gt;1 ponto), <code>REDUZINDO</code> (-&lt;1 ponto), <code>ESTAVEL</code>, <code>SEM_HISTORICO</code></td>
+</tr>
+<tr class="odd">
+<td><code>n_meds_90d</code></td>
+<td>INT64</td>
+<td>Número de medicamentos no snapshot de ~90 dias atrás (janela ±15 dias)</td>
+</tr>
+<tr class="even">
+<td><code>acb_90d</code></td>
+<td>INT64</td>
+<td>Score ACB total no snapshot de ~90 dias atrás</td>
+</tr>
+<tr class="odd">
+<td><code>n_meds_180d</code></td>
+<td>INT64</td>
+<td>Número de medicamentos no snapshot de ~180 dias atrás (janela ±30 dias)</td>
+</tr>
+<tr class="even">
+<td><code>acb_180d</code></td>
+<td>INT64</td>
+<td>Score ACB total no snapshot de ~180 dias atrás</td>
+</tr>
+<tr class="odd">
+<td><code>n_meds_365d</code></td>
+<td>INT64</td>
+<td>Número de medicamentos no snapshot de ~365 dias atrás (janela ±35 dias)</td>
+</tr>
+<tr class="even">
+<td><code>acb_365d</code></td>
+<td>INT64</td>
+<td>Score ACB total no snapshot de ~365 dias atrás</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="perfil-dm-antidiabéticos-orais" class="level3">
+<h3 class="anchored" data-anchor-id="perfil-dm-antidiabéticos-orais">4.5 Perfil DM — Antidiabéticos orais</h3>
+<p>Classes cobertas: Biguanida, Sulfonilureia, Glinida, iSGLT2, iDPP4, Agonista GLP-1, Agonista GIP/GLP-1, Tiazolidinediona, Inibidor alfa-glicosidase.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variável</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>data_ultima_prescricao_oral</code></td>
+<td>DATE</td>
+<td>Data da prescrição mais recente de qualquer antidiabético oral nos últimos 365 dias</td>
+</tr>
+<tr class="even">
+<td><code>dias_desde_ultima_prescricao_oral</code></td>
+<td>INT64</td>
+<td>Dias desde a última prescrição de antidiabético oral</td>
+</tr>
+<tr class="odd">
+<td><code>classes_antidiabeticos</code></td>
+<td>STRING</td>
+<td>Classes farmacológicas de antidiabéticos orais prescritas, separadas por <code>;</code> (ex: <code>BIGUANIDA; iSGLT2</code>)</td>
+</tr>
+<tr class="even">
+<td><code>n_classes_antidiabeticos</code></td>
+<td>INT64</td>
+<td>Número de classes distintas de antidiabéticos orais prescritas</td>
+</tr>
+<tr class="odd">
+<td><code>risco_hipoglicemia_oral</code></td>
+<td>STRING</td>
+<td>Risco de hipoglicemia do esquema oral. Valores: <code>ALTO</code> (sulfonilureia/glinida), <code>MODERADO</code> (glinida), <code>BAIXO</code> (demais)</td>
+</tr>
+<tr class="even">
+<td><code>intensidade_tratamento_dm</code></td>
+<td>STRING</td>
+<td>Síntese da intensidade do tratamento DM. Valores: <code>INSULINOTERAPIA_BASAL</code>, <code>INSULINOTERAPIA_PRANDIAL</code>, <code>TRIPLA_TERAPIA_ORAL</code>, <code>DUPLA_TERAPIA_ORAL</code>, <code>MONOTERAPIA_ORAL</code></td>
+</tr>
+</tbody>
+</table>
+<section id="biguanidas-metformina" class="level4">
+<h4 class="anchored" data-anchor-id="biguanidas-metformina">Biguanidas (Metformina)</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variável</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>principio_BIGUANIDA</code></td>
+<td>STRING</td>
+<td>Princípio ativo da biguanida prescrita (ex: <code>Metformina</code>)</td>
+</tr>
+<tr class="even">
+<td><code>dose_BIGUANIDA_mg_dia</code></td>
+<td>FLOAT64</td>
+<td>Dose diária estimada de biguanida em mg/dia</td>
+</tr>
+<tr class="odd">
+<td><code>dose_BIGUANIDA_180d</code></td>
+<td>FLOAT64</td>
+<td>Dose de biguanida no snapshot de ~180 dias</td>
+</tr>
+<tr class="even">
+<td><code>dose_BIGUANIDA_365d</code></td>
+<td>FLOAT64</td>
+<td>Dose de biguanida no snapshot de ~365 dias</td>
+</tr>
+<tr class="odd">
+<td><code>tendencia_dose_BIGUANIDA</code></td>
+<td>STRING</td>
+<td>Tendência da dose vs.&nbsp;180 dias. Valores: <code>INICIOU</code>, <code>SUSPENSO</code>, <code>AUMENTANDO</code>, <code>REDUZINDO</code>, <code>ESTAVEL</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="sulfonilureias" class="level4">
+<h4 class="anchored" data-anchor-id="sulfonilureias">Sulfonilureias</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variável</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>principio_SULFONILUREIA</code></td>
+<td>STRING</td>
+<td>Princípio ativo prescrito (ex: <code>Gliclazida</code>, <code>Glimepirida</code>, <code>Glibenclamida</code>)</td>
+</tr>
+<tr class="even">
+<td><code>dose_SULFONILUREIA_mg_dia</code></td>
+<td>FLOAT64</td>
+<td>Dose diária estimada em mg/dia</td>
+</tr>
+<tr class="odd">
+<td><code>dose_SULFONILUREIA_180d</code></td>
+<td>FLOAT64</td>
+<td>Dose no snapshot de ~180 dias</td>
+</tr>
+<tr class="even">
+<td><code>dose_SULFONILUREIA_365d</code></td>
+<td>FLOAT64</td>
+<td>Dose no snapshot de ~365 dias</td>
+</tr>
+<tr class="odd">
+<td><code>tendencia_dose_SULFONILUREIA</code></td>
+<td>STRING</td>
+<td>Tendência da dose vs.&nbsp;180 dias</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="isglt2-gliflozinas" class="level4">
+<h4 class="anchored" data-anchor-id="isglt2-gliflozinas">iSGLT2 (Gliflozinas)</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variável</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>principio_iSGLT2</code></td>
+<td>STRING</td>
+<td>Princípio ativo prescrito (ex: <code>Dapagliflozina</code>, <code>Empagliflozina</code>, <code>Canagliflozina</code>)</td>
+</tr>
+<tr class="even">
+<td><code>dose_iSGLT2_mg_dia</code></td>
+<td>FLOAT64</td>
+<td>Dose diária estimada em mg/dia</td>
+</tr>
+<tr class="odd">
+<td><code>dose_iSGLT2_180d</code></td>
+<td>FLOAT64</td>
+<td>Dose no snapshot de ~180 dias</td>
+</tr>
+<tr class="even">
+<td><code>dose_iSGLT2_365d</code></td>
+<td>FLOAT64</td>
+<td>Dose no snapshot de ~365 dias</td>
+</tr>
+<tr class="odd">
+<td><code>tendencia_dose_iSGLT2</code></td>
+<td>STRING</td>
+<td>Tendência da dose vs.&nbsp;180 dias</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="idpp4-gliptinas" class="level4">
+<h4 class="anchored" data-anchor-id="idpp4-gliptinas">iDPP4 (Gliptinas)</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variável</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>principio_iDPP4</code></td>
+<td>STRING</td>
+<td>Princípio ativo prescrito (ex: <code>Sitagliptina</code>, <code>Vildagliptina</code>, <code>Linagliptina</code>)</td>
+</tr>
+<tr class="even">
+<td><code>dose_iDPP4_mg_dia</code></td>
+<td>FLOAT64</td>
+<td>Dose diária estimada em mg/dia</td>
+</tr>
+<tr class="odd">
+<td><code>dose_iDPP4_180d</code></td>
+<td>FLOAT64</td>
+<td>Dose no snapshot de ~180 dias</td>
+</tr>
+<tr class="even">
+<td><code>dose_iDPP4_365d</code></td>
+<td>FLOAT64</td>
+<td>Dose no snapshot de ~365 dias</td>
+</tr>
+<tr class="odd">
+<td><code>tendencia_dose_iDPP4</code></td>
+<td>STRING</td>
+<td>Tendência da dose vs.&nbsp;180 dias</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="agonistas-glp-1-e-gipglp-1" class="level4">
+<h4 class="anchored" data-anchor-id="agonistas-glp-1-e-gipglp-1">Agonistas GLP-1 e GIP/GLP-1</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variável</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>principio_GLP1</code></td>
+<td>STRING</td>
+<td>Princípio ativo do agonista GLP-1 prescrito (ex: <code>Semaglutida</code>, <code>Liraglutida</code>, <code>Dulaglutida</code>)</td>
+</tr>
+<tr class="even">
+<td><code>principio_GIP_GLP1</code></td>
+<td>STRING</td>
+<td>Princípio ativo do agonista GIP/GLP-1 prescrito (ex: <code>Tirzepatida</code>)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="tiazolidinedionas" class="level4">
+<h4 class="anchored" data-anchor-id="tiazolidinedionas">Tiazolidinedionas</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variável</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>principio_TIAZOLIDINEDIONA</code></td>
+<td>STRING</td>
+<td>Princípio ativo prescrito (ex: <code>Pioglitazona</code>)</td>
+</tr>
+<tr class="even">
+<td><code>dose_TIAZOLIDINEDIONA_mg_dia</code></td>
+<td>FLOAT64</td>
+<td>Dose diária estimada em mg/dia</td>
+</tr>
+<tr class="odd">
+<td><code>dose_TIAZOLIDINEDIONA_180d</code></td>
+<td>FLOAT64</td>
+<td>Dose no snapshot de ~180 dias</td>
+</tr>
+<tr class="even">
+<td><code>dose_TIAZOLIDINEDIONA_365d</code></td>
+<td>FLOAT64</td>
+<td>Dose no snapshot de ~365 dias</td>
+</tr>
+<tr class="odd">
+<td><code>tendencia_dose_TIAZOLIDINEDIONA</code></td>
+<td>STRING</td>
+<td>Tendência da dose vs.&nbsp;180 dias</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="glinidas-e-inibidores-alfa-glicosidase" class="level4">
+<h4 class="anchored" data-anchor-id="glinidas-e-inibidores-alfa-glicosidase">Glinidas e Inibidores alfa-glicosidase</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variável</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>principio_GLINIDA</code></td>
+<td>STRING</td>
+<td>Princípio ativo prescrito (ex: <code>Repaglinida</code>)</td>
+</tr>
+<tr class="even">
+<td><code>dose_GLINIDA_mg_dia</code></td>
+<td>FLOAT64</td>
+<td>Dose diária estimada em mg/dia</td>
+</tr>
+<tr class="odd">
+<td><code>dose_GLINIDA_180d</code></td>
+<td>FLOAT64</td>
+<td>Dose no snapshot de ~180 dias</td>
+</tr>
+<tr class="even">
+<td><code>dose_GLINIDA_365d</code></td>
+<td>FLOAT64</td>
+<td>Dose no snapshot de ~365 dias</td>
+</tr>
+<tr class="odd">
+<td><code>tendencia_dose_GLINIDA</code></td>
+<td>STRING</td>
+<td>Tendência da dose vs.&nbsp;180 dias</td>
+</tr>
+<tr class="even">
+<td><code>principio_ACARBOSE</code></td>
+<td>STRING</td>
+<td>Princípio ativo prescrito (ex: <code>Acarbose</code>)</td>
+</tr>
+<tr class="odd">
+<td><code>dose_ACARBOSE_mg_dia</code></td>
+<td>FLOAT64</td>
+<td>Dose diária estimada em mg/dia</td>
+</tr>
+<tr class="even">
+<td><code>dose_ACARBOSE_180d</code></td>
+<td>FLOAT64</td>
+<td>Dose no snapshot de ~180 dias</td>
+</tr>
+<tr class="odd">
+<td><code>dose_ACARBOSE_365d</code></td>
+<td>FLOAT64</td>
+<td>Dose no snapshot de ~365 dias</td>
+</tr>
+<tr class="even">
+<td><code>tendencia_dose_ACARBOSE</code></td>
+<td>STRING</td>
+<td>Tendência da dose vs.&nbsp;180 dias</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="perfil-dm-insulinas" class="level3">
+<h3 class="anchored" data-anchor-id="perfil-dm-insulinas">4.6 Perfil DM — Insulinas</h3>
+<p>Tipos de ação cobertos: Intermediária (NPH), Prolongada (análogos basais), Ultra-prolongada, Rápida (Regular), Ultrarápida (análogos prandiais), Pré-misturada.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variável</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>data_ultima_prescricao_insulina</code></td>
+<td>DATE</td>
+<td>Data da prescrição mais recente de qualquer insulina nos últimos 365 dias</td>
+</tr>
+<tr class="even">
+<td><code>dias_desde_ultima_prescricao_insulina</code></td>
+<td>INT64</td>
+<td>Dias desde a última prescrição de insulina</td>
+</tr>
+<tr class="odd">
+<td><code>tipo_insulina</code></td>
+<td>STRING</td>
+<td>Síntese do esquema insulínico. Valores: <code>NPH</code>, <code>NPH+REGULAR</code>, <code>REGULAR</code>, <code>ANALOGOS_BASAIS</code>, <code>PRE_MISTURADA</code></td>
+</tr>
+<tr class="even">
+<td><code>principio_INSULINA_BASAL_HUMANA</code></td>
+<td>STRING</td>
+<td>Princípio ativo da insulina basal humana prescrita (ex: <code>Insulina Humana NPH</code>)</td>
+</tr>
+<tr class="odd">
+<td><code>dose_NPH_ui_dia</code></td>
+<td>INT64</td>
+<td>Dose total diária de NPH em unidades internacionais (UI). Estimada a partir da posologia; NULL para esquemas abertos (<code>CONFORME ESQUEMA</code>)</td>
+</tr>
+<tr class="even">
+<td><code>n_aplicacoes_NPH_dia</code></td>
+<td>INT64</td>
+<td>Número de aplicações diárias de NPH estimado da posologia (1, 2 ou 3)</td>
+</tr>
+<tr class="odd">
+<td><code>principio_INSULINA_PRANDIAL_HUMANA</code></td>
+<td>STRING</td>
+<td>Princípio ativo da insulina prandial humana prescrita (ex: <code>Insulina Humana Regular</code>)</td>
+</tr>
+<tr class="even">
+<td><code>esquema_insulina_regular</code></td>
+<td>STRING</td>
+<td>Tipo de uso da insulina Regular. Valores: <code>CORRECAO_AGUDA</code>, <code>ESQUEMA_GLICEMIA</code>, <code>ESQUEMA_LIVRE</code>, <code>OUTRO</code></td>
+</tr>
+<tr class="odd">
+<td><code>principio_INSULINA_BASAL_ANALOGICA</code></td>
+<td>STRING</td>
+<td>Princípio ativo do análogo basal prescrito (ex: <code>Insulina Glargina U100</code>, <code>Insulina Detemir</code>)</td>
+</tr>
+<tr class="even">
+<td><code>principio_INSULINA_PRANDIAL_ANALOGICA</code></td>
+<td>STRING</td>
+<td>Princípio ativo do análogo prandial prescrito (ex: <code>Insulina Asparte</code>, <code>Insulina Lispro</code>)</td>
+</tr>
+<tr class="odd">
+<td><code>principio_INSULINA_MISTA</code></td>
+<td>STRING</td>
+<td>Princípio ativo da insulina pré-misturada prescrita</td>
+</tr>
+<tr class="even">
+<td><code>dose_NPH_ui_180d</code></td>
+<td>INT64</td>
+<td>Dose de NPH no snapshot de ~180 dias</td>
+</tr>
+<tr class="odd">
+<td><code>dose_NPH_ui_365d</code></td>
+<td>INT64</td>
+<td>Dose de NPH no snapshot de ~365 dias</td>
+</tr>
+<tr class="even">
+<td><code>tendencia_dose_NPH</code></td>
+<td>STRING</td>
+<td>Tendência da dose de NPH vs.&nbsp;180 dias. Valores: <code>INICIOU</code>, <code>SUSPENSO</code>, <code>AUMENTANDO</code>, <code>REDUZINDO</code>, <code>ESTAVEL</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="perfil-has-anti-hipertensivos" class="level3">
+<h3 class="anchored" data-anchor-id="perfil-has-anti-hipertensivos">4.7 Perfil HAS — Anti-hipertensivos</h3>
+<p>Classes cobertas: IECA, BRA, BCC-DHP, BCC não-DHP, Diurético tiazídico, Diurético de alça, Diurético poupador de K, Betabloqueador, Simpatolítico central, Alfabloqueador, Vasodilatador direto, Nitrato.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variável</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>data_ultima_prescricao_has</code></td>
+<td>DATE</td>
+<td>Data da prescrição mais recente de qualquer anti-hipertensivo nos últimos 365 dias</td>
+</tr>
+<tr class="even">
+<td><code>dias_desde_ultima_prescricao_has</code></td>
+<td>INT64</td>
+<td>Dias desde a última prescrição de anti-hipertensivo</td>
+</tr>
+<tr class="odd">
+<td><code>classes_anti_hipertensivos</code></td>
+<td>STRING</td>
+<td>Classes farmacológicas anti-hipertensivas prescritas, separadas por <code>;</code></td>
+</tr>
+<tr class="even">
+<td><code>n_classes_anti_hipertensivos</code></td>
+<td>INT64</td>
+<td>Número de classes distintas de anti-hipertensivos prescritas</td>
+</tr>
+<tr class="odd">
+<td><code>intensidade_tratamento_has</code></td>
+<td>STRING</td>
+<td>Síntese da intensidade do tratamento HAS. Valores: <code>MONOTERAPIA</code>, <code>DUPLA_TERAPIA</code>, <code>TRIPLA_TERAPIA</code>, <code>QUADRUPLA_TERAPIA</code></td>
+</tr>
+</tbody>
+</table>
+<section id="ieca" class="level4">
+<h4 class="anchored" data-anchor-id="ieca">IECA</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variável</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>principio_IECA</code></td>
+<td>STRING</td>
+<td>Princípio ativo prescrito (ex: <code>Enalapril</code>, <code>Captopril</code>, <code>Ramipril</code>)</td>
+</tr>
+<tr class="even">
+<td><code>dose_IECA_mg_dia</code></td>
+<td>FLOAT64</td>
+<td>Dose diária estimada em mg/dia</td>
+</tr>
+<tr class="odd">
+<td><code>dose_IECA_180d</code></td>
+<td>FLOAT64</td>
+<td>Dose no snapshot de ~180 dias</td>
+</tr>
+<tr class="even">
+<td><code>dose_IECA_365d</code></td>
+<td>FLOAT64</td>
+<td>Dose no snapshot de ~365 dias</td>
+</tr>
+<tr class="odd">
+<td><code>tendencia_dose_IECA</code></td>
+<td>STRING</td>
+<td>Tendência da dose vs.&nbsp;180 dias</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="bra" class="level4">
+<h4 class="anchored" data-anchor-id="bra">BRA</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variável</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>principio_BRA</code></td>
+<td>STRING</td>
+<td>Princípio ativo prescrito (ex: <code>Losartana</code>, <code>Valsartana</code>, <code>Olmesartana</code>)</td>
+</tr>
+<tr class="even">
+<td><code>dose_BRA_mg_dia</code></td>
+<td>FLOAT64</td>
+<td>Dose diária estimada em mg/dia</td>
+</tr>
+<tr class="odd">
+<td><code>dose_BRA_180d</code></td>
+<td>FLOAT64</td>
+<td>Dose no snapshot de ~180 dias</td>
+</tr>
+<tr class="even">
+<td><code>dose_BRA_365d</code></td>
+<td>FLOAT64</td>
+<td>Dose no snapshot de ~365 dias</td>
+</tr>
+<tr class="odd">
+<td><code>tendencia_dose_BRA</code></td>
+<td>STRING</td>
+<td>Tendência da dose vs.&nbsp;180 dias</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="bcc-di-hidropiridínicos" class="level4">
+<h4 class="anchored" data-anchor-id="bcc-di-hidropiridínicos">BCC — Di-hidropiridínicos</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variável</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>principio_BCC_DHP</code></td>
+<td>STRING</td>
+<td>Princípio ativo prescrito (ex: <code>Anlodipino</code>, <code>Nifedipino</code>, <code>Lercanidipino</code>)</td>
+</tr>
+<tr class="even">
+<td><code>dose_BCC_DHP_mg_dia</code></td>
+<td>FLOAT64</td>
+<td>Dose diária estimada em mg/dia</td>
+</tr>
+<tr class="odd">
+<td><code>dose_BCC_DHP_180d</code></td>
+<td>FLOAT64</td>
+<td>Dose no snapshot de ~180 dias</td>
+</tr>
+<tr class="even">
+<td><code>dose_BCC_DHP_365d</code></td>
+<td>FLOAT64</td>
+<td>Dose no snapshot de ~365 dias</td>
+</tr>
+<tr class="odd">
+<td><code>tendencia_dose_BCC_DHP</code></td>
+<td>STRING</td>
+<td>Tendência da dose vs.&nbsp;180 dias</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="bcc-não-di-hidropiridínicos" class="level4">
+<h4 class="anchored" data-anchor-id="bcc-não-di-hidropiridínicos">BCC — Não di-hidropiridínicos</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variável</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>principio_BCC_NAO_DHP</code></td>
+<td>STRING</td>
+<td>Princípio ativo prescrito (ex: <code>Verapamil</code>, <code>Diltiazem</code>)</td>
+</tr>
+<tr class="even">
+<td><code>dose_BCC_NAO_DHP_mg_dia</code></td>
+<td>FLOAT64</td>
+<td>Dose diária estimada em mg/dia</td>
+</tr>
+<tr class="odd">
+<td><code>dose_BCC_NAO_DHP_180d</code></td>
+<td>FLOAT64</td>
+<td>Dose no snapshot de ~180 dias</td>
+</tr>
+<tr class="even">
+<td><code>dose_BCC_NAO_DHP_365d</code></td>
+<td>FLOAT64</td>
+<td>Dose no snapshot de ~365 dias</td>
+</tr>
+<tr class="odd">
+<td><code>tendencia_dose_BCC_NAO_DHP</code></td>
+<td>STRING</td>
+<td>Tendência da dose vs.&nbsp;180 dias</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="diurético-tiazídico" class="level4">
+<h4 class="anchored" data-anchor-id="diurético-tiazídico">Diurético tiazídico</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variável</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>principio_TIAZIDICO</code></td>
+<td>STRING</td>
+<td>Princípio ativo prescrito (ex: <code>Hidroclorotiazida</code>, <code>Clortalidona</code>, <code>Indapamida</code>)</td>
+</tr>
+<tr class="even">
+<td><code>dose_TIAZIDICO_mg_dia</code></td>
+<td>FLOAT64</td>
+<td>Dose diária estimada em mg/dia</td>
+</tr>
+<tr class="odd">
+<td><code>dose_TIAZIDICO_180d</code></td>
+<td>FLOAT64</td>
+<td>Dose no snapshot de ~180 dias</td>
+</tr>
+<tr class="even">
+<td><code>dose_TIAZIDICO_365d</code></td>
+<td>FLOAT64</td>
+<td>Dose no snapshot de ~365 dias</td>
+</tr>
+<tr class="odd">
+<td><code>tendencia_dose_TIAZIDICO</code></td>
+<td>STRING</td>
+<td>Tendência da dose vs.&nbsp;180 dias</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="diurético-de-alça" class="level4">
+<h4 class="anchored" data-anchor-id="diurético-de-alça">Diurético de alça</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variável</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>principio_DIURETICO_ALCA</code></td>
+<td>STRING</td>
+<td>Princípio ativo prescrito (ex: <code>Furosemida</code>)</td>
+</tr>
+<tr class="even">
+<td><code>dose_DIURETICO_ALCA_mg_dia</code></td>
+<td>FLOAT64</td>
+<td>Dose diária estimada em mg/dia</td>
+</tr>
+<tr class="odd">
+<td><code>dose_DIURETICO_ALCA_180d</code></td>
+<td>FLOAT64</td>
+<td>Dose no snapshot de ~180 dias</td>
+</tr>
+<tr class="even">
+<td><code>dose_DIURETICO_ALCA_365d</code></td>
+<td>FLOAT64</td>
+<td>Dose no snapshot de ~365 dias</td>
+</tr>
+<tr class="odd">
+<td><code>tendencia_dose_DIURETICO_ALCA</code></td>
+<td>STRING</td>
+<td>Tendência da dose vs.&nbsp;180 dias</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="diurético-poupador-de-k" class="level4">
+<h4 class="anchored" data-anchor-id="diurético-poupador-de-k">Diurético poupador de K</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variável</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>principio_POUPADOR_K</code></td>
+<td>STRING</td>
+<td>Princípio ativo prescrito (ex: <code>Espironolactona</code>, <code>Eplerenona</code>)</td>
+</tr>
+<tr class="even">
+<td><code>dose_POUPADOR_K_mg_dia</code></td>
+<td>FLOAT64</td>
+<td>Dose diária estimada em mg/dia</td>
+</tr>
+<tr class="odd">
+<td><code>dose_POUPADOR_K_180d</code></td>
+<td>FLOAT64</td>
+<td>Dose no snapshot de ~180 dias</td>
+</tr>
+<tr class="even">
+<td><code>dose_POUPADOR_K_365d</code></td>
+<td>FLOAT64</td>
+<td>Dose no snapshot de ~365 dias</td>
+</tr>
+<tr class="odd">
+<td><code>tendencia_dose_POUPADOR_K</code></td>
+<td>STRING</td>
+<td>Tendência da dose vs.&nbsp;180 dias</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="betabloqueador" class="level4">
+<h4 class="anchored" data-anchor-id="betabloqueador">Betabloqueador</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variável</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>principio_BETABLOQUEADOR</code></td>
+<td>STRING</td>
+<td>Princípio ativo prescrito (ex: <code>Atenolol</code>, <code>Carvedilol</code>, <code>Bisoprolol</code>, <code>Metoprolol</code>)</td>
+</tr>
+<tr class="even">
+<td><code>dose_BETABLOQUEADOR_mg_dia</code></td>
+<td>FLOAT64</td>
+<td>Dose diária estimada em mg/dia</td>
+</tr>
+<tr class="odd">
+<td><code>dose_BETABLOQUEADOR_180d</code></td>
+<td>FLOAT64</td>
+<td>Dose no snapshot de ~180 dias</td>
+</tr>
+<tr class="even">
+<td><code>dose_BETABLOQUEADOR_365d</code></td>
+<td>FLOAT64</td>
+<td>Dose no snapshot de ~365 dias</td>
+</tr>
+<tr class="odd">
+<td><code>tendencia_dose_BETABLOQUEADOR</code></td>
+<td>STRING</td>
+<td>Tendência da dose vs.&nbsp;180 dias</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="simpatolítico-central" class="level4">
+<h4 class="anchored" data-anchor-id="simpatolítico-central">Simpatolítico central</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variável</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>principio_SIMPATICOLITICO</code></td>
+<td>STRING</td>
+<td>Princípio ativo prescrito (ex: <code>Metildopa</code>, <code>Clonidina</code>, <code>Moxonidina</code>)</td>
+</tr>
+<tr class="even">
+<td><code>dose_SIMPATICOLITICO_mg_dia</code></td>
+<td>FLOAT64</td>
+<td>Dose diária estimada em mg/dia</td>
+</tr>
+<tr class="odd">
+<td><code>dose_SIMPATICOLITICO_180d</code></td>
+<td>FLOAT64</td>
+<td>Dose no snapshot de ~180 dias</td>
+</tr>
+<tr class="even">
+<td><code>dose_SIMPATICOLITICO_365d</code></td>
+<td>FLOAT64</td>
+<td>Dose no snapshot de ~365 dias</td>
+</tr>
+<tr class="odd">
+<td><code>tendencia_dose_SIMPATICOLITICO</code></td>
+<td>STRING</td>
+<td>Tendência da dose vs.&nbsp;180 dias</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="alfabloqueador" class="level4">
+<h4 class="anchored" data-anchor-id="alfabloqueador">Alfabloqueador</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variável</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>principio_ALFABLOQUEADOR</code></td>
+<td>STRING</td>
+<td>Princípio ativo prescrito (ex: <code>Doxazosina</code>, <code>Prazosina</code>)</td>
+</tr>
+<tr class="even">
+<td><code>dose_ALFABLOQUEADOR_mg_dia</code></td>
+<td>FLOAT64</td>
+<td>Dose diária estimada em mg/dia</td>
+</tr>
+<tr class="odd">
+<td><code>dose_ALFABLOQUEADOR_180d</code></td>
+<td>FLOAT64</td>
+<td>Dose no snapshot de ~180 dias</td>
+</tr>
+<tr class="even">
+<td><code>dose_ALFABLOQUEADOR_365d</code></td>
+<td>FLOAT64</td>
+<td>Dose no snapshot de ~365 dias</td>
+</tr>
+<tr class="odd">
+<td><code>tendencia_dose_ALFABLOQUEADOR</code></td>
+<td>STRING</td>
+<td>Tendência da dose vs.&nbsp;180 dias</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="vasodilatador-direto" class="level4">
+<h4 class="anchored" data-anchor-id="vasodilatador-direto">Vasodilatador direto</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variável</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>principio_VASODILATADOR</code></td>
+<td>STRING</td>
+<td>Princípio ativo prescrito (ex: <code>Hidralazina</code>, <code>Minoxidil</code>)</td>
+</tr>
+<tr class="even">
+<td><code>dose_VASODILATADOR_mg_dia</code></td>
+<td>FLOAT64</td>
+<td>Dose diária estimada em mg/dia</td>
+</tr>
+<tr class="odd">
+<td><code>dose_VASODILATADOR_180d</code></td>
+<td>FLOAT64</td>
+<td>Dose no snapshot de ~180 dias</td>
+</tr>
+<tr class="even">
+<td><code>dose_VASODILATADOR_365d</code></td>
+<td>FLOAT64</td>
+<td>Dose no snapshot de ~365 dias</td>
+</tr>
+<tr class="odd">
+<td><code>tendencia_dose_VASODILATADOR</code></td>
+<td>STRING</td>
+<td>Tendência da dose vs.&nbsp;180 dias</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="nitrato" class="level4">
+<h4 class="anchored" data-anchor-id="nitrato">Nitrato</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variável</th>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>principio_NITRATO</code></td>
+<td>STRING</td>
+<td>Princípio ativo prescrito (ex: <code>Isossorbida Mononitrato</code>, <code>Isossorbida Dinitrato</code>)</td>
+</tr>
+<tr class="even">
+<td><code>dose_NITRATO_mg_dia</code></td>
+<td>FLOAT64</td>
+<td>Dose diária estimada em mg/dia</td>
+</tr>
+<tr class="odd">
+<td><code>dose_NITRATO_180d</code></td>
+<td>FLOAT64</td>
+<td>Dose no snapshot de ~180 dias</td>
+</tr>
+<tr class="even">
+<td><code>dose_NITRATO_365d</code></td>
+<td>FLOAT64</td>
+<td>Dose no snapshot de ~365 dias</td>
+</tr>
+<tr class="odd">
+<td><code>tendencia_dose_NITRATO</code></td>
+<td>STRING</td>
+<td>Tendência da dose vs.&nbsp;180 dias</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="alertas-clínicos-has" class="level3">
+<h3 class="anchored" data-anchor-id="alertas-clínicos-has">4.8 Alertas clínicos HAS</h3>
+<p>Flags booleanos gerados automaticamente na construção do perfil HAS, sinalizando prescrições com potencial risco farmacológico.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variável</th>
+<th>Tipo</th>
+<th>Alerta</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>alerta_propranolol</code></td>
+<td>BOOLEAN</td>
+<td>TRUE se Propranolol está prescrito (betabloqueador não cardiosseletivo; evitar em asmáticos e DPOC)</td>
+</tr>
+<tr class="even">
+<td><code>alerta_nifedipino_acao_curta</code></td>
+<td>BOOLEAN</td>
+<td>TRUE se Nifedipino 10mg está prescrito (formulação de ação curta; associada a eventos cardiovasculares; uso não recomendado para HAS crônica)</td>
+</tr>
+<tr class="odd">
+<td><code>alerta_metildopa</code></td>
+<td>BOOLEAN</td>
+<td>TRUE se Metildopa está prescrita (simpatolítico de segunda linha; elevada carga anticolinérgica em idosos; exceção: gestantes)</td>
+</tr>
+<tr class="even">
+<td><code>alerta_ieca_mais_bra</code></td>
+<td>BOOLEAN</td>
+<td>TRUE se IECA e BRA estão prescritos simultaneamente (duplo bloqueio do SRAA; contraindicado pela maioria das diretrizes)</td>
+</tr>
+<tr class="odd">
+<td><code>alerta_dose_hidralazina</code></td>
+<td>BOOLEAN</td>
+<td>TRUE se dose de Hidralazina &gt; 200 mg/dia (acima do limite terapêutico habitual para HAS crônica ambulatorial)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="lógica-de-tendências-de-dose" class="level2">
+<h2 class="anchored" data-anchor-id="lógica-de-tendências-de-dose">5. Lógica de tendências de dose</h2>
+<p>Aplicada uniformemente a todos os campos de tendência (<code>tendencia_dose_*</code>):</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Valor</th>
+<th>Condição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>INICIOU</code></td>
+<td>Dose atual preenchida E dose no snapshot 180d era NULL</td>
+</tr>
+<tr class="even">
+<td><code>SUSPENSO</code></td>
+<td>Dose atual é NULL E dose no snapshot 180d estava preenchida</td>
+</tr>
+<tr class="odd">
+<td><code>AUMENTANDO</code></td>
+<td>Dose atual &gt; dose 180d × 1,2 (aumento ≥ 20%)</td>
+</tr>
+<tr class="even">
+<td><code>REDUZINDO</code></td>
+<td>Dose atual &lt; dose 180d × 0,8 (redução ≥ 20%)</td>
+</tr>
+<tr class="odd">
+<td><code>ESTAVEL</code></td>
+<td>Variação dentro de ±20%</td>
+</tr>
+<tr class="even">
+<td><code>NULL</code></td>
+<td>Princípio ativo não prescrito em nenhuma das janelas</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="estimativa-de-dose-diária" class="level2">
+<h2 class="anchored" data-anchor-id="estimativa-de-dose-diária">6. Estimativa de dose diária</h2>
+<p>A dose diária (mg/dia) é calculada como:</p>
+<pre><code>dose_mg_dia = concentracao_mg × n_comprimidos_dia</code></pre>
+<p><strong>Extração de <code>concentracao_mg</code>:</strong> REGEXP sobre o nome do medicamento, com normalização prévia de espaços decimais (<code>3 125MG</code> → <code>3.125MG</code>, etc.).</p>
+<p><strong>Estimativa de <code>n_comprimidos_dia</code>:</strong> hierarquia de fontes:</p>
+<ol type="1">
+<li>Campo <code>quantidade</code> da prescrição, se valor ∈ {30, 60, 90, 120, 150, 180} → divide por 30</li>
+<li>Campo <code>posologia</code> — regex sobre padrões textuais:
+<ul>
+<li><code>8/8h</code>, <code>3x ao dia</code> → 3,0</li>
+<li><code>12/12h</code>, <code>2x ao dia</code> → 2,0</li>
+<li><code>1x ao dia</code>, <code>diariamente</code> → 1,0</li>
+</ul></li>
+<li>NULL se nenhum padrão reconhecido</li>
+</ol>
+<p>Para <strong>insulina NPH</strong>: dose em UI/dia extraída por regex de <code>posologia</code> (<code>\d+ UI</code>), com lógica específica para múltiplas aplicações e esquemas <code>12/12h</code>.</p>
+<hr>
+</section>
+<section id="pendências-e-limitações-conhecidas" class="level2">
+<h2 class="anchored" data-anchor-id="pendências-e-limitações-conhecidas">7. Pendências e limitações conhecidas</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Item</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>medicamento_desconhecido</code></td>
+<td>Lista de exclusão incompleta: formas tópicas/injetáveis de princípios conhecidos, contraceptivos hormonais, fitoterápicos e antimicrobianos comuns ainda geram falsos positivos</td>
+</tr>
+<tr class="even">
+<td><code>dose_NPH_ui_dia = NULL</code></td>
+<td>Posologias do tipo <code>CONFORME ESQUEMA</code> não são parseáveis; requer análise manual ou campo de flag separado</td>
+</tr>
+<tr class="odd">
+<td>Combinações fixas</td>
+<td>Medicamentos de dose fixa combinada (ex: Dutasterida + Tansulosina, Losartana + Hidroclorotiazida) não são decompostos — cada componente não é capturado separadamente</td>
+</tr>
+<tr class="even">
+<td>Alertas STOPP avançados</td>
+<td>Glibenclamida em idoso e Metformina em IRC grave dependem de cruzamento com idade e morbidades — reservados para a tabela fato</td>
+</tr>
+<tr class="odd">
+<td>Sinônimos</td>
+<td>Dicionário <code>sinonimos</code> cobre os principais nomes comerciais do Vitacare; expansão contínua indicada</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="controle-de-versão-da-query" class="level2">
+<h2 class="anchored" data-anchor-id="controle-de-versão-da-query">8. Controle de versão da query</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- _ultimas → manter o QUALIFY, comentar o ORDER BY</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>QUALIFY <span class="fu">ROW_NUMBER</span>() <span class="kw">OVER</span> (<span class="kw">PARTITION</span> <span class="kw">BY</span> bf.cpf <span class="kw">ORDER</span> <span class="kw">BY</span> bf.data_prescricao <span class="kw">DESC</span>) <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">--ORDER BY bf.cpf, bf.data_prescricao DESC</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">-- _longo → comentar o QUALIFY, descomentar o ORDER BY</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co">--QUALIFY ROW_NUMBER() OVER (PARTITION BY bf.cpf ORDER BY bf.data_prescricao DESC) = 1</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> bf.cpf, bf.data_prescricao <span class="kw">DESC</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+<p><em>Documento gerado em 2026-04-09 — SMS-RJ / Sub-PAV / Navegador Clínico de Multimorbidade</em></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./PoliF.html" class="pagination-link" aria-label="Polifarmácia">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Polifarmácia</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./fragil.html" class="pagination-link" aria-label="Fragilidade em idosos">
+        <span class="nav-page-text">Fragilidade em idosos</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

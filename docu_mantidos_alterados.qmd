@@ -1,0 +1,435 @@
+# MM_mantidos_alterados - Documentação Técnica  {.unnumbered}
+
+**Projeto:** Navegador Clínico de Multimorbidade — SMS-RJ  
+**Dataset:** `rj-sms-sandbox.sub_pav_us`  
+**Versões:** `MM_mantidos_alterados_ultimas` · `MM_mantidos_alterados_longo`  
+**Última atualização:** 2026-04-09  
+**Fonte primária:** `rj-sms.brutos_prontuario_vitacare.atendimento`  
+
+---
+
+## 1. Propósito
+
+Tabela de perfil farmacológico detalhado por paciente, construída a partir das prescrições eletrônicas do prontuário Vitacare nos últimos 365 dias. Consolida, em uma única linha por CPF (versão `_ultimas`), as informações sobre:
+
+- Todos os medicamentos prescritos na última consulta
+- Escore de carga anticolinérgica (ACB)
+- Núcleo crônico de medicamentos em quatro janelas temporais
+- Perfil detalhado de tratamento para Diabetes Mellitus (DM) — orais e insulinas
+- Perfil detalhado de tratamento para Hipertensão Arterial Sistêmica (HAS)
+- Snapshots comparativos (90d, 180d, 365d) e tendências de dose
+
+Serve como insumo direto para a tabela fato `MM_2026_novos_cadastros_stopp_start` e para os módulos de Polifarmácia e STOPP/START do Navegador Clínico.
+
+---
+
+## 2. Versões da tabela
+
+| Versão | Linhas por CPF | Controle |
+|---|---|---|
+| `_ultimas` | 1 (última prescrição) | `QUALIFY ROW_NUMBER() OVER (PARTITION BY cpf ORDER BY data_prescricao DESC) = 1` |
+| `_longo` | N (todas as prescrições) | `ORDER BY cpf, data_prescricao DESC` |
+
+---
+
+## 3. Arquitetura da query (6 blocos)
+
+| Bloco | Nome | Descrição |
+|---|---|---|
+| 0 | Dicionários | `acb_dict` (scores ACB por princípio ativo) e `sinonimos` (nomes comerciais → INN) |
+| 1 | Pipeline base | Extração e normalização de medicamentos do JSON de prescrições, deduplicação, join ACB |
+| 2 | Núcleos crônicos | Medicamentos prescritos ≥ 2x nas janelas de 90d, 180d, 365d e núcleo atual |
+| 3 | Trajetória | Snapshots de contagem e ACB, medicamentos que entraram/saíram, tendências |
+| 4 | Perfil DM oral | Classificação por classe farmacológica, doses mg/dia, snapshots e tendências |
+| 5 | Insulinas | Classificação por tipo de ação, dose NPH em UI/dia, snapshots e tendências |
+| 6 | Perfil HAS | Classificação por classe, doses mg/dia, alertas clínicos, snapshots e tendências |
+
+---
+
+## 4. Dicionário de variáveis
+
+### 4.1 Identificação
+
+| Variável | Tipo | Descrição |
+|---|---|---|
+| `cpf` | STRING | CPF do paciente (11 dígitos, validado por regex `^\d{11}$`) |
+| `cnes_unidade` | STRING | CNES da unidade de saúde onde ocorreu a última prescrição |
+| `data_prescricao` | DATE | Data da última prescrição do paciente (versão `_ultimas`) |
+| `dias_desde_prescricao` | INT64 | Dias transcorridos entre a última prescrição e a data atual |
+
+---
+
+### 4.2 Medicamentos gerais
+
+| Variável | Tipo | Descrição |
+|---|---|---|
+| `total_medicamentos` | INT64 | Número total de medicamentos na última prescrição (após deduplicação e exclusão de insumos) |
+| `score_acb_total` | INT64 | Soma dos escores ACB de todos os medicamentos da última prescrição. Score individual: 1 (leve), 2 (moderado), 3 (alto) |
+| `lista_medicamentos` | STRING | Lista completa de medicamentos normalizados da última prescrição, separados por `; ` |
+| `medicamentos_acb` | STRING | Lista dos medicamentos com score ACB > 0, no formato `Nome(score)`, separados por `; `. NULL se nenhum medicamento anticolinérgico |
+| `medicamento_desconhecido` | STRING | Medicamentos cujo nome normalizado não casa com nenhum princípio ativo da lista de exclusão conhecida. Usado para identificar lacunas no mapeamento. NULL se todos foram reconhecidos |
+| `data_prescricao_anterior` | DATE | Data da prescrição imediatamente anterior à última |
+| `medicamentos_anteriores` | STRING | Lista de medicamentos da prescrição anterior, separados por `; ` |
+| `total_medicamentos_anterior` | INT64 | Número de medicamentos na prescrição anterior |
+
+---
+
+### 4.3 Núcleo crônico
+
+O núcleo crônico é definido como o conjunto de medicamentos prescritos em pelo menos 2 consultas distintas dentro da janela temporal. O núcleo **atual** é a interseção do núcleo de 180 dias com os medicamentos presentes na última prescrição.
+
+| Variável | Tipo | Descrição |
+|---|---|---|
+| `nucleo_cronico_atual` | STRING | Medicamentos crônicos presentes também na última prescrição (interseção núcleo 180d ∩ última prescrição), separados por `; ` |
+| `total_cronicos_atual` | INT64 | Número de medicamentos no núcleo crônico atual |
+| `nucleo_cronico_90d` | STRING | Medicamentos prescritos ≥ 2 vezes nos últimos 90 dias, separados por `; ` |
+| `total_cronicos_90d` | INT64 | Número de medicamentos no núcleo crônico de 90 dias |
+| `nucleo_cronico_180d` | STRING | Medicamentos prescritos ≥ 2 vezes nos últimos 180 dias, separados por `; ` |
+| `total_cronicos_180d` | INT64 | Número de medicamentos no núcleo crônico de 180 dias |
+| `nucleo_cronico_365d` | STRING | Medicamentos prescritos ≥ 2 vezes nos últimos 365 dias, separados por `; ` |
+| `total_cronicos_365d` | INT64 | Número de medicamentos no núcleo crônico de 365 dias |
+
+---
+
+### 4.4 Trajetória e tendências gerais
+
+Comparação da prescrição atual com um snapshot aproximado de 180 dias atrás (janela ±30 dias).
+
+| Variável | Tipo | Descrição |
+|---|---|---|
+| `medicamentos_entraram` | STRING | Medicamentos presentes na última prescrição mas ausentes no snapshot de 180 dias, separados por `; ` |
+| `medicamentos_sairam` | STRING | Medicamentos presentes no snapshot de 180 dias mas ausentes na última prescrição, separados por `; ` |
+| `tendencia_polifarmacia` | STRING | Tendência do número total de medicamentos vs. 180 dias atrás. Valores: `AUMENTANDO` (>20%), `REDUZINDO` (<-20%), `ESTAVEL`, `SEM_HISTORICO` |
+| `tendencia_acb` | STRING | Tendência do score ACB total vs. 180 dias atrás. Valores: `AUMENTANDO` (+>1 ponto), `REDUZINDO` (-<1 ponto), `ESTAVEL`, `SEM_HISTORICO` |
+| `n_meds_90d` | INT64 | Número de medicamentos no snapshot de ~90 dias atrás (janela ±15 dias) |
+| `acb_90d` | INT64 | Score ACB total no snapshot de ~90 dias atrás |
+| `n_meds_180d` | INT64 | Número de medicamentos no snapshot de ~180 dias atrás (janela ±30 dias) |
+| `acb_180d` | INT64 | Score ACB total no snapshot de ~180 dias atrás |
+| `n_meds_365d` | INT64 | Número de medicamentos no snapshot de ~365 dias atrás (janela ±35 dias) |
+| `acb_365d` | INT64 | Score ACB total no snapshot de ~365 dias atrás |
+
+---
+
+### 4.5 Perfil DM — Antidiabéticos orais
+
+Classes cobertas: Biguanida, Sulfonilureia, Glinida, iSGLT2, iDPP4, Agonista GLP-1, Agonista GIP/GLP-1, Tiazolidinediona, Inibidor alfa-glicosidase.
+
+| Variável | Tipo | Descrição |
+|---|---|---|
+| `data_ultima_prescricao_oral` | DATE | Data da prescrição mais recente de qualquer antidiabético oral nos últimos 365 dias |
+| `dias_desde_ultima_prescricao_oral` | INT64 | Dias desde a última prescrição de antidiabético oral |
+| `classes_antidiabeticos` | STRING | Classes farmacológicas de antidiabéticos orais prescritas, separadas por `; ` (ex: `BIGUANIDA; iSGLT2`) |
+| `n_classes_antidiabeticos` | INT64 | Número de classes distintas de antidiabéticos orais prescritas |
+| `risco_hipoglicemia_oral` | STRING | Risco de hipoglicemia do esquema oral. Valores: `ALTO` (sulfonilureia/glinida), `MODERADO` (glinida), `BAIXO` (demais) |
+| `intensidade_tratamento_dm` | STRING | Síntese da intensidade do tratamento DM. Valores: `INSULINOTERAPIA_BASAL`, `INSULINOTERAPIA_PRANDIAL`, `TRIPLA_TERAPIA_ORAL`, `DUPLA_TERAPIA_ORAL`, `MONOTERAPIA_ORAL` |
+
+#### Biguanidas (Metformina)
+
+| Variável | Tipo | Descrição |
+|---|---|---|
+| `principio_BIGUANIDA` | STRING | Princípio ativo da biguanida prescrita (ex: `Metformina`) |
+| `dose_BIGUANIDA_mg_dia` | FLOAT64 | Dose diária estimada de biguanida em mg/dia |
+| `dose_BIGUANIDA_180d` | FLOAT64 | Dose de biguanida no snapshot de ~180 dias |
+| `dose_BIGUANIDA_365d` | FLOAT64 | Dose de biguanida no snapshot de ~365 dias |
+| `tendencia_dose_BIGUANIDA` | STRING | Tendência da dose vs. 180 dias. Valores: `INICIOU`, `SUSPENSO`, `AUMENTANDO`, `REDUZINDO`, `ESTAVEL` |
+
+#### Sulfonilureias
+
+| Variável | Tipo | Descrição |
+|---|---|---|
+| `principio_SULFONILUREIA` | STRING | Princípio ativo prescrito (ex: `Gliclazida`, `Glimepirida`, `Glibenclamida`) |
+| `dose_SULFONILUREIA_mg_dia` | FLOAT64 | Dose diária estimada em mg/dia |
+| `dose_SULFONILUREIA_180d` | FLOAT64 | Dose no snapshot de ~180 dias |
+| `dose_SULFONILUREIA_365d` | FLOAT64 | Dose no snapshot de ~365 dias |
+| `tendencia_dose_SULFONILUREIA` | STRING | Tendência da dose vs. 180 dias |
+
+#### iSGLT2 (Gliflozinas)
+
+| Variável | Tipo | Descrição |
+|---|---|---|
+| `principio_iSGLT2` | STRING | Princípio ativo prescrito (ex: `Dapagliflozina`, `Empagliflozina`, `Canagliflozina`) |
+| `dose_iSGLT2_mg_dia` | FLOAT64 | Dose diária estimada em mg/dia |
+| `dose_iSGLT2_180d` | FLOAT64 | Dose no snapshot de ~180 dias |
+| `dose_iSGLT2_365d` | FLOAT64 | Dose no snapshot de ~365 dias |
+| `tendencia_dose_iSGLT2` | STRING | Tendência da dose vs. 180 dias |
+
+#### iDPP4 (Gliptinas)
+
+| Variável | Tipo | Descrição |
+|---|---|---|
+| `principio_iDPP4` | STRING | Princípio ativo prescrito (ex: `Sitagliptina`, `Vildagliptina`, `Linagliptina`) |
+| `dose_iDPP4_mg_dia` | FLOAT64 | Dose diária estimada em mg/dia |
+| `dose_iDPP4_180d` | FLOAT64 | Dose no snapshot de ~180 dias |
+| `dose_iDPP4_365d` | FLOAT64 | Dose no snapshot de ~365 dias |
+| `tendencia_dose_iDPP4` | STRING | Tendência da dose vs. 180 dias |
+
+#### Agonistas GLP-1 e GIP/GLP-1
+
+| Variável | Tipo | Descrição |
+|---|---|---|
+| `principio_GLP1` | STRING | Princípio ativo do agonista GLP-1 prescrito (ex: `Semaglutida`, `Liraglutida`, `Dulaglutida`) |
+| `principio_GIP_GLP1` | STRING | Princípio ativo do agonista GIP/GLP-1 prescrito (ex: `Tirzepatida`) |
+
+#### Tiazolidinedionas
+
+| Variável | Tipo | Descrição |
+|---|---|---|
+| `principio_TIAZOLIDINEDIONA` | STRING | Princípio ativo prescrito (ex: `Pioglitazona`) |
+| `dose_TIAZOLIDINEDIONA_mg_dia` | FLOAT64 | Dose diária estimada em mg/dia |
+| `dose_TIAZOLIDINEDIONA_180d` | FLOAT64 | Dose no snapshot de ~180 dias |
+| `dose_TIAZOLIDINEDIONA_365d` | FLOAT64 | Dose no snapshot de ~365 dias |
+| `tendencia_dose_TIAZOLIDINEDIONA` | STRING | Tendência da dose vs. 180 dias |
+
+#### Glinidas e Inibidores alfa-glicosidase
+
+| Variável | Tipo | Descrição |
+|---|---|---|
+| `principio_GLINIDA` | STRING | Princípio ativo prescrito (ex: `Repaglinida`) |
+| `dose_GLINIDA_mg_dia` | FLOAT64 | Dose diária estimada em mg/dia |
+| `dose_GLINIDA_180d` | FLOAT64 | Dose no snapshot de ~180 dias |
+| `dose_GLINIDA_365d` | FLOAT64 | Dose no snapshot de ~365 dias |
+| `tendencia_dose_GLINIDA` | STRING | Tendência da dose vs. 180 dias |
+| `principio_ACARBOSE` | STRING | Princípio ativo prescrito (ex: `Acarbose`) |
+| `dose_ACARBOSE_mg_dia` | FLOAT64 | Dose diária estimada em mg/dia |
+| `dose_ACARBOSE_180d` | FLOAT64 | Dose no snapshot de ~180 dias |
+| `dose_ACARBOSE_365d` | FLOAT64 | Dose no snapshot de ~365 dias |
+| `tendencia_dose_ACARBOSE` | STRING | Tendência da dose vs. 180 dias |
+
+---
+
+### 4.6 Perfil DM — Insulinas
+
+Tipos de ação cobertos: Intermediária (NPH), Prolongada (análogos basais), Ultra-prolongada, Rápida (Regular), Ultrarápida (análogos prandiais), Pré-misturada.
+
+| Variável | Tipo | Descrição |
+|---|---|---|
+| `data_ultima_prescricao_insulina` | DATE | Data da prescrição mais recente de qualquer insulina nos últimos 365 dias |
+| `dias_desde_ultima_prescricao_insulina` | INT64 | Dias desde a última prescrição de insulina |
+| `tipo_insulina` | STRING | Síntese do esquema insulínico. Valores: `NPH`, `NPH+REGULAR`, `REGULAR`, `ANALOGOS_BASAIS`, `PRE_MISTURADA` |
+| `principio_INSULINA_BASAL_HUMANA` | STRING | Princípio ativo da insulina basal humana prescrita (ex: `Insulina Humana NPH`) |
+| `dose_NPH_ui_dia` | INT64 | Dose total diária de NPH em unidades internacionais (UI). Estimada a partir da posologia; NULL para esquemas abertos (`CONFORME ESQUEMA`) |
+| `n_aplicacoes_NPH_dia` | INT64 | Número de aplicações diárias de NPH estimado da posologia (1, 2 ou 3) |
+| `principio_INSULINA_PRANDIAL_HUMANA` | STRING | Princípio ativo da insulina prandial humana prescrita (ex: `Insulina Humana Regular`) |
+| `esquema_insulina_regular` | STRING | Tipo de uso da insulina Regular. Valores: `CORRECAO_AGUDA`, `ESQUEMA_GLICEMIA`, `ESQUEMA_LIVRE`, `OUTRO` |
+| `principio_INSULINA_BASAL_ANALOGICA` | STRING | Princípio ativo do análogo basal prescrito (ex: `Insulina Glargina U100`, `Insulina Detemir`) |
+| `principio_INSULINA_PRANDIAL_ANALOGICA` | STRING | Princípio ativo do análogo prandial prescrito (ex: `Insulina Asparte`, `Insulina Lispro`) |
+| `principio_INSULINA_MISTA` | STRING | Princípio ativo da insulina pré-misturada prescrita |
+| `dose_NPH_ui_180d` | INT64 | Dose de NPH no snapshot de ~180 dias |
+| `dose_NPH_ui_365d` | INT64 | Dose de NPH no snapshot de ~365 dias |
+| `tendencia_dose_NPH` | STRING | Tendência da dose de NPH vs. 180 dias. Valores: `INICIOU`, `SUSPENSO`, `AUMENTANDO`, `REDUZINDO`, `ESTAVEL` |
+
+---
+
+### 4.7 Perfil HAS — Anti-hipertensivos
+
+Classes cobertas: IECA, BRA, BCC-DHP, BCC não-DHP, Diurético tiazídico, Diurético de alça, Diurético poupador de K, Betabloqueador, Simpatolítico central, Alfabloqueador, Vasodilatador direto, Nitrato.
+
+| Variável | Tipo | Descrição |
+|---|---|---|
+| `data_ultima_prescricao_has` | DATE | Data da prescrição mais recente de qualquer anti-hipertensivo nos últimos 365 dias |
+| `dias_desde_ultima_prescricao_has` | INT64 | Dias desde a última prescrição de anti-hipertensivo |
+| `classes_anti_hipertensivos` | STRING | Classes farmacológicas anti-hipertensivas prescritas, separadas por `; ` |
+| `n_classes_anti_hipertensivos` | INT64 | Número de classes distintas de anti-hipertensivos prescritas |
+| `intensidade_tratamento_has` | STRING | Síntese da intensidade do tratamento HAS. Valores: `MONOTERAPIA`, `DUPLA_TERAPIA`, `TRIPLA_TERAPIA`, `QUADRUPLA_TERAPIA` |
+
+#### IECA
+
+| Variável | Tipo | Descrição |
+|---|---|---|
+| `principio_IECA` | STRING | Princípio ativo prescrito (ex: `Enalapril`, `Captopril`, `Ramipril`) |
+| `dose_IECA_mg_dia` | FLOAT64 | Dose diária estimada em mg/dia |
+| `dose_IECA_180d` | FLOAT64 | Dose no snapshot de ~180 dias |
+| `dose_IECA_365d` | FLOAT64 | Dose no snapshot de ~365 dias |
+| `tendencia_dose_IECA` | STRING | Tendência da dose vs. 180 dias |
+
+#### BRA
+
+| Variável | Tipo | Descrição |
+|---|---|---|
+| `principio_BRA` | STRING | Princípio ativo prescrito (ex: `Losartana`, `Valsartana`, `Olmesartana`) |
+| `dose_BRA_mg_dia` | FLOAT64 | Dose diária estimada em mg/dia |
+| `dose_BRA_180d` | FLOAT64 | Dose no snapshot de ~180 dias |
+| `dose_BRA_365d` | FLOAT64 | Dose no snapshot de ~365 dias |
+| `tendencia_dose_BRA` | STRING | Tendência da dose vs. 180 dias |
+
+#### BCC — Di-hidropiridínicos
+
+| Variável | Tipo | Descrição |
+|---|---|---|
+| `principio_BCC_DHP` | STRING | Princípio ativo prescrito (ex: `Anlodipino`, `Nifedipino`, `Lercanidipino`) |
+| `dose_BCC_DHP_mg_dia` | FLOAT64 | Dose diária estimada em mg/dia |
+| `dose_BCC_DHP_180d` | FLOAT64 | Dose no snapshot de ~180 dias |
+| `dose_BCC_DHP_365d` | FLOAT64 | Dose no snapshot de ~365 dias |
+| `tendencia_dose_BCC_DHP` | STRING | Tendência da dose vs. 180 dias |
+
+#### BCC — Não di-hidropiridínicos
+
+| Variável | Tipo | Descrição |
+|---|---|---|
+| `principio_BCC_NAO_DHP` | STRING | Princípio ativo prescrito (ex: `Verapamil`, `Diltiazem`) |
+| `dose_BCC_NAO_DHP_mg_dia` | FLOAT64 | Dose diária estimada em mg/dia |
+| `dose_BCC_NAO_DHP_180d` | FLOAT64 | Dose no snapshot de ~180 dias |
+| `dose_BCC_NAO_DHP_365d` | FLOAT64 | Dose no snapshot de ~365 dias |
+| `tendencia_dose_BCC_NAO_DHP` | STRING | Tendência da dose vs. 180 dias |
+
+#### Diurético tiazídico
+
+| Variável | Tipo | Descrição |
+|---|---|---|
+| `principio_TIAZIDICO` | STRING | Princípio ativo prescrito (ex: `Hidroclorotiazida`, `Clortalidona`, `Indapamida`) |
+| `dose_TIAZIDICO_mg_dia` | FLOAT64 | Dose diária estimada em mg/dia |
+| `dose_TIAZIDICO_180d` | FLOAT64 | Dose no snapshot de ~180 dias |
+| `dose_TIAZIDICO_365d` | FLOAT64 | Dose no snapshot de ~365 dias |
+| `tendencia_dose_TIAZIDICO` | STRING | Tendência da dose vs. 180 dias |
+
+#### Diurético de alça
+
+| Variável | Tipo | Descrição |
+|---|---|---|
+| `principio_DIURETICO_ALCA` | STRING | Princípio ativo prescrito (ex: `Furosemida`) |
+| `dose_DIURETICO_ALCA_mg_dia` | FLOAT64 | Dose diária estimada em mg/dia |
+| `dose_DIURETICO_ALCA_180d` | FLOAT64 | Dose no snapshot de ~180 dias |
+| `dose_DIURETICO_ALCA_365d` | FLOAT64 | Dose no snapshot de ~365 dias |
+| `tendencia_dose_DIURETICO_ALCA` | STRING | Tendência da dose vs. 180 dias |
+
+#### Diurético poupador de K
+
+| Variável | Tipo | Descrição |
+|---|---|---|
+| `principio_POUPADOR_K` | STRING | Princípio ativo prescrito (ex: `Espironolactona`, `Eplerenona`) |
+| `dose_POUPADOR_K_mg_dia` | FLOAT64 | Dose diária estimada em mg/dia |
+| `dose_POUPADOR_K_180d` | FLOAT64 | Dose no snapshot de ~180 dias |
+| `dose_POUPADOR_K_365d` | FLOAT64 | Dose no snapshot de ~365 dias |
+| `tendencia_dose_POUPADOR_K` | STRING | Tendência da dose vs. 180 dias |
+
+#### Betabloqueador
+
+| Variável | Tipo | Descrição |
+|---|---|---|
+| `principio_BETABLOQUEADOR` | STRING | Princípio ativo prescrito (ex: `Atenolol`, `Carvedilol`, `Bisoprolol`, `Metoprolol`) |
+| `dose_BETABLOQUEADOR_mg_dia` | FLOAT64 | Dose diária estimada em mg/dia |
+| `dose_BETABLOQUEADOR_180d` | FLOAT64 | Dose no snapshot de ~180 dias |
+| `dose_BETABLOQUEADOR_365d` | FLOAT64 | Dose no snapshot de ~365 dias |
+| `tendencia_dose_BETABLOQUEADOR` | STRING | Tendência da dose vs. 180 dias |
+
+#### Simpatolítico central
+
+| Variável | Tipo | Descrição |
+|---|---|---|
+| `principio_SIMPATICOLITICO` | STRING | Princípio ativo prescrito (ex: `Metildopa`, `Clonidina`, `Moxonidina`) |
+| `dose_SIMPATICOLITICO_mg_dia` | FLOAT64 | Dose diária estimada em mg/dia |
+| `dose_SIMPATICOLITICO_180d` | FLOAT64 | Dose no snapshot de ~180 dias |
+| `dose_SIMPATICOLITICO_365d` | FLOAT64 | Dose no snapshot de ~365 dias |
+| `tendencia_dose_SIMPATICOLITICO` | STRING | Tendência da dose vs. 180 dias |
+
+#### Alfabloqueador
+
+| Variável | Tipo | Descrição |
+|---|---|---|
+| `principio_ALFABLOQUEADOR` | STRING | Princípio ativo prescrito (ex: `Doxazosina`, `Prazosina`) |
+| `dose_ALFABLOQUEADOR_mg_dia` | FLOAT64 | Dose diária estimada em mg/dia |
+| `dose_ALFABLOQUEADOR_180d` | FLOAT64 | Dose no snapshot de ~180 dias |
+| `dose_ALFABLOQUEADOR_365d` | FLOAT64 | Dose no snapshot de ~365 dias |
+| `tendencia_dose_ALFABLOQUEADOR` | STRING | Tendência da dose vs. 180 dias |
+
+#### Vasodilatador direto
+
+| Variável | Tipo | Descrição |
+|---|---|---|
+| `principio_VASODILATADOR` | STRING | Princípio ativo prescrito (ex: `Hidralazina`, `Minoxidil`) |
+| `dose_VASODILATADOR_mg_dia` | FLOAT64 | Dose diária estimada em mg/dia |
+| `dose_VASODILATADOR_180d` | FLOAT64 | Dose no snapshot de ~180 dias |
+| `dose_VASODILATADOR_365d` | FLOAT64 | Dose no snapshot de ~365 dias |
+| `tendencia_dose_VASODILATADOR` | STRING | Tendência da dose vs. 180 dias |
+
+#### Nitrato
+
+| Variável | Tipo | Descrição |
+|---|---|---|
+| `principio_NITRATO` | STRING | Princípio ativo prescrito (ex: `Isossorbida Mononitrato`, `Isossorbida Dinitrato`) |
+| `dose_NITRATO_mg_dia` | FLOAT64 | Dose diária estimada em mg/dia |
+| `dose_NITRATO_180d` | FLOAT64 | Dose no snapshot de ~180 dias |
+| `dose_NITRATO_365d` | FLOAT64 | Dose no snapshot de ~365 dias |
+| `tendencia_dose_NITRATO` | STRING | Tendência da dose vs. 180 dias |
+
+---
+
+### 4.8 Alertas clínicos HAS
+
+Flags booleanos gerados automaticamente na construção do perfil HAS, sinalizando prescrições com potencial risco farmacológico.
+
+| Variável | Tipo | Alerta |
+|---|---|---|
+| `alerta_propranolol` | BOOLEAN | TRUE se Propranolol está prescrito (betabloqueador não cardiosseletivo; evitar em asmáticos e DPOC) |
+| `alerta_nifedipino_acao_curta` | BOOLEAN | TRUE se Nifedipino 10mg está prescrito (formulação de ação curta; associada a eventos cardiovasculares; uso não recomendado para HAS crônica) |
+| `alerta_metildopa` | BOOLEAN | TRUE se Metildopa está prescrita (simpatolítico de segunda linha; elevada carga anticolinérgica em idosos; exceção: gestantes) |
+| `alerta_ieca_mais_bra` | BOOLEAN | TRUE se IECA e BRA estão prescritos simultaneamente (duplo bloqueio do SRAA; contraindicado pela maioria das diretrizes) |
+| `alerta_dose_hidralazina` | BOOLEAN | TRUE se dose de Hidralazina > 200 mg/dia (acima do limite terapêutico habitual para HAS crônica ambulatorial) |
+
+---
+
+## 5. Lógica de tendências de dose
+
+Aplicada uniformemente a todos os campos de tendência (`tendencia_dose_*`):
+
+| Valor | Condição |
+|---|---|
+| `INICIOU` | Dose atual preenchida E dose no snapshot 180d era NULL |
+| `SUSPENSO` | Dose atual é NULL E dose no snapshot 180d estava preenchida |
+| `AUMENTANDO` | Dose atual > dose 180d × 1,2 (aumento ≥ 20%) |
+| `REDUZINDO` | Dose atual < dose 180d × 0,8 (redução ≥ 20%) |
+| `ESTAVEL` | Variação dentro de ±20% |
+| `NULL` | Princípio ativo não prescrito em nenhuma das janelas |
+
+---
+
+## 6. Estimativa de dose diária
+
+A dose diária (mg/dia) é calculada como:
+
+```
+dose_mg_dia = concentracao_mg × n_comprimidos_dia
+```
+
+**Extração de `concentracao_mg`:** REGEXP sobre o nome do medicamento, com normalização prévia de espaços decimais (`3 125MG` → `3.125MG`, etc.).
+
+**Estimativa de `n_comprimidos_dia`:** hierarquia de fontes:
+
+1. Campo `quantidade` da prescrição, se valor ∈ {30, 60, 90, 120, 150, 180} → divide por 30
+2. Campo `posologia` — regex sobre padrões textuais:
+   - `8/8h`, `3x ao dia` → 3,0
+   - `12/12h`, `2x ao dia` → 2,0
+   - `1x ao dia`, `diariamente` → 1,0
+3. NULL se nenhum padrão reconhecido
+
+Para **insulina NPH**: dose em UI/dia extraída por regex de `posologia` (`\d+ UI`), com lógica específica para múltiplas aplicações e esquemas `12/12h`.
+
+---
+
+## 7. Pendências e limitações conhecidas
+
+| Item | Descrição |
+|---|---|
+| `medicamento_desconhecido` | Lista de exclusão incompleta: formas tópicas/injetáveis de princípios conhecidos, contraceptivos hormonais, fitoterápicos e antimicrobianos comuns ainda geram falsos positivos |
+| `dose_NPH_ui_dia = NULL` | Posologias do tipo `CONFORME ESQUEMA` não são parseáveis; requer análise manual ou campo de flag separado |
+| Combinações fixas | Medicamentos de dose fixa combinada (ex: Dutasterida + Tansulosina, Losartana + Hidroclorotiazida) não são decompostos — cada componente não é capturado separadamente |
+| Alertas STOPP avançados | Glibenclamida em idoso e Metformina em IRC grave dependem de cruzamento com idade e morbidades — reservados para a tabela fato |
+| Sinônimos | Dicionário `sinonimos` cobre os principais nomes comerciais do Vitacare; expansão contínua indicada |
+
+---
+
+## 8. Controle de versão da query
+
+```sql
+-- _ultimas → manter o QUALIFY, comentar o ORDER BY
+QUALIFY ROW_NUMBER() OVER (PARTITION BY bf.cpf ORDER BY bf.data_prescricao DESC) = 1
+--ORDER BY bf.cpf, bf.data_prescricao DESC
+
+-- _longo → comentar o QUALIFY, descomentar o ORDER BY
+--QUALIFY ROW_NUMBER() OVER (PARTITION BY bf.cpf ORDER BY bf.data_prescricao DESC) = 1
+ORDER BY bf.cpf, bf.data_prescricao DESC
+```
+
+---
+
+*Documento gerado em 2026-04-09 — SMS-RJ / Sub-PAV / Navegador Clínico de Multimorbidade*
